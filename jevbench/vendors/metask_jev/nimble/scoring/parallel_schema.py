@@ -4,8 +4,6 @@ import json
 import string
 from dataclasses import dataclass
 
-MODEL_ID = "Qwen/Qwen3.5-4B"
-REVISION = "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
 SYSTEM_PROMPT = (
     "Classify the context using the supplied schema. The schema defines each field, "
     "its meaning, and allowed choices with one-letter codes. Use choice descriptions "

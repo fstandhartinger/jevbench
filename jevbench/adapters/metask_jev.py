@@ -27,6 +27,7 @@ from __future__ import annotations
 import json
 import math
 import os
+from pathlib import Path
 import time
 
 from .base import DecisionResult
@@ -34,9 +35,8 @@ from .base import DecisionResult
 DEFAULT_MODEL_PATH = os.environ.get(
     "METASK_JEV_MODEL_PATH",
     os.path.expanduser("~/nimble-lab-work/metask-jev-4b/merged"))
-NIMBLE_PACKAGE_PATH = os.environ.get(
-    "METASK_JEV_NIMBLE_PACKAGE",
-    os.path.expanduser("~/nimble-small/third_party/nimble"))
+_VENDORED = str(Path(__file__).resolve().parent.parent / "vendors" / "metask_jev")
+NIMBLE_PACKAGE_PATH = os.environ.get("METASK_JEV_NIMBLE_PACKAGE", _VENDORED)
 
 TEMPERATURE_BY_KIND = {"choice": 1.7875, "noul": 2.25, "score": 2.05}
 

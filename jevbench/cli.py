@@ -25,7 +25,7 @@ from .adapters import (GradioSpaceAdapter, LocalOpenJevAdapter, NeedleLocalAdapt
                        RemoteInprocAdapter, SemIfDirectAdapter, SgSystemOneAdapter, So1DeciderAdapter,
                        TypeSafeAdapter, DjevAdapter,
                        LayaLocalAdapter, Gliner2LocalAdapter, VerdictLocalAdapter, PawLocalAdapter,
-                       ClassifierDevAdapter, CertoLocalAdapter)
+                       ClassifierDevAdapter, CertoLocalAdapter, PixelLocalAdapter)
 from .budget import Ledger
 from .runner import DEFAULT_RESERVE_USD, Runner
 from .summarize import public_export, summarize
@@ -64,8 +64,9 @@ def cmd_run(args) -> int:
              "djev": DjevAdapter,
              "laya_local": LayaLocalAdapter, "gliner2_local": Gliner2LocalAdapter,
              "verdict_local": VerdictLocalAdapter, "paw_local": PawLocalAdapter,
-             "classifier_dev": ClassifierDevAdapter, "certo_local": CertoLocalAdapter}
-    if args.adapter not in ("typesafe", "djev", "needle_local", "semif_direct", "so1_decider", "sg_system_one", "classifier_dev") and not args.endpoint:
+             "classifier_dev": ClassifierDevAdapter, "certo_local": CertoLocalAdapter,
+             "pixel_local": PixelLocalAdapter}
+    if args.adapter not in ("typesafe", "djev", "needle_local", "semif_direct", "so1_decider", "sg_system_one", "classifier_dev", "pixel_local") and not args.endpoint:
         print(f"--endpoint required for {args.adapter}", file=sys.stderr)
         return 2
     kwargs = dict(endpoint=args.endpoint, model=args.model,
@@ -75,7 +76,8 @@ def cmd_run(args) -> int:
     if args.adapter == "openai_compat":
         kwargs["model"] = args.model or ""
     if args.adapter in ("local_openjev", "semif_direct", "so1_decider", "sg_system_one",
-                        "laya_local", "gliner2_local", "verdict_local", "paw_local", "certo_local"):
+                        "laya_local", "gliner2_local", "verdict_local", "paw_local", "certo_local",
+                        "pixel_local"):
         kwargs["revision"] = args.revision
     adapter = kinds[args.adapter](**kwargs)
     if args.cost_basis:
@@ -164,6 +166,7 @@ def main(argv=None) -> int:
                                 "local_openjev", "openai_compat", "needle_local",
                                 "semif_direct", "so1_decider", "remote_inproc",
                                 "sg_system_one", "djev", "laya_local", "gliner2_local",
+                                "pixel_local",
                                 "verdict_local", "paw_local", "classifier_dev", "certo_local"])
     p_run.add_argument("--endpoint", default=None)
     p_run.add_argument("--model", default=None)

@@ -1,0 +1,119 @@
+{
+ "key": "pixel",
+ "display": "Pixel (LivioGama, potion-128M zero-shot)",
+ "class": "classifier",
+ "open": "yes",
+ "author": "LivioGama",
+ "repo": "https://github.com/LivioGama/pixel",
+ "licence": "MIT",
+ "underlying": "Model2Vec potion-multilingual-128M static embeddings via `pixel classify`; cosine similarity -> softmax(tau=0.07). Not a trained decision model: a deterministic retrieval tool's zero-shot decision op.",
+ "has_distribution": true,
+ "probability_source": [
+  "native"
+ ],
+ "endpoint_condition": "our CPU (submitter's machine, Apple M4 Max, model resident)",
+ "partial": true,
+ "tiers": {
+  "easy": 0.6458333333333334,
+  "standard": 0.3611111111111111,
+  "hard": 0.45045045045045046
+ },
+ "calibration": {
+  "score": 63.644568765598734,
+  "score_label_only_as_onehot": null,
+  "ece_hard": 0.2068397164180184,
+  "probability_fidelity": 68.65708081480115,
+  "brier_hard": 0.7442550028788073,
+  "brier_standard_judge_v11": 0.6930846618034102,
+  "note": "public tiers only: 231/534 decisions (easy 48/72, standard 72/96, hard public 111/220, judge 0/146); fidelity over the 10 public probability items"
+ },
+ "hard": {
+  "run": "runs/pixel--hard-public (pixel_local adapter, public half only)",
+  "n_items": 111,
+  "n_ok": 111,
+  "n_attempted": 111,
+  "coverage": 0.5045454545454545,
+  "success_rate": 1.0,
+  "accuracy": 0.45045045045045046,
+  "by_family": {
+   "adversarial": {
+    "correct": 3,
+    "n": 6,
+    "accuracy": 0.5
+   },
+   "ambiguous": {
+    "correct": 4,
+    "n": 7,
+    "accuracy": 0.5714285714285714
+   },
+   "judge_hard": {
+    "correct": 7,
+    "n": 17,
+    "accuracy": 0.4117647058823529
+   },
+   "long_policy": {
+    "correct": 7,
+    "n": 19,
+    "accuracy": 0.3684210526315789
+   },
+   "multi_hop": {
+    "correct": 5,
+    "n": 18,
+    "accuracy": 0.2777777777777778
+   },
+   "probability": {
+    "correct": 5,
+    "n": 10,
+    "accuracy": 0.5
+   },
+   "routing_hard": {
+    "correct": 4,
+    "n": 5,
+    "accuracy": 0.8
+   },
+   "temporal_numeric": {
+    "correct": 5,
+    "n": 15,
+    "accuracy": 0.3333333333333333
+   },
+   "tradeoff": {
+    "correct": 5,
+    "n": 6,
+    "accuracy": 0.8333333333333334
+   },
+   "trap": {
+    "correct": 5,
+    "n": 8,
+    "accuracy": 0.625
+   }
+  },
+  "has_distribution": true,
+  "brier_mean": 0.7442550028788073,
+  "ece": 0.2068397164180184,
+  "probability_fidelity": 68.65708081480115,
+  "calibration_score": 63.644568765598734,
+  "latency_p50_s": 0.0010132919996976852,
+  "latency_p95_s": 0.00244124949676916,
+  "mean_input_tokens": 1169,
+  "mean_output_tokens": 0,
+  "charged_usd": 0.0
+ },
+ "speed_block": {
+  "measured_where": "local, Apple M4 Max, `pixel classify --jsonl` with the model resident (model loaded before timing)",
+  "hardware": "Apple M4 Max",
+  "n": 231,
+  "p50_s": 0.0003225000109523535,
+  "p95_s": 0.0023608329938724637,
+  "run": "serial 231-decision easy+standard+hard-public run"
+ },
+ "cost": {
+  "kind": "estimate",
+  "usd_per_1000": 0.0026616338951310856,
+  "usd_per_1000_v11_tiers": 0.00043125000000000005,
+  "usd_per_1000_hard": 0.0058449999999999995,
+  "basis_v11": "ESTIMATE: encoder-class list price $0.005/M in, $0.0/M out (deepinfra base-size encoders; a static Model2Vec model is strictly cheaper) x ~86 input and 0 output tokens per easy/standard decision (chars/4 estimate)",
+  "basis_hard": "ESTIMATE: same encoder-class price x ~1169 input and 0 output tokens per hard decision (chars/4 estimate)",
+  "basis_final": "ESTIMATE: hosted-encoder list price $0.005/M in, $0.0/M out; conservative upper bound \u2014 potion-128M is a static (non-transformer) model, real cost is lower",
+  "self_host_sensitivity": null
+ }
+}

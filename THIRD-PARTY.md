@@ -20,6 +20,7 @@ provider's API key to anyone else's endpoint.
 | Gemini 3.1 Flash-Lite | Google | <https://ai.google.dev> |
 | DeepSeek V4.1 Flash | DeepSeek | <https://api-docs.deepseek.com> |
 | Qwen3.8 27B | Qwen, served by Chutes | <https://chutes.ai> |
+| metask-jev-4b | wayfind (Metask AI) | <https://huggingface.co/wayfind/metask-jev-4b-policy-mix>, <https://github.com/metask-ai/metask-jev> |
 
 Model weights, base models and each project's own code keep their own licences.
 A permissive licence on a repository is not a licence for the base model it

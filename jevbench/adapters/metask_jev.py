@@ -6,8 +6,8 @@ candidate cross-entropy objective on 44.8k view-augmented public decisions
 plus 390 policy-family decisions with teacher soft labels. Apache-2.0.
 
 Interface: the official Nimble prompt contract (prepare_prompts) and scoring
-protocol (CudaCandidateScorer), reused unmodified — the same code path as the
-Bespoke Nimble 9B entry, with two configuration differences:
+protocol, reused unmodified — the same code path as the Bespoke Nimble 9B
+entry, with two configuration differences:
 
   - max_input_tokens=4096 (the base model natively supports 262,144; the 9B
     pipeline's 2048 limit rejects 36 of the 111 public hard items)
@@ -15,9 +15,11 @@ Bespoke Nimble 9B entry, with two configuration differences:
     validation split (never on eval): choice 1.7875 / noul 2.25 / score 2.05.
     Raw ECE 0.100 -> 0.028.
 
-Requires the vendored `nimble` package (github.com/bespokelabsai/nimble) on
-PYTHONPATH and a CUDA GPU with BF16. Local weights have no provider tariff:
-price is null here and estimated later by size class, never 0.
+Runs on a CUDA GPU (BF16) or Apple Silicon (MPS). Needs the vendored `nimble`
+package (in jevbench/vendors/metask_jev/, no extra install); point
+METASK_JEV_NIMBLE_PACKAGE at a full nimble checkout to override. Local weights
+have no provider tariff: price is null here and estimated later by size class,
+never 0.
 
 Model: https://huggingface.co/wayfind/metask-jev-4b-policy-mix
 """
@@ -27,8 +29,9 @@ from __future__ import annotations
 import json
 import math
 import os
-from pathlib import Path
+import sys
 import time
+from pathlib import Path
 
 from .base import DecisionResult
 
@@ -58,8 +61,8 @@ class MetaskJevAdapter:
     def load(self):
         if self._scorer is None:
             import torch
-            if NIMBLE_PACKAGE_PATH not in __import__("sys").path:
-                __import__("sys").path.insert(0, NIMBLE_PACKAGE_PATH)
+            if NIMBLE_PACKAGE_PATH not in sys.path:
+                sys.path.insert(0, NIMBLE_PACKAGE_PATH)
             from nimble.scoring.cuda_scorer import CudaCandidateScorer
             t0 = time.perf_counter()
             self._scorer = CudaCandidateScorer(
@@ -69,6 +72,7 @@ class MetaskJevAdapter:
                 max_input_tokens=4096)
             self.load_s = time.perf_counter() - t0
             self.torch_version = torch.__version__
+            self.device = self._scorer.device
         return self._scorer
 
     def _labels_and_rubric(self, task):
@@ -150,7 +154,7 @@ class MetaskJevAdapter:
         res.probs = {k: res.probs[k] for k in labels}
         res.ok = True
         res.raw = {"probabilities": probs, "runtime": {
-            "device": "cuda", "probability_origin": "native-candidate-softmax",
+            "device": scorer.device, "probability_origin": "native-candidate-softmax",
             "temperature_by_kind": TEMPERATURE_BY_KIND, "temperature_applied": T,
             "torch": getattr(self, "torch_version", None), "revision": self.revision}}
         return res

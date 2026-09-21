@@ -66,7 +66,7 @@ def cmd_run(args) -> int:
              "verdict_local": VerdictLocalAdapter, "paw_local": PawLocalAdapter,
              "metask_jev": MetaskJevAdapter,
              "classifier_dev": ClassifierDevAdapter, "certo_local": CertoLocalAdapter}
-    if args.adapter not in ("typesafe", "djev", "needle_local", "semif_direct", "so1_decider", "sg_system_one", "classifier_dev") and not args.endpoint:
+    if args.adapter not in ("typesafe", "djev", "needle_local", "semif_direct", "so1_decider", "sg_system_one", "classifier_dev", "metask_jev") and not args.endpoint:
         print(f"--endpoint required for {args.adapter}", file=sys.stderr)
         return 2
     kwargs = dict(endpoint=args.endpoint, model=args.model,

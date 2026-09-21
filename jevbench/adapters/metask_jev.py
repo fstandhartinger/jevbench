@@ -32,9 +32,10 @@ import time
 
 from .base import DecisionResult
 
-DEFAULT_MODEL_PATH = os.environ.get(
-    "METASK_JEV_MODEL_PATH",
-    os.path.expanduser("~/nimble-lab-work/metask-jev-4b/merged"))
+# default: the HF repo id — huggingface_hub resolves and caches it on first load.
+# Set METASK_JEV_MODEL_PATH to a local merged-weights dir to skip the download.
+DEFAULT_MODEL_PATH = os.environ.get("METASK_JEV_MODEL_PATH",
+                                    "wayfind/metask-jev-4b-policy-mix")
 _VENDORED = str(Path(__file__).resolve().parent.parent / "vendors" / "metask_jev")
 NIMBLE_PACKAGE_PATH = os.environ.get("METASK_JEV_NIMBLE_PACKAGE", _VENDORED)
 

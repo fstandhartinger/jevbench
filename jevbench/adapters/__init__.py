@@ -39,3 +39,5 @@ from .smalljev_local import SmallJevLocalAdapter  # noqa: F401
 def NeedleLocalAdapter(**kw):  # lazy: only the Needle venv can import needle
     from .needle_local import NeedleLocalAdapter as A
     return A(**kw)
+
+from .qwen_flash_linear import QwenFlashLinearAdapter  # noqa: F401

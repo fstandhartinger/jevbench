@@ -260,6 +260,10 @@ anywhere, for anyone.
 
 ## Reproduce
 
+The optional [`qwen_flash_linear` adapter](docs/qwen-flash-linear.md) connects to the
+Qwen3.8 Flash Next compact BF16 linear runtime. Its pinned deployment instructions
+and repeatability limitations are documented separately; no scored row is added.
+
 Python 3.10+. The HTTP adapters need only the standard library.
 
 ```sh

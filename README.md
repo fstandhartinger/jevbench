@@ -53,6 +53,15 @@ interactive: [benchmarkheaven.com/jev-models](https://benchmarkheaven.com/jev-mo
   (`A. no, B. yes`) the same model scored 21 % instead of 72 % on answer-judging items — small models are very sensitive to
   option order. Both runs: [`results/v1.2/runs/open-alternative-jev/`](results/v1.2/runs/open-alternative-jev/).
 
+### Other mentions and diagnostics
+
+- [stuntdouble](https://github.com/ReallyArtificial/stuntdouble) is an independent shadow-proxy and replay companion
+  that can import JevBench's public hard items to compare local decision models. It is a tool, not a JevBench entrant;
+  its [example report](https://github.com/ReallyArtificial/stuntdouble/tree/main/reports/2026-09-22-m3pro-kev0.8b-vs-laya)
+  is not an official JevBench result.
+- The [option-order robustness analysis in issue #40](https://github.com/fstandhartinger/jevbench/issues/40) is a
+  separate diagnostic on public choice items. It does not change the canonical task order or official scores.
+
 ![JevBench v1.3.0 — JevBench Score](results/v1.2/charts/main-score.png)
 
 ### What changed in the score

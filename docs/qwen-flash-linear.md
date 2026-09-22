@@ -6,8 +6,8 @@ existing ranks are changed by this PR.
 
 ## Identity and reproducible deployment
 
-- Runtime: [WIlfLin/JEV-Qwen3.8-Flash-Next-Linear-Runtime](https://huggingface.co/WIlfLin/JEV-Qwen3.8-Flash-Next-Linear-Runtime/tree/4b43ad7d5e29a1c207e596941d09fcaeb4bd4549),
-  revision `4b43ad7d5e29a1c207e596941d09fcaeb4bd4549`.
+- Runtime: [WIlfLin/JEV-Qwen3.8-Flash-Next-Linear-Runtime](https://huggingface.co/WIlfLin/JEV-Qwen3.8-Flash-Next-Linear-Runtime/tree/690c62e07b984777ed054cdd9b3eb19437736669),
+  revision `690c62e07b984777ed054cdd9b3eb19437736669`.
 - Backbone: [primitive-ai/Qwen3.8-Flash-Next-mixed-NVFP4-FP8](https://huggingface.co/primitive-ai/Qwen3.8-Flash-Next-mixed-NVFP4-FP8/tree/07915ee79ec217c117e8a57bf2557a4a1418c10f),
   revision `07915ee79ec217c117e8a57bf2557a4a1418c10f` (about 184 GB on disk).
 - Output head: 86 original BF16 rows, shape `(86, 2560)`, SHA256
@@ -27,7 +27,7 @@ submitter cannot observe held-out inputs.
 
 ```sh
 hf download WIlfLin/JEV-Qwen3.8-Flash-Next-Linear-Runtime \
-  --revision 4b43ad7d5e29a1c207e596941d09fcaeb4bd4549 --local-dir flash-linear
+  --revision 690c62e07b984777ed054cdd9b3eb19437736669 --local-dir flash-linear
 cd flash-linear
 python download_weights.py
 bash serve_backend.sh
@@ -64,7 +64,7 @@ From the benchmark checkout, with the local runtime ready:
 ```sh
 python -m jevbench.cli run \
   --adapter qwen_flash_linear --endpoint http://127.0.0.1:8239 --key-env '' \
-  --model WIlfLin/JEV-Qwen3.8-Flash-Next-Linear-Runtime@4b43ad7 \
+  --model WIlfLin/JEV-Qwen3.8-Flash-Next-Linear-Runtime@690c62e \
   --tasks datasets/public/easy.jsonl,datasets/public/original.jsonl,datasets/public/hard.jsonl \
   --cost-basis local_existing_gpu_compute_unpriced --reserve-usd 0 --cap-usd 0 \
   --results ../private/flash-linear/results.jsonl \
@@ -87,7 +87,8 @@ retain repetitions/dispersion if evaluating this submission, rather than treatin
 one run as a definitive score. Public benchmark conclusions were withdrawn from
 the model card; this PR deliberately contains no accuracy or rank claim.
 
-The pinned runtime has completed local public requests. Adapter validation uses
-recorded native responses plus unit tests for task mapping, malformed responses,
-and error propagation. It does not constitute a maintainer-run full-suite result.
+The pinned runtime completed two full 231-item local public runs with the
+connection-reuse wrapper. The benchmark CLI also completed a live request through
+this adapter. Validation additionally replays recorded native responses and tests
+task mapping, malformed responses and error propagation. It does not constitute a maintainer-run full-suite result.
 No held-out data is requested or supplied in this PR.

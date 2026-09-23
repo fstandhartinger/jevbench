@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.1 — 2026-09-23
+
+- Added six systems omitted from the frozen v1.4.0 board, each with a completed 308-item sealed measurement.
+- Kept the v1.4 scoring formula and all 76 v1.4.0 scores unchanged; the approved top five remains unchanged.
+- Published aggregate accuracy and calibration data only. The six new rows have no API exposure flag because their sealed items were evaluated offline.
+
 ## v1.4.0 — 2026-09-23
 
 - Added 308 fresh sealed decisions. Only aggregate results are published; task text and answers remain sealed.

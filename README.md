@@ -11,10 +11,10 @@ JevBench is [Benchmark Heaven](https://benchmarkheaven.com)'s own benchmark. It 
 affiliated with or endorsed by TypeSafe AI, whose Jev model is one of the systems
 measured here.
 
-## v1.4.0: fresh sealed decisions and a Jev-class score (current)
+## v1.4.1: six completed additions to the v1.4 board (current)
 
-**[Live board](https://benchmarkheaven.com/jev-models)** · [v1.4 method](docs/METHOD-v1.4.md) ·
-[aggregate results](results/v1.4/jevbench-v1.4-results.json) · [changelog](CHANGELOG.md)
+**[Live board](https://benchmarkheaven.com/jev-models)** · [v1.4.1 release notes](docs/RELEASE-v1.4.1.md) ·
+[v1.4 method](docs/METHOD-v1.4.md) · [aggregate results](results/v1.4.1/jevbench-v1.4.1-results.json) · [changelog](CHANGELOG.md)
 
 The official score blends 20% chance-corrected Intelligence from 308 fresh sealed decisions with 80% of the v1.3.0 Intelligence axis. Calibration is blended toward the sealed-inclusive measurement. The four axes use an equal-weight harmonic mean. A public-to-sealed accuracy gap above 25 percentage points reduces Intelligence; the existing low-Intelligence penalty remains, and Speed and Cost each receive a quadratic gate below 50. Their underlying measurements are unchanged from v1.3.0.
 
@@ -26,7 +26,7 @@ The official score blends 20% chance-corrected Intelligence from 308 fresh seale
 | 4 | Winnow-12B Q8 | 55.58 |
 | 5 | reflex 4B (kshetrajna12) | 53.99 |
 
-Only aggregates are published for the sealed items. Rows with an **API** flag identify operator endpoints that received the item text without answer keys. swanOne remains visible without a v1.4 rank because its sealed run was not completed. The public half can be trained on or selected against, so the held-out private part will need to evolve as the field changes.
+v1.4.1 adds six systems to the 76 listed in v1.4.0. All six have completed sealed measurements; their rows are ranked below the existing top five. The scoring formula and every v1.4.0 score are unchanged. Only aggregates are published for the sealed items. Rows with an **API** flag identify operator endpoints that received the item text without answer keys. swanOne remains visible without a v1.4 rank because its sealed run was not completed. The public half can be trained on or selected against, so the held-out private part will need to evolve as the field changes.
 
 ## v1.3.0: previous scoring release
 

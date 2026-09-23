@@ -1,0 +1,5304 @@
+{
+  "meta": {
+    "source_generated": "2026-09-23T09:21:00Z",
+    "sealed_items": 308,
+    "sealed_chance_used": 0.293,
+    "source": "JevBench v1.4 aggregate comparison; no task text, answers, or per-item output"
+  },
+  "systems": [
+    {
+      "key": "gpt-6-luna",
+      "display": "GPT-6 Luna (default medium reasoning effort)",
+      "author": "OpenAI",
+      "repo": null,
+      "class": "llm-baseline",
+      "licence": "proprietary API",
+      "ranked": true,
+      "source": "GPT-6 API measurement 2026-09-23",
+      "v130": {
+        "score": 70.36922576521634,
+        "rank": 13,
+        "axes": {
+          "intelligence": 98.29962029838433,
+          "calibration": 95.33456312913633,
+          "speed": 72.58709736103097,
+          "cost": 36.04702601026741
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 1.0,
+          "judge": 0.9726027397260274,
+          "hard": 0.9863636363636363
+        }
+      },
+      "public_acc": 0.9956709956709957,
+      "sealed_acc": 0.9545454545454546,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.9459,
+          "judge_hard": 0.9024,
+          "long_policy": 0.95,
+          "multi_hop": 0.9737,
+          "paraphrase_robustness": 1.0,
+          "probability": 1.0,
+          "safety_judge": 0.9375,
+          "temporal_numeric": 0.9464,
+          "tradeoff": 0.9615,
+          "trap_adversarial": 1.0
+        },
+        "ece": 0.09774373485292245,
+        "mean_tvd_gold_probs": 0.010314550895454543,
+        "calibration": 89.70989896993504,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.9358,
+          "1/3": 0.9278,
+          "2/3": 1.0
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8961,
+            "accuracy": 0.9493
+          },
+          "conf>=0.9": {
+            "coverage": 0.8929,
+            "accuracy": 0.9491
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 92.0535090362689
+        }
+      },
+      "note": "OpenAI direct API baseline; reasoning effort default medium; strict JSON-schema probability response; temperature unset; max_completion_tokens=4096; price cost from returned usage at official standard list rates.",
+      "note_v14": "API measurement: sealed item text (no golds) was sent to OpenAI",
+      "api_usage": {
+        "n_with_usage": 534,
+        "n_missing_usage": 0,
+        "input_tokens": 396291,
+        "cached_input_tokens": 0,
+        "uncached_input_tokens": 396291,
+        "output_tokens": 65398,
+        "reasoning_output_tokens": 44692,
+        "total_tokens": 461689,
+        "cost_usd_at_list_price": 0.07232810000000002,
+        "input_price_per_million": 0.1,
+        "cached_input_price_per_million": 0.01,
+        "output_price_per_million": 0.5,
+        "v1_4": {
+          "n_with_usage": 308,
+          "n_missing_usage": 0,
+          "input_tokens": 278963,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 278963,
+          "output_tokens": 84873,
+          "reasoning_output_tokens": 71425,
+          "total_tokens": 363836,
+          "cost_usd_at_list_price": 0.07033279999999999,
+          "input_price_per_million": 0.1,
+          "cached_input_price_per_million": 0.01,
+          "output_price_per_million": 0.5
+        }
+      },
+      "api_price_per_million_tokens": {
+        "uncached_input_usd": 0.1,
+        "cached_input_usd": 0.01,
+        "output_usd": 0.5,
+        "basis": "OpenAI direct API standard, short-context list pricing; 2026-09-23"
+      },
+      "cost_per_1000_decisions_usd": 0.13544588014981276,
+      "api_latency": {
+        "n": 242,
+        "p50_s": 1.477266326546669,
+        "p95_s": 3.731053405255079,
+        "basis": "serial v1.2 standard+judge subset; used for Speed axis"
+      }
+    },
+    {
+      "key": "gpt-6-luna-low",
+      "display": "GPT-6 Luna (low reasoning effort)",
+      "author": "OpenAI",
+      "repo": null,
+      "class": "llm-baseline",
+      "licence": "proprietary API",
+      "ranked": true,
+      "source": "GPT-6 API measurement 2026-09-23",
+      "v130": {
+        "score": 70.70041643027498,
+        "rank": 11,
+        "axes": {
+          "intelligence": 97.25628229621793,
+          "calibration": 94.55667126765907,
+          "speed": 73.65729480447798,
+          "cost": 36.88606127569502
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9895833333333334,
+          "judge": 0.9726027397260274,
+          "hard": 0.9727272727272728
+        }
+      },
+      "public_acc": 0.9913419913419913,
+      "sealed_acc": 0.9285714285714286,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.973,
+          "judge_hard": 0.9268,
+          "long_policy": 0.875,
+          "multi_hop": 0.9474,
+          "paraphrase_robustness": 1.0,
+          "probability": 1.0,
+          "safety_judge": 0.9375,
+          "temporal_numeric": 0.8929,
+          "tradeoff": 0.9231,
+          "trap_adversarial": 0.8333
+        },
+        "ece": 0.11788425329158833,
+        "mean_tvd_gold_probs": 0.027823548852892555,
+        "calibration": 86.82039722819654,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.8899,
+          "1/3": 0.9278,
+          "2/3": 0.9706
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8961,
+            "accuracy": 0.9239
+          },
+          "conf>=0.9": {
+            "coverage": 0.8929,
+            "accuracy": 0.9236
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 90.04384474463927
+        }
+      },
+      "note": "OpenAI direct API baseline; reasoning effort low; strict JSON-schema probability response; temperature unset; max_completion_tokens=4096; price cost from returned usage at official standard list rates.",
+      "note_v14": "API measurement: sealed item text (no golds) was sent to OpenAI",
+      "api_usage": {
+        "n_with_usage": 534,
+        "n_missing_usage": 0,
+        "input_tokens": 396291,
+        "cached_input_tokens": 0,
+        "uncached_input_tokens": 396291,
+        "output_tokens": 56376,
+        "reasoning_output_tokens": 36073,
+        "total_tokens": 452667,
+        "cost_usd_at_list_price": 0.06781710000000006,
+        "input_price_per_million": 0.1,
+        "cached_input_price_per_million": 0.01,
+        "output_price_per_million": 0.5,
+        "v1_4": {
+          "n_with_usage": 308,
+          "n_missing_usage": 0,
+          "input_tokens": 278963,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 278963,
+          "output_tokens": 69557,
+          "reasoning_output_tokens": 56302,
+          "total_tokens": 348520,
+          "cost_usd_at_list_price": 0.06267480000000003,
+          "input_price_per_million": 0.1,
+          "cached_input_price_per_million": 0.01,
+          "output_price_per_million": 0.5
+        }
+      },
+      "api_price_per_million_tokens": {
+        "uncached_input_usd": 0.1,
+        "cached_input_usd": 0.01,
+        "output_usd": 0.5,
+        "basis": "OpenAI direct API standard, short-context list pricing; 2026-09-23"
+      },
+      "cost_per_1000_decisions_usd": 0.12699831460674169,
+      "api_latency": {
+        "n": 242,
+        "p50_s": 1.4418320655822754,
+        "p95_s": 2.9878296986222264,
+        "basis": "serial v1.2 standard+judge subset; used for Speed axis"
+      }
+    },
+    {
+      "key": "jevk5-v02",
+      "display": "JevK5 v0.2.0",
+      "author": "allebee",
+      "repo": "https://github.com/allebee/jevk5",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (code/adapter); Apache-2.0 (Qwen3.5-4B base)",
+      "ranked": true,
+      "source": "round 5 new",
+      "v130": {
+        "score": 77.29659511062113,
+        "rank": 1,
+        "axes": {
+          "intelligence": 82.56174884612334,
+          "calibration": 79.75218623814123,
+          "speed": 91.09028776527087,
+          "cost": 59.517941238875515
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9583333333333334,
+          "judge": 0.9452054794520548,
+          "hard": 0.7
+        }
+      },
+      "public_acc": 0.8528138528138528,
+      "sealed_acc": 0.33116883116883117,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4324,
+          "judge_hard": 0.3659,
+          "long_policy": 0.225,
+          "multi_hop": 0.3947,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.3929,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2679,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.22177826419666213,
+        "mean_tvd_gold_probs": 0.2744738869604739,
+        "calibration": 64.09847923231008,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1376,
+          "1/3": 0.268,
+          "2/3": 0.598
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2695,
+            "accuracy": 0.4096
+          },
+          "conf>=0.9": {
+            "coverage": 0.0682,
+            "accuracy": 0.381
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 70.6208571514064
+        }
+      },
+      "note": "Author says no JevBench items or outputs were used for training, tuning, or selection; public results are reported. Scan found only one generic instruction shared by 8 public hard items; unreleased teacher/replay corpora were unavailable.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "jev-1.13.0",
+      "display": "Jev 1.13.0 (TypeSafe AI)",
+      "author": "TypeSafe AI",
+      "repo": "https://docs.typesafe.ai",
+      "class": "jev",
+      "licence": "proprietary API",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 74.40448849535433,
+        "rank": 3,
+        "axes": {
+          "intelligence": 85.69176285262259,
+          "calibration": 82.6528888888889,
+          "speed": 83.26811926100174,
+          "cost": 51.96616538951724
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9895833333333334,
+          "judge": 0.9452054794520548,
+          "hard": 0.740909090909091
+        }
+      },
+      "public_acc": 0.8658008658008658,
+      "sealed_acc": 0.36688311688311687,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2973,
+          "judge_hard": 0.3415,
+          "long_policy": 0.275,
+          "multi_hop": 0.4474,
+          "paraphrase_robustness": 0.6429,
+          "probability": 0.5,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2857,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.2203584546766365,
+        "mean_tvd_gold_probs": 0.285059657177839,
+        "calibration": 63.7111716734444,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1009,
+          "1/3": 0.3402,
+          "2/3": 0.6765
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2922,
+            "accuracy": 0.4
+          },
+          "conf>=0.9": {
+            "coverage": 0.0844,
+            "accuracy": 0.4231
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 71.60355384654628
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (TypeSafe API), as for every API measurement"
+    },
+    {
+      "key": "hopper",
+      "display": "Hopper",
+      "author": "HopitAI",
+      "repo": "https://huggingface.co/HopitAI/hopper",
+      "class": "jev-rebuild",
+      "licence": "Component-specific terms recorded in RESULT.md; submitted adapter release and Qwen base retain their respective terms",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 75.40886356781982,
+        "rank": 2,
+        "axes": {
+          "intelligence": 76.39256221924461,
+          "calibration": 83.02985315441592,
+          "speed": 86.80781551893452,
+          "cost": 58.728026855585874
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.96875,
+          "judge": 0.8356164383561644,
+          "hard": 0.65
+        }
+      },
+      "public_acc": 0.8225108225108225,
+      "sealed_acc": 0.3409090909090909,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3243,
+          "judge_hard": 0.3902,
+          "long_policy": 0.275,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.3571,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.15951254697758535,
+        "mean_tvd_gold_probs": 0.2587116285456973,
+        "calibration": 71.1131638749566,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2018,
+          "1/3": 0.3814,
+          "2/3": 0.451
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1786,
+            "accuracy": 0.2727
+          },
+          "conf>=0.9": {
+            "coverage": 0.0325,
+            "accuracy": 0.2
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 76.0784510747313
+        }
+      },
+      "note": "Round 4 unpublished. Author discloses heavy public-benchmark-directed development (26 model/prompt configs, 20+ calibration-map variants observed against the public half); scan of 17 released files vs 231 public tasks found 0 state/instruction matches; training corpus not released so overlap not independently verifiable.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "gpt-5.6-luna",
+      "display": "GPT-5.6 Luna (low reasoning effort)",
+      "author": "OpenAI",
+      "repo": null,
+      "class": "llm-baseline",
+      "licence": "proprietary API",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 65.94418818052425,
+        "rank": 27,
+        "axes": {
+          "intelligence": 95.3254678182423,
+          "calibration": 89.79207658196586,
+          "speed": 77.5464346646158,
+          "cost": 28.490318789992514
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.9657534246575342,
+          "hard": 0.9454545454545454
+        }
+      },
+      "public_acc": 0.974025974025974,
+      "sealed_acc": 0.8896103896103896,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.8649,
+          "judge_hard": 0.878,
+          "long_policy": 0.85,
+          "multi_hop": 0.8947,
+          "paraphrase_robustness": 0.9286,
+          "probability": 1.0,
+          "safety_judge": 0.9375,
+          "temporal_numeric": 0.8393,
+          "tradeoff": 0.9231,
+          "trap_adversarial": 0.9167
+        },
+        "ece": 0.1549736113861939,
+        "mean_tvd_gold_probs": 0.03925552223751804,
+        "calibration": 82.5398627495047,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.8991,
+          "1/3": 0.866,
+          "2/3": 0.902
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8864,
+            "accuracy": 0.8828
+          },
+          "conf>=0.9": {
+            "coverage": 0.8669,
+            "accuracy": 0.8839
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 85.5616185130302
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (OpenAI API), as for every API measurement"
+    },
+    {
+      "key": "ninfer-qwen3.8-flash-next",
+      "display": "NInfer Qwen3.8-Flash-Next mixed",
+      "author": "Igor L. / NInfer contributors",
+      "repo": "https://github.com/igorls/ninfer",
+      "class": "native-logit",
+      "licence": "Qwen Community License 1.0 (model); Apache-2.0 (engine)",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 70.94796786702575,
+        "rank": 9,
+        "axes": {
+          "intelligence": 87.40125097359677,
+          "calibration": 84.45937435398001,
+          "speed": 88.20497686265139,
+          "cost": 38.91358504738628
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9895833333333334,
+          "judge": 0.952054794520548,
+          "hard": 0.7727272727272727
+        }
+      },
+      "public_acc": 0.8961038961038961,
+      "sealed_acc": 0.3409090909090909,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.5122,
+          "long_policy": 0.275,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.3214,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.1923,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.19232581023201106,
+        "mean_tvd_gold_probs": 0.2787020005170424,
+        "calibration": 66.83231895094677,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1835,
+          "1/3": 0.268,
+          "2/3": 0.5784
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2338,
+            "accuracy": 0.4722
+          },
+          "conf>=0.9": {
+            "coverage": 0.0422,
+            "accuracy": 0.3846
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 74.17692536887729
+        }
+      },
+      "note": "Round 4 unpublished. Engine scan (1,758 files) vs 231 public tasks: 0 exact matches. Submitter discloses no training for Flash-Next but repeated consultation of public items and a public-hard temperature sweep.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "winnow-12b",
+      "display": "Winnow-12B Q8",
+      "author": "Eldan Ring",
+      "repo": "https://huggingface.co/EldanRing/Winnow-12B",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0, including the applicable Gemma 4 base/derivative licence terms",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 71.21883011371422,
+        "rank": 8,
+        "axes": {
+          "intelligence": 82.0447452273211,
+          "calibration": 71.96875781135537,
+          "speed": 82.32624042236164,
+          "cost": 52.92322256021786
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.96875,
+          "judge": 0.910958904109589,
+          "hard": 0.7090909090909091
+        }
+      },
+      "public_acc": 0.8571428571428571,
+      "sealed_acc": 0.33116883116883117,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3514,
+          "judge_hard": 0.4634,
+          "long_policy": 0.225,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.6429,
+          "probability": 0.3214,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.1607,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.30773902331043035,
+        "mean_tvd_gold_probs": 0.37456505751162006,
+        "calibration": 50.49784479337596,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1376,
+          "1/3": 0.268,
+          "2/3": 0.598
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.4838,
+            "accuracy": 0.4094
+          },
+          "conf>=0.9": {
+            "coverage": 0.2597,
+            "accuracy": 0.4625
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 59.44405855086738
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "djev",
+      "display": "djev (Maisa, diffusion-gemma)",
+      "author": "Maisa (David Villalón)",
+      "repo": "https://github.com/Davipar/djev-dev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 code; Google DiffusionGemma Apache-2.0 weights; no djev-specific weights",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 73.02927314568292,
+        "rank": 6,
+        "axes": {
+          "intelligence": 82.66796898754649,
+          "calibration": 65.41450619010376,
+          "speed": 91.35677310946093,
+          "cost": 57.57524920597589
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.9315068493150684,
+          "hard": 0.6954545454545454
+        }
+      },
+      "public_acc": 0.8398268398268398,
+      "sealed_acc": 0.2987012987012987,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1892,
+          "judge_hard": 0.4878,
+          "long_policy": 0.225,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.4286,
+          "probability": 0.25,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.41862236643597567,
+        "mean_tvd_gold_probs": 0.45798486852351306,
+        "calibration": 35.23851993022678,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1651,
+          "1/3": 0.2577,
+          "2/3": 0.4804
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.5162,
+            "accuracy": 0.3459
+          },
+          "conf>=0.9": {
+            "coverage": 0.3247,
+            "accuracy": 0.32
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 47.81184753850886
+        }
+      },
+      "note": "already on the live v1.3.0 board | v1.4: hosted api.djev.dev was paused by its operator (\"Serving is paused by the administrator\"); sealed tier measured on the public djev runtime (Davipar/djev-dev 3ce907e, same weights, default mode) self-hosted on an H100; Speed/Cost kept from v1.3.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "reflex-4b",
+      "display": "reflex 4B (kshetrajna12)",
+      "author": "kshetrajna12",
+      "repo": "https://github.com/kshetrajna12/reflex",
+      "class": "jev-rebuild",
+      "licence": "MIT (code, adapter); Apache-2.0 (base)",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 70.31658532999862,
+        "rank": 14,
+        "axes": {
+          "intelligence": 80.13624687620394,
+          "calibration": 75.21406363636362,
+          "speed": 67.96813879081057,
+          "cost": 59.675719111465405
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9479166666666666,
+          "judge": 0.9726027397260274,
+          "hard": 0.6318181818181818
+        }
+      },
+      "public_acc": 0.7922077922077922,
+      "sealed_acc": 0.2824675324675325,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.3415,
+          "long_policy": 0.2,
+          "multi_hop": 0.3421,
+          "paraphrase_robustness": 0.2143,
+          "probability": 0.2857,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.25715864935064936,
+        "mean_tvd_gold_probs": 0.2694915151515152,
+        "calibration": 60.80955930735931,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.0826,
+          "1/3": 0.299,
+          "2/3": 0.4804
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2662,
+            "accuracy": 0.2683
+          },
+          "conf>=0.9": {
+            "coverage": 0.1104,
+            "accuracy": 0.2647
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 66.8114361111111
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "jevone",
+      "display": "JevOne",
+      "author": "Juspay",
+      "repo": "https://huggingface.co/juspay/jev-one",
+      "class": "jev-rebuild",
+      "licence": "Component-specific JevOne/Qwen/SGLang terms recorded in RESULT.md",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 69.25524530948347,
+        "rank": 15,
+        "axes": {
+          "intelligence": 84.43620691281326,
+          "calibration": 85.86039772727274,
+          "speed": 88.46835142022954,
+          "cost": 35.86750288568889
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.96875,
+          "judge": 0.9246575342465754,
+          "hard": 0.75
+        }
+      },
+      "public_acc": 0.8961038961038961,
+      "sealed_acc": 0.33766233766233766,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3243,
+          "judge_hard": 0.3659,
+          "long_policy": 0.175,
+          "multi_hop": 0.2895,
+          "paraphrase_robustness": 0.2857,
+          "probability": 0.3214,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.3929,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.6667
+        },
+        "ece": 0.22276396103896104,
+        "mean_tvd_gold_probs": 0.33297878787878793,
+        "calibration": 61.074664502164495,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.156,
+          "1/3": 0.3196,
+          "2/3": 0.549
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2403,
+            "accuracy": 0.3649
+          },
+          "conf>=0.9": {
+            "coverage": 0.0195,
+            "accuracy": 0.1667
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 71.40205334595959
+        }
+      },
+      "note": "Round 4 unpublished. Scan vs 231 public tasks: 0 matches. Training corpus/provenance not disclosed — overlap unknown.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "djev-thinking",
+      "display": "djev (thinking)",
+      "author": "David Villalon / Maisa",
+      "repo": "https://github.com/Davipar/djev-dev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 62.35960888483864,
+        "rank": 37,
+        "axes": {
+          "intelligence": 80.83072059431514,
+          "calibration": 92.70437317469347,
+          "speed": 75.15117536916611,
+          "cost": 26.85351129959409
+        },
+        "tiers": {
+          "easy": 0.9583333333333334,
+          "standard": 0.9895833333333334,
+          "judge": 0.8013698630136986,
+          "hard": 0.7772727272727272
+        }
+      },
+      "public_acc": 0.8744588744588745,
+      "sealed_acc": 0.6006493506493507,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 220,
+        "by_family": {
+          "ambiguous_abstain": 0.5135,
+          "judge_hard": 0.6585,
+          "long_policy": 0.525,
+          "multi_hop": 0.5789,
+          "paraphrase_robustness": 0.7857,
+          "probability": 0.7857,
+          "safety_judge": 0.5625,
+          "temporal_numeric": 0.6071,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.8333
+        },
+        "ece": 0.20398190438407426,
+        "mean_tvd_gold_probs": 0.03354633673501975,
+        "calibration": 77.92449272484158,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.5229,
+          "1/3": 0.6598,
+          "2/3": 0.6275
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.6331,
+            "accuracy": 0.8205
+          },
+          "conf>=0.9": {
+            "coverage": 0.6071,
+            "accuracy": 0.8289
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 84.08277624561322
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest; 220/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "ninfer-qwen3.8-27b-t1.5",
+      "display": "NInfer Qwen3.8-27B NVFP4 (T=1.5)",
+      "author": "Igor L. / NInfer contributors",
+      "repo": "https://github.com/igorls/ninfer",
+      "class": "native-logit",
+      "licence": "Apache-2.0 (engine and submitted 27B artifact/base)",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 66.18806782927027,
+        "rank": 25,
+        "axes": {
+          "intelligence": 84.4338135198064,
+          "calibration": 80.65487973275552,
+          "speed": 80.14121364631829,
+          "cost": 35.16542294913728
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.9657534246575342,
+          "hard": 0.7045454545454546
+        }
+      },
+      "public_acc": 0.8311688311688312,
+      "sealed_acc": 0.33116883116883117,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.439,
+          "long_policy": 0.2,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.2857,
+          "safety_judge": 0.625,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.20248643451982903,
+        "mean_tvd_gold_probs": 0.26364491184533145,
+        "calibration": 66.56911095575052,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1468,
+          "1/3": 0.3196,
+          "2/3": 0.5392
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1916,
+            "accuracy": 0.3729
+          },
+          "conf>=0.9": {
+            "coverage": 0.026,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 72.4381812795026
+        }
+      },
+      "note": "Round 4 unpublished. T=1.5 is an offline recomputation from raw logits of the same run, not a second execution. T=1.5 was chosen by sweeping public hard items (development-set calibrated, disclosed).",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "decider-35b-a3b",
+      "display": "decider-35b-a3b (Mapika)",
+      "author": "Mapika",
+      "repo": "https://huggingface.co/Mapika/decider-35b-a3b",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 67.55405352545425,
+        "rank": 20,
+        "axes": {
+          "intelligence": 79.57871029182618,
+          "calibration": 71.50368181818185,
+          "speed": 80.78478445085703,
+          "cost": 45.30548488186928
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.96875,
+          "judge": 0.910958904109589,
+          "hard": 0.6545454545454545
+        }
+      },
+      "public_acc": 0.8311688311688312,
+      "sealed_acc": 0.31493506493506496,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3243,
+          "judge_hard": 0.2927,
+          "long_policy": 0.25,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.4286,
+          "probability": 0.2143,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.6667
+        },
+        "ece": 0.3186694805194805,
+        "mean_tvd_gold_probs": 0.3060333333333333,
+        "calibration": 52.83138528138528,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2202,
+          "1/3": 0.2165,
+          "2/3": 0.5098
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.4058,
+            "accuracy": 0.36
+          },
+          "conf>=0.9": {
+            "coverage": 0.2305,
+            "accuracy": 0.3239
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 60.611508838383855
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "simplejev-qwen3.8-27b",
+      "display": "SimpleJev Qwen3.8-27B",
+      "author": "Featherless AI",
+      "repo": "https://github.com/featherless-ai/simple-jev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (Qwen weights); repository licence not stated",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 66.29860868418298,
+        "rank": 24,
+        "axes": {
+          "intelligence": 84.70717465474874,
+          "calibration": 81.14491951146204,
+          "speed": 71.17954293639775,
+          "cost": 39.48943618731995
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.96875,
+          "judge": 0.9315068493150684,
+          "hard": 0.75
+        }
+      },
+      "public_acc": 0.8658008658008658,
+      "sealed_acc": 0.35714285714285715,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4595,
+          "judge_hard": 0.5122,
+          "long_policy": 0.25,
+          "multi_hop": 0.2368,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.3929,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.2217556156276108,
+        "mean_tvd_gold_probs": 0.3325765961888979,
+        "calibration": 61.19560862779402,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.211,
+          "1/3": 0.3918,
+          "2/3": 0.4804
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.263,
+            "accuracy": 0.4691
+          },
+          "conf>=0.9": {
+            "coverage": 0.0422,
+            "accuracy": 0.4615
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 69.50782149598902
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (Featherless demo), as for every API measurement"
+    },
+    {
+      "key": "deepseek-flash",
+      "display": "DeepSeek V4.1 Flash (thinking default)",
+      "author": "DeepSeek",
+      "repo": null,
+      "class": "llm-baseline",
+      "licence": "open weights, proprietary API route",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 57.54288064128547,
+        "rank": 45,
+        "axes": {
+          "intelligence": 94.33138029881806,
+          "calibration": 96.66517503108454,
+          "speed": 71.59823070734842,
+          "cost": 16.793370728606376
+        },
+        "tiers": {
+          "easy": 0.9861111111111112,
+          "standard": 0.9895833333333334,
+          "judge": 0.9315068493150684,
+          "hard": 0.95
+        }
+      },
+      "public_acc": 0.9783549783549783,
+      "sealed_acc": 0.948051948051948,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 298,
+        "by_family": {
+          "ambiguous_abstain": 0.8919,
+          "judge_hard": 0.9512,
+          "long_policy": 0.95,
+          "multi_hop": 0.9737,
+          "paraphrase_robustness": 0.8571,
+          "probability": 0.8929,
+          "safety_judge": 1.0,
+          "temporal_numeric": 1.0,
+          "tradeoff": 0.9615,
+          "trap_adversarial": 0.9167
+        },
+        "ece": 0.053169160248450045,
+        "mean_tvd_gold_probs": 0.030092295759979366,
+        "calibration": 93.17846918715603,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.9358,
+          "1/3": 0.9485,
+          "2/3": 0.9608
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8766,
+            "accuracy": 0.9815
+          },
+          "conf>=0.9": {
+            "coverage": 0.8377,
+            "accuracy": 0.9845
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 94.63126328879291
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (DeepSeek API), as for every API measurement; 298/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "semif-qwen3.5-4b",
+      "display": "SemIf, formerly OpenJev (Qwen3.5-4B, TheoLeeCJ)",
+      "author": "Theodore Lee (TheoLeeCJ)",
+      "repo": "https://github.com/TheoLeeCJ/openjev",
+      "class": "jev-rebuild",
+      "licence": "MIT (code); Qwen3.5 weights Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 73.08747495585776,
+        "rank": 5,
+        "axes": {
+          "intelligence": 78.9598081649456,
+          "calibration": 72.60139737235289,
+          "speed": 83.70422262345133,
+          "cost": 59.46663998783557
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.952054794520548,
+          "hard": 0.5954545454545455
+        }
+      },
+      "public_acc": 0.8095238095238095,
+      "sealed_acc": 0.262987012987013,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1351,
+          "judge_hard": 0.4146,
+          "long_policy": 0.15,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.2143,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.25,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.2930190833249826,
+        "mean_tvd_gold_probs": 0.31235785856297704,
+        "calibration": 55.08019873935288,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1101,
+          "1/3": 0.3299,
+          "2/3": 0.3627
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2727,
+            "accuracy": 0.2857
+          },
+          "conf>=0.9": {
+            "coverage": 0.1071,
+            "accuracy": 0.1515
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 62.38069816976955
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "jqv",
+      "display": "jqv (Qwen3-32B zero-shot)",
+      "author": "hjmurmur (Octalab)",
+      "repo": "https://github.com/Octalab-Inc/jqv",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (Qwen3-32B weights); serving code public",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 68.62862396499413,
+        "rank": 17,
+        "axes": {
+          "intelligence": 79.28281068482198,
+          "calibration": 79.0059752597162,
+          "speed": 74.62291018872223,
+          "cost": 47.458062754792564
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9583333333333334,
+          "judge": 0.9246575342465754,
+          "hard": 0.6454545454545455
+        }
+      },
+      "public_acc": 0.8008658008658008,
+      "sealed_acc": 0.2824675324675325,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2973,
+          "judge_hard": 0.3415,
+          "long_policy": 0.125,
+          "multi_hop": 0.2368,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.1786,
+          "safety_judge": 0.5625,
+          "temporal_numeric": 0.2679,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.2640164549910016,
+        "mean_tvd_gold_probs": 0.33344587609298304,
+        "calibration": 56.92606069625069,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1927,
+          "1/3": 0.2784,
+          "2/3": 0.3824
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2597,
+            "accuracy": 0.2625
+          },
+          "conf>=0.9": {
+            "coverage": 0.0325,
+            "accuracy": 0.4
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 66.12602509769465
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "jobe-qwen3.5-4b",
+      "display": "Jobe Qwen3.5-4B (frozen)",
+      "author": "MantisShrimpdev",
+      "repo": "https://github.com/MantisShrimpdev/jobe",
+      "class": "native-logit",
+      "licence": "MIT code; Apache-2.0 weights",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 73.37135548467025,
+        "rank": 4,
+        "axes": {
+          "intelligence": 79.09073782623408,
+          "calibration": 71.93099687161168,
+          "speed": 85.5887262805767,
+          "cost": 59.517941238875515
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.9657534246575342,
+          "hard": 0.5863636363636363
+        }
+      },
+      "public_acc": 0.8095238095238095,
+      "sealed_acc": 0.2564935064935065,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1351,
+          "judge_hard": 0.3659,
+          "long_policy": 0.175,
+          "multi_hop": 0.1842,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.2143,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.25,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.2992288903669122,
+        "mean_tvd_gold_probs": 0.312865715912751,
+        "calibration": 54.43382516767123,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1101,
+          "1/3": 0.3196,
+          "2/3": 0.3529
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.276,
+            "accuracy": 0.2824
+          },
+          "conf>=0.9": {
+            "coverage": 0.1104,
+            "accuracy": 0.1471
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 61.72431337764642
+        }
+      },
+      "note": "Round 4 unpublished. No trained weights/LoRA/calibration fit; release explicitly rejects fitted temperature/order averaging. Scan of 37 files vs 231 public tasks: 0 matches.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "localjev-qwen3.5-4b",
+      "display": "local-jev Qwen3.5-4B",
+      "author": "Amith Chandrappa (amithgc)",
+      "repo": "https://github.com/amithgc/local-jev",
+      "class": "jev-rebuild",
+      "licence": "MIT code; Apache-2.0 Qwen weights",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 70.92991890404122,
+        "rank": 10,
+        "axes": {
+          "intelligence": 78.7881231928782,
+          "calibration": 76.80427272727272,
+          "speed": 74.96494013517304,
+          "cost": 55.797342929598116
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9583333333333334,
+          "judge": 0.958904109589041,
+          "hard": 0.6045454545454545
+        }
+      },
+      "public_acc": 0.8051948051948052,
+      "sealed_acc": 0.2597402597402597,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1622,
+          "judge_hard": 0.4146,
+          "long_policy": 0.1,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.2857,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.21122499999999994,
+        "mean_tvd_gold_probs": 0.2517318181818182,
+        "calibration": 66.2909090909091,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1284,
+          "1/3": 0.2887,
+          "2/3": 0.3725
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1396,
+            "accuracy": 0.186
+          },
+          "conf>=0.9": {
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 70.67147727272727
+        }
+      },
+      "note": "Round 4 unpublished. Scan of 72 files: 0 matches. Author discloses choosing JSON layout after observing results on the 231 public items (benchmark-directed choice, disclosed).",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "ninfer-qwen3.8-27b",
+      "display": "NInfer Qwen3.8-27B NVFP4",
+      "author": "Igor L. / NInfer contributors",
+      "repo": "https://github.com/igorls/ninfer",
+      "class": "native-logit",
+      "licence": "Apache-2.0 (engine and submitted 27B artifact/base)",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 64.69414495970757,
+        "rank": 30,
+        "axes": {
+          "intelligence": 84.4338135198064,
+          "calibration": 73.61592001433777,
+          "speed": 80.14121364631829,
+          "cost": 35.16542294913728
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.9657534246575342,
+          "hard": 0.7045454545454546
+        }
+      },
+      "public_acc": 0.8311688311688312,
+      "sealed_acc": 0.33116883116883117,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.439,
+          "long_policy": 0.2,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.2857,
+          "safety_judge": 0.625,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.29928035033403366,
+        "mean_tvd_gold_probs": 0.31639450600815167,
+        "calibration": 54.252239666189055,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1468,
+          "1/3": 0.3196,
+          "2/3": 0.5392
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3604,
+            "accuracy": 0.3514
+          },
+          "conf>=0.9": {
+            "coverage": 0.1299,
+            "accuracy": 0.375
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 62.32043981125102
+        }
+      },
+      "note": "Round 4 unpublished. Raw T=1.0 row. Author discloses repeated public-item consultation and public-hard tuning (applies to both NInfer 27B rows).",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "openjev-sglang",
+      "display": "openjev-sglang (Qwen3.6-35B-A3B on SGLang)",
+      "author": "ekzhang",
+      "repo": "https://github.com/ekzhang/openjev-sglang",
+      "class": "jev-rebuild",
+      "licence": "no licence file in the repository as of 2026-09-19; Qwen3.6 weights keep their own terms",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 65.26826354532687,
+        "rank": 29,
+        "axes": {
+          "intelligence": 83.44922532193256,
+          "calibration": 77.41176873901938,
+          "speed": 77.059799513554,
+          "cost": 36.45449272670061
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9583333333333334,
+          "judge": 0.952054794520548,
+          "hard": 0.7136363636363636
+        }
+      },
+      "public_acc": 0.8528138528138528,
+      "sealed_acc": 0.33116883116883117,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.3902,
+          "long_policy": 0.35,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.2857,
+          "probability": 0.3214,
+          "safety_judge": 0.5625,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.2807123157213715,
+        "mean_tvd_gold_probs": 0.3805310400704129,
+        "calibration": 52.9022164243422,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1835,
+          "1/3": 0.2784,
+          "2/3": 0.5392
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3312,
+            "accuracy": 0.3039
+          },
+          "conf>=0.9": {
+            "coverage": 0.1201,
+            "accuracy": 0.2162
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 63.114529888791026
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (author's Modal demo), as for every API measurement"
+    },
+    {
+      "key": "litjev",
+      "display": "LitJev (Qwen3.8-27B)",
+      "author": "Zhengxu Yu",
+      "repo": "https://github.com/zhengxuyu/litjev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (code); Apache-2.0 base weights",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 62.69075853252832,
+        "rank": 34,
+        "axes": {
+          "intelligence": 82.41521808432806,
+          "calibration": 83.51703479356011,
+          "speed": 66.72450940291681,
+          "cost": 33.63149944045428
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.8835616438356164,
+          "hard": 0.7318181818181818
+        }
+      },
+      "public_acc": 0.8614718614718615,
+      "sealed_acc": 0.30844155844155846,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.3171,
+          "long_policy": 0.25,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.2857,
+          "probability": 0.2143,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.22889566781015255,
+        "mean_tvd_gold_probs": 0.2854794651142363,
+        "calibration": 62.83645996327293,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1376,
+          "1/3": 0.2371,
+          "2/3": 0.5588
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1851,
+            "accuracy": 0.3509
+          },
+          "conf>=0.9": {
+            "coverage": 0.0195,
+            "accuracy": 0.1667
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 71.45336614255925
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "reflex-27b",
+      "display": "reflex-27b (Qwen3.8-27B)",
+      "author": "kshetrajna12",
+      "repo": "https://github.com/kshetrajna12/reflex",
+      "class": "jev-rebuild",
+      "licence": "MIT code; Apache-2.0 Qwen weights",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 63.33315017675085,
+        "rank": 33,
+        "axes": {
+          "intelligence": 85.77522217678047,
+          "calibration": 86.17813284090909,
+          "speed": 67.46599369477367,
+          "cost": 32.26119927292868
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9583333333333334,
+          "judge": 0.958904109589041,
+          "hard": 0.759090909090909
+        }
+      },
+      "public_acc": 0.8701298701298701,
+      "sealed_acc": 0.29545454545454547,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3514,
+          "judge_hard": 0.3659,
+          "long_policy": 0.15,
+          "multi_hop": 0.3947,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.1429,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.27544625324675326,
+        "mean_tvd_gold_probs": 0.2619540757575758,
+        "calibration": 59.35767088744588,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1101,
+          "1/3": 0.2887,
+          "2/3": 0.5
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2662,
+            "accuracy": 0.3415
+          },
+          "conf>=0.9": {
+            "coverage": 0.0455,
+            "accuracy": 0.2857
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 70.53286336805556
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "metask-jev-4b",
+      "display": "metask-jev-4b",
+      "author": "Wayfind (metask-ai)",
+      "repo": "https://github.com/metask-ai/metask-jev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 72.36190467891471,
+        "rank": 7,
+        "axes": {
+          "intelligence": 76.58656331817049,
+          "calibration": 73.66990323719499,
+          "speed": 89.10064969336227,
+          "cost": 54.54015986693759
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9791666666666666,
+          "judge": 0.8972602739726028,
+          "hard": 0.5909090909090909
+        }
+      },
+      "public_acc": 0.7965367965367965,
+      "sealed_acc": 0.275974025974026,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1351,
+          "judge_hard": 0.3902,
+          "long_policy": 0.275,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.2857,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.2983131309817638,
+        "mean_tvd_gold_probs": 0.33633566873871057,
+        "calibration": 53.35190346488809,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1193,
+          "1/3": 0.299,
+          "2/3": 0.4216
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3604,
+            "accuracy": 0.2703
+          },
+          "conf>=0.9": {
+            "coverage": 0.0487,
+            "accuracy": 0.2667
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 61.8177367033493
+        }
+      },
+      "note": "Round 4 unpublished. Model card discloses 44.8k+16.1k+390 training rows incl. synthetic families intentionally mirroring JevBench hard families, plus repeated evaluation on all 231 public items (benchmark-directed development disclosed). Scan of 61 files: 0 exact matches.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "openjev-razorback16",
+      "display": "OpenJev (DiffusionGemma 26B-A4B NVFP4, razorback16)",
+      "author": "razorback16 / Codiv",
+      "repo": "https://github.com/razorback16/openjev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (repo and weights)",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 66.36329072785742,
+        "rank": 23,
+        "axes": {
+          "intelligence": 79.1518810235335,
+          "calibration": 64.76011611808524,
+          "speed": 83.1778984786352,
+          "cost": 45.49198106171689
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9583333333333334,
+          "judge": 0.910958904109589,
+          "hard": 0.6545454545454545
+        }
+      },
+      "public_acc": 0.8181818181818182,
+      "sealed_acc": 0.2857142857142857,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1351,
+          "judge_hard": 0.4878,
+          "long_policy": 0.225,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.4286,
+          "probability": 0.2143,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.25
+        },
+        "ece": 0.43439819122402074,
+        "mean_tvd_gold_probs": 0.42197705050525675,
+        "calibration": 35.461328352335094,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1835,
+          "1/3": 0.2165,
+          "2/3": 0.4608
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.5292,
+            "accuracy": 0.319
+          },
+          "conf>=0.9": {
+            "coverage": 0.3052,
+            "accuracy": 0.266
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 47.66915658806432
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "simplejev-qwen3.6-35b-a3b",
+      "display": "SimpleJev Qwen3.6-35B-A3B",
+      "author": "Featherless AI",
+      "repo": "https://github.com/featherless-ai/simple-jev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (Qwen weights); repository licence not stated",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 62.48305419264297,
+        "rank": 36,
+        "axes": {
+          "intelligence": 79.52213153533707,
+          "calibration": 67.05838957604325,
+          "speed": 74.98811602029707,
+          "cost": 38.11671147049971
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9375,
+          "judge": 0.9315068493150684,
+          "hard": 0.6636363636363637
+        }
+      },
+      "public_acc": 0.8138528138528138,
+      "sealed_acc": 0.2824675324675325,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3514,
+          "judge_hard": 0.2439,
+          "long_policy": 0.25,
+          "multi_hop": 0.2895,
+          "paraphrase_robustness": 0.4286,
+          "probability": 0.25,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.3683251373334364,
+        "mean_tvd_gold_probs": 0.3579619355615567,
+        "calibration": 45.269389488578526,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1376,
+          "1/3": 0.268,
+          "2/3": 0.451
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.4058,
+            "accuracy": 0.232
+          },
+          "conf>=0.9": {
+            "coverage": 0.1656,
+            "accuracy": 0.1373
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 54.34813952502216
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (Featherless demo), as for every API measurement"
+    },
+    {
+      "key": "gemini-3.1-flash-lite",
+      "display": "Gemini 3.1 Flash-Lite",
+      "author": "Google",
+      "repo": null,
+      "class": "llm-baseline",
+      "licence": "proprietary API",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 60.08928259753951,
+        "rank": 41,
+        "axes": {
+          "intelligence": 85.56083319133411,
+          "calibration": 68.08811278368097,
+          "speed": 81.78762581772229,
+          "cost": 27.362399077259013
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9895833333333334,
+          "judge": 0.9315068493150684,
+          "hard": 0.75
+        }
+      },
+      "public_acc": 0.8701298701298701,
+      "sealed_acc": 0.38636363636363635,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 307,
+        "by_family": {
+          "ambiguous_abstain": 0.3243,
+          "judge_hard": 0.5122,
+          "long_policy": 0.15,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.6429,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.3036,
+          "tradeoff": 0.3462,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.5778164713767407,
+        "mean_tvd_gold_probs": 0.1659069960525604,
+        "calibration": 41.704650197371976,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2202,
+          "1/3": 0.3299,
+          "2/3": 0.6176
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.9026,
+            "accuracy": 0.3633
+          },
+          "conf>=0.9": {
+            "coverage": 0.8571,
+            "accuracy": 0.3561
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 52.69775960833405
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (Google API), as for every API measurement; 307/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "qwen35-9b-jev-data-mix-v2",
+      "display": "Qwen3.5-9B Jev-like data-mix v2",
+      "author": "jsaurabh",
+      "repo": "https://huggingface.co/jsaurabh/qwen3.5-9b-jev-data-mix-v2",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (adapter code and weights; Qwen3.5-9B base is Apache-2.0)",
+      "ranked": true,
+      "source": "round 5 new",
+      "v130": {
+        "score": 65.50770324701708,
+        "rank": 28,
+        "axes": {
+          "intelligence": 78.09032618265003,
+          "calibration": 67.91119597550764,
+          "speed": 81.97617376178209,
+          "cost": 42.35875944111046
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9479166666666666,
+          "judge": 0.952054794520548,
+          "hard": 0.6045454545454545
+        }
+      },
+      "public_acc": 0.7835497835497836,
+      "sealed_acc": 0.2922077922077922,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3243,
+          "judge_hard": 0.3415,
+          "long_policy": 0.225,
+          "multi_hop": 0.1579,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.2857,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.1607,
+          "tradeoff": 0.4231,
+          "trap_adversarial": 0.6667
+        },
+        "ece": 0.3331439466058434,
+        "mean_tvd_gold_probs": 0.36924397736185965,
+        "calibration": 48.223406471322676,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1284,
+          "1/3": 0.2887,
+          "2/3": 0.4706
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3734,
+            "accuracy": 0.313
+          },
+          "conf>=0.9": {
+            "coverage": 0.1429,
+            "accuracy": 0.2273
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 56.42665209806641
+        }
+      },
+      "note": "The author disclosed development on the public JevBench set and public-result comparisons; released-data overlap scan found no matches, but 764 gap and 382 replay training rows are unreleased.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "openjev-thinking",
+      "display": "OpenJev (thinking, BF16)",
+      "author": "razorback16",
+      "repo": "https://github.com/razorback16/openjev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 59.98618116922599,
+        "rank": 42,
+        "axes": {
+          "intelligence": 87.96811832253644,
+          "calibration": 69.55970870533434,
+          "speed": 76.05530411890852,
+          "cost": 27.82225297231227
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 1.0,
+          "judge": 0.9452054794520548,
+          "hard": 0.7818181818181819
+        }
+      },
+      "public_acc": 0.8874458874458875,
+      "sealed_acc": 0.42207792207792205,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3784,
+          "judge_hard": 0.6829,
+          "long_policy": 0.25,
+          "multi_hop": 0.3947,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.3571,
+          "safety_judge": 0.6875,
+          "temporal_numeric": 0.3036,
+          "tradeoff": 0.3462,
+          "trap_adversarial": 0.6667
+        },
+        "ece": 0.39430812212776295,
+        "mean_tvd_gold_probs": 0.507949203579107,
+        "calibration": 35.171727608268355,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2661,
+          "1/3": 0.3918,
+          "2/3": 0.6176
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.6883,
+            "accuracy": 0.4906
+          },
+          "conf>=0.9": {
+            "coverage": 0.5292,
+            "accuracy": 0.5521
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 49.50005306537918
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "jev-qwen3.5-9b-base-nvfp4",
+      "display": "JEV Qwen3.5-9B Base NVFP4",
+      "author": "WilfLin",
+      "repo": "https://huggingface.co/WIlfLin/JEV-Qwen3.5-9B-Base-NVFP4",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 entrant and upstream checkpoint",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 68.88432501076402,
+        "rank": 16,
+        "axes": {
+          "intelligence": 73.82008479712314,
+          "calibration": 75.45696135708826,
+          "speed": 93.29099763267277,
+          "cost": 43.327939808722704
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9166666666666666,
+          "judge": 0.8972602739726028,
+          "hard": 0.5863636363636363
+        }
+      },
+      "public_acc": 0.7532467532467533,
+      "sealed_acc": 0.29545454545454547,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1622,
+          "judge_hard": 0.4634,
+          "long_policy": 0.175,
+          "multi_hop": 0.2368,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.1429,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.6667
+        },
+        "ece": 0.2909642591491922,
+        "mean_tvd_gold_probs": 0.37599808026398673,
+        "calibration": 52.10367007188144,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2294,
+          "1/3": 0.3505,
+          "2/3": 0.3137
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.237,
+            "accuracy": 0.2603
+          },
+          "conf>=0.9": {
+            "coverage": 0.0455,
+            "accuracy": 0.2143
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 61.834208107384285
+        }
+      },
+      "note": "Round 4 unpublished. Byte-identical to upstream March-2026 NVFP4 checkpoint, predates JevBench v1.2, no task-specific training added. Had 3 preliminary scope/policy scoring errors corrected during review (pooled-ECE, full-run latency, cost estimate); score above is final corrected value.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "nimble-9b",
+      "display": "Bespoke Nimble 9B (Bespoke Labs)",
+      "author": "Bespoke Labs",
+      "repo": "https://github.com/bespokelabsai/nimble",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (weights); repository without a licence file as of 19 Sep",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 60.47515137925396,
+        "rank": 40,
+        "axes": {
+          "intelligence": 77.91214852943436,
+          "calibration": 65.30347273546205,
+          "speed": 78.68440871747626,
+          "cost": 33.41009520749539
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9479166666666666,
+          "judge": 0.8904109589041096,
+          "hard": 0.6545454545454545
+        }
+      },
+      "public_acc": 0.7965367965367965,
+      "sealed_acc": 0.288961038961039,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2703,
+          "judge_hard": 0.2927,
+          "long_policy": 0.225,
+          "multi_hop": 0.2895,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.3929,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.1964,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.4030108266010678,
+        "mean_tvd_gold_probs": 0.4192696110111676,
+        "calibration": 38.73543678933484,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1651,
+          "1/3": 0.2371,
+          "2/3": 0.4706
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.4903,
+            "accuracy": 0.2781
+          },
+          "conf>=0.9": {
+            "coverage": 0.2435,
+            "accuracy": 0.32
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 49.80545176688784
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "opensourcejev-qwen35-4b-q4km",
+      "display": "OpenSourceJev (Qwen3.5-4B Q4_K_M, native llama.cpp)",
+      "author": "sabeel111",
+      "repo": "https://github.com/sabeel111/OpenSourceJev",
+      "class": "jev-rebuild",
+      "licence": "MIT (repository code); Apache-2.0 (Qwen/Qwen3.5-4B base and unsloth/Qwen3.5-4B-GGUF Q4_K_M conversion)",
+      "ranked": true,
+      "source": "round 5 unpublished",
+      "v130": {
+        "score": 70.6590827344797,
+        "rank": 12,
+        "axes": {
+          "calibration": 66.35693795454543,
+          "cost": 63.955600615838556,
+          "intelligence": 71.59359305734671,
+          "speed": 82.04136987594218
+        },
+        "tiers": {
+          "easy": 1.0,
+          "hard": 0.5636363636363636,
+          "judge": 0.8561643835616438,
+          "standard": 0.9270833333333334
+        }
+      },
+      "public_acc": 0.7835497835497836,
+      "sealed_acc": 0.262987012987013,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.3902,
+          "long_policy": 0.1,
+          "multi_hop": 0.2368,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.3214,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.1607,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.25
+        },
+        "ece": 0.3257234805194805,
+        "mean_tvd_gold_probs": 0.38307442424242427,
+        "calibration": 48.27393073593073,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.211,
+          "1/3": 0.3093,
+          "2/3": 0.2745
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.289,
+            "accuracy": 0.2584
+          },
+          "conf>=0.9": {
+            "coverage": 0.0649,
+            "accuracy": 0.35
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 55.80851707702019
+        }
+      },
+      "note": "DM submission, measure-only (JevBench publishing HOLD in force). Same author as the existing simplejev-qwen3.5-0.8b row (sabeel111/Featherless AI). Round-4 audit of an earlier commit could not be measured (no public GGUF, Windows-only DLL loader, unpinned llama.cpp build); this round the author published the exact unsloth Q4_K_M GGUF (hash/size independently verified) and we built llama.cpp CUDA from current upstream master on Linux ourselves -- its ABI matched the ctypes bindings exactly, so only a loader file-naming fix was needed (documented diff), no code/scoring/calibration change. Our public-231 subset exactly reproduced the author-reported table: easy 48/48, standard 67/72, hard 66/111, schema 231/231. Calibration (noul temperature) fit only on Google BoolQ, not JevBench. Repo docs name 3 public task IDs while describing benchmark-directed algorithm fixes on the public half (disclosed); 0 exact state/instruction text matches in a released-file scan.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "jev-local",
+      "display": "jev-local (Qwen3.5-9B)",
+      "author": "us (GitHub)",
+      "repo": "https://github.com/us/jev-local",
+      "class": "jev-rebuild",
+      "licence": "no licence stated in the repository (public code); Apache-2.0 base weights",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 61.79680786600313,
+        "rank": 38,
+        "axes": {
+          "intelligence": 70.76681508843012,
+          "calibration": 68.7437159090909,
+          "speed": 69.18842978642493,
+          "cost": 43.327939808722704
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.84375,
+          "judge": 0.8904109589041096,
+          "hard": 0.5909090909090909
+        }
+      },
+      "public_acc": 0.7489177489177489,
+      "sealed_acc": 0.29545454545454547,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.3659,
+          "long_policy": 0.25,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.4643,
+          "safety_judge": 0.25,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.1923,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.259294805194805,
+        "mean_tvd_gold_probs": 0.38046969696969685,
+        "calibration": 55.04703463203465,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1743,
+          "1/3": 0.2887,
+          "2/3": 0.4314
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3019,
+            "accuracy": 0.3548
+          },
+          "conf>=0.9": {
+            "coverage": 0.1526,
+            "accuracy": 0.2553
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 60.75398516414141
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "system-one-open",
+      "display": "system-one-open (Gemma 4 E2B LoRA on an L4)",
+      "author": "mithalouni",
+      "repo": "https://github.com/mithalouni/system-one-open",
+      "class": "jev-rebuild",
+      "licence": "MIT (repository LICENSE; Gemma weights keep Google’s terms)",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 66.59745356122706,
+        "rank": 22,
+        "axes": {
+          "intelligence": 69.54527897078596,
+          "calibration": 56.699696211408835,
+          "speed": 76.96012500732209,
+          "cost": 64.82109224519658
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9375,
+          "judge": 0.8767123287671232,
+          "hard": 0.4909090909090909
+        }
+      },
+      "public_acc": 0.7316017316017316,
+      "sealed_acc": 0.275974025974026,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.2439,
+          "long_policy": 0.275,
+          "multi_hop": 0.1316,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.25,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.4615,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.3141180161234028,
+        "mean_tvd_gold_probs": 0.3477199734087694,
+        "calibration": 51.20219971722125,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1927,
+          "1/3": 0.2784,
+          "2/3": 0.3627
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3312,
+            "accuracy": 0.2843
+          },
+          "conf>=0.9": {
+            "coverage": 0.1299,
+            "accuracy": 0.2
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 53.49282325646608
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (author's Modal demo), as for every API measurement"
+    },
+    {
+      "key": "open-jev-zefan-9b",
+      "display": "Open-Jev 9B (Zefan Cai)",
+      "author": "Zefan Cai (@Zefan_Cai)",
+      "repo": "https://github.com/Zefan-Cai/Open-Jev",
+      "class": "jev-rebuild",
+      "licence": "MIT (loader); Apache-2.0 (adapter and pinned Qwen base); CC0-1.0 public training projection",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 54.95864804501749,
+        "rank": 47,
+        "axes": {
+          "intelligence": 71.16915718206087,
+          "calibration": 63.2782433598038,
+          "speed": 72.03286755510636,
+          "cost": 28.123361021000306
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.90625,
+          "judge": 0.815068493150685,
+          "hard": 0.6090909090909091
+        }
+      },
+      "public_acc": 0.7748917748917749,
+      "sealed_acc": 0.2987012987012987,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.2927,
+          "long_policy": 0.2,
+          "multi_hop": 0.2895,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.4643,
+          "safety_judge": 0.25,
+          "temporal_numeric": 0.25,
+          "tradeoff": 0.4231,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.2739115176674875,
+        "mean_tvd_gold_probs": 0.27647657324283903,
+        "calibration": 58.7850195711093,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1927,
+          "1/3": 0.2784,
+          "2/3": 0.4314
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3409,
+            "accuracy": 0.3048
+          },
+          "conf>=0.9": {
+            "coverage": 0.1526,
+            "accuracy": 0.2128
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 60.657196149732016
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "raw-qwen3-4b-instruct-2507",
+      "display": "Raw Qwen3 4B Instruct 2507 direct logits",
+      "author": "Alibaba Qwen / neutral reproduction",
+      "repo": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+      "class": "raw-logit-control",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 58.58927286491753,
+        "rank": 44,
+        "axes": {
+          "intelligence": 70.22920123790398,
+          "calibration": 32.10926095618333,
+          "speed": 87.55255760839427,
+          "cost": 59.683674963546565
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.8645833333333334,
+          "judge": 0.9383561643835616,
+          "hard": 0.5181818181818182
+        }
+      },
+      "public_acc": 0.696969696969697,
+      "sealed_acc": 0.2727272727272727,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.2927,
+          "long_policy": 0.175,
+          "multi_hop": 0.2632,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.3929,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.1964,
+          "tradeoff": 0.3462,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.6285346412298987,
+        "mean_tvd_gold_probs": 0.5382095919974224,
+        "calibration": 23.089520400128883,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2294,
+          "1/3": 0.268,
+          "2/3": 0.3235
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8539,
+            "accuracy": 0.2662
+          },
+          "conf>=0.9": {
+            "coverage": 0.6916,
+            "accuracy": 0.2535
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 26.847745631818235
+        }
+      },
+      "note": "Round 4 unpublished. Neutral raw-logit control.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "open-alternative-jev",
+      "display": "open-alternative-jev (Qwen3.5-4B, IkerMoel)",
+      "author": "IkerMoel",
+      "repo": "https://github.com/ikermoel/open-alternative-jev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (code and weights)",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 66.9883439146374,
+        "rank": 21,
+        "axes": {
+          "intelligence": 64.04897795132875,
+          "calibration": 63.16501249259078,
+          "speed": 83.47780372641819,
+          "cost": 59.62620384142349
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.84375,
+          "judge": 0.7465753424657534,
+          "hard": 0.5681818181818182
+        }
+      },
+      "public_acc": 0.7402597402597403,
+      "sealed_acc": 0.2435064935064935,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1622,
+          "judge_hard": 0.3171,
+          "long_policy": 0.15,
+          "multi_hop": 0.2895,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.1786,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.1607,
+          "tradeoff": 0.1538,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.35199515504627493,
+        "mean_tvd_gold_probs": 0.30117218001805685,
+        "calibration": 49.74187549446966,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1927,
+          "1/3": 0.2371,
+          "2/3": 0.3039
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3149,
+            "accuracy": 0.2577
+          },
+          "conf>=0.9": {
+            "coverage": 0.1104,
+            "accuracy": 0.1176
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 55.3348492436868
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "qwen3-reranker-4b",
+      "display": "Qwen3-Reranker-4B",
+      "author": "Qwen",
+      "repo": "https://huggingface.co/Qwen/Qwen3-Reranker-4B",
+      "class": "reranker",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 63.82721228923758,
+        "rank": 31,
+        "axes": {
+          "intelligence": 63.98067503727088,
+          "calibration": 67.03907338325979,
+          "speed": 78.72320187600475,
+          "cost": 49.152310354989595
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.7916666666666666,
+          "judge": 0.8767123287671232,
+          "hard": 0.5
+        }
+      },
+      "public_acc": 0.6796536796536796,
+      "sealed_acc": 0.2987012987012987,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3243,
+          "judge_hard": 0.2927,
+          "long_policy": 0.275,
+          "multi_hop": 0.2895,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.2857,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.25,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.6667
+        },
+        "ece": 0.2524012949436469,
+        "mean_tvd_gold_probs": 0.2636450540083371,
+        "calibration": 61.57761780521846,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.211,
+          "1/3": 0.2268,
+          "2/3": 0.4608
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2662,
+            "accuracy": 0.378
+          },
+          "conf>=0.9": {
+            "coverage": 0.1558,
+            "accuracy": 0.3125
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 63.853224296069016
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "system-one-sg",
+      "display": "system-one (Qwen3-8B, Sean Goedecke)",
+      "author": "Sean Goedecke",
+      "repo": "https://github.com/sgoedecke/system-one",
+      "class": "jev-rebuild",
+      "licence": "no licence file in the repository as of 19 Sep; Qwen3 weights Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 54.830990505255514,
+        "rank": 48,
+        "axes": {
+          "intelligence": 70.3016034401033,
+          "calibration": 36.764309957143894,
+          "speed": 84.3621367799104,
+          "cost": 41.45387606228526
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.90625,
+          "judge": 0.9178082191780822,
+          "hard": 0.5
+        }
+      },
+      "public_acc": 0.7186147186147186,
+      "sealed_acc": 0.2435064935064935,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1892,
+          "judge_hard": 0.2927,
+          "long_policy": 0.125,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.2857,
+          "probability": 0.3214,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.1964,
+          "tradeoff": 0.3462,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.6526329163774862,
+        "mean_tvd_gold_probs": 0.5008885538236733,
+        "calibration": 24.955572308816336,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1835,
+          "1/3": 0.2062,
+          "2/3": 0.3431
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8571,
+            "accuracy": 0.2462
+          },
+          "conf>=0.9": {
+            "coverage": 0.6916,
+            "accuracy": 0.2441
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 29.875879662286152
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "kev-8b",
+      "display": "kev 8B (research preview)",
+      "author": "Jared Palmer",
+      "repo": "https://github.com/jaredpalmer/kev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 56.383551097366656,
+        "rank": 46,
+        "axes": {
+          "intelligence": 69.38030902507023,
+          "calibration": 44.18419951086019,
+          "speed": 74.85933162711135,
+          "cost": 44.04134083457654
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9270833333333334,
+          "judge": 0.9041095890410958,
+          "hard": 0.4727272727272727
+        }
+      },
+      "public_acc": 0.7142857142857143,
+      "sealed_acc": 0.21753246753246752,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1081,
+          "judge_hard": 0.2683,
+          "long_policy": 0.15,
+          "multi_hop": 0.1316,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.2857,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.125,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.47359168059663115,
+        "mean_tvd_gold_probs": 0.41023786196801504,
+        "calibration": 32.12893884193613,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1468,
+          "1/3": 0.2062,
+          "2/3": 0.3039
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.5065,
+            "accuracy": 0.2308
+          },
+          "conf>=0.9": {
+            "coverage": 0.3117,
+            "accuracy": 0.2292
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 37.15196412065449
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "decision-machine-1",
+      "display": "decision-machine-1 (milliseconds.ai)",
+      "author": "milliseconds.ai (Baptiste Laget)",
+      "repo": "https://www.milliseconds.ai",
+      "class": "decision-api",
+      "licence": "proprietary API, closed weights",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 68.33662413233554,
+        "rank": 18,
+        "axes": {
+          "intelligence": 62.07457007916058,
+          "calibration": 70.4452442163124,
+          "speed": 92.92504013916033,
+          "cost": 53.668063581045736
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.7604166666666666,
+          "judge": 0.8972602739726028,
+          "hard": 0.4681818181818182
+        }
+      },
+      "public_acc": 0.6753246753246753,
+      "sealed_acc": 0.2564935064935065,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.4146,
+          "long_policy": 0.15,
+          "multi_hop": 0.1842,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.25,
+          "safety_judge": 0.1875,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.23509657008642643,
+        "mean_tvd_gold_probs": 0.24792438823650945,
+        "calibration": 64.0941235795319,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2018,
+          "1/3": 0.2784,
+          "2/3": 0.2941
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2273,
+            "accuracy": 0.3286
+          },
+          "conf>=0.9": {
+            "coverage": 0.0162,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 66.7404238448571
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (Milliseconds API), as for every API measurement"
+    },
+    {
+      "key": "zerank-2",
+      "display": "ZeroEntropy zerank-2",
+      "author": "ZeroEntropy",
+      "repo": "https://huggingface.co/zeroentropy/zerank-2-reranker",
+      "class": "reranker",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 65.96713617823673,
+        "rank": 26,
+        "axes": {
+          "intelligence": 63.0186253114589,
+          "calibration": 76.48899637062043,
+          "speed": 78.96019184080492,
+          "cost": 49.75473753033334
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.7916666666666666,
+          "judge": 0.8835616438356164,
+          "hard": 0.4727272727272727
+        }
+      },
+      "public_acc": 0.7012987012987013,
+      "sealed_acc": 0.2857142857142857,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.2927,
+          "long_policy": 0.125,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.3929,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.14686658277918277,
+        "mean_tvd_gold_probs": 0.21993584644511172,
+        "calibration": 74.31654939982613,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2202,
+          "1/3": 0.268,
+          "2/3": 0.3725
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1234,
+            "accuracy": 0.3158
+          },
+          "conf>=0.9": {
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 75.22173563765708
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "kev-4b",
+      "display": "kev 4B (research preview)",
+      "author": "Jared Palmer",
+      "repo": "https://github.com/jaredpalmer/kev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 59.724673285425375,
+        "rank": 43,
+        "axes": {
+          "intelligence": 64.79617353902547,
+          "calibration": 41.97093961668896,
+          "speed": 75.73845187472214,
+          "cost": 61.77327904537152
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9166666666666666,
+          "judge": 0.8561643835616438,
+          "hard": 0.42272727272727273
+        }
+      },
+      "public_acc": 0.6623376623376623,
+      "sealed_acc": 0.22402597402597402,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 306,
+        "by_family": {
+          "ambiguous_abstain": 0.1081,
+          "judge_hard": 0.3171,
+          "long_policy": 0.2,
+          "multi_hop": 0.1316,
+          "paraphrase_robustness": 0.2143,
+          "probability": 0.2857,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.1429,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.4649653895628323,
+        "mean_tvd_gold_probs": 0.3704342946415854,
+        "calibration": 34.9817463116375,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1651,
+          "1/3": 0.2165,
+          "2/3": 0.2941
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.5032,
+            "accuracy": 0.2581
+          },
+          "conf>=0.9": {
+            "coverage": 0.3052,
+            "accuracy": 0.234
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 37.893910188742275
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest; 306/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "raw-qwen3-8b",
+      "display": "Raw Qwen3 8B direct logits",
+      "author": "Alibaba Qwen / neutral reproduction",
+      "repo": "https://huggingface.co/Qwen/Qwen3-8B",
+      "class": "raw-logit-control",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 50.415533525795176,
+        "rank": 53,
+        "axes": {
+          "intelligence": 68.847037270151,
+          "calibration": 25.95057492779241,
+          "speed": 86.33902733346537,
+          "cost": 41.88109987449869
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.8645833333333334,
+          "judge": 0.9657534246575342,
+          "hard": 0.4636363636363636
+        }
+      },
+      "public_acc": 0.683982683982684,
+      "sealed_acc": 0.262987012987013,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.3659,
+          "long_policy": 0.15,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.2143,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.2679,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.6451195930737063,
+        "mean_tvd_gold_probs": 0.5918125549550098,
+        "calibration": 20.409372252249508,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.211,
+          "1/3": 0.2784,
+          "2/3": 0.3039
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8669,
+            "accuracy": 0.2697
+          },
+          "conf>=0.9": {
+            "coverage": 0.7532,
+            "accuracy": 0.2672
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 22.718206700392383
+        }
+      },
+      "note": "Round 4 unpublished. Neutral raw-logit control.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "raw-phi-4-mini",
+      "display": "Raw Phi-4 mini direct logits",
+      "author": "Microsoft / neutral reproduction",
+      "repo": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "class": "raw-logit-control",
+      "licence": "MIT",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 63.42593271007894,
+        "rank": 32,
+        "axes": {
+          "intelligence": 59.08049486516691,
+          "calibration": 62.204501783900376,
+          "speed": 88.83321682255763,
+          "cost": 49.570821980679646
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.7395833333333334,
+          "judge": 0.7808219178082192,
+          "hard": 0.5227272727272727
+        }
+      },
+      "public_acc": 0.658008658008658,
+      "sealed_acc": 0.2922077922077922,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2973,
+          "judge_hard": 0.2927,
+          "long_policy": 0.25,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.3571,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.2857,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.32396223009125014,
+        "mean_tvd_gold_probs": 0.31133412916875286,
+        "calibration": 52.03707053243734,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2018,
+          "1/3": 0.2887,
+          "2/3": 0.3922
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3799,
+            "accuracy": 0.2906
+          },
+          "conf>=0.9": {
+            "coverage": 0.1688,
+            "accuracy": 0.25
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 56.273500220546936
+        }
+      },
+      "note": "Round 4 unpublished. Neutral raw-logit control, not JevBench-directed.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "decider-2b",
+      "display": "decider-2b (Mapika)",
+      "author": "Mapika",
+      "repo": "https://huggingface.co/Mapika/decider-2b",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 61.6816875223098,
+        "rank": 39,
+        "axes": {
+          "intelligence": 61.24411705024726,
+          "calibration": 46.58881818181821,
+          "speed": 83.17774245885059,
+          "cost": 60.99184724027941
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.8541666666666666,
+          "judge": 0.773972602739726,
+          "hard": 0.4727272727272727
+        }
+      },
+      "public_acc": 0.70995670995671,
+      "sealed_acc": 0.24675324675324675,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.2927,
+          "long_policy": 0.225,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.2143,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.1964,
+          "tradeoff": 0.1923,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.4128347402597403,
+        "mean_tvd_gold_probs": 0.4286681818181817,
+        "calibration": 37.28311688311688,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.156,
+          "1/3": 0.2474,
+          "2/3": 0.3431
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.5,
+            "accuracy": 0.2532
+          },
+          "conf>=0.9": {
+            "coverage": 0.2792,
+            "accuracy": 0.2326
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 41.160492424242435
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "open-jev-zefan-2b",
+      "display": "Open-Jev 2B (Zefan Cai)",
+      "author": "Zefan Cai (@Zefan_Cai)",
+      "repo": "https://github.com/Zefan-Cai/Open-Jev",
+      "class": "jev-rebuild",
+      "licence": "MIT (loader); Apache-2.0 (adapter and pinned Qwen base); CC0-1.0 public training projection",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 51.31393833805917,
+        "rank": 52,
+        "axes": {
+          "intelligence": 60.96359619854646,
+          "calibration": 55.05370286560958,
+          "speed": 73.45427178913715,
+          "cost": 28.123361021000306
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.7916666666666666,
+          "judge": 0.8835616438356164,
+          "hard": 0.42727272727272725
+        }
+      },
+      "public_acc": 0.645021645021645,
+      "sealed_acc": 0.262987012987013,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.4146,
+          "long_policy": 0.075,
+          "multi_hop": 0.2368,
+          "paraphrase_robustness": 0.4286,
+          "probability": 0.25,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.285145843407084,
+        "mean_tvd_gold_probs": 0.3154353632258828,
+        "calibration": 55.71364749799746,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2202,
+          "1/3": 0.2887,
+          "2/3": 0.2843
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3117,
+            "accuracy": 0.2812
+          },
+          "conf>=0.9": {
+            "coverage": 0.1169,
+            "accuracy": 0.3056
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 55.43867056783584
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "open-jev-json-canvas-joshuasp",
+      "display": "Open Jev JSON Canvas (JoshuaSP)",
+      "author": "JoshuaSP",
+      "repo": "https://github.com/JoshuaSP/open-jev",
+      "class": "jev-rebuild",
+      "licence": "MIT code; Apache-2.0 DiffusionGemma weights",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 23.76873427028549,
+        "rank": 62,
+        "axes": {
+          "intelligence": 83.23483633648618,
+          "calibration": null,
+          "speed": 84.06148554434631,
+          "cost": 45.616507411040736
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9895833333333334,
+          "judge": 0.9246575342465754,
+          "hard": 0.7045454545454546
+        }
+      },
+      "public_acc": 0.8441558441558441,
+      "sealed_acc": 0.3116883116883117,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.4146,
+          "long_policy": 0.275,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.3214,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2679,
+          "tradeoff": 0.1154,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.6883116883116883,
+        "mean_tvd_gold_probs": 0.6473121212121212,
+        "calibration": 17.634393939393938,
+        "label_only": true,
+        "by_panel_stratum": {
+          "0/3": 0.1835,
+          "1/3": 0.2371,
+          "2/3": 0.5196
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 1.0,
+            "accuracy": 0.3117
+          },
+          "conf>=0.9": {
+            "coverage": 1.0,
+            "accuracy": 0.3117
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 0.0
+        }
+      },
+      "note": "Round 4 unpublished. Returns only a final label, not a probability distribution — calibration counts as 0 in the composite. Scan of 39 files: 0 matches.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "kev-0.6b",
+      "display": "kev 0.6B (research preview)",
+      "author": "Jared Palmer",
+      "repo": "https://github.com/jaredpalmer/kev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 62.489006255662105,
+        "rank": 35,
+        "axes": {
+          "intelligence": 51.9132695254489,
+          "calibration": 51.092162895835045,
+          "speed": 75.55649753874303,
+          "cost": 76.08691668696139
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.8125,
+          "judge": 0.6643835616438356,
+          "hard": 0.4
+        }
+      },
+      "public_acc": 0.6666666666666666,
+      "sealed_acc": 0.24025974025974026,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 307,
+        "by_family": {
+          "ambiguous_abstain": 0.1351,
+          "judge_hard": 0.3659,
+          "long_policy": 0.225,
+          "multi_hop": 0.1842,
+          "paraphrase_robustness": 0.6429,
+          "probability": 0.0,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.3462,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.31029333226482253,
+        "mean_tvd_gold_probs": 0.4256266596356605,
+        "calibration": 47.689333791734725,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2477,
+          "1/3": 0.1856,
+          "2/3": 0.2843
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.289,
+            "accuracy": 0.3596
+          },
+          "conf>=0.9": {
+            "coverage": 0.1299,
+            "accuracy": 0.35
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 49.10717925177652
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest; 307/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "jeff",
+      "display": "jeff (Logan Markewich, GLiFormer 400M)",
+      "author": "Logan Markewich",
+      "repo": "https://github.com/logan-markewich/jeff",
+      "class": "jev-rebuild",
+      "licence": "MIT (code); GLiFormer weights per their model card",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 54.38199454750733,
+        "rank": 49,
+        "axes": {
+          "intelligence": 46.854834433980876,
+          "calibration": 64.5620340909091,
+          "speed": 63.49232389662579,
+          "cost": 76.57596288088385
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.7604166666666666,
+          "judge": 0.6164383561643836,
+          "hard": 0.37727272727272726
+        }
+      },
+      "public_acc": 0.6277056277056277,
+      "sealed_acc": 0.33116883116883117,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2703,
+          "judge_hard": 0.5366,
+          "long_policy": 0.275,
+          "multi_hop": 0.2632,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.3214,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2857,
+          "tradeoff": 0.1538,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.12291623376623377,
+        "mean_tvd_gold_probs": 0.2639757575757576,
+        "calibration": 74.50958874458874,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2752,
+          "1/3": 0.3814,
+          "2/3": 0.3431
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1851,
+            "accuracy": 0.5789
+          },
+          "conf>=0.9": {
+            "coverage": 0.0065,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 70.36477430555556
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "laya",
+      "display": "Laya (Convai Innovations, ModernBERT-large 421M)",
+      "author": "Convai Innovations",
+      "repo": "https://huggingface.co/convaiinnovations/laya",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 54.35373809070198,
+        "rank": 50,
+        "axes": {
+          "intelligence": 45.82464454274022,
+          "calibration": 62.46471590909091,
+          "speed": 71.05966297458822,
+          "cost": 86.20408526325653
+        },
+        "tiers": {
+          "easy": 0.9444444444444444,
+          "standard": 0.7291666666666666,
+          "judge": 0.6917808219178082,
+          "hard": 0.3409090909090909
+        }
+      },
+      "public_acc": 0.5844155844155844,
+      "sealed_acc": 0.30844155844155846,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2973,
+          "judge_hard": 0.3902,
+          "long_policy": 0.275,
+          "multi_hop": 0.2895,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.2143,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.1964,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.17190551948051955,
+        "mean_tvd_gold_probs": 0.3342469696969697,
+        "calibration": 66.09709956709956,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2477,
+          "1/3": 0.3402,
+          "2/3": 0.3431
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1818,
+            "accuracy": 0.375
+          },
+          "conf>=0.9": {
+            "coverage": 0.0195,
+            "accuracy": 0.1667
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 64.58360637626262
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "von-395m",
+      "display": "Von (wfzyx, Option-Marker 395M)",
+      "author": "wfzyx (Victor Hugo)",
+      "repo": "https://github.com/wfzyx/von",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 code; Apache-2.0 weights (answerdotai/ModernBERT-large base)",
+      "ranked": true,
+      "source": "round 5 new",
+      "v130": {
+        "score": 53.08478248718057,
+        "rank": 51,
+        "axes": {
+          "intelligence": 45.01329911734195,
+          "calibration": 74.62548863636364,
+          "speed": 70.45969264486726,
+          "cost": 77.75792651988814
+        },
+        "tiers": {
+          "easy": 0.9305555555555556,
+          "standard": 0.6875,
+          "judge": 0.684931506849315,
+          "hard": 0.37272727272727274
+        }
+      },
+      "public_acc": 0.5714285714285714,
+      "sealed_acc": 0.2792207792207792,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.4634,
+          "long_policy": 0.2,
+          "multi_hop": 0.3947,
+          "paraphrase_robustness": 0.0714,
+          "probability": 0.1786,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.0893,
+          "tradeoff": 0.5,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.10662467532467533,
+        "mean_tvd_gold_probs": 0.22925909090909097,
+        "calibration": 77.87457792207792,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2202,
+          "1/3": 0.268,
+          "2/3": 0.3529
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.0617,
+            "accuracy": 0.4737
+          },
+          "conf>=0.9": {
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 76.52079071969698
+        }
+      },
+      "note": "The author disclosed that its temperature calibration map used the 231 public JevBench items; monotonic scaling does not change accuracy. Estimated cost is USD 0.00551 per 1,000 decisions.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "opendecision",
+      "display": "OpenDecision (ModernBERT-large zero-shot)",
+      "author": "Deepan Wadhwa",
+      "repo": "https://github.com/deepanwadhwa/OpenDecision",
+      "class": "classifier",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 40.58744897671299,
+        "rank": 54,
+        "axes": {
+          "intelligence": 40.80927227619637,
+          "calibration": 56.092333006283695,
+          "speed": 79.89955851182286,
+          "cost": 75.34414706615897
+        },
+        "tiers": {
+          "easy": 0.875,
+          "standard": 0.625,
+          "judge": 0.7123287671232876,
+          "hard": 0.33181818181818185
+        }
+      },
+      "public_acc": 0.5324675324675324,
+      "sealed_acc": 0.2564935064935065,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3243,
+          "judge_hard": 0.4634,
+          "long_policy": 0.15,
+          "multi_hop": 0.0789,
+          "paraphrase_robustness": 0.2143,
+          "probability": 0.25,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.24082116910268542,
+        "mean_tvd_gold_probs": 0.3382534505175144,
+        "calibration": 59.00521056385574,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1927,
+          "1/3": 0.2371,
+          "2/3": 0.3431
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2305,
+            "accuracy": 0.2958
+          },
+          "conf>=0.9": {
+            "coverage": 0.1104,
+            "accuracy": 0.2353
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 57.79151158153405
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "raw-qwen3-1.7b",
+      "display": "Raw Qwen3 1.7B direct logits",
+      "author": "Alibaba Qwen / neutral reproduction",
+      "repo": "https://huggingface.co/Qwen/Qwen3-1.7B",
+      "class": "raw-logit-control",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 37.3907084877778,
+        "rank": 57,
+        "axes": {
+          "intelligence": 42.87858889232335,
+          "calibration": 26.764043868254227,
+          "speed": 89.71855887469545,
+          "cost": 64.8957758569641
+        },
+        "tiers": {
+          "easy": 0.8194444444444444,
+          "standard": 0.5520833333333334,
+          "judge": 0.7534246575342466,
+          "hard": 0.43636363636363634
+        }
+      },
+      "public_acc": 0.5411255411255411,
+      "sealed_acc": 0.2597402597402597,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.2927,
+          "long_policy": 0.175,
+          "multi_hop": 0.2632,
+          "paraphrase_robustness": 0.2143,
+          "probability": 0.3214,
+          "safety_judge": 0.1875,
+          "temporal_numeric": 0.125,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.5
+        },
+        "ece": 0.66250416149145,
+        "mean_tvd_gold_probs": 0.6134437634847831,
+        "calibration": 19.327811825760843,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1743,
+          "1/3": 0.268,
+          "2/3": 0.3431
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8831,
+            "accuracy": 0.2794
+          },
+          "conf>=0.9": {
+            "coverage": 0.7727,
+            "accuracy": 0.2857
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 22.42624184346642
+        }
+      },
+      "note": "Round 4 unpublished. Neutral raw-logit control.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "openjev-verdict-1.4",
+      "display": "openJev Verdict 1.4",
+      "author": "Hemant (heman10x)",
+      "repo": "https://huggingface.co/heman10x/rlcd-modernbert-151m",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 38.93683519894202,
+        "rank": 55,
+        "axes": {
+          "intelligence": 38.55664845884808,
+          "calibration": 74.13545833230623,
+          "speed": 78.08595973190066,
+          "cost": 82.35883967864214
+        },
+        "tiers": {
+          "easy": 0.8611111111111112,
+          "standard": 0.6770833333333334,
+          "judge": 0.5616438356164384,
+          "hard": 0.37727272727272726
+        }
+      },
+      "public_acc": 0.5757575757575758,
+      "sealed_acc": 0.2792207792207792,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.3415,
+          "long_policy": 0.375,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.2857,
+          "probability": 0.2143,
+          "safety_judge": 0.1875,
+          "temporal_numeric": 0.125,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.18085664849055377,
+        "mean_tvd_gold_probs": 0.28172359724667667,
+        "calibration": 67.82815528861079,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.211,
+          "1/3": 0.1856,
+          "2/3": 0.4412
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.0552,
+            "accuracy": 0.2353
+          },
+          "conf>=0.9": {
+            "coverage": 0.0032,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 70.45619822348388
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "openjev-verdict",
+      "display": "openJev Verdict (heman10x, ModernBERT-base 151M)",
+      "author": "Hemant (heman10x)",
+      "repo": "https://github.com/Heman10x-NGU/openJev-verdict-2.0",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 38.059545049974176,
+        "rank": 56,
+        "axes": {
+          "intelligence": 39.80526702710233,
+          "calibration": 51.29640397786167,
+          "speed": 76.68207818819491,
+          "cost": 83.05556459946699
+        },
+        "tiers": {
+          "easy": 0.8611111111111112,
+          "standard": 0.65625,
+          "judge": 0.6095890410958904,
+          "hard": 0.38181818181818183
+        }
+      },
+      "public_acc": 0.5541125541125541,
+      "sealed_acc": 0.24675324675324675,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2973,
+          "judge_hard": 0.3415,
+          "long_policy": 0.275,
+          "multi_hop": 0.1842,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.2857,
+          "safety_judge": 0.125,
+          "temporal_numeric": 0.1607,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.3988990974201011,
+        "mean_tvd_gold_probs": 0.43461401294340607,
+        "calibration": 38.37938961081959,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.211,
+          "1/3": 0.1649,
+          "2/3": 0.3627
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.4253,
+            "accuracy": 0.3282
+          },
+          "conf>=0.9": {
+            "coverage": 0.1851,
+            "accuracy": 0.3509
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 43.76147893042045
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "kev-0.5b",
+      "display": "kev 0.5B",
+      "author": "Jared Palmer",
+      "repo": "https://github.com/jaredpalmer/kev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 33.24350332804402,
+        "rank": 58,
+        "axes": {
+          "intelligence": 38.170465529254024,
+          "calibration": 47.367924010582875,
+          "speed": 76.95661397000733,
+          "cost": 76.08687775906971
+        },
+        "tiers": {
+          "easy": 0.9583333333333334,
+          "standard": 0.5208333333333334,
+          "judge": 0.7123287671232876,
+          "hard": 0.3090909090909091
+        }
+      },
+      "public_acc": 0.4935064935064935,
+      "sealed_acc": 0.2727272727272727,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 307,
+        "by_family": {
+          "ambiguous_abstain": 0.2162,
+          "judge_hard": 0.4878,
+          "long_policy": 0.175,
+          "multi_hop": 0.1842,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.1071,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.1607,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.2630974270065443,
+        "mean_tvd_gold_probs": 0.3872250676582809,
+        "calibration": 54.32900391643152,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2477,
+          "1/3": 0.2474,
+          "2/3": 0.3235
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.263,
+            "accuracy": 0.4938
+          },
+          "conf>=0.9": {
+            "coverage": 0.026,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 51.42855395566125
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest; 307/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "gliner2-large",
+      "display": "GLiNER2 large (Fastino)",
+      "author": "Fastino",
+      "repo": "https://huggingface.co/fastino/gliner2-large-v1",
+      "class": "classifier",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 29.55158409895235,
+        "rank": 59,
+        "axes": {
+          "intelligence": 40.14699648103604,
+          "calibration": 24.31885823276304,
+          "speed": 61.65849142544844,
+          "cost": 73.3279398087227
+        },
+        "tiers": {
+          "easy": 0.9861111111111112,
+          "standard": 0.625,
+          "judge": 0.6095890410958904,
+          "hard": 0.36363636363636365
+        }
+      },
+      "public_acc": 0.5670995670995671,
+      "sealed_acc": 0.2857142857142857,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4595,
+          "judge_hard": 0.3659,
+          "long_policy": 0.15,
+          "multi_hop": 0.2368,
+          "paraphrase_robustness": 0.2857,
+          "probability": 0.1786,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.4493875919611423,
+        "mean_tvd_gold_probs": 0.5848125152216609,
+        "calibration": 25.820615042802725,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2385,
+          "1/3": 0.2268,
+          "2/3": 0.3922
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.5584,
+            "accuracy": 0.2907
+          },
+          "conf>=0.9": {
+            "coverage": 0.4675,
+            "accuracy": 0.2986
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 25.194883038619523
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "smalljev",
+      "display": "smalljev semantic-v9",
+      "author": "Aditya (isHeSatoshi)",
+      "repo": "https://github.com/isHeSatoshi/smalljev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 27.444453253651357,
+        "rank": 60,
+        "axes": {
+          "intelligence": 35.12937048856184,
+          "calibration": 58.88025149088166,
+          "speed": 79.81829102912181,
+          "cost": 57.872598102653555
+        },
+        "tiers": {
+          "easy": 0.9722222222222222,
+          "standard": 0.6875,
+          "judge": 0.4041095890410959,
+          "hard": 0.38181818181818183
+        }
+      },
+      "public_acc": 0.6060606060606061,
+      "sealed_acc": 0.2694805194805195,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.6098,
+          "long_policy": 0.15,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.3571,
+          "probability": 0.25,
+          "safety_judge": 0.1875,
+          "temporal_numeric": 0.1786,
+          "tradeoff": 0.1154,
+          "trap_adversarial": 0.25
+        },
+        "ece": 0.226379418382784,
+        "mean_tvd_gold_probs": 0.3519140902078625,
+        "calibration": 59.76635365132847,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2936,
+          "1/3": 0.2784,
+          "2/3": 0.2353
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.224,
+            "accuracy": 0.3623
+          },
+          "conf>=0.9": {
+            "coverage": 0.039,
+            "accuracy": 0.25
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 59.39714441780897
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "gliner2",
+      "display": "GLiNER2 (Fastino, gliner2.5-base)",
+      "author": "Fastino",
+      "repo": "https://github.com/fastino-ai/GLiNER2",
+      "class": "classifier",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 24.036445808742133,
+        "rank": 61,
+        "axes": {
+          "intelligence": 35.62144224229537,
+          "calibration": 23.668537162731784,
+          "speed": 71.82859826025441,
+          "cost": 83.05556459946699
+        },
+        "tiers": {
+          "easy": 0.9722222222222222,
+          "standard": 0.6666666666666666,
+          "judge": 0.4589041095890411,
+          "hard": 0.36363636363636365
+        }
+      },
+      "public_acc": 0.5800865800865801,
+      "sealed_acc": 0.2922077922077922,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4054,
+          "judge_hard": 0.439,
+          "long_policy": 0.225,
+          "multi_hop": 0.2632,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.1429,
+          "safety_judge": 0.5,
+          "temporal_numeric": 0.1964,
+          "tradeoff": 0.3846,
+          "trap_adversarial": 0.25
+        },
+        "ece": 0.4605469570144431,
+        "mean_tvd_gold_probs": 0.513862712569272,
+        "calibration": 28.252168670092093,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2661,
+          "1/3": 0.2165,
+          "2/3": 0.3922
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.5909,
+            "accuracy": 0.3077
+          },
+          "conf>=0.9": {
+            "coverage": 0.4091,
+            "accuracy": 0.3492
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 26.342322208691964
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "gliner2.5-multi",
+      "display": "GLiNER2.5 multi (Fastino, 287M)",
+      "author": "Fastino",
+      "repo": "https://huggingface.co/fastino/gliner2.5-multi-v1",
+      "class": "classifier",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 16.61305398280731,
+        "rank": 64,
+        "axes": {
+          "intelligence": 27.664703779318668,
+          "calibration": 56.141750517866484,
+          "speed": 67.79966551109104,
+          "cost": 82.35883967864214
+        },
+        "tiers": {
+          "easy": 0.9027777777777778,
+          "standard": 0.5104166666666666,
+          "judge": 0.4383561643835616,
+          "hard": 0.37727272727272726
+        }
+      },
+      "public_acc": 0.48917748917748916,
+      "sealed_acc": 0.32792207792207795,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4324,
+          "judge_hard": 0.561,
+          "long_policy": 0.275,
+          "multi_hop": 0.2632,
+          "paraphrase_robustness": 0.0714,
+          "probability": 0.25,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.2679,
+          "tradeoff": 0.3077,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.23909397495837956,
+        "mean_tvd_gold_probs": 0.33684133216288276,
+        "calibration": 59.248535896017906,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.3303,
+          "1/3": 0.2887,
+          "2/3": 0.3627
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.3182,
+            "accuracy": 0.4592
+          },
+          "conf>=0.9": {
+            "coverage": 0.1071,
+            "accuracy": 0.5455
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 57.95404198845482
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "open-jev-deberta-v3-large",
+      "display": "open-jev-deberta-v3-large (local CPU)",
+      "author": "Kotoba Labs",
+      "repo": "https://github.com/kotoba-lang/typed-decisions",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 (model card); DeBERTa-v3 keeps its own terms",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 23.065925583996304,
+        "rank": 63,
+        "axes": {
+          "intelligence": 31.88915182127158,
+          "calibration": 66.3822600310561,
+          "speed": 65.97921316871283,
+          "cost": 74.02828721517697
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.4895833333333333,
+          "judge": 0.5342465753424658,
+          "hard": 0.36363636363636365
+        }
+      },
+      "public_acc": 0.5238095238095238,
+      "sealed_acc": 0.29545454545454547,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 297,
+        "by_family": {
+          "ambiguous_abstain": 0.3784,
+          "judge_hard": 0.439,
+          "long_policy": 0.3,
+          "multi_hop": 0.2632,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.1429,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.16482671974885346,
+        "mean_tvd_gold_probs": 0.32956998226976764,
+        "calibration": 67.03882891162627,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.3028,
+          "1/3": 0.2165,
+          "2/3": 0.3627
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.1364,
+            "accuracy": 0.4286
+          },
+          "conf>=0.9": {
+            "coverage": 0.0032,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 66.76525854472203
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest; 297/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "raw-qwen3-0.6b",
+      "display": "Raw Qwen3 0.6B direct logits",
+      "author": "Alibaba Qwen / neutral reproduction",
+      "repo": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "class": "raw-logit-control",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 14.695767847925103,
+        "rank": 65,
+        "axes": {
+          "intelligence": 28.524464094860445,
+          "calibration": 21.917025326715812,
+          "speed": 89.94746620755858,
+          "cost": 73.92667572688353
+        },
+        "tiers": {
+          "easy": 0.8888888888888888,
+          "standard": 0.5416666666666666,
+          "judge": 0.4657534246575342,
+          "hard": 0.35
+        }
+      },
+      "public_acc": 0.4805194805194805,
+      "sealed_acc": 0.2564935064935065,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2703,
+          "judge_hard": 0.2927,
+          "long_policy": 0.3,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.3214,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.125,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.6510417528775192,
+        "mean_tvd_gold_probs": 0.63447794074069,
+        "calibration": 18.276102962965503,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1835,
+          "1/3": 0.2371,
+          "2/3": 0.3529
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.8734,
+            "accuracy": 0.2677
+          },
+          "conf>=0.9": {
+            "coverage": 0.7175,
+            "accuracy": 0.3032
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 19.793153947861462
+        }
+      },
+      "note": "Round 4 unpublished. Neutral raw-logit control.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "simplejev-qwen3.5-0.8b",
+      "display": "SimpleJev (Qwen3.5-0.8B, CPU)",
+      "author": "sabeel111 / Featherless AI",
+      "repo": "https://github.com/featherless-ai/simple-jev",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 server; Apache-2.0 Qwen3.5-0.8B checkpoint",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 11.60209541534599,
+        "rank": 67,
+        "axes": {
+          "intelligence": 24.929386805579167,
+          "calibration": 48.535504904090345,
+          "speed": 57.454265052488324,
+          "cost": 68.25265889330862
+        },
+        "tiers": {
+          "easy": 0.875,
+          "standard": 0.5729166666666666,
+          "judge": 0.1917808219178082,
+          "hard": 0.4
+        }
+      },
+      "public_acc": 0.5454545454545454,
+      "sealed_acc": 0.3474025974025974,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1622,
+          "judge_hard": 0.7073,
+          "long_policy": 0.15,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.3571,
+          "safety_judge": 0.5625,
+          "temporal_numeric": 0.3214,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.326324301213026,
+        "mean_tvd_gold_probs": 0.3443589086717277,
+        "calibration": 50.149624445111016,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.3761,
+          "1/3": 0.3814,
+          "2/3": 0.2843
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.4545,
+            "accuracy": 0.4429
+          },
+          "conf>=0.9": {
+            "coverage": 0.3214,
+            "accuracy": 0.5253
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 49.477074636352405
+        }
+      },
+      "note": "Round 4 unpublished. 143 pinned files scanned: 0 exact matches. No JevBench-specific fine-tuning.",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "gliner2.5-small",
+      "display": "GLiNER2.5 small (Fastino, 74M)",
+      "author": "Fastino",
+      "repo": "https://huggingface.co/fastino/gliner2.5-small-v1",
+      "class": "classifier",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 13.84974486725046,
+        "rank": 66,
+        "axes": {
+          "intelligence": 25.618919552106576,
+          "calibration": 47.1625470589488,
+          "speed": 77.83454067554766,
+          "cost": 82.35883967864214
+        },
+        "tiers": {
+          "easy": 0.8333333333333334,
+          "standard": 0.4791666666666667,
+          "judge": 0.5,
+          "hard": 0.33181818181818185
+        }
+      },
+      "public_acc": 0.4588744588744589,
+      "sealed_acc": 0.2857142857142857,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2973,
+          "judge_hard": 0.2927,
+          "long_policy": 0.25,
+          "multi_hop": 0.1842,
+          "paraphrase_robustness": 0.1429,
+          "probability": 0.3929,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.2321,
+          "tradeoff": 0.3462,
+          "trap_adversarial": 0.6667
+        },
+        "ece": 0.24154998879734568,
+        "mean_tvd_gold_probs": 0.3609884379642649,
+        "calibration": 57.79557922205218,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2569,
+          "1/3": 0.1959,
+          "2/3": 0.402
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2825,
+            "accuracy": 0.4138
+          },
+          "conf>=0.9": {
+            "coverage": 0.1916,
+            "accuracy": 0.4746
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 53.365149154092435
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "mirror",
+      "display": "Mirror",
+      "author": "Bluusun",
+      "repo": "https://github.com/Bluusun/Decision-API",
+      "class": "jev-rebuild",
+      "licence": "Apache-2.0 wrapper and Mirror release; upstream DeBERTa/model assets retain their own terms",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 5.198860594004477,
+        "rank": 68,
+        "axes": {
+          "intelligence": 18.263874951255378,
+          "calibration": 24.322575867184653,
+          "speed": 70.75829315240604,
+          "cost": 73.3279398087227
+        },
+        "tiers": {
+          "easy": 0.875,
+          "standard": 0.4583333333333333,
+          "judge": 0.3150684931506849,
+          "hard": 0.17272727272727273
+        }
+      },
+      "public_acc": 0.41125541125541126,
+      "sealed_acc": 0.09090909090909091,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 102,
+        "by_family": {
+          "ambiguous_abstain": 0.1081,
+          "judge_hard": 0.2683,
+          "long_policy": 0.0,
+          "multi_hop": 0.0263,
+          "paraphrase_robustness": 0.0714,
+          "probability": 0.1429,
+          "safety_judge": 0.0,
+          "temporal_numeric": 0.0893,
+          "tradeoff": 0.0,
+          "trap_adversarial": 0.1667
+        },
+        "ece": 0.46805769782243106,
+        "mean_tvd_gold_probs": 0.4769304859425074,
+        "calibration": 29.347705920631523,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.055,
+          "1/3": 0.0309,
+          "2/3": 0.1863
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.2013,
+            "accuracy": 0.3387
+          },
+          "conf>=0.9": {
+            "coverage": 0.1526,
+            "accuracy": 0.3617
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 27.253901731695326
+        }
+      },
+      "note": "Round 4 unpublished. 171 intended HTTP 422 context rejections (over 512-token limit) counted once each as misses; only 363/534 valid distributions returned. Found via Gmail submission (Lewis).",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest; 102/308 sealed items answered validly (failures count as wrong)"
+    },
+    {
+      "key": "mxbai-rerank-base-v2",
+      "display": "Mixedbread mxbai-rerank-base-v2",
+      "author": "Mixedbread",
+      "repo": "https://huggingface.co/mixedbread-ai/mxbai-rerank-base-v2",
+      "class": "reranker",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 0.764251199794221,
+        "rank": 69,
+        "axes": {
+          "intelligence": 6.693302965594308,
+          "calibration": 83.14828824044193,
+          "speed": 87.50360537571527,
+          "cost": 67.92989463663068
+        },
+        "tiers": {
+          "easy": 0.4444444444444444,
+          "standard": 0.3333333333333333,
+          "judge": 0.2671232876712329,
+          "hard": 0.4
+        }
+      },
+      "public_acc": 0.3722943722943723,
+      "sealed_acc": 0.34415584415584416,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.4324,
+          "judge_hard": 0.4878,
+          "long_policy": 0.175,
+          "multi_hop": 0.2105,
+          "paraphrase_robustness": 0.6429,
+          "probability": 0.5714,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.25,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.3333
+        },
+        "ece": 0.02699784510577387,
+        "mean_tvd_gold_probs": 0.22520538035991342,
+        "calibration": 86.03994647142693,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.3028,
+          "1/3": 0.299,
+          "2/3": 0.4314
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.0,
+            "accuracy": null
+          },
+          "conf>=0.9": {
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 84.83508887518317
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "gte-reranker-modernbert-base",
+      "display": "Alibaba GTE Reranker ModernBERT-base",
+      "author": "Alibaba-NLP",
+      "repo": "https://huggingface.co/Alibaba-NLP/gte-reranker-modernbert-base",
+      "class": "reranker",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 0.32219057759911496,
+        "rank": 71,
+        "axes": {
+          "intelligence": 4.569305273729187,
+          "calibration": 76.84759720665565,
+          "speed": 90.58799397367488,
+          "cost": 69.64001789071294
+        },
+        "tiers": {
+          "easy": 0.3333333333333333,
+          "standard": 0.3958333333333333,
+          "judge": 0.3013698630136986,
+          "hard": 0.33636363636363636
+        }
+      },
+      "public_acc": 0.33766233766233766,
+      "sealed_acc": 0.3344155844155844,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.3514,
+          "judge_hard": 0.7073,
+          "long_policy": 0.125,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.2857,
+          "safety_judge": 0.4375,
+          "temporal_numeric": 0.25,
+          "tradeoff": 0.1923,
+          "trap_adversarial": 0.25
+        },
+        "ece": 0.04756891580703539,
+        "mean_tvd_gold_probs": 0.24559373344991753,
+        "calibration": 82.96342174680058,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.3853,
+          "1/3": 0.3814,
+          "2/3": 0.2353
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.0162,
+            "accuracy": 0.2
+          },
+          "conf>=0.9": {
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 80.41516152174019
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "bge-reranker-v2-m3",
+      "display": "BAAI bge-reranker-v2-m3",
+      "author": "BAAI",
+      "repo": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+      "class": "reranker",
+      "licence": "Apache-2.0",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 0.6763072957019215,
+        "rank": 70,
+        "axes": {
+          "intelligence": 6.263689402102906,
+          "calibration": 83.82649106525265,
+          "speed": 89.52513700533652,
+          "cost": 73.3733106383488
+        },
+        "tiers": {
+          "easy": 0.4305555555555556,
+          "standard": 0.3645833333333333,
+          "judge": 0.08904109589041095,
+          "hard": 0.36818181818181817
+        }
+      },
+      "public_acc": 0.3939393939393939,
+      "sealed_acc": 0.2792207792207792,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2432,
+          "judge_hard": 0.6341,
+          "long_policy": 0.225,
+          "multi_hop": 0.1579,
+          "paraphrase_robustness": 0.2857,
+          "probability": 0.2857,
+          "safety_judge": 0.25,
+          "temporal_numeric": 0.1964,
+          "tradeoff": 0.2308,
+          "trap_adversarial": 0.25
+        },
+        "ece": 0.03946008009412363,
+        "mean_tvd_gold_probs": 0.2207131513398822,
+        "calibration": 85.01833442359353,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.3211,
+          "1/3": 0.3299,
+          "2/3": 0.1863
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.0,
+            "accuracy": null
+          },
+          "conf>=0.9": {
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 84.52173302428483
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "certo",
+      "display": "Certo v1 (AltSlate Labs)",
+      "author": "AltSlate Labs",
+      "repo": "https://huggingface.co/altslate/certo-decision-model",
+      "class": "jev-rebuild",
+      "licence": "MIT",
+      "ranked": true,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 0.0,
+        "rank": 72,
+        "axes": {
+          "intelligence": 0.0,
+          "calibration": 82.02971590909091,
+          "speed": 93.97471093191521,
+          "cost": 100.0
+        },
+        "tiers": {
+          "easy": 0.2777777777777778,
+          "standard": 0.3020833333333333,
+          "judge": 0.2191780821917808,
+          "hard": 0.3181818181818182
+        }
+      },
+      "public_acc": 0.31601731601731603,
+      "sealed_acc": 0.29545454545454547,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.1622,
+          "judge_hard": 0.6098,
+          "long_policy": 0.175,
+          "multi_hop": 0.3158,
+          "paraphrase_robustness": 0.5,
+          "probability": 0.3214,
+          "safety_judge": 0.3125,
+          "temporal_numeric": 0.2143,
+          "tradeoff": 0.1154,
+          "trap_adversarial": 0.4167
+        },
+        "ece": 0.037789610389610415,
+        "mean_tvd_gold_probs": 0.22624242424242422,
+        "calibration": 84.90891774891774,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.2752,
+          "1/3": 0.3402,
+          "2/3": 0.2745
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.0,
+            "accuracy": null
+          },
+          "conf>=0.9": {
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 83.70925031565656
+        }
+      },
+      "note": "already on the live v1.3.0 board",
+      "note_v14": "re-run on a throwaway RunPod pod with the original recipe; deviations in its manifest"
+    },
+    {
+      "key": "classifier-dev-fast",
+      "display": "classifier.dev (fast tier)",
+      "author": "mrmps (@michael_chomsky)",
+      "repo": "https://classifier.dev",
+      "class": "jev-service",
+      "licence": "MIT (code); hosted service",
+      "ranked": false,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 83.64670446057299,
+        "rank": null,
+        "axes": {
+          "intelligence": 85.13161053003458,
+          "calibration": 77.8658124426079,
+          "speed": 87.59107265834845,
+          "cost": 84.31363764158988
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.9895833333333334,
+          "judge": 0.9726027397260274,
+          "hard": 0.7045454545454546
+        }
+      },
+      "public_acc": 0.8528138528138528,
+      "sealed_acc": 0.34415584415584416,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 308,
+        "by_family": {
+          "ambiguous_abstain": 0.2973,
+          "judge_hard": 0.3659,
+          "long_policy": 0.175,
+          "multi_hop": 0.3684,
+          "paraphrase_robustness": 0.5714,
+          "probability": 0.5,
+          "safety_judge": 0.375,
+          "temporal_numeric": 0.3036,
+          "tradeoff": 0.2692,
+          "trap_adversarial": 0.5833
+        },
+        "ece": 0.22765151515151522,
+        "mean_tvd_gold_probs": 0.31378787878787867,
+        "calibration": 61.54545454545454,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1193,
+          "1/3": 0.2887,
+          "2/3": 0.6373
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.289,
+            "accuracy": 0.3933
+          },
+          "conf>=0.9": {
+            "coverage": 0.1234,
+            "accuracy": 0.3684
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 68.34560366926844
+        }
+      },
+      "note": "unranked / honorable mention",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (classifier.dev), as for every API measurement"
+    },
+    {
+      "key": "swanone",
+      "display": "swanOne",
+      "author": "swanOne submitter",
+      "repo": "https://github.com/swanOne",
+      "class": "jev-rebuild",
+      "licence": "Patch/repository and Qwen/Mia component-specific terms recorded in RESULT.md",
+      "ranked": true,
+      "source": "round 4 unpublished",
+      "v130": {
+        "score": 67.83909510453081,
+        "rank": 19,
+        "axes": {
+          "intelligence": 85.32368338862247,
+          "calibration": 79.11489077730333,
+          "speed": 81.31394160150775,
+          "cost": 38.58578528901667
+        },
+        "tiers": {
+          "easy": 1.0,
+          "standard": 0.96875,
+          "judge": 0.9315068493150684,
+          "hard": 0.7636363636363637
+        }
+      },
+      "public_acc": 0.8874458874458875,
+      "sealed_acc": null,
+      "v14": {
+        "axes": {
+          "calibration": null
+        }
+      },
+      "note": "Round 4 unpublished. Draft vocabulary derived via AGPL-3.0 generator (provenance recorded separately). Submitter consulted all 231 public tasks and swept temperature over 111 public hard tasks. Score corrected during review from pooled-534 ECE/latency to hard-tier/242-item block. | v1.4: Not re-measured: needs its own H100 NVL pod (99 GiB weights); RunPod balance ran low during this job. Ready-to-run recipe kept."
+    },
+    {
+      "key": "qwen3.8-27b",
+      "display": "Qwen3.8 27B (Chutes TEE)",
+      "author": "Qwen / Chutes",
+      "repo": null,
+      "class": "llm-baseline",
+      "licence": "open weights",
+      "ranked": false,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 24.836695615027768,
+        "rank": null,
+        "axes": {
+          "intelligence": 67.4325524043019,
+          "calibration": 92.09887121241667,
+          "speed": 61.270489995780956,
+          "cost": 0.0
+        },
+        "tiers": {
+          "easy": 0.9861111111111112,
+          "standard": 0.9895833333333334,
+          "judge": 0.952755905511811,
+          "hard": 0.21363636363636362
+        }
+      },
+      "public_acc": 0.7186147186147186,
+      "sealed_acc": 0.21753246753246752,
+      "sealed": {
+        "n": 308,
+        "answered_valid": 69,
+        "by_family": {
+          "ambiguous_abstain": 0.7838,
+          "judge_hard": 0.9268,
+          "long_policy": 0.0,
+          "multi_hop": 0.0,
+          "paraphrase_robustness": 0.0,
+          "probability": 0.0,
+          "safety_judge": 0.0,
+          "temporal_numeric": 0.0,
+          "tradeoff": 0.0,
+          "trap_adversarial": 0.0
+        },
+        "ece": 0.017608695652173934,
+        "mean_tvd_gold_probs": null,
+        "calibration": 96.47826086956522,
+        "label_only": false,
+        "by_panel_stratum": {
+          "0/3": 0.1468,
+          "1/3": 0.2165,
+          "2/3": 0.2941
+        },
+        "risk_coverage": {
+          "conf>=0.7": {
+            "coverage": 0.224,
+            "accuracy": 0.971
+          },
+          "conf>=0.9": {
+            "coverage": 0.224,
+            "accuracy": 0.971
+          }
+        }
+      },
+      "v14": {
+        "axes": {
+          "calibration": 94.65351517908667
+        }
+      },
+      "note": "unranked / honorable mention",
+      "note_v14": "sealed item text (no golds) was sent to the operator endpoint (Chutes), as for every API measurement; 69/308 sealed items answered validly (failures count as wrong); partial: Chutes rate limit stopped the run after 81/308 items; unranked as in v1.3"
+    },
+    {
+      "key": "needle-3-tools",
+      "display": "Needle 3, options as tools (post-hoc adapter mode)",
+      "author": "Cactus Compute",
+      "repo": "https://github.com/cactus-compute/needle",
+      "class": "small-tool-model",
+      "licence": "Apache-2.0 (model and package)",
+      "ranked": false,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 1.0757743846539873,
+        "rank": null,
+        "axes": {
+          "intelligence": 13.527361471793748,
+          "calibration": null,
+          "speed": 52.842525649949984,
+          "cost": 65.27447796986436
+        },
+        "tiers": {
+          "easy": 0.6666666666666666,
+          "standard": 0.3125,
+          "judge": 0.3424657534246575,
+          "hard": null
+        }
+      },
+      "public_acc": 0.22077922077922077,
+      "sealed_acc": null,
+      "v14": {
+        "axes": {
+          "calibration": null
+        }
+      },
+      "note": "unranked / honorable mention | v1.4: Not re-measured: same as needle-3."
+    },
+    {
+      "key": "needle-3",
+      "display": "Needle 3 (Cactus, 2-bit, local CPU)",
+      "author": "Cactus Compute",
+      "repo": "https://github.com/cactus-compute/needle",
+      "class": "small-tool-model",
+      "licence": "Apache-2.0 (model and package)",
+      "ranked": false,
+      "source": "v1.3.0 public",
+      "v130": {
+        "score": 0.09466799356370086,
+        "rank": null,
+        "axes": {
+          "intelligence": 4.583148211883233,
+          "calibration": null,
+          "speed": 59.92368509307548,
+          "cost": 58.68121468207322
+        },
+        "tiers": {
+          "easy": 0.4722222222222222,
+          "standard": 0.16666666666666666,
+          "judge": 0.3150684931506849,
+          "hard": 0.07727272727272727
+        }
+      },
+      "public_acc": 0.22510822510822512,
+      "sealed_acc": null,
+      "v14": {
+        "axes": {
+          "calibration": null
+        }
+      },
+      "note": "unranked / honorable mention | v1.4: Not re-measured: ~100-250 s per item on a rented CPU pod (19 s on Sandy); needs a dedicated CPU host."
+    }
+  ]
+}

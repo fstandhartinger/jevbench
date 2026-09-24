@@ -11,7 +11,7 @@ JevBench is [Benchmark Heaven](https://benchmarkheaven.com)'s own benchmark. It 
 affiliated with or endorsed by TypeSafe AI, whose Jev model is one of the systems
 measured here.
 
-## v1.4.0: fresh sealed decisions and a Jev-class score (current)
+## v1.4.1: fresh sealed decisions and a Jev-class score (current)
 
 **[Live board](https://benchmarkheaven.com/jev-models)** · [v1.4 method](docs/METHOD-v1.4.md) ·
 [aggregate results](results/v1.4/jevbench-v1.4-results.json) · [changelog](CHANGELOG.md)

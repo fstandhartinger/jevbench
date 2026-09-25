@@ -173,6 +173,21 @@ def test_instinct_keeps_its_base_model_estimate(rows):
     assert inst["cost"]["usd_per_1000"] == pytest.approx(0.3253253932584269)
 
 
+def test_openjeff_exact_base_price_and_full_protocol(rows):
+    row = rows["openjeff-pilot-v1"]
+    expected = 410384 * 0.05 / 1e6 / 534 * 1000
+    assert row["ranked"] and row["api_flag"] is False
+    assert row["sealed_aggregate"]["n"] == 308
+    assert row["cost"]["usd_per_1000"] == pytest.approx(expected, rel=1e-12)
+    assert row["cost"]["measured_input_tokens_frozen"] == 410384
+    assert row["cost"]["measured_output_tokens_frozen"] == 0
+    assert "NanoGPT/Aoru" in row["cost"]["basis"]
+    assert row["release_evidence"]["row_sha256"] == \
+        "d4547897e15b17c8b55d1ce31ffc492a0de9c492c19ac85eb90217ac203a6eb9"
+    assert row["release_evidence"]["raw_results_sha256"] == \
+        "9f89edb195bb16ab59e49486465f4b3caccde9b76bddb1c87749c7deef44f0d3"
+
+
 def test_price_rule_blocks_unverified_api_tariffs(published, rows):
     assert published["status"] == "draft"
     assert published["publication_ready"] is False

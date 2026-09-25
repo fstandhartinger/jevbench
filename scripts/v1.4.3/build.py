@@ -365,6 +365,13 @@ APUS_PUBLIC_OWNER_AGGREGATE = DATA / "owner-rows" / "apus-openjev-4b-original-AG
 APUS_PUBLIC_OWNER_AGGREGATE_SHA256 = "b86ca9a780eea927c46e06e37ab814be287717a328bb4f5c7b97dc96acba23c9"
 APUS_PUBLIC_OWNER_ROW = DATA / "owner-rows" / "apus-openjev-4b-original-ROW-public.json"
 APUS_PUBLIC_OWNER_ROW_SHA256 = "6b74ead5df76e68a753b86e0f5a8dc4037664f49d5c1d24b54a6d71d7029b7e0"
+OPENJEFF_OWNER_AGGREGATE_SHA256 = "df8af262a37d2e649afea65e975e9e842b989cedeb6b1bbe595c5cc12bf0d951"
+OPENJEFF_OWNER_ROW_SHA256 = "d4547897e15b17c8b55d1ce31ffc492a0de9c492c19ac85eb90217ac203a6eb9"
+OPENJEFF_RAW_SHA256 = "9f89edb195bb16ab59e49486465f4b3caccde9b76bddb1c87749c7deef44f0d3"
+OPENJEFF_CATALOG = DATA / "price-receipts" / "NANOGPT-MODELS-20260925T1925Z.json"
+OPENJEFF_CATALOG_SHA256 = "f4f70a0e9f9bbdb86a94f06a50ed1ce58f7976a28f8211458476f7cd5d52ae07"
+OPENJEFF_PROVIDER_PAGE = DATA / "price-receipts" / "NANOGPT-AORU-20260925T1927Z.html"
+OPENJEFF_PROVIDER_PAGE_SHA256 = "81642fe5cacb81c79da12e63188f890a7b4cdc2d3ea978e52127e116c1101a65"
 
 # ---------------------------------------------------------------------------------------------------------------
 # Release corrections applied at assembly. Every entry is documented in docs/RELEASE-v1.4.3.md.
@@ -603,6 +610,15 @@ def assemble(config):
                 token_path = path.with_name(path.name.replace("-AGGREGATE-SOURCE-", "-TOKEN-AGGREGATE-SOURCE-"))
                 assert sha(path) == expected_agg_sha and sha(token_path) == expected_token_sha, src["key"]
             check_pair(src, row)
+            if src["key"] == "openjeff-pilot-v1":
+                if (sha(path), sha(row_path), row.get("raw_results_sha256")) != (
+                    OPENJEFF_OWNER_AGGREGATE_SHA256, OPENJEFF_OWNER_ROW_SHA256,
+                    OPENJEFF_RAW_SHA256):
+                    raise ValueError("OpenJeff owner aggregate/ROW/raw hash mismatch")
+                if (row["measurements"]["cost"]["input_tokens_old_534"],
+                    row["measurements"]["cost"]["output_tokens_old_534"],
+                    row["sealed"]["answered_valid"]) != (410384, 0, 308):
+                    raise ValueError("OpenJeff frozen usage or sealed count mismatch")
             if src["key"] == "certo-r1":
                 assert sha(path) == "6c487dfeebb77248a1165a50580e3f06ceb5eda3e8b6a918c6527fb0f1718c30", src["key"]
                 assert sha(row_path) == "a2da1e332b4cea2ccab4fc50b6c40057f72d612f69141479a162da4c7323e17c", src["key"]
@@ -870,6 +886,41 @@ def apply_pricing_rule(rows, footnotes):
                            "usd_per_1000": expected, "basis": cost["basis"],
                            "evidence": [f"results/v1.4.3/price-receipts/{CERTO_BASE_RECEIPT.name}",
                                         "certo/RESULT.md", "certo/outputs/certo-r1-ROW-v1.4.3.json"]})
+            continue
+        if key == "openjeff-pilot-v1":
+            if (sha(OPENJEFF_CATALOG), sha(OPENJEFF_PROVIDER_PAGE)) != (
+                OPENJEFF_CATALOG_SHA256, OPENJEFF_PROVIDER_PAGE_SHA256):
+                raise ValueError("OpenJeff price receipts changed")
+            matches = [model for model in read(OPENJEFF_CATALOG)["data"]
+                       if model.get("id") == "gemma-4-12b-it"]
+            if len(matches) != 1 or matches[0].get("providers") != ["aoru"] or \
+                    matches[0].get("pricing", {}).get("prompt") != 0.05:
+                raise ValueError("OpenJeff exact-base paid route missing or changed")
+            evidence = row["release_evidence"]
+            expected_cost = 410384 * 0.05 / 1e6 / 534 * 1000
+            if (evidence.get("row_sha256") != OPENJEFF_OWNER_ROW_SHA256 or
+                evidence.get("aggregate_source_sha256") != OPENJEFF_OWNER_AGGREGATE_SHA256 or
+                evidence.get("raw_results_sha256") != OPENJEFF_RAW_SHA256 or
+                row["api_flag"] or row["sealed_aggregate"]["n"] != 308 or
+                not math.isclose(cost["usd_per_1000"], expected_cost, rel_tol=1e-12)):
+                raise ValueError("OpenJeff measurement/price assertion failed")
+            reference = ("NanoGPT/Aoru exact Gemma 4 12B paid route at $0.05/M input "
+                         "and $0.25/M output, 25 Sep 2026 cutoff; "
+                         "https://nano-gpt.com/provider/aoru")
+            cost.update(kind="estimate", basis="ESTIMATE: " + reference,
+                        measured_input_tokens_frozen=410384,
+                        measured_output_tokens_frozen=0)
+            row["scoring_note"] = ("Official 842-decision evaluator-owned offline measurement. "
+                                   "Cost is a labelled exact-base estimate at " + reference +
+                                   " Applied to 410,384 measured input and zero generated output "
+                                   "tokens over 534 frozen decisions; it is not the GPU bill.")
+            footnotes[key] = footnotes[key].split("Cost is a labelled estimate:", 1)[0].rstrip() + \
+                " " + row["scoring_note"]
+            review.append({"key": key, "status": "bookable-base-reference",
+                           "usd_per_1000": expected_cost, "basis": cost["basis"],
+                           "evidence": [f"results/v1.4.3/price-receipts/{OPENJEFF_CATALOG.name}",
+                                        f"results/v1.4.3/price-receipts/{OPENJEFF_PROVIDER_PAGE.name}",
+                                        "w4b/RESULT.md", "w4b/PRICE-VERIFY.md"]})
             continue
         if key in SUPERSEDED_VERSION:
             successor = next((other for other in rows if other["key"] == "jevk5-9b-v0.3.3"), None)

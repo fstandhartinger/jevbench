@@ -542,5 +542,13 @@
   "row": "certo-r1-ROW-v1.4.3.json",
   "row_sha256": "a2da1e332b4cea2ccab4fc50b6c40057f72d612f69141479a162da4c7323e17c",
   "override": false
+ },
+ {
+  "key": "openjeff-pilot-v1",
+  "aggregate_source": "openjeff-pilot-v1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "df8af262a37d2e649afea65e975e9e842b989cedeb6b1bbe595c5cc12bf0d951",
+  "row": "openjeff-pilot-v1-ROW-v1.4.3.json",
+  "row_sha256": "d4547897e15b17c8b55d1ce31ffc492a0de9c492c19ac85eb90217ac203a6eb9",
+  "override": false
  }
 ]

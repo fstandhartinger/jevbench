@@ -4,7 +4,7 @@
 
 ## Scope and evidence
 
-The current candidate has **160 unique listings**: 93 carried from v1.4.2 and 67 v1.4.3 additions. It provisionally ranks **138**. Official new full-protocol rows use the frozen 534 decisions plus 308 sealed decisions on evaluator-owned offline pods, or an explicitly flagged API route. Owner aggregate and ROW SHA-256 pins are in `results/v1.4.3/input-manifest.json`; no sealed per-item predictions are included. The released v1.4 scoring implementation and four-axis formula are unchanged. The draft candidate digest is `0f53bf9e9ce0b370eee729b8ae98464ce10b50d86f41fce4dc357803d61ac7d8`.
+The current candidate has **161 unique listings**: 93 carried from v1.4.2 and 68 v1.4.3 additions. It provisionally ranks **139**. Official new full-protocol rows use the frozen 534 decisions plus 308 sealed decisions on evaluator-owned offline pods, or an explicitly flagged API route. Owner aggregate and ROW SHA-256 pins are in `results/v1.4.3/input-manifest.json`; no sealed per-item predictions are included. The released v1.4 scoring implementation and four-axis formula are unchanged. The draft candidate digest is `943d35bbbe154c5b86794fa7142965734299d6de909923bf596a265b6a5e3b51`.
 
 ## Provisional public orders
 
@@ -28,4 +28,4 @@ The draft has **17 explicit measured-unranked holds**, including two Gevva prove
 
 ## Verification and remaining gates
 
-The Qwen3.8 price correction passed an independent focused code review before rebuild. The release suite passed **40/40** (`PYTHONPATH=. python3 -m pytest -q tests/test_v143_release.py`). The `--final` builder gate refuses to write a publishable result without a receipt for Florian's approval of the changed top five. OpenJeff and ProgramAsWeights official measurement outcomes, final roster integrity and leak scan, new headline-entrant verification, preview approval, site PR review, merge, tag and live checks remain. No v1.4.3 release has been published.
+The Qwen3.8 price correction passed an independent focused code review before rebuild. OpenJeff pilot v1 then completed 842/842 on an evaluator-owned offline A100 pod; its frozen 410,384 input and zero output tokens use the paid NanoGPT/Aoru exact Gemma 4 12B base reference at $0.05/M input, yielding a labelled $0.038425468 estimate per 1,000 decisions and provisional rank 35 in this roster. Its owner aggregate/ROW/raw and first-party price receipts are hash-pinned in the builder, with an independent post-build CODE PASS. The release suite passed **41/41** (`PYTHONPATH=. python3 -m pytest -q tests/test_v143_release.py`). The `--final` builder gate refuses to write a publishable result without a receipt for Florian's approval of the changed top five. ProgramAsWeights and later intake, final roster integrity and leak scan, final candidate verification, preview approval, site PR review, merge, tag and live checks remain. No v1.4.3 release has been published.

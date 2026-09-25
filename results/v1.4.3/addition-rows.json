@@ -3494,5 +3494,57 @@
    "aggregate_source_sha256": "6c487dfeebb77248a1165a50580e3f06ceb5eda3e8b6a918c6527fb0f1718c30",
    "row_sha256": "a2da1e332b4cea2ccab4fc50b6c40057f72d612f69141479a162da4c7323e17c"
   }
+ },
+ {
+  "key": "openjeff-pilot-v1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (see speed basis), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9791666666666666,
+   "judge": 0.863013698630137,
+   "hard": 0.740909090909091
+  },
+  "speed": {
+   "p50_s_raw": 0.10691136550303781,
+   "p95_s_raw": 0.2951261824979156,
+   "p50_s_adjusted": 0.36382273100607565,
+   "p95_s_adjusted": 0.7402523649958312,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's reviewed OpenJeff pilot server on loopback inside the offline container, NVIDIA A100-SXM4-80GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.03842546816479401,
+   "basis": "ESTIMATE: NanoGPT/Aoru exact Gemma 4 12B public route at $0.05/M input and $0.25/M output, 25 Sep 2026; recheck at publication cut-off; exact prompt-token counts from a separate offline tokenizer pass over the same compiled requests; server reports no usage and generates no output tokens; documented pre-forward refusals count 0 tokens; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "9f89edb195bb16ab59e49486465f4b3caccde9b76bddb1c87749c7deef44f0d3",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "df8af262a37d2e649afea65e975e9e842b989cedeb6b1bbe595c5cc12bf0d951",
+   "row_sha256": "d4547897e15b17c8b55d1ce31ffc492a0de9c492c19ac85eb90217ac203a6eb9"
+  }
  }
 ]

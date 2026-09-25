@@ -858,22 +858,8 @@
    "ranked": true,
    "repo": "https://huggingface.co/apus-ailab/APUS-OpenJev-v1-4B",
    "sealed": {
-    "ece": 0.47333455376565914,
-    "answered_valid": 308,
-    "risk_coverage": {
-     "conf>=0.7": {
-      "accuracy": 0.2677595628415301,
-      "coverage": 0.5941558441558441,
-      "n": 183
-     },
-     "conf>=0.9": {
-      "accuracy": 0.24107142857142858,
-      "coverage": 0.36363636363636365,
-      "n": 112
-     }
-    },
-    "mean_tvd_gold_probs": 0.5276796090876007,
     "n": 308,
+    "calibration": 26.28256416905405,
     "by_family": {
      "ambiguous_abstain": {
       "accuracy": 0.21621621621621623,
@@ -926,6 +912,9 @@
       "n": 12
      }
     },
+    "label_only": false,
+    "ece": 0.47333455376565914,
+    "mean_tvd_gold_probs": 0.5276796090876007,
     "by_panel_stratum": {
      "0/3": {
       "accuracy": 0.11926605504587157,
@@ -943,8 +932,19 @@
       "n": 102
      }
     },
-    "calibration": 26.28256416905405,
-    "label_only": false
+    "answered_valid": 308,
+    "risk_coverage": {
+     "conf>=0.7": {
+      "accuracy": 0.2677595628415301,
+      "coverage": 0.5941558441558441,
+      "n": 183
+     },
+     "conf>=0.9": {
+      "accuracy": 0.24107142857142858,
+      "coverage": 0.36363636363636365,
+      "n": 112
+     }
+    }
    },
    "sealed_acc": 0.2564935064935065,
    "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026)",
@@ -5675,6 +5675,90 @@
      "hard_public": 0.5675675675675675,
      "hard_heldout": 0.47706422018348627,
      "sealed": 0.17857142857142858
+    }
+   }
+  },
+  {
+   "key": "openjeff-pilot-v1",
+   "display": "OpenJeff pilot v1",
+   "author": "greyaperez",
+   "repo": "https://github.com/greyaperez/openjeff",
+   "class": "jev-rebuild",
+   "licence": "Apache-2.0 code and adapter; Gemma 4 12B base Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-v143-models GPU worker w4b, full 534+308 protocol)",
+   "note": "OpenJeff pilot v1, evaluator-owned offline 8×A100 node, exact Gemma 4 12B base reference price estimate.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium NVIDIA A100-SXM4-80GB pod, through JevBench's unchanged typesafe adapter against the author's reviewed OpenJeff pilot server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: NanoGPT/Aoru exact Gemma 4 12B public route at $0.05/M input and $0.25/M output, 25 Sep 2026; recheck at publication cut-off, over exact prompt-token counts from a separate offline tokenizer pass over the same compiled requests. The server reports no usage and generates no output tokens; documented pre-forward refusals count 0 tokens. It is not a GPU bill.",
+   "v130": {
+    "score": 70.56583233840063,
+    "rank": 12,
+    "axes": {
+     "intelligence": 82.0133206811041,
+     "calibration": 67.24906286916121,
+     "speed": 85.69730366897788,
+     "cost": 52.46142497432754
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.863013698630137,
+     "hard": 0.740909090909091
+    }
+   },
+   "public_acc": 0.8831168831168831,
+   "sealed_acc": 0.31493506493506496,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.2162,
+     "judge_hard": 0.561,
+     "long_policy": 0.175,
+     "multi_hop": 0.3421,
+     "paraphrase_robustness": 0.5714,
+     "probability": 0.4643,
+     "safety_judge": 0.4375,
+     "temporal_numeric": 0.1071,
+     "tradeoff": 0.2308,
+     "trap_adversarial": 0.5
+    },
+    "ece": 0.47103951316185705,
+    "mean_tvd_gold_probs": 0.40268468567813387,
+    "calibration": 32.7618143999076,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1376,
+     "1/3": 0.3196,
+     "2/3": 0.5
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.6818,
+      "accuracy": 0.3571
+     },
+     "conf>=0.9": {
+      "coverage": 0.487,
+      "accuracy": 0.4133
+     }
+    }
+   },
+   "v14": {
+    "score": 57.644540751285156,
+    "rank": 14,
+    "axes": {
+     "intelligence": 52.10917773379665,
+     "calibration": 47.131501262096606,
+     "speed": 85.69730366897788,
+     "cost": 52.46142497432754
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.863013698630137,
+     "hard_public": 0.7747747747747747,
+     "hard_heldout": 0.7064220183486238,
+     "sealed": 0.31493506493506496
     }
    }
   }

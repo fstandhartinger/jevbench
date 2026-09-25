@@ -1359,6 +1359,18 @@
     "certo/RESULT.md",
     "certo/outputs/certo-r1-ROW-v1.4.3.json"
    ]
+  },
+  {
+   "key": "openjeff-pilot-v1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.038425468164794016,
+   "basis": "ESTIMATE: NanoGPT/Aoru exact Gemma 4 12B paid route at $0.05/M input and $0.25/M output, 25 Sep 2026 cutoff; https://nano-gpt.com/provider/aoru",
+   "evidence": [
+    "results/v1.4.3/price-receipts/NANOGPT-MODELS-20260925T1925Z.json",
+    "results/v1.4.3/price-receipts/NANOGPT-AORU-20260925T1927Z.html",
+    "w4b/RESULT.md",
+    "w4b/PRICE-VERIFY.md"
+   ]
   }
  ]
 }

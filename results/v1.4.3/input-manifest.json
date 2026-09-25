@@ -1,0 +1,135 @@
+[
+ {
+  "key": "blink-4b",
+  "aggregate_source": "blink-4b-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "fe0439d82d7e6c0e214de6fb9f11465ea134f795ec49d00943acf4f05902713f",
+  "row": "blink-4b-ROW-v1.4.2.json",
+  "row_sha256": "fecdfdb5d684bdb12a875337f60535e9e8403dec8da279d19065db48328edfca",
+  "override": false
+ },
+ {
+  "key": "imajev-2b",
+  "aggregate_source": "imajev-2b-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "fee9a5373f98e0c89f48758d17e234ed9edfc22cbf19bb0b8a631996c4aea541",
+  "row": "imajev-2b-ROW-v1.4.2.json",
+  "row_sha256": "8b19c05e88a3a52d649a96a03faa5a0e56955c45b3a78529060418c4e3480ea0",
+  "override": false
+ },
+ {
+  "key": "imajev-4b",
+  "aggregate_source": "imajev-4b-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "b7a307f637901f3b6e7342eb9767ce4fac59dee4b8066ed807e07a02cb73fb2f",
+  "row": "imajev-4b-ROW-v1.4.2.json",
+  "row_sha256": "328744b1a8b3db71d799540e16a80a963b82013ea7a28db3fbada68fbcb5d775",
+  "override": false
+ },
+ {
+  "key": "imajev-9b",
+  "aggregate_source": "imajev-9b-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "cb1e014fdab7d038386e4a381dde7c5824c369a9f105781da1efc38b443f1d66",
+  "row": "imajev-9b-ROW-v1.4.2.json",
+  "row_sha256": "c8664242687cfdc698795cc7e101bc9ae54f5f46255746fd0085bc13e165ad12",
+  "override": false
+ },
+ {
+  "key": "ryotide-gemma",
+  "aggregate_source": "ryotide-gemma-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "1bb636a2464c5d0e16b98ab85f87678321e6d100273a50111fd87f31ee7400d7",
+  "row": "ryotide-gemma-ROW-v1.4.2.json",
+  "row_sha256": "2f0c2ff57804185b439855f9b669773d8b12cb7916babaf77eca69cc2c3a1fc7",
+  "override": false
+ },
+ {
+  "key": "ryotide-qwen",
+  "aggregate_source": "ryotide-qwen-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "8eeaf793e6f16845131807da9362079349f0444d0363088a9d7cf4261c1798f3",
+  "row": "ryotide-qwen-ROW-v1.4.2.json",
+  "row_sha256": "c0b51dec1c5ad26e337cd1b8071a1128249cdb4e5d529bc33a26a5c9494c72ec",
+  "override": false
+ },
+ {
+  "key": "decision-4b-v11",
+  "aggregate_source": "decision-4b-v11-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "a080dba9aa5f18f17a5fffe1ef30c1fced8f7cdddd47c7ab2a9e367f217e18fc",
+  "row": "decision-4b-v11-ROW-v1.4.3.json",
+  "row_sha256": "6c28050aab7e36f148994fa26bfd7ea8ea6e3ffba5aef4b708d702a32d7914ce",
+  "override": true
+ },
+ {
+  "key": "decision-4b-v12",
+  "aggregate_source": "decision-4b-v12-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "aa6bc91e3f3eb7fc95fbe7e892047eca0258abdb1c9168137e370fe1d81e7a78",
+  "row": "decision-4b-v12-ROW-v1.4.3.json",
+  "row_sha256": "72a37686b35271d8eef979703ee9799c65fd62aee8ea8cf1777157a238ff5cfd",
+  "override": true
+ },
+ {
+  "key": "gliner25-decide",
+  "partial": "gliner25-decide-PARTIAL-v1.4.3.json",
+  "partial_sha256": "1f708a51169af11e217f33d730bfba794564f6bdc0e4aa9e02279726b31b6c58"
+ },
+ {
+  "key": "nemotron-diffusion-8b",
+  "aggregate_source": "nemotron-diffusion-8b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "95f91f87c0af209d198b0567072253d85deed022a20bc6de990de692d402935b",
+  "row": "nemotron-diffusion-8b-ROW-v1.4.3.json",
+  "row_sha256": "3567ddffa3edd73c8282ac336eda31d5874207c88211688c8a81dd5499f423b1",
+  "override": false
+ },
+ {
+  "key": "plumb-4b",
+  "aggregate_source": "plumb-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "aade49ff5c86936b14ed287d6a503d3c1ba2884eb2b9f745cc8f0e4b73296165",
+  "row": "plumb-4b-ROW-v1.4.3.json",
+  "row_sha256": "0fe248c8e2c1f267951c8d8c0fd3a480baea1cbf725caacd2911c087facda709",
+  "override": false
+ },
+ {
+  "key": "apus-openjev-4b",
+  "aggregate_source": "APUS-OpenJev-v1-4B-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "65d8ba2cda9db9beba456bb736b3b55760d1753313379017ec70f5923e07333a",
+  "row": "APUS-OpenJev-v1-4B-ROW-v1.4.2.json",
+  "row_sha256": "d727be9e98e2c2dc76195436e40a3abd25e668c726cdd4ec9786eac8f0bde9e0",
+  "override": true
+ },
+ {
+  "key": "jpt-4b",
+  "aggregate_source": "jpt-4b-AGGREGATE-SOURCE-v1.4.2.json",
+  "aggregate_source_sha256": "de0e30897b0e3e580e93b14313854d346c388dca4259bb6367936b6bf8b9dbde",
+  "row": "jpt-4b-ROW-v1.4.2.json",
+  "row_sha256": "8ac57400f129ce5aa6c281bfd7d03f15b68fd3aa7f70d831af72eb5bc3837c97",
+  "override": false
+ },
+ {
+  "key": "autojev-27b",
+  "aggregate_source": "autojev-27b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "8cc2bb442915d8efca9ca644d6fb14e39dcae089bfc18ee6c7fd6ca078e81f3e",
+  "row": "autojev-27b-ROW-v1.4.3.json",
+  "row_sha256": "66fb2cd94c69bd6860e296f64d70413adb093f2b6f82e6e2f6b5161427777ead",
+  "override": false
+ },
+ {
+  "key": "eikos-27b",
+  "aggregate_source": "eikos-27b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "32d18d2e89dc3eb65cfb616bc60a2e7c2514f78d5c0ec1d6791e4277410b0774",
+  "row": "eikos-27b-ROW-v1.4.3.json",
+  "row_sha256": "c47c1a569cea1dd279bc4ed73b2c2d103ac880b18d90722fc6a888dc0cc4edd5",
+  "override": false
+ },
+ {
+  "key": "eikos-4b",
+  "aggregate_source": "eikos-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "494be2c04a09105a43611e8edf1b6ebd0efc250488f9ef0977f2b62098b6d3eb",
+  "row": "eikos-4b-ROW-v1.4.3.json",
+  "row_sha256": "96d57c49b1572b85f5ef9273b6010f8a2ac54cf374422f44974741b5b9b579f1",
+  "override": false
+ },
+ {
+  "key": "vtx-jev-1",
+  "aggregate_source": "vtx-jev-1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "3d233c9158468af257c051b3e927e40eab538cab5645a36fa8930e0922c4381a",
+  "row": "vtx-jev-1-ROW-v1.4.3.json",
+  "row_sha256": "33639c9c825217d4a9d4d5736442acc78ff0d4484fadc7b831054fbc8b1961b2",
+  "override": false
+ }
+]

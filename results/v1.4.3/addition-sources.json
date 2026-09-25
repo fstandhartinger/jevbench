@@ -1,0 +1,1438 @@
+{
+ "meta": {
+  "source": "Official full-protocol v1.4.3 addition rows; only system/family/stratum aggregates, no task text, answers or per-item output",
+  "sealed_items": 308,
+  "composite_v14_sha256": "33177d06eab9f78667972ec3b20997344f70a78e16b05326453a2c31200cac79"
+ },
+ "systems": [
+  {
+   "key": "blink-4b",
+   "display": "blink-4b (thegovind, Qwen3.5-4B LoRA soup)",
+   "author": "thegovind",
+   "repo": "https://huggingface.co/thegovind/blink-4b",
+   "class": "jev-rebuild",
+   "licence": "weights: non-commercial research and evaluation (LICENSE.md); serve.py, blink.py and the Dockerfile Apache-2.0; base Qwen3.5-4B Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026, jevbench-add-requests run 13)",
+   "note": "thegovind/blink-4b rev c243abdd2d79478db510dcdc60a88087c18547c0 (tag v1.0): merged weights, a uniform average of three LoRA fine-tunes of Qwen/Qwen3.5-4B, served by the author's own serve.py/blink.py on the stack their Dockerfile pins (torch 2.13.0, transformers 5.17.0, flash-linear-attention 0.5.2). One forward pass per request, native probabilities over the offered options, no generated tokens, temperature 1.0 (not fitted), the client's option order kept, no test-time ensembling. serve.py hashes every file in the author's weights.sha256 before serving. Over-limit requests (255 options, 131,072 input tokens, 512 questions) are HTTP 422, which counts as a wrong answer. Disclosed by the author: development was measured on the 231 public items, JevK5's 65 public hard items were a second selection set, and a Qwen3.8-27B teacher wrote training rows. | Disclosure: the author developed on the public items and on JevBench K5's public hard items. Its sealed accuracy (0.295) is at the 0.293 chance level while its public accuracy is high; the generalization penalty applies. An 8-gram screen found no shared text.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-24, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 78.0666511053832,
+    "rank": 1,
+    "axes": {
+     "intelligence": 84.31870730422813,
+     "calibration": 80.67307378622434,
+     "speed": 91.74507809924913,
+     "cost": 59.515060404687304
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9895833333333334,
+     "judge": 0.952054794520548,
+     "hard": 0.7045454545454546
+    }
+   },
+   "public_acc": 0.8614718614718615,
+   "sealed_acc": 0.29545454545454547,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.3784,
+     "judge_hard": 0.3415,
+     "long_policy": 0.2,
+     "multi_hop": 0.2368,
+     "paraphrase_robustness": 0.2857,
+     "probability": 0.25,
+     "safety_judge": 0.375,
+     "temporal_numeric": 0.2679,
+     "tradeoff": 0.3077,
+     "trap_adversarial": 0.5
+    },
+    "ece": 0.25781911380242645,
+    "mean_tvd_gold_probs": 0.26740310755801755,
+    "calibration": 60.84793324185648,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1009,
+     "1/3": 0.2784,
+     "2/3": 0.5196
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.2792,
+      "accuracy": 0.3023
+     },
+     "conf>=0.9": {
+      "coverage": 0.0812,
+      "accuracy": 0.24
+     }
+    }
+   },
+   "v14": {
+    "score": 66.68048584109582,
+    "rank": 5,
+    "axes": {
+     "intelligence": 52.39073327611262,
+     "calibration": 69.10840846867643,
+     "speed": 91.74507809924913,
+     "cost": 59.515060404687304
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9895833333333334,
+     "judge": 0.952054794520548,
+     "hard_public": 0.7207207207207207,
+     "hard_heldout": 0.6880733944954128,
+     "sealed": 0.29545454545454547
+    }
+   }
+  },
+  {
+   "key": "imajev-2b",
+   "display": "imajev-2b (mohit67890, Qwen3.5-2B + LoRA)",
+   "author": "mohit67890",
+   "repo": "https://github.com/mohit67890/imajev",
+   "class": "jev-rebuild",
+   "licence": "Apache-2.0 (code and adapters); base Qwen weights unchanged",
+   "ranked": true,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026, jevbench-add-requests run 13)",
+   "note": "mohit67890/imajev-2b over Qwen/Qwen3.5-2B @ 15852e8c16360a2fea060d615a32b45270f8a8fc (adapter rev 66e4b8c808bae45ca98bed5edd2de6323bdb0576), served by the author's own scripts/playground/server.py from github.com/mohit67890/imajev @ 4469df3c61fa643deeeff60a64aeffbdf34a48b7 on the torch backend with the nominated four option orders (--rotations 4) and the shipped per-size temperature in calibration.json. PEFT LoRA r16/a32 on the language layers plus a 255-code linear readout; the vision tower is frozen and JevBench sends no images. One forward pass per option order, no generated tokens; usage.input_tokens is the server's own count and output_tokens is always 0. Disclosed by the author: about a million training decisions, none from JevBench items, Jev outputs or paid APIs. | Packaging note: torchvision was missing from the package's [torch] extra and was added to start the server; nothing else was changed.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium RTX PRO 6000 Blackwell 96 GB pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-2B list price $0.02/M input (the exact base weights; one pass, no output tokens), read 2026-09-24, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 74.24670184952883,
+    "rank": 4,
+    "axes": {
+     "intelligence": 76.11897873909889,
+     "calibration": 72.4855629500401,
+     "speed": 84.72358337075718,
+     "cost": 65.00696353253073
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9479166666666666,
+     "judge": 0.9178082191780822,
+     "hard": 0.5909090909090909
+    }
+   },
+   "public_acc": 0.7878787878787878,
+   "sealed_acc": 0.2922077922077922,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.1892,
+     "judge_hard": 0.3171,
+     "long_policy": 0.325,
+     "multi_hop": 0.2105,
+     "paraphrase_robustness": 0.2857,
+     "probability": 0.3214,
+     "safety_judge": 0.375,
+     "temporal_numeric": 0.3036,
+     "tradeoff": 0.2692,
+     "trap_adversarial": 0.5
+    },
+    "ece": 0.22777214730865736,
+    "mean_tvd_gold_probs": 0.2669784730420733,
+    "calibration": 63.8738616170306,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.211,
+     "1/3": 0.3093,
+     "2/3": 0.3627
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.2175,
+      "accuracy": 0.2537
+     },
+     "conf>=0.9": {
+      "coverage": 0.0357,
+      "accuracy": 0.0909
+     }
+    }
+   },
+   "v14": {
+    "score": 55.19461381397872,
+    "rank": 6,
+    "axes": {
+     "intelligence": 46.289269780090216,
+     "calibration": 67.46207050578455,
+     "speed": 84.72358337075718,
+     "cost": 65.00696353253073
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9479166666666666,
+     "judge": 0.9178082191780822,
+     "hard_public": 0.6036036036036037,
+     "hard_heldout": 0.5779816513761468,
+     "sealed": 0.2922077922077922
+    }
+   }
+  },
+  {
+   "key": "imajev-4b",
+   "display": "imajev-4b (mohit67890, Qwen3.5-4B + LoRA)",
+   "author": "mohit67890",
+   "repo": "https://github.com/mohit67890/imajev",
+   "class": "jev-rebuild",
+   "licence": "Apache-2.0 (code and adapters); base Qwen weights unchanged",
+   "ranked": true,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026, jevbench-add-requests run 13)",
+   "note": "mohit67890/imajev-4b over Qwen/Qwen3.5-4B @ 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a (adapter rev 712891d1192c6491441a19bdea254d8a6e1048d0), served by the author's own scripts/playground/server.py from github.com/mohit67890/imajev @ 4469df3c61fa643deeeff60a64aeffbdf34a48b7 on the torch backend with the nominated four option orders (--rotations 4) and the shipped per-size temperature in calibration.json. PEFT LoRA r16/a32 on the language layers plus a 255-code linear readout; the vision tower is frozen and JevBench sends no images. One forward pass per option order, no generated tokens; usage.input_tokens is the server's own count and output_tokens is always 0. Disclosed by the author: about a million training decisions, none from JevBench items, Jev outputs or paid APIs. | Independent #1 gate (25 Sep 2026): PASS — composite recomputed exactly from the raw predictions. Disclosure: the author's training pipeline evaluated every checkpoint on the public JevBench splits as a development monitor (not a selection gate); held-out hard accuracy (0.697) is at the public hard level (0.694). Packaging note: torchvision was missing from the package's [torch] extra and was added to start the server; nothing else was changed.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium RTX PRO 6000 Blackwell 96 GB pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-24, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 76.01799541165167,
+    "rank": 2,
+    "axes": {
+     "intelligence": 83.75183995528843,
+     "calibration": 81.68607096281278,
+     "speed": 81.7283553921489,
+     "cost": 59.72422576086029
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.958904109589041,
+     "hard": 0.6954545454545454
+    }
+   },
+   "public_acc": 0.8484848484848485,
+   "sealed_acc": 0.37012987012987014,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.4324,
+     "judge_hard": 0.3659,
+     "long_policy": 0.3,
+     "multi_hop": 0.3684,
+     "paraphrase_robustness": 0.4286,
+     "probability": 0.3214,
+     "safety_judge": 0.375,
+     "temporal_numeric": 0.375,
+     "tradeoff": 0.2692,
+     "trap_adversarial": 0.6667
+    },
+    "ece": 0.1931489487685338,
+    "mean_tvd_gold_probs": 0.2961060138578786,
+    "calibration": 65.87980443025269,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.156,
+     "1/3": 0.3918,
+     "2/3": 0.5784
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.224,
+      "accuracy": 0.3768
+     },
+     "conf>=0.9": {
+      "coverage": 0.0357,
+      "accuracy": 0.1818
+     }
+    }
+   },
+   "v14": {
+    "score": 66.69275595024672,
+    "rank": 1,
+    "axes": {
+     "intelligence": 55.931772714952885,
+     "calibration": 72.46574881881939,
+     "speed": 81.7283553921489,
+     "cost": 59.72422576086029
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.958904109589041,
+     "hard_public": 0.6936936936936937,
+     "hard_heldout": 0.6972477064220184,
+     "sealed": 0.37012987012987014
+    }
+   }
+  },
+  {
+   "key": "imajev-9b",
+   "display": "imajev-9b (mohit67890, Qwen3.5-9B + LoRA)",
+   "author": "mohit67890",
+   "repo": "https://github.com/mohit67890/imajev",
+   "class": "jev-rebuild",
+   "licence": "Apache-2.0 (code and adapters); base Qwen weights unchanged",
+   "ranked": true,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026, jevbench-add-requests run 13)",
+   "note": "mohit67890/imajev-9b over Qwen/Qwen3.5-9B @ c202236235762e1c871ad0ccb60c8ee5ba337b9a (adapter rev 7301600591665b941d324b1a297e097b56724f9b), served by the author's own scripts/playground/server.py from github.com/mohit67890/imajev @ 4469df3c61fa643deeeff60a64aeffbdf34a48b7 on the torch backend with the nominated four option orders (--rotations 4) and the shipped per-size temperature in calibration.json. PEFT LoRA r16/a32 on the language layers plus a 255-code linear readout; the vision tower is frozen and JevBench sends no images. One forward pass per option order, no generated tokens; usage.input_tokens is the server's own count and output_tokens is always 0. Disclosed by the author: about a million training decisions, none from JevBench items, Jev outputs or paid APIs. | Packaging note: torchvision was missing from the package's [torch] extra and was added to start the server; nothing else was changed.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium RTX PRO 6000 Blackwell 96 GB pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-9B list price $0.10/M input (the exact base weights; OpenRouter's model-level price for qwen/qwen3.5-9b is the same $0.10/M), read 2026-09-24, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 70.52591723375569,
+    "rank": 12,
+    "axes": {
+     "intelligence": 84.26906591929406,
+     "calibration": 82.40916462928672,
+     "speed": 80.89562612087147,
+     "cost": 44.037863402450164
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 1.0,
+     "judge": 0.9452054794520548,
+     "hard": 0.7
+    }
+   },
+   "public_acc": 0.8528138528138528,
+   "sealed_acc": 0.3409090909090909,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.3514,
+     "judge_hard": 0.2927,
+     "long_policy": 0.25,
+     "multi_hop": 0.3684,
+     "paraphrase_robustness": 0.5,
+     "probability": 0.25,
+     "safety_judge": 0.375,
+     "temporal_numeric": 0.3393,
+     "tradeoff": 0.3846,
+     "trap_adversarial": 0.5833
+    },
+    "ece": 0.21455899707157058,
+    "mean_tvd_gold_probs": 0.3286252527334334,
+    "calibration": 62.112837656171266,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1835,
+     "1/3": 0.3299,
+     "2/3": 0.5196
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.2435,
+      "accuracy": 0.28
+     },
+     "conf>=0.9": {
+      "coverage": 0.0455,
+      "accuracy": 0.3571
+     }
+    }
+   },
+   "v14": {
+    "score": 60.93748299593357,
+    "rank": 12,
+    "axes": {
+     "intelligence": 54.849018600288844,
+     "calibration": 70.56964056163605,
+     "speed": 80.89562612087147,
+     "cost": 44.037863402450164
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 1.0,
+     "judge": 0.9452054794520548,
+     "hard_public": 0.6936936936936937,
+     "hard_heldout": 0.7064220183486238,
+     "sealed": 0.3409090909090909
+    }
+   }
+  },
+  {
+   "key": "ryotide-gemma",
+   "display": "RYOTIDE-Gemma (csabag, frozen google/gemma-4-E4B-it)",
+   "author": "csabag",
+   "repo": "https://github.com/csabag/ryotide",
+   "class": "system-one-open",
+   "licence": "MIT (code); base weights Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026, jevbench-add-requests run 13)",
+   "note": "github.com/csabag/ryotide @ v0.1.0 (6bbb615a170dc16b83ca62373aa7ada7bf3ea27e), preset ryotide-gemma: frozen google/gemma-4-E4B-it @ ee0ef6023621cff504d758262d4e04895a5af4a2, no adapter, no LoRA, no trained head. The prompt is state, question, question again (S/Q/Q); the distribution is the next-token softmax over the option letters after the prefix 'Answer: **', masked to those letters and renormalised, thinking off, temperature 1.924, one forward pass and one option order per decision, no generated tokens. Choice options are put in a canonical natural order, so the decision does not depend on the client's JSON key order. Disclosed by the author: the read position and the echo were chosen by measurement on the 231 public items; the temperature was fitted on a synthetic set, never on JevBench items. | The repository vendors JevBench's published public dataset for running the harness; the serving path does not use it.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra google/gemma-4-E4B-it list price $0.02/M input (the exact base weights; one pass, no output tokens), read 2026-09-24, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 71.95897066252404,
+    "rank": 8,
+    "axes": {
+     "intelligence": 76.94770541061554,
+     "calibration": 60.47486204128166,
+     "speed": 89.95471938653394,
+     "cost": 64.05385264148765
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9583333333333334,
+     "judge": 0.9383561643835616,
+     "hard": 0.5818181818181818
+    }
+   },
+   "public_acc": 0.7965367965367965,
+   "sealed_acc": 0.3116883116883117,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.2432,
+     "judge_hard": 0.4634,
+     "long_policy": 0.2,
+     "multi_hop": 0.2105,
+     "paraphrase_robustness": 0.3571,
+     "probability": 0.1786,
+     "safety_judge": 0.5,
+     "temporal_numeric": 0.2857,
+     "tradeoff": 0.4231,
+     "trap_adversarial": 0.5833
+    },
+    "ece": 0.33339345292605915,
+    "mean_tvd_gold_probs": 0.37854241282476236,
+    "calibration": 47.73353406615597,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1743,
+     "1/3": 0.3299,
+     "2/3": 0.4412
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.3864,
+      "accuracy": 0.3445
+     },
+     "conf>=0.9": {
+      "coverage": 0.1591,
+      "accuracy": 0.2653
+     }
+    }
+   },
+   "v14": {
+    "score": 55.64449334483539,
+    "rank": 5,
+    "axes": {
+     "intelligence": 47.47586843583557,
+     "calibration": 53.042420722458345,
+     "speed": 89.95471938653394,
+     "cost": 64.05385264148765
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9583333333333334,
+     "judge": 0.9383561643835616,
+     "hard_public": 0.6036036036036037,
+     "hard_heldout": 0.5596330275229358,
+     "sealed": 0.3116883116883117
+    }
+   }
+  },
+  {
+   "key": "ryotide-qwen",
+   "display": "RYOTIDE-Qwen (csabag, frozen Qwen/Qwen3.5-4B)",
+   "author": "csabag",
+   "repo": "https://github.com/csabag/ryotide",
+   "class": "system-one-open",
+   "licence": "MIT (code); base weights Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026, jevbench-add-requests run 13)",
+   "note": "github.com/csabag/ryotide @ v0.1.0 (6bbb615a170dc16b83ca62373aa7ada7bf3ea27e), preset ryotide-qwen: frozen Qwen/Qwen3.5-4B @ 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a, no adapter, no LoRA, no trained head. The prompt is state, question, question again (S/Q/Q); the distribution is the next-token softmax over the option letters after the prefix 'Answer: **', masked to those letters and renormalised, thinking off, temperature 1.0, one forward pass and one option order per decision, no generated tokens. Choice options are put in a canonical natural order, so the decision does not depend on the client's JSON key order. Disclosed by the author: the read position and the echo were chosen by measurement on the 231 public items; the temperature was fitted on a synthetic set, never on JevBench items. | Disclosure (pre-registered by the author): public hard accuracy 0.658 against held-out hard 0.523. The repository vendors JevBench's published public dataset for running the harness; the serving path does not use it.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-24, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 72.86018450123098,
+    "rank": 7,
+    "axes": {
+     "intelligence": 68.68058377450409,
+     "calibration": 77.42494925461921,
+     "speed": 90.0644411163014,
+     "cost": 58.842728284580154
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.8854166666666666,
+     "judge": 0.7945205479452054,
+     "hard": 0.5909090909090909
+    }
+   },
+   "public_acc": 0.7965367965367965,
+   "sealed_acc": 0.2857142857142857,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.2432,
+     "judge_hard": 0.3659,
+     "long_policy": 0.175,
+     "multi_hop": 0.2105,
+     "paraphrase_robustness": 0.5,
+     "probability": 0.2143,
+     "safety_judge": 0.5625,
+     "temporal_numeric": 0.3036,
+     "tradeoff": 0.1923,
+     "trap_adversarial": 0.4167
+    },
+    "ece": 0.23868773808731097,
+    "mean_tvd_gold_probs": 0.283010965361773,
+    "calibration": 61.98067792318025,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1835,
+     "1/3": 0.3608,
+     "2/3": 0.3235
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.224,
+      "accuracy": 0.3623
+     },
+     "conf>=0.9": {
+      "coverage": 0.0552,
+      "accuracy": 0.1765
+     }
+    }
+   },
+   "v14": {
+    "score": 42.203699235066736,
+    "rank": 21,
+    "axes": {
+     "intelligence": 41.19667618287757,
+     "calibration": 68.41579097794649,
+     "speed": 90.0644411163014,
+     "cost": 58.842728284580154
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.8854166666666666,
+     "judge": 0.7945205479452054,
+     "hard_public": 0.6576576576576577,
+     "hard_heldout": 0.5229357798165137,
+     "sealed": 0.2857142857142857
+    }
+   }
+  },
+  {
+   "key": "decision-4b-v11",
+   "display": "Decision 4B v1.1 (FlyMyJev, Qwen3.5-4B + LoRA)",
+   "author": "denti (flymy-ai)",
+   "repo": "https://huggingface.co/flymy-ai/decision-4b-v1.1",
+   "class": "system-one-open",
+   "licence": "Apache-2.0 (adapter and code); base Qwen3.5-4B Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-add-requests run 14)",
+   "note": "flymy-ai/decision-4b-v1.1 (run qwen35_4b_letter_h10_v63) @ d7060294e51c83d173fe35b169682992bfdc20ce, the predecessor of v1.2 trained on a subset of the same data: same base Qwen/Qwen3.5-4B @ 851bf6e8…, same adapter shape and the same server.py and readout, at T = 1.35. Submitted alongside v1.2 because the two are a tie on the author's own public measurements (203/231 each) and only the sealed set separates them. Recorded discrepancy: the request pins revision 96e57a9570b811e2ecd332893ac325fd9aba4240, which does not exist on the Hub; the repository's only package commit, used here, is d7060294… Training data not released (the author offers it privately for an overlap audit), so it could not be screened; an 8-gram screen of the released package found no text shared with the public items. The author states that no JevBench item and no Jev output was used as training data and that a 13-word overlap filter removed generated training items sharing a span with the public items. The package's own reports/gates.json shows that its release gates included thresholds on the 231 public JevBench items (public hard, standard and easy), so the public split was used for model selection. Temperature fitted on the author's own data. Independent verification gate for new top-five entrants (25 Sep 2026): LEGIT. Cost basis, public-versus-sealed gap, available overlap and a composite recomputation from the raw predictions were checked; the score recomputes exactly. Its never-public held-out hard accuracy (0.771) is close to its public hard accuracy (0.766).",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-25, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 80.12778404851558,
+    "rank": 1,
+    "axes": {
+     "intelligence": 86.76891879401285,
+     "calibration": 85.3385568654781,
+     "speed": 93.53521505095928,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.952054794520548,
+     "hard": 0.7681818181818182
+    }
+   },
+   "public_acc": 0.8787878787878788,
+   "sealed_acc": 0.39935064935064934,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.5946,
+     "judge_hard": 0.4146,
+     "long_policy": 0.425,
+     "multi_hop": 0.3158,
+     "paraphrase_robustness": 0.2143,
+     "probability": 0.4286,
+     "safety_judge": 0.5,
+     "temporal_numeric": 0.2857,
+     "tradeoff": 0.4231,
+     "trap_adversarial": 0.4167
+    },
+    "ece": 0.12826287967769745,
+    "mean_tvd_gold_probs": 0.207738337309794,
+    "calibration": 76.78679516674056,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.2202,
+     "1/3": 0.3918,
+     "2/3": 0.598
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.2175,
+      "accuracy": 0.4478
+     },
+     "conf>=0.9": {
+      "coverage": 0.0455,
+      "accuracy": 0.3571
+     }
+    }
+   },
+   "v14": {
+    "score": 71.96531301027613,
+    "rank": 1,
+    "axes": {
+     "intelligence": 59.96305985713556,
+     "calibration": 80.3500292078812,
+     "speed": 93.53521505095928,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.952054794520548,
+     "hard_public": 0.7657657657657657,
+     "hard_heldout": 0.7706422018348624,
+     "sealed": 0.39935064935064934
+    }
+   }
+  },
+  {
+   "key": "decision-4b-v12",
+   "display": "Decision 4B v1.2 (FlyMyJev, Qwen3.5-4B + LoRA)",
+   "author": "denti (flymy-ai)",
+   "repo": "https://huggingface.co/flymy-ai/decision-4b-v1.2",
+   "class": "system-one-open",
+   "licence": "Apache-2.0 (adapter and code); base Qwen3.5-4B Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-add-requests run 14)",
+   "note": "flymy-ai/decision-4b-v1.2 (run qwen35_4b_letter_h10_v64b) @ 79792bfb89e38498a21d1b71bc96b684be7b6617 over Qwen/Qwen3.5-4B @ 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a, LoRA r16 (14.4M) folded into the bf16 weights at load, served by the package's own server.py on the TypeSafe /v1/systemone wire format, requirements as pinned (torch 2.8.0, transformers 5.17.0, peft 0.21.0, flash-linear-attention 0.5.2). The chat template with thinking off and one JSON user message {evidence, criterion, options}; the distribution is the fp32 softmax over the option letters' logits at the last prompt token at T = 1.45, fitted on the author's own data; nothing is generated and no label outside the declared options can come out; model.load() verifies every package file against manifest.json. Training data not released (the author offers it privately for an overlap audit), so it could not be screened; an 8-gram screen of the released package found no text shared with the public items. The author states that no JevBench item and no Jev output was used as training data and that a 13-word overlap filter removed generated training items sharing a span with the public items. The package's own reports/gates.json shows that its release gates included thresholds on the 231 public JevBench items (public hard, standard and easy), so the public split was used for model selection. Temperature fitted on the author's own data. Recorded discrepancy: the request pins revision 4a30e33e76a133a1163e78ae78315ae16f7e0f9c, which does not exist on the Hub; the repository's only package commit, used here, is 79792bfb…, created four minutes after the request was filed. Independent verification gate for new top-five entrants (25 Sep 2026): LEGIT. Cost basis, public-versus-sealed gap, available overlap and a composite recomputation from the raw predictions were checked; the score recomputes exactly. Its never-public held-out hard accuracy (0.761) is close to its public hard accuracy (0.784).",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-25 — the basis the author himself suggested and the one every other Qwen3.5-4B row uses, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 80.8467856492637,
+    "rank": 1,
+    "axes": {
+     "intelligence": 87.36049566281787,
+     "calibration": 87.84758951631323,
+     "speed": 93.5315629639197,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.96875,
+     "judge": 0.9726027397260274,
+     "hard": 0.7727272727272727
+    }
+   },
+   "public_acc": 0.8831168831168831,
+   "sealed_acc": 0.42857142857142855,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.5676,
+     "judge_hard": 0.439,
+     "long_policy": 0.35,
+     "multi_hop": 0.3158,
+     "paraphrase_robustness": 0.3571,
+     "probability": 0.4643,
+     "safety_judge": 0.5,
+     "temporal_numeric": 0.3393,
+     "tradeoff": 0.5769,
+     "trap_adversarial": 0.5833
+    },
+    "ece": 0.11682585319625094,
+    "mean_tvd_gold_probs": 0.20722091884107297,
+    "calibration": 77.95636873832126,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.2477,
+     "1/3": 0.4433,
+     "2/3": 0.6078
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.2208,
+      "accuracy": 0.5147
+     },
+     "conf>=0.9": {
+      "coverage": 0.0649,
+      "accuracy": 0.65
+     }
+    }
+   },
+   "v14": {
+    "score": 72.85374885761975,
+    "rank": 1,
+    "axes": {
+     "intelligence": 61.65613407962488,
+     "calibration": 82.07771072915125,
+     "speed": 93.5315629639197,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.96875,
+     "judge": 0.9726027397260274,
+     "hard_public": 0.7837837837837838,
+     "hard_heldout": 0.7614678899082569,
+     "sealed": 0.42857142857142855
+    }
+   }
+  },
+  {
+   "key": "gliner25-decide",
+   "display": "GLiNER2.5-Decide (Fastino, 340M)",
+   "author": "fastino",
+   "repo": "https://huggingface.co/fastino/GLiNER2.5-Decide",
+   "class": "classifier",
+   "licence": "Apache-2.0",
+   "ranked": false,
+   "source": "v1.4.3 addition attempt (official offline measurement on Sandy's CPU, 25 Sep 2026, jevbench-add-requests run 14)",
+   "note": "fastino/GLiNER2.5-Decide @ 7ee5da4c2415e32259bcdc0b1a7367c32ce8d6f6, the 340M English member of the GLiNER2.5 family, fine-tuned from fastino/gliner2-large-v1; loaded in-process with the author's own gliner2 AutoExtractor on Sandy's CPU. Measured with exactly the mapping its three siblings on the board were measured with (GLiNER2.5 small, GLiNER2.5 multi, GLiNER2 large; docs/v1.2-additions.md ‘GLiNER2 mapping’, written down before those runs): text = 'Question: <instructions>\\n\\n<state>' because the model has no instruction slot; labels = the option keys and their rubric text (choice), {yes: criteria.true, no: criteria.false} (noul) or the ordinal level texts (score). The distribution is the model's own single-label softmax over the per-label logits, read out in full through the documented class_act='softmax', multi_label=True, cls_threshold=0.0; the sigmoid multi-label scores are not used and nothing is renormalised by us. A schema-conditioned classifier, not a decision LM: it does not reason and its own card says so.",
+   "note_v14": null,
+   "v130": {
+    "score": null,
+    "rank": null,
+    "axes": {
+     "intelligence": null,
+     "calibration": null,
+     "speed": null,
+     "cost": null
+    },
+    "tiers": {}
+   },
+   "public_acc": null,
+   "sealed_acc": null,
+   "api_flag": false,
+   "sealed": null,
+   "v14": null
+  },
+  {
+   "key": "nemotron-diffusion-8b",
+   "display": "Nemotron Diffusion 8B (pst2154, optimized vLLM)",
+   "author": "pst2154",
+   "repo": "https://github.com/pst2154/Nemotron_Jev",
+   "class": "system-one-open",
+   "licence": "MIT (application code); the modified vLLM runtime Apache-2.0; nvidia/Nemotron-Labs-Diffusion-8B keeps its upstream licence",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-add-requests run 14)",
+   "note": "nvidia/Nemotron-Labs-Diffusion-8B @ 16c67f0560b912e93e0cabb6e0c4f5c3086d95fc, unchanged upstream weights, served by github.com/pst2154/Nemotron_Jev @ cdc36d6013a6401bf1dfa7f4048cdb69e7138d69 on the author's digest-pinned modified vLLM runtime (ghcr.io/pst2154/nemotron-jev@sha256:03e09c01…), BF16, candidate-only output projection, direct candidate logits, compiled execution and CUDA graphs, ISOLATE_REQUEST_CACHE=1 and the default position ordering, on the TypeSafe /v1/systemone wire format. Native candidate probabilities from a masked forward pass; no LoRA, no extra training, no quantization, no autoregressive rollout, nothing generated. This is an inference implementation over NVIDIA's checkpoint, not TypeSafe Jev. Disclosed by the author: the inherited option-ordering and code-reassignment rule was selected using public benchmark examples in earlier 14B experiments, so his 231-item results are not independent held-out evidence and he asks for our own measurement.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: ESTIMATE: no hosted listing exists for nvidia/Nemotron-Labs-Diffusion-8B on DeepInfra or OpenRouter, so the nearest same-vendor, same-size-class listing is used — DeepInfra nvidia/NVIDIA-Nemotron-Nano-9B-v2 list price $0.04/M input and $0.16/M output, read 2026-09-25. Its server reports output_tokens: 1 per decision, so that one token is paid for at the output price rather than assumed free, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 67.6239648683329,
+    "rank": 18,
+    "axes": {
+     "intelligence": 65.33835183036193,
+     "calibration": 62.99153685781973,
+     "speed": 92.47000802186156,
+     "cost": 54.94791865083507
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.84375,
+     "judge": 0.773972602739726,
+     "hard": 0.5727272727272728
+    }
+   },
+   "public_acc": 0.7532467532467533,
+   "sealed_acc": 0.23376623376623376,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.2162,
+     "judge_hard": 0.3415,
+     "long_policy": 0.075,
+     "multi_hop": 0.2368,
+     "paraphrase_robustness": 0.1429,
+     "probability": 0.2143,
+     "safety_judge": 0.4375,
+     "temporal_numeric": 0.1964,
+     "tradeoff": 0.2308,
+     "trap_adversarial": 0.5
+    },
+    "ece": 0.3719274711906403,
+    "mean_tvd_gold_probs": 0.40044096813495594,
+    "calibration": 42.78520447418818,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1009,
+     "1/3": 0.268,
+     "2/3": 0.3431
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.3669,
+      "accuracy": 0.2301
+     },
+     "conf>=0.9": {
+      "coverage": 0.211,
+      "accuracy": 0.2154
+     }
+    }
+   },
+   "v14": {
+    "score": 36.32388871561323,
+    "rank": 39,
+    "axes": {
+     "intelligence": 39.98699614429055,
+     "calibration": 51.20450963403466,
+     "speed": 92.47000802186156,
+     "cost": 54.94791865083507
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.84375,
+     "judge": 0.773972602739726,
+     "hard_public": 0.5765765765765766,
+     "hard_heldout": 0.5688073394495413,
+     "sealed": 0.23376623376623376
+    }
+   }
+  },
+  {
+   "key": "plumb-4b",
+   "display": "Plumb-4B (crh225, JevK5 v0.2 + LoRA)",
+   "author": "crh225",
+   "repo": "https://github.com/crh225/plumb",
+   "class": "jev-rebuild",
+   "licence": "Apache-2.0 (weights and code; NOTICE credits JevK5, Qwen and SemIf); base Qwen3.5-4B Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-add-requests run 14)",
+   "note": "crh225/plumb-4b @ 55de037801a8a9b9de3db5c0e16cef86210c2186: merged bf16 weights, LoRA r16 on the attention projections of JevK5 v0.2 (itself Qwen3.5-4B), served by the author's documented command, jevk5 v0.2.0's own jevk5-serve (github.com/allebee/jevk5, Apache-2.0), unmodified. One forward pass per decision: softmax over the declared options' answer-letter logits at the last position divided by the package's own T = 2.07 (jevk5_config.json), up to 16 options, 0 generated tokens; inputs over 16,384 tokens are refused rather than truncated. Disclosed by the author: no JevBench item was trained or tuned on and every checkpoint and temperature choice came from his own held-out sets, but the 231 public items were scored after each of five training rounds and that aggregate feedback shaped the recipe (hard mining, long documents, document length) — development against the public distribution, stated plainly. His own overlap audit dropped 9 training items sharing more than two 8-word spans with a public item. | Independent top-five gate (25 Sep 2026): LEGIT — cost basis (same as its JevK5 parent), public-versus-sealed gap against like-for-like rows, an 8-gram screen of its released training data (no row shares more than two 8-grams with a public item) and an exact composite recomputation.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-25, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 79.73357327525596,
+    "rank": 1,
+    "axes": {
+     "intelligence": 87.17992461659533,
+     "calibration": 83.31697247551787,
+     "speed": 93.49040479933188,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.952054794520548,
+     "hard": 0.7772727272727272
+    }
+   },
+   "public_acc": 0.8961038961038961,
+   "sealed_acc": 0.37987012987012986,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.5946,
+     "judge_hard": 0.2927,
+     "long_policy": 0.3,
+     "multi_hop": 0.4211,
+     "paraphrase_robustness": 0.4286,
+     "probability": 0.2857,
+     "safety_judge": 0.3125,
+     "temporal_numeric": 0.375,
+     "tradeoff": 0.3462,
+     "trap_adversarial": 0.5
+    },
+    "ece": 0.28215403489574986,
+    "mean_tvd_gold_probs": 0.23924419273418004,
+    "calibration": 59.82238687371601,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1835,
+     "1/3": 0.3299,
+     "2/3": 0.6373
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.4481,
+      "accuracy": 0.4203
+     },
+     "conf>=0.9": {
+      "coverage": 0.2045,
+      "accuracy": 0.4762
+     }
+    }
+   },
+   "v14": {
+    "score": 69.1304355453705,
+    "rank": 1,
+    "axes": {
+     "intelligence": 58.96297439648504,
+     "calibration": 69.61179754113346,
+     "speed": 93.49040479933188,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9791666666666666,
+     "judge": 0.952054794520548,
+     "hard_public": 0.8018018018018018,
+     "hard_heldout": 0.7522935779816514,
+     "sealed": 0.37987012987012986
+    }
+   }
+  },
+  {
+   "api_flag": false,
+   "author": "APUS AI Lab",
+   "class": "system-one-open",
+   "display": "APUS-OpenJev-v1-4B",
+   "key": "apus-openjev-4b",
+   "licence": "Apache-2.0",
+   "note": "APUS-OpenJev-v1-4B revision 422b3741f8b5c092eeefef847c1ca89d78337d45, based on Qwen/Qwen3.5-4B. The full-depth released OpenJet decision API receives the official state and instructions with each full option text in the original order; ordinal score levels are represented as choices over every complete level description; binary guardrail items use APUS's native yes/no API. The exact upstream training-example overlap is unknown. This model was previously measured on the public 231-item split, so that split is exposed to model selection. Structured source-state objects were rendered as compact JSON for APUS’s text state field; source strings were preserved verbatim.",
+   "note_v14": "Offline local open-weight inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4, the same label-free source input rendered for APUS's native decision API) in a network-disabled, read-only container on an evaluator-owned Lium RTX PRO 6000 pod; no operator endpoint; no golds were exposed. Latency is the in-process APUS decision call on the serial standard+judge items with the self-hosted adjustment. Cost is a labelled estimate at DeepInfra's Qwen/Qwen3.5-4B list price ($0.03/M input, no output), the basis of every other Qwen3.5-4B row; it is not a GPU bill.",
+   "public_acc": 0.7965367965367965,
+   "ranked": true,
+   "repo": "https://huggingface.co/apus-ailab/APUS-OpenJev-v1-4B",
+   "sealed": {
+    "answered_valid": 308,
+    "attempted": 308,
+    "by_family": {
+     "ambiguous_abstain": {
+      "accuracy": 0.21621621621621623,
+      "correct": 8,
+      "n": 37
+     },
+     "judge_hard": {
+      "accuracy": 0.3902439024390244,
+      "correct": 16,
+      "n": 41
+     },
+     "long_policy": {
+      "accuracy": 0.125,
+      "correct": 5,
+      "n": 40
+     },
+     "multi_hop": {
+      "accuracy": 0.13157894736842105,
+      "correct": 5,
+      "n": 38
+     },
+     "paraphrase_robustness": {
+      "accuracy": 0.35714285714285715,
+      "correct": 5,
+      "n": 14
+     },
+     "probability": {
+      "accuracy": 0.21428571428571427,
+      "correct": 6,
+      "n": 28
+     },
+     "safety_judge": {
+      "accuracy": 0.375,
+      "correct": 6,
+      "n": 16
+     },
+     "temporal_numeric": {
+      "accuracy": 0.19642857142857142,
+      "correct": 11,
+      "n": 56
+     },
+     "tradeoff": {
+      "accuracy": 0.38461538461538464,
+      "correct": 10,
+      "n": 26
+     },
+     "trap_adversarial": {
+      "accuracy": 0.5833333333333334,
+      "correct": 7,
+      "n": 12
+     }
+    },
+    "by_panel_stratum": {
+     "0/3": {
+      "accuracy": 0.11926605504587157,
+      "correct": 13,
+      "n": 109
+     },
+     "1/3": {
+      "accuracy": 0.27835051546391754,
+      "correct": 27,
+      "n": 97
+     },
+     "2/3": {
+      "accuracy": 0.38235294117647056,
+      "correct": 39,
+      "n": 102
+     }
+    },
+    "calibration": 26.28256416905405,
+    "ece": 0.47333455376565914,
+    "failed_or_invalid": 0,
+    "label_only": false,
+    "mean_tvd_gold_probs": 0.5276796090876007,
+    "n": 308,
+    "results_location": "private sealed run directory (not published)",
+    "risk_coverage": {
+     "conf>=0.7": {
+      "accuracy": 0.2677595628415301,
+      "coverage": 0.5941558441558441,
+      "n": 183
+     },
+     "conf>=0.9": {
+      "accuracy": 0.24107142857142858,
+      "coverage": 0.36363636363636365,
+      "n": 112
+     }
+    }
+   },
+   "sealed_acc": 0.2564935064935065,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026)",
+   "v130": {
+    "axes": {
+     "calibration": 51.673741796513,
+     "cost": 59.80935687037695,
+     "intelligence": 77.34311013269121,
+     "speed": 88.03811240314363
+    },
+    "rank": null,
+    "score": null,
+    "tiers": {
+     "easy": 1.0,
+     "hard": 0.6136363636363636,
+     "judge": 0.8904109589041096,
+     "standard": 0.9791666666666666
+    }
+   },
+   "v14": {
+    "axes": {
+     "calibration": 36.862221513828615,
+     "cost": 59.80935687037695,
+     "intelligence": 47.7459552102095,
+     "speed": 88.03811240314363
+    },
+    "rank": null,
+    "score": null,
+    "tiers": {
+     "easy": 1.0,
+     "hard_heldout": 0.6422018348623854,
+     "hard_public": 0.5855855855855856,
+     "judge": 0.8904109589041096,
+     "sealed": 0.2564935064935065,
+     "standard": 0.9791666666666666
+    }
+   }
+  },
+  {
+   "key": "jpt-4b",
+   "display": "JPT-4B (kirp, Qwen3.5-4B LoRA)",
+   "author": "kirp",
+   "repo": "https://huggingface.co/kirp/jpt-4b",
+   "class": "jev-rebuild",
+   "licence": "CC-BY-NC-4.0 (weights); llm2jev MIT",
+   "ranked": true,
+   "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026, jevbench-add-requests run 12)",
+   "note": "kirp/jpt-4b rev 13f4884984b252cfac5c8a675388f31fb5f54ec1 (Qwen/Qwen3.5-4B + merged LoRA) on SGLang 0.5.9 behind llm2jev 0.6.1 (wheel identical to git 2b252d5), one prefill per question, softmax over option labels at T=1.036 (fitted on the author's own mix). The author discloses that public hard-tier misses by family steered which training data was generated next. | Measured in run 12 (24 Sep) on an H100 80 GB because its pinned SGLang fails on Blackwell GPUs; released with v1.4.3 because its aggregate file was missing at the v1.4.2 cut.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the base weights; one pass, no output), read 2026-09-24, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 77.65097599520638,
+    "rank": 1,
+    "axes": {
+     "intelligence": 82.11260345097219,
+     "calibration": 85.19339925666831,
+     "speed": 86.45284801828151,
+     "cost": 60.11634954693235
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9583333333333334,
+     "judge": 0.8767123287671232,
+     "hard": 0.75
+    }
+   },
+   "public_acc": 0.8874458874458875,
+   "sealed_acc": 0.3246753246753247,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.3784,
+     "judge_hard": 0.4146,
+     "long_policy": 0.225,
+     "multi_hop": 0.2632,
+     "paraphrase_robustness": 0.4286,
+     "probability": 0.2143,
+     "safety_judge": 0.625,
+     "temporal_numeric": 0.2321,
+     "tradeoff": 0.3077,
+     "trap_adversarial": 0.5833
+    },
+    "ece": 0.23279419205095764,
+    "mean_tvd_gold_probs": 0.2823729833479397,
+    "calibration": 62.60193162750725,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1651,
+     "1/3": 0.3196,
+     "2/3": 0.5
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.289,
+      "accuracy": 0.4719
+     },
+     "conf>=0.9": {
+      "coverage": 0.0455,
+      "accuracy": 0.2857
+     }
+    }
+   },
+   "v14": {
+    "score": 66.63623028766864,
+    "rank": 6,
+    "axes": {
+     "intelligence": 52.680095136473874,
+     "calibration": 72.01504313965769,
+     "speed": 86.45284801828151,
+     "cost": 60.11634954693235
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9583333333333334,
+     "judge": 0.8767123287671232,
+     "hard_public": 0.7927927927927928,
+     "hard_heldout": 0.7064220183486238,
+     "sealed": 0.3246753246753247
+    }
+   }
+  },
+  {
+   "key": "autojev-27b",
+   "display": "AutoJev-27B (denis-pplx, Qwen3.8-27B)",
+   "author": "denis-pplx",
+   "repo": "https://github.com/denis-pplx/autojev",
+   "class": "jev-rebuild",
+   "licence": "Apache-2.0 (weights); MIT (code); base Qwen3.8-27B Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-v143-models GPU worker, run-14 protocol)",
+   "note": "denis-pplx/autojev-27b @ 6f5b557e037f5edb25c7dc92dbc6553e5a19c015 (the original release; full-weight SFT of Qwen/Qwen3.8-27B, checkpoint step 200, 73,000 curated examples), served by the author's own TypeSafe server (github.com/denis-pplx/autojev @ ee63c1515980491a742f0bd0685c8dc5ca1f00c3, autojev-serve, unchanged) with its DecisionModel: the state, question and every full option text in one prompt, a 255-code learned readout on the last hidden state, the checkpoint's own temperature 2.2076; 8,192-token limit without truncation; nothing generated. Measurement copy of model.py adds only local_files_only / trust_remote_code=False / use_safetensors and a strict key check. Training-data overlap with the 231 public items is UNVERIFIED: the curated corpus is not published, so no overlap audit was possible; the release provenance names a 'public' data hash, and the author's 84.60% is his own claim, not a JevBench number.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026; the Instinct precedent): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-25T07:42Z, receipts/OPENROUTER-MODELS-20260925T074254Z.json; the same $0.42/M as run 14's 04:15Z snapshot), zero output-token price because nothing is generated. No public bookable price exists for this system. Sensitivity: the older $0.214/M OpenRouter provider list price the reflex-27b and LitJev rows carry, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 64.43633060637076,
+    "rank": 29,
+    "axes": {
+     "intelligence": 88.21415419940323,
+     "calibration": 87.3554653339014,
+     "speed": 87.12079682094031,
+     "cost": 25.678698583268968
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9895833333333334,
+     "judge": 0.9726027397260274,
+     "hard": 0.7727272727272727
+    }
+   },
+   "public_acc": 0.8701298701298701,
+   "sealed_acc": 0.37012987012987014,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.5135,
+     "judge_hard": 0.3415,
+     "long_policy": 0.225,
+     "multi_hop": 0.4211,
+     "paraphrase_robustness": 0.6429,
+     "probability": 0.5,
+     "safety_judge": 0.4375,
+     "temporal_numeric": 0.1607,
+     "tradeoff": 0.3462,
+     "trap_adversarial": 0.6667
+    },
+    "ece": 0.12838050391750216,
+    "mean_tvd_gold_probs": 0.1905561847992188,
+    "calibration": 77.63414036828885,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1651,
+     "1/3": 0.2887,
+     "2/3": 0.6667
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.2078,
+      "accuracy": 0.5156
+     },
+     "conf>=0.9": {
+      "coverage": 0.0162,
+      "accuracy": 0.8
+     }
+    }
+   },
+   "v14": {
+    "score": 57.508494984060505,
+    "rank": 71,
+    "axes": {
+     "intelligence": 59.85390387860737,
+     "calibration": 81.68469243729407,
+     "speed": 87.12079682094031,
+     "cost": 25.678698583268968
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9895833333333334,
+     "judge": 0.9726027397260274,
+     "hard_public": 0.7387387387387387,
+     "hard_heldout": 0.8073394495412844,
+     "sealed": 0.37012987012987014
+    }
+   }
+  },
+  {
+   "key": "eikos-27b",
+   "display": "Eikos-27B (caiovicentino1, Qwen3.8-27B)",
+   "author": "caiovicentino1 (Caio Vicentino)",
+   "repo": "https://huggingface.co/caiovicentino1/Eikos-27B",
+   "class": "jev-rebuild",
+   "licence": "MIT (weights and code); base Qwen3.8-27B Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-v143-models GPU worker, run-14 protocol)",
+   "note": "caiovicentino1/Eikos-27B @ 136685e21b07273c1874dc8b0fc243a219bca83c (fine-tune of Qwen/Qwen3.8-27B, BF16, same recipe and code as Eikos-4B), served by the author's own TypeSafe-compatible serve.py (PyTorch backend) with its shipped decision_config.json: SemIf prompt, next-token letter logits over the declared options, calib.json = T 1.0; 16,000-token limit, no generation. Same reviewed loader change as Eikos-4B (built-in AutoModelForImageTextToText for the shipped Qwen3_5ForConditionalGeneration layout, local-only, strict key check; prompt, readout and temperature unchanged). Later commit 63a3eb2a (serve.py keep-alive only) recorded; weights identical; scout-pinned revision used. Overlap audit as for Eikos-4B (same released data): 0 exact matches, 0 flagged pairs, max containment 2.5%. Self-reported public numbers (e.g. hard 82.9%) are the author's own harness, not JevBench's.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026; the Instinct precedent): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-25T07:42Z, receipts/OPENROUTER-MODELS-20260925T074254Z.json; the same $0.42/M as run 14's 04:15Z snapshot), zero output-token price because nothing is generated. No public bookable price exists for this system. Sensitivity: the older $0.214/M OpenRouter provider list price the reflex-27b and LitJev rows carry, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 64.31182649435418,
+    "rank": 29,
+    "axes": {
+     "intelligence": 91.3216297338406,
+     "calibration": 85.91448502570695,
+     "speed": 86.74810365793385,
+     "cost": 25.134100168528377
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 1.0,
+     "judge": 0.952054794520548,
+     "hard": 0.85
+    }
+   },
+   "public_acc": 0.9177489177489178,
+   "sealed_acc": 0.525974025974026,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.6216,
+     "judge_hard": 0.6098,
+     "long_policy": 0.425,
+     "multi_hop": 0.6053,
+     "paraphrase_robustness": 0.7143,
+     "probability": 0.6429,
+     "safety_judge": 0.5,
+     "temporal_numeric": 0.2857,
+     "tradeoff": 0.5,
+     "trap_adversarial": 0.75
+    },
+    "ece": 0.16143358636695843,
+    "mean_tvd_gold_probs": 0.22108624976498611,
+    "calibration": 72.80232887505485,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.3028,
+     "1/3": 0.5258,
+     "2/3": 0.7647
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.4091,
+      "accuracy": 0.6429
+     },
+     "conf>=0.9": {
+      "coverage": 0.0552,
+      "accuracy": 0.8824
+     }
+    }
+   },
+   "v14": {
+    "score": 58.79634161806585,
+    "rank": 71,
+    "axes": {
+     "intelligence": 70.03356942704669,
+     "calibration": 78.2657272711599,
+     "speed": 86.74810365793385,
+     "cost": 25.134100168528377
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 1.0,
+     "judge": 0.952054794520548,
+     "hard_public": 0.8288288288288288,
+     "hard_heldout": 0.8715596330275229,
+     "sealed": 0.525974025974026
+    }
+   }
+  },
+  {
+   "key": "eikos-4b",
+   "display": "Eikos-4B (caiovicentino1, Qwen3.5-4B)",
+   "author": "caiovicentino1 (Caio Vicentino)",
+   "repo": "https://huggingface.co/caiovicentino1/Eikos-4B",
+   "class": "jev-rebuild",
+   "licence": "MIT (weights and code); base Qwen3.5-4B Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-v143-models GPU worker, run-14 protocol)",
+   "note": "caiovicentino1/Eikos-4B @ 3501f815b16870944f1c470df3cfb51ae4d5b721 (full fine-tune / weight-average soup of Qwen/Qwen3.5-4B, distilled from a GLM-5.3-Flash teacher; code github.com/caiovicentino/eikos, MIT), served by the author's own TypeSafe-compatible serve.py (PyTorch backend) with its shipped decision_config.json: SemIf prompt, next-token letter logits over the declared options, calib.json = T 1.0; 16,000-token limit, no generation. Measurement copy: letter_adapter.py loads the shipped Qwen3_5ForConditionalGeneration layout through the built-in AutoModelForImageTextToText class, local-only, safetensors-only and strict about missing/unexpected keys (the released code asks for AutoModelForCausalLM, whose text-only class does not match the checkpoint's key layout); prompt, readout and temperature unchanged. The repository gained one later commit (64790dfd, 24 Sep 12:00 UTC: serve.py HTTP keep-alive, 'no change to any decision'); weights are identical and the scout-pinned revision is used. Overlap audit: the released 25,566-row training/validation data screened against the 231 public items — 0 exact prompt matches, 0 flagged pairs, max 8-gram containment 2.5%. The author states no evaluation set was trained on; his public-set numbers are his own harness's, not JevBench's.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against the author's own server on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-25 — the basis every other Qwen3.5-4B row uses; no public bookable price exists for this system, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 78.27318602675642,
+    "rank": 1,
+    "axes": {
+     "intelligence": 82.33370746277023,
+     "calibration": 84.11473587681354,
+     "speed": 91.06560743973688,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9375,
+     "judge": 0.9246575342465754,
+     "hard": 0.7318181818181818
+    }
+   },
+   "public_acc": 0.8484848484848485,
+   "sealed_acc": 0.3246753246753247,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.3243,
+     "judge_hard": 0.3659,
+     "long_policy": 0.225,
+     "multi_hop": 0.3684,
+     "paraphrase_robustness": 0.3571,
+     "probability": 0.3571,
+     "safety_judge": 0.5,
+     "temporal_numeric": 0.2321,
+     "tradeoff": 0.3077,
+     "trap_adversarial": 0.5
+    },
+    "ece": 0.2573631152075219,
+    "mean_tvd_gold_probs": 0.26248351092830746,
+    "calibration": 61.13951293283243,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.1376,
+     "1/3": 0.2887,
+     "2/3": 0.5588
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.2727,
+      "accuracy": 0.3571
+     },
+     "conf>=0.9": {
+      "coverage": 0.039,
+      "accuracy": 0.3333
+     }
+    }
+   },
+   "v14": {
+    "score": 67.1952725315029,
+    "rank": 5,
+    "axes": {
+     "intelligence": 53.193217433820266,
+     "calibration": 70.71252249282455,
+     "speed": 91.06560743973688,
+     "cost": 59.517941238875515
+    },
+    "tiers": {
+     "easy": 1.0,
+     "standard": 0.9375,
+     "judge": 0.9246575342465754,
+     "hard_public": 0.7387387387387387,
+     "hard_heldout": 0.7247706422018348,
+     "sealed": 0.3246753246753247
+    }
+   }
+  },
+  {
+   "key": "vtx-jev-1",
+   "display": "VTX-JEV-1 (VTXAI, 12.66M LF4 encoder)",
+   "author": "VTXAI",
+   "repo": "https://huggingface.co/VTXAI/VTX-JEV-1",
+   "class": "jev-rebuild",
+   "licence": "Apache-2.0",
+   "ranked": true,
+   "source": "v1.4.3 addition (official offline measurement, 25 Sep 2026, jevbench-v143-models GPU worker, run-14 protocol)",
+   "note": "VTXAI/VTX-JEV-1 @ 79abe5512ec65479953f119d593708fee492f5c7: a 12.66M-parameter non-autoregressive encoder (4 layers, 256 wide, blockwise-LF4 weights, 8.0 MB file) that reads one state and the typed question and returns a distribution over the declared options from per-option [MASK] markers at the model's own per-type temperatures (config.json: 1.15/1.10/1.25); 1,024-position input ceiling, state truncated to fit, 32 tokens per option. Distilled on SargeDev/jev-distill-corpus-v3 (655,806 rows of Jev-labelled decisions). Run through the reviewed local-only copy of the author's JevClient (pinned config/model classes, strict safetensors load, the author's fp16-on-CUDA dtype; no remote code), behind a minimal stdlib loopback wrapper because the release ships no HTTP server. Overlap audit: the full 655,806-row training corpus screened against the 231 public items — 0 exact prompt matches, 0 flagged pairs, max 8-gram containment 0.0%. The author's own 73.1% on 3,000 held-out JEV cases is his claim, not a JevBench number.",
+   "note_v14": "Offline self-hosted inference of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4) in a network-disabled, read-only container on an evaluator-owned Lium H100 80 GB (Hopper) pod, through JevBench's unchanged typesafe adapter against a minimal stdlib loopback wrapper (vtx_server.py) around the author's in-process JevClient.system_one on loopback; no operator endpoint; no golds were exposed. Latency is the serial request wall time on the standard+judge items with the self-hosted adjustment. Cost is a labelled estimate: ESTIMATE: hosted-provider price of the nearest listed size class, DeepInfra sentence-transformers/all-MiniLM-L6-v2 (22.7M, the smallest encoder DeepInfra lists) $0.005/M in, $0.00/M out, read 2026-09-25T07:42Z — the same $0.005/M the GLiNER2.5 small (74M) row uses; VTX-JEV-1 (12.66M) has no hosted listing anywhere; one forward pass, nothing generated, over the server's own usage.input_tokens; it is not a GPU bill.",
+   "v130": {
+    "score": 1.2707743239801184,
+    "rank": 70,
+    "axes": {
+     "intelligence": 8.240587728489219,
+     "calibration": 67.15714039766247,
+     "speed": 95.14490401766257,
+     "cost": 90.97715414584903
+    },
+    "tiers": {
+     "easy": 0.3333333333333333,
+     "standard": 0.3333333333333333,
+     "judge": 0.4589041095890411,
+     "hard": 0.2772727272727273
+    }
+   },
+   "public_acc": 0.30735930735930733,
+   "sealed_acc": 0.32792207792207795,
+   "api_flag": false,
+   "sealed": {
+    "n": 308,
+    "answered_valid": 308,
+    "by_family": {
+     "ambiguous_abstain": 0.2432,
+     "judge_hard": 0.439,
+     "long_policy": 0.175,
+     "multi_hop": 0.2895,
+     "paraphrase_robustness": 0.5714,
+     "probability": 0.3929,
+     "safety_judge": 0.4375,
+     "temporal_numeric": 0.3214,
+     "tradeoff": 0.3077,
+     "trap_adversarial": 0.3333
+    },
+    "ece": 0.06803366299960523,
+    "mean_tvd_gold_probs": 0.22017063502660306,
+    "calibration": 82.18810194870932,
+    "label_only": false,
+    "by_panel_stratum": {
+     "0/3": 0.3486,
+     "1/3": 0.3196,
+     "2/3": 0.3137
+    },
+    "risk_coverage": {
+     "conf>=0.7": {
+      "coverage": 0.013,
+      "accuracy": 0.5
+     },
+     "conf>=0.9": {
+      "coverage": 0.0032,
+      "accuracy": 0.0
+     }
+    }
+   },
+   "v14": {
+    "score": 0.8110016106246147,
+    "rank": 85,
+    "axes": {
+     "intelligence": 6.658083385758156,
+     "calibration": 75.9252013024398,
+     "speed": 95.14490401766257,
+     "cost": 90.97715414584903
+    },
+    "tiers": {
+     "easy": 0.3333333333333333,
+     "standard": 0.3333333333333333,
+     "judge": 0.4589041095890411,
+     "hard_public": 0.2882882882882883,
+     "hard_heldout": 0.26605504587155965,
+     "sealed": 0.32792207792207795
+    }
+   }
+  }
+ ]
+}

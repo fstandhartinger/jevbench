@@ -64,11 +64,6 @@
   "override": true
  },
  {
-  "key": "gliner25-decide",
-  "partial": "gliner25-decide-PARTIAL-v1.4.3.json",
-  "partial_sha256": "1f708a51169af11e217f33d730bfba794564f6bdc0e4aa9e02279726b31b6c58"
- },
- {
   "key": "nemotron-diffusion-8b",
   "aggregate_source": "nemotron-diffusion-8b-AGGREGATE-SOURCE-v1.4.3.json",
   "aggregate_source_sha256": "95f91f87c0af209d198b0567072253d85deed022a20bc6de990de692d402935b",
@@ -130,6 +125,422 @@
   "aggregate_source_sha256": "3d233c9158468af257c051b3e927e40eab538cab5645a36fa8930e0922c4381a",
   "row": "vtx-jev-1-ROW-v1.4.3.json",
   "row_sha256": "33639c9c825217d4a9d4d5736442acc78ff0d4484fadc7b831054fbc8b1961b2",
+  "override": false
+ },
+ {
+  "key": "bev-v0.1.2",
+  "aggregate_source": "bev-v0.1.2-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "76a8d058f9950c4abd0fb900822be4081824689a59681e26651a65ec78c8e1c7",
+  "row": "bev-v0.1.2-ROW-v1.4.3.json",
+  "row_sha256": "0cef7ab5e13d66d3ce7da9306f0e2415f3ae496f284d6e0f1d0ceadb3df8d13d",
+  "override": false
+ },
+ {
+  "key": "bosun-v3.1-0.6b",
+  "aggregate_source": "bosun-v3.1-0.6b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "8a0a7ebbe2d51e743d5350fdae98f46801bc7b335a43ec9e0cb5ba2b4fd46fc1",
+  "row": "bosun-v3.1-0.6b-ROW-v1.4.3.json",
+  "row_sha256": "eb3201c56f45a130a2c0c20017c43c600bd522d5ed89192408fefc75ecf1e97a",
+  "override": false
+ },
+ {
+  "key": "bosun-v3.1-1.7b",
+  "aggregate_source": "bosun-v3.1-1.7b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "82c289caea2fee4a2a780235e71b70d5d8cc6b575494d325937aa423dc299719",
+  "row": "bosun-v3.1-1.7b-ROW-v1.4.3.json",
+  "row_sha256": "11d98acb51b7f374d083addfe18cf673640123039c036b5371e0009fc17274d1",
+  "override": false
+ },
+ {
+  "key": "deem-0.8b-v1",
+  "aggregate_source": "deem-0.8b-v1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "e692491371a3b5fdddddaa3f1607e20596de906b8fbca6fe27e2ddd7c8c5270e",
+  "row": "deem-0.8b-v1-ROW-v1.4.3.json",
+  "row_sha256": "9a7c05432ce8e4d80e69756b2c962fb0cf4a6442304cd46c2bc9b92ef65a7f3d",
+  "override": false
+ },
+ {
+  "key": "deem-9b-v1",
+  "aggregate_source": "deem-9b-v1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "29d7c672c70fc19263a307f89dcf971b004346942fbbfa369fa31b731e77850b",
+  "row": "deem-9b-v1-ROW-v1.4.3.json",
+  "row_sha256": "6f223ce92f17e57a9dbf0aeaa499456d46f1f9a1a36efa59fcfaf46477dfd98a",
+  "override": false
+ },
+ {
+  "key": "jevk5-9b-v0.3",
+  "aggregate_source": "jevk5-9b-v0.3-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "4f8eba027d4ad55863ccd190932752f027435722f3f5addeb8b4803a939d4b11",
+  "row": "jevk5-9b-v0.3-ROW-v1.4.3.json",
+  "row_sha256": "dcc4b468b56ff31c691cdf2867d6e737f30b6785772d2d172f896152ff1b2ec0",
+  "override": false
+ },
+ {
+  "key": "jevk5-v0.3-4b",
+  "aggregate_source": "jevk5-v0.3-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "6664736ddf63b63891abd5d4ca485de2e37969113cb8300578d9a244dca96ccb",
+  "row": "jevk5-v0.3-4b-ROW-v1.4.3.json",
+  "row_sha256": "c15a64909d94aeb6d5006b9b99abd53d6524793d1b7e3188712fd92267da20ed",
+  "override": false
+ },
+ {
+  "key": "tde-general-v0.1",
+  "aggregate_source": "tde-general-v0.1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "cef1fd1c445e2f00eb3c15f84234b7dcd32e5a236d751d31fb4f15f42ddc3c9d",
+  "row": "tde-general-v0.1-ROW-v1.4.3.json",
+  "row_sha256": "ba620f4b2bbf6c0e88bdc1ac97708185ff619d25d5230d6111c8e6c1444f18c2",
+  "override": false
+ },
+ {
+  "key": "ballot-jev-0.5b",
+  "aggregate_source": "ballot-jev-0.5b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "3590d990c6e4fd606ccab209e84589b5941a81d7e06b2b0f62453e042449d3f4",
+  "row": "ballot-jev-0.5b-ROW-v1.4.3.json",
+  "row_sha256": "9a4d955a61c6c63c88c3befd6eb4ce55cba0e60b9b0ec7ded1ea4ca325372c41",
+  "override": false
+ },
+ {
+  "key": "compass-0.2.0",
+  "aggregate_source": "compass-0.2.0-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "161c657f4fd856a1973d5167cd9c83945e5bd4f8ab08a8d431c9342da3bf1d70",
+  "row": "compass-0.2.0-ROW-v1.4.3.json",
+  "row_sha256": "89a75101f7fda6503cedf64f430b414aa0e102b512f40211058f545dfdb1acec",
+  "override": false
+ },
+ {
+  "key": "jqv-targeted",
+  "aggregate_source": "jqv-targeted-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "2c0afba15eeb7e39fea5af6b5659df997edce2ef8b6c23fa3591b8e689049d1d",
+  "row": "jqv-targeted-ROW-v1.4.3.json",
+  "row_sha256": "bea7f484d1fd3ef23c98f4fb157030e4265c8ad04766cf2106bfcfe017066a53",
+  "override": false
+ },
+ {
+  "key": "manchego-v2.1",
+  "aggregate_source": "manchego-v2.1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "1dbce7e09e315fb8b9545c5d9868e6003d5279c9debe3f346c301ab757e6dddc",
+  "row": "manchego-v2.1-ROW-v1.4.3.json",
+  "row_sha256": "638e91d969b292382e17cab0f4aee56d835654a2f6d5cc794d9612bdad2efd4f",
+  "override": false
+ },
+ {
+  "key": "minijev-4b",
+  "aggregate_source": "minijev-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "f190204782519a09c0e39f27663edd35257f3bb44aaa616dbd2154288059aa81",
+  "row": "minijev-4b-ROW-v1.4.3.json",
+  "row_sha256": "a6f76bec506bf485690520241824e38c0c161197dada094800e08851c1465efa",
+  "override": false
+ },
+ {
+  "key": "nanojev-0.6b",
+  "aggregate_source": "nanojev-0.6b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "4aaa2f984ea827cd68d04b0d0c4b00686720b0ab979064982c85b4f4aa91bd75",
+  "row": "nanojev-0.6b-ROW-v1.4.3.json",
+  "row_sha256": "1c879df098f9cc3a1201c3bbe6358aabe0bac8f3014ff53af6db68e489af2b4d",
+  "override": false
+ },
+ {
+  "key": "nemotron-diffusion-14b",
+  "aggregate_source": "nemotron-diffusion-14b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "8869708a56bb4b24bd52c737802af05ee10ed89da76ebd9f821a06d0fd13e38e",
+  "row": "nemotron-diffusion-14b-ROW-v1.4.3.json",
+  "row_sha256": "054978253b3aad63ff992c327d6ab18fc0b30e88d632cd2f84cd4a97401598eb",
+  "override": false
+ },
+ {
+  "key": "neojev-qwen3.8-27b-l56",
+  "aggregate_source": "neojev-qwen3.8-27b-l56-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "fa06d93184be376e9fbcbb2f4918989f4bdeb8d18bbe804a91130135fec6eb13",
+  "row": "neojev-qwen3.8-27b-l56-ROW-v1.4.3.json",
+  "row_sha256": "918fe99714195fc3d0b4db18401afacaa3bfc429e214d2a80a1334bbc1650420",
+  "override": false
+ },
+ {
+  "key": "open-jev-27b-v1.1",
+  "aggregate_source": "open-jev-27b-v1.1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "337b1546a00ff5b268ce687aa23f9c5beab736e4d320324a96ca80f008d150d8",
+  "row": "open-jev-27b-v1.1-ROW-v1.4.3.json",
+  "row_sha256": "8f79de76cfbab171a436d49ecfc0a50a00b6334492137ab6d2987d8da0ccaf4c",
+  "override": false
+ },
+ {
+  "key": "reflex-qwen3.5-0.8b",
+  "aggregate_source": "reflex-qwen3.5-0.8b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "3261a64cba19b5558d43330d61d4b57d30d705821db329e433c789191f090412",
+  "row": "reflex-qwen3.5-0.8b-ROW-v1.4.3.json",
+  "row_sha256": "62555a971ce970ec43d7f2152f2b54641c9b8e259cd4ec318d641ab2ce947ef2",
+  "override": false
+ },
+ {
+  "key": "shisa-de-1",
+  "aggregate_source": "shisa-de-1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "97b48140033bb83a3d5524f42bce3a836b44b107167750c962a98217b1c67f8d",
+  "row": "shisa-de-1-ROW-v1.4.3.json",
+  "row_sha256": "63248271847ac7d309020dbfb836bb57954b200a47c377ad124a343d6f024c5f",
+  "override": false
+ },
+ {
+  "key": "certus-v0007",
+  "aggregate_source": "certus-v0007-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "e7b8f9fd84917eed79f9b27d851bdce91cfcc6829ea5e63b050527099c2b1178",
+  "row": "certus-v0007-ROW-v1.4.3.json",
+  "row_sha256": "6ac65b8c70f2223c293f6a479a7518dd9c85b9f6d990c94738fb582b5c91d7a0",
+  "override": false
+ },
+ {
+  "key": "diy-jev-27b",
+  "aggregate_source": "diy-jev-27b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "d6588963df5760512903c75f73cf849adb302c6f71cb37867c6b668e7b7f877d",
+  "row": "diy-jev-27b-ROW-v1.4.3.json",
+  "row_sha256": "f299404240a31606194e96d2a15301f4fcde5707b2127e5e57ce4e170c425632",
+  "override": false
+ },
+ {
+  "key": "diy-jev-4b",
+  "aggregate_source": "diy-jev-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "cf880d0688eca927cfd1a5685498d9862493610bd7bfeba34838fea49a3c3b7f",
+  "row": "diy-jev-4b-ROW-v1.4.3.json",
+  "row_sha256": "f19b8d3d5eb81df14d6c3afc7f51de2f776d22b9153cd64d7042aa7cfae03fcd",
+  "override": false
+ },
+ {
+  "key": "go-system-one",
+  "aggregate_source": "go-system-one-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "f88b2c7997df069b60e24e55edeb4e6ccc194495a9b0022b483f35c1a83e5d7e",
+  "row": "go-system-one-ROW-v1.4.3.json",
+  "row_sha256": "310289aca67f2680e86f14517d0dda4abf4e8e76bad40c9a8ccfebd0850c9c02",
+  "override": false
+ },
+ {
+  "key": "jevall",
+  "aggregate_source": "jevall-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "b7f5d2ee5e6b744c4b670809a50235ee90f1907ea8998381d6daba700c320141",
+  "row": "jevall-ROW-v1.4.3.json",
+  "row_sha256": "5274cd8f85135b35ab7c1e3c6ef3e4e3479e8f062be6b85a48049f1402c12672",
+  "override": false
+ },
+ {
+  "key": "quire-v0.1.1",
+  "aggregate_source": "quire-v0.1.1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "46d1a09f2ae7dd5ff03002045bdd56dc87b675b801d5c35bf7f740cc9db634ef",
+  "row": "quire-v0.1.1-ROW-v1.4.3.json",
+  "row_sha256": "eabe7068d6f698b2b8b2f2fd6f7b6b694d0e1be841fdcee5df273a4e4dc2c250",
+  "override": false
+ },
+ {
+  "key": "rev-qwen3.5-4b",
+  "aggregate_source": "rev-qwen3.5-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "57b03c9bf616d096e6d6af535c1b257b0c2f74edea58afe527f06ee30364c4e8",
+  "row": "rev-qwen3.5-4b-ROW-v1.4.3.json",
+  "row_sha256": "67d3dc793280990e6677e5be4752db38d33d9f4f702206e4ec91017843e9d8e2",
+  "override": false
+ },
+ {
+  "key": "rev-qwen3.8-27b",
+  "aggregate_source": "rev-qwen3.8-27b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "926b5d454f0d24b90de77547ebf0591241c025d60ab06ff2d228a14f38151d50",
+  "row": "rev-qwen3.8-27b-ROW-v1.4.3.json",
+  "row_sha256": "5222958de618db6c59a0a6d4728d2144e4366f4c2a01474614db7ea786f2019a",
+  "override": false
+ },
+ {
+  "key": "rwkv-jev",
+  "aggregate_source": "rwkv-jev-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "d7efd4e3bbdc89c6e5ff09436e78b67537a64f9b227d9c3807292894d0bd7172",
+  "row": "rwkv-jev-ROW-v1.4.3.json",
+  "row_sha256": "ee99148b7395e9629ea2d1e9b6187d9083e35c9985468030f3d79d284ccd3388",
+  "override": false
+ },
+ {
+  "key": "simplejev-gemma-4-12b",
+  "aggregate_source": "simplejev-gemma-4-12b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "5047851ee23dfe4014fa547764dd3669beb40e3a663ad2cdefcbb36581102d54",
+  "row": "simplejev-gemma-4-12b-ROW-v1.4.3.json",
+  "row_sha256": "cde84ea0d9790cf9dcf8fae2d7252099c857a2f99f72184504a519370db2e4f8",
+  "override": false
+ },
+ {
+  "key": "simplejev-gemma-4-26b-a4b",
+  "aggregate_source": "simplejev-gemma-4-26b-a4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "46284e4d3f14de08f62d6fe9873684e7d8294dffe0a5a1aa2a49c89b55e674e9",
+  "row": "simplejev-gemma-4-26b-a4b-ROW-v1.4.3.json",
+  "row_sha256": "fc557c26a35b7eeed71653dde48a07aad2f7e77b5bf2c0eca5d85fb3159ba5a2",
+  "override": false
+ },
+ {
+  "key": "simplejev-qwen3.5-4b",
+  "aggregate_source": "simplejev-qwen3.5-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "39353ac523968adefff795ba0e17e6106475725570331ac7902f673a16459e01",
+  "row": "simplejev-qwen3.5-4b-ROW-v1.4.3.json",
+  "row_sha256": "fa6504e663f065e675d647e527d4d7d56cf940b7367e168c7f40d33718d6e001",
+  "override": false
+ },
+ {
+  "key": "standardone-3b",
+  "aggregate_source": "standardone-3b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "fef75e04f68e98afdaa2e6c2d9283049e374784ef02b95d3e3a1d128b8586098",
+  "row": "standardone-3b-ROW-v1.4.3.json",
+  "row_sha256": "acae1d54c4d32f3d9a1a8a84bd311c97f22c7e1929a831f90996ebd3474b5f22",
+  "override": false
+ },
+ {
+  "key": "bluusun-decision-1",
+  "aggregate_source": "bluusun-decision-1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "995df1292b7cca9171776e7819df1bfe3106e95f14034d2c28f1f3f5d5c50125",
+  "row": "bluusun-decision-1-ROW-v1.4.3.json",
+  "row_sha256": "5dba82a8a1edd1cf6420425492c7958dc8e361b7fa0b58b630883d1c564fefe8",
+  "override": false
+ },
+ {
+  "key": "simplejev-rwkv-mid",
+  "aggregate_source": "simplejev-rwkv-mid-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "6b5aa36646a075060c82f658e5a8360c74278d5b15fd08c53b807f9d65f1a36e",
+  "row": "simplejev-rwkv-mid-ROW-v1.4.3.json",
+  "row_sha256": "591cddc292a6714fb50339b2f5521fd6b7a7e3605231193b82a970446909accf",
+  "override": false
+ },
+ {
+  "key": "simplejev-rwkv-small",
+  "aggregate_source": "simplejev-rwkv-small-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "1f4db5f82fafea014a9b0d86041982d08fe10a0ad7344ae8b6ae564ae77c2c76",
+  "row": "simplejev-rwkv-small-ROW-v1.4.3.json",
+  "row_sha256": "f674b089757c7baab476f31e2265c161429084dbfa17436024c52bbb131f96e6",
+  "override": false
+ },
+ {
+  "key": "simplejev-rwkv-std",
+  "aggregate_source": "simplejev-rwkv-std-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "75a38dcb001a197d0860081a267a350bf1a3f67d5540b3b26afa2402f56a5f53",
+  "row": "simplejev-rwkv-std-ROW-v1.4.3.json",
+  "row_sha256": "f956c31e034fdcf3365f5efce51b901eba594209cffee473c0084651b2a332d3",
+  "override": false
+ },
+ {
+  "key": "bonsai-llama-jev",
+  "aggregate_source": "bonsai-llama-jev-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "9782044f380d1a1697a60602ed67c96a6672e41080de85494906fe63a6f6d366",
+  "row": "bonsai-llama-jev-ROW-v1.4.3.json",
+  "row_sha256": "fd002aba96db475dd05071cb580861a6a23b16aebc147be6e84e33147ec80ff7",
+  "override": false
+ },
+ {
+  "key": "jpt-0.8b",
+  "aggregate_source": "jpt-0.8b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "f7852cce43c7b0d6793b3acd45bd4053b4a66a833b45fa2b2cbf7fae659e58ff",
+  "row": "jpt-0.8b-ROW-v1.4.3.json",
+  "row_sha256": "f517ac118b5400a78f7697e4d2d2f8c932ba4c1092d2e37049e433678f440c49",
+  "override": false
+ },
+ {
+  "key": "jpt-9b",
+  "aggregate_source": "jpt-9b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "20326927a14e566fd4aba4801f9d7aca7e0fe00f0db501073350bd2f4344a8cd",
+  "row": "jpt-9b-ROW-v1.4.3.json",
+  "row_sha256": "d06d0bc40bae382c57df625e0f25221a8f1f82eaf56bc93664c60764b4118177",
+  "override": false
+ },
+ {
+  "key": "winnow-e4b",
+  "aggregate_source": "winnow-e4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "53abcac56241ea7bc77c860173d5db67b5bdd9f456cdb971c8b6d2663d9d973b",
+  "row": "winnow-e4b-ROW-v1.4.3.json",
+  "row_sha256": "f27b201e5fa12e8e2f691bb9441bf8b9dee1e3bd442462bd6ad3c95d8775f1f6",
+  "override": false
+ },
+ {
+  "key": "mica-v01-4b",
+  "aggregate_source": "mica-v01-4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "b8506e0103d6dda1cab29abce7a5f5578ebb45bb47dd4620011ed7cc2343495e",
+  "row": "mica-v01-4b-ROW-v1.4.3.json",
+  "row_sha256": "41574c72d012c5acfaa151b6d6d95174dcf42aa220e6120ec5a02c8d67f34fd0",
+  "override": true
+ },
+ {
+  "key": "tde-general-large",
+  "aggregate_source": "tde-general-large-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "ca3731c6d7426bcbde1dab388c6ff5154cf468f65c45ce164b706c84f3d75149",
+  "row": "tde-general-large-ROW-v1.4.3.json",
+  "row_sha256": "6179f71a69851aa2622a28a896e459c59fee6e1ae6dcdeb4d8e27049e253484d",
+  "override": false
+ },
+ {
+  "key": "this-that-1-2",
+  "aggregate_source": "this-that-1-2-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "9f676b5eada3ea282e555af916ee7f37fa10e1112e4a2ae37dd8e3e5d53710f9",
+  "row": "this-that-1-2-ROW-v1.4.3.json",
+  "row_sha256": "6a86c8316ef525c5e9dc39f49bf68a4f500383eaf5e9cc84bfba69195f627f90",
+  "override": false
+ },
+ {
+  "key": "gevva-e2b",
+  "aggregate_source": "gevva-e2b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "b15a8c5b07c3446e6e36baf8e38ef2cd28b15bf0ed10cc0bf27f8406db3f85b7",
+  "row": "gevva-e2b-ROW-v1.4.3.json",
+  "row_sha256": "397cf35bac2e76765643d02d9b469309309c42b140d50827923985b151a8cd6b",
+  "override": false,
+  "token_receipt": "gevva-e2b-TOKEN-AGGREGATE-SOURCE-v1.4.3.json",
+  "token_receipt_sha256": "b1ed7aaa039796814afead4bed326c78ad70d03ae1c1dd24e3ea530f1af32c01"
+ },
+ {
+  "key": "gevva-e4b",
+  "aggregate_source": "gevva-e4b-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "fbfac14f7734f3aea55f9398604b6447b2ce9d78eca4dad22b4a16fbd0e4fd12",
+  "row": "gevva-e4b-ROW-v1.4.3.json",
+  "row_sha256": "9c7943a293700c9fe3e3e5fc19ac4598c1ace65f9e639a4c0f173c1d4f1e086f",
+  "override": false,
+  "token_receipt": "gevva-e4b-TOKEN-AGGREGATE-SOURCE-v1.4.3.json",
+  "token_receipt_sha256": "2611ff0851968a645bb32941a4b25b831ea3f0b0ee151802333091d6f0b71b14"
+ },
+ {
+  "key": "typical-small-v3",
+  "aggregate_source": "typical-small-v3-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "36e9f3ac11e31329899eae2352651ffc9f5248c4104cb005136ee1e26fffd63d",
+  "row": "typical-small-v3-ROW-v1.4.3.json",
+  "row_sha256": "cba551a258fa439bfca0b7751d56c999c4f4c6f79891d4e76ec1124c56d3562c",
+  "override": false,
+  "token_receipt": "typical-small-v3-TOKEN-AGGREGATE-SOURCE-v1.4.3.json",
+  "token_receipt_sha256": "1daf4873fc6c1b20321790bdfa6cd0a415dbe1f44ece10127b013f9ca33c951e"
+ },
+ {
+  "key": "gliner25-decide",
+  "aggregate_source": "gliner25-decide-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "20a6f3e80b2b2c6004b429dca724610ed194b77a5ab266fdaab3641881cb2a8d",
+  "row": "gliner25-decide-ROW-v1.4.3.json",
+  "row_sha256": "fbebfb4895d75b3be88ad3eb9472862bc87239ed8c3fe788d32bd64544cb933c",
+  "override": false
+ },
+ {
+  "key": "diffusion-jev-sglang",
+  "aggregate_source": "diffusion-jev-sglang-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "1725b832abbc61c07fb131b114d6d967b93db129d32efb0e30d2046102cf9571",
+  "row": "diffusion-jev-sglang-ROW-v1.4.3.json",
+  "row_sha256": "443dd05d6063134c55d807b022d1fbf55a2cf80e3465ebb88422f7d3e27cbc81",
+  "override": false
+ },
+ {
+  "key": "jevk5-9b-v0.3.3",
+  "aggregate_source": "jevk5-9b-v0.3.3-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "6ac129e6e31428afe4894f3ad7d6550a83eba53e4731cd0fde0fd46ff7436b4f",
+  "row": "jevk5-9b-v0.3.3-ROW-v1.4.3.json",
+  "row_sha256": "ec8ebc3522aa6bdba240116e1558312abde3aa7b5446537d7161debf19227f9c",
+  "override": false
+ },
+ {
+  "key": "jevk5-lite-preview1",
+  "aggregate_source": "jevk5-lite-preview1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "abed1bd2547c7d57f4f9f6cbbcb49f610fde8801f8fc083a32159db0d23ab3e9",
+  "row": "jevk5-lite-preview1-ROW-v1.4.3.json",
+  "row_sha256": "d990fbdf57abf53aff5714fec8da48f03d26f69acf7acb861db6506f30ad9df7",
+  "override": false,
+  "token_receipt": "jevk5-lite-preview1-TOKEN-AGGREGATE-SOURCE-v1.4.3.json",
+  "token_receipt_sha256": "894d92551874d0f5abf35ff1f91dacf0ec3892770592ce7e79253dcd0e34e2e7"
+ },
+ {
+  "key": "certo-r1",
+  "aggregate_source": "certo-r1-AGGREGATE-SOURCE-v1.4.3.json",
+  "aggregate_source_sha256": "6c487dfeebb77248a1165a50580e3f06ceb5eda3e8b6a918c6527fb0f1718c30",
+  "row": "certo-r1-ROW-v1.4.3.json",
+  "row_sha256": "a2da1e332b4cea2ccab4fc50b6c40057f72d612f69141479a162da4c7323e17c",
   "override": false
  }
 ]

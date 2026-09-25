@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bluusun — Decision API</title>
+<meta name="description" content="Send evidence, a question, and options. The Bluusun Decision API returns a decision with calibrated probabilities as JSON. $0.005 per call, prepaid.">
+<meta name="theme-color" content="#071018">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23071018%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2238%22%20fill%3D%22none%22%20stroke%3D%22%235ad4f6%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2220%22%20fill%3D%22%235ad4f6%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071018;
+  --navy:#0c1c2b;
+  --navy-2:#123047;
+  --paper:#f4f0e8;
+  --card:#fff;
+  --sun:#5ad4f6;
+  --sun-deep:#1aa4c8;
+  --text:#1a2430;
+  --muted:#5c6b7a;
+  --line:#e4e0d6;
+  --ok-bg:#e9f7ef;--ok-bd:#b7e4c7;--ok:#14532d;
+  --err-bg:#fdecec;--err-bd:#f5c2c2;--err:#8f1d1d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;line-height:1.6;color:var(--text);background:var(--paper)}
+h1,h2,h3,h4{font-family:"Instrument Serif",Georgia,serif;font-weight:400;letter-spacing:-.02em;line-height:1.15;color:var(--navy)}
+a{color:var(--sun-deep);text-decoration:none}
+a:hover{color:#0e7a98}
+.container{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+header.site{position:sticky;top:0;z-index:1000;background:rgba(7,16,24,.92);backdrop-filter:saturate(1.2) blur(12px);border-bottom:1px solid rgba(90,212,246,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.25rem;max-width:1120px;margin:0 auto;gap:1rem}
+.logo{display:flex;align-items:center;gap:.55rem;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase}
+.logo:hover{color:#fff}
+.logo .mark{width:1.35rem;height:1.35rem;flex:none}
+.nav-links{display:flex;gap:1.1rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.86);font-weight:600;font-size:.92rem}
+.nav-links a:hover{color:#fff}
+.nav-links a.btn-white,.nav-links a.btn-white:visited{color:var(--ink);opacity:1}
+.nav-links a.btn-white:hover{text-decoration:none;filter:brightness(1.06)}
+.btn{display:inline-block;padding:.62rem 1.2rem;border-radius:999px;font-weight:600;border:0;cursor:pointer;font-size:.95rem;font-family:inherit;line-height:1.2;text-align:center;background:#ece7dc;color:var(--navy)}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{color:var(--ink);filter:brightness(1.05)}
+.btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.btn-outline:hover{background:rgba(255,255,255,.08);color:#fff}
+.btn-primary{background:var(--sun);color:var(--ink)}
+.btn-primary:hover{background:#8ee4fa;color:var(--ink)}
+.btn-sm{padding:.4rem .9rem;font-size:.85rem}
+.hamburger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1}
+.card{background:var(--card);border-radius:16px;box-shadow:0 12px 40px rgba(7,16,24,.06);border:1px solid var(--line);padding:1.5rem}
+code.inline{background:#f1f3f9;border:1px solid #e2e6f0;border-radius:6px;padding:.1rem .4rem;font-size:.85em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre.code{background:#071018;color:#d7f6ff;border-radius:14px;padding:1.1rem 1.2rem;overflow-x:auto;font-size:.82rem;line-height:1.55;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid rgba(90,212,246,.18)}
+.alert{border-radius:10px;padding:.8rem 1rem;margin:0 0 1rem;font-size:.95rem}
+.alert-err{background:var(--err-bg);border:1px solid var(--err-bd);color:var(--err)}
+.alert-ok{background:var(--ok-bg);border:1px solid var(--ok-bd);color:var(--ok)}
+table.data{width:100%;border-collapse:collapse;font-size:.9rem}
+table.data th,table.data td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid #eef0f4;vertical-align:top}
+table.data th{color:#5b6472;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.stat{font-size:2rem;font-weight:700;color:var(--navy);font-family:Figtree,system-ui,sans-serif;letter-spacing:-.03em;line-height:1.1}
+.muted{color:var(--muted)}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tabs a{padding:.5rem 1rem;border-radius:999px;background:#ece7dc;font-weight:600;font-size:.9rem;color:var(--navy)}
+.tabs a:hover{color:var(--navy)}
+.tabs a.active{background:var(--navy);color:#fff}
+input[type=text],input[type=email],input[type=password],select,textarea{width:100%;padding:.65rem .8rem;border:1px solid #d7dbe3;border-radius:10px;font-size:1rem;font-family:inherit;background:#fff;color:var(--text)}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(90,212,246,.55);outline-offset:1px;border-color:var(--sun-deep)}
+label{font-weight:600;font-size:.9rem;display:block;margin:.8rem 0 .3rem}
+footer.site{background:var(--ink);color:#d5e4ee;padding:2.75rem 0 2.25rem;text-align:center;margin-top:3rem;border-top:1px solid rgba(90,212,246,.12)}
+footer.site h3{color:#fff;font-family:Figtree,system-ui,sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem;margin-bottom:.6rem}
+footer.site a{color:#fff;font-weight:600}
+footer.site a:hover{color:var(--sun)}
+footer.site p{margin:.2rem 0}
+@media(max-width:820px){
+  .hamburger{display:block}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#071018;flex-direction:column;align-items:stretch;padding:.75rem 1.25rem 1.25rem;gap:.45rem;border-bottom:1px solid rgba(90,212,246,.12)}
+  .nav-links.open{display:flex}
+  .grid2,.grid3{grid-template-columns:1fr}
+  table.data{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body class="home">
+<header class="site">
+<nav class="nav" aria-label="Primary">
+<a class="logo" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="#5ad4f6" stroke-width="1.4"/><circle cx="16" cy="16" r="6.5" fill="#5ad4f6"/></svg>Bluusun</a>
+<button class="hamburger" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+<div class="nav-links" id="navlinks">
+<a href="/#how">How it works</a>
+<a href="/#results">Results</a>
+<a href="/#pricing">Pricing</a>
+<a href="/#group">The group</a><a href="/auth.php?action=login">Log in</a><a href="/auth.php?action=signup" class="btn btn-white btn-sm">Sign up</a></div></nav></header><style>
+body.home{background:var(--ink);color:#d7e4ee}
+body.home h1,body.home h2,body.home h3,body.home h4{color:#f4f8fb}
+body.home .muted{color:#9bb0c0}
+body.home a{color:var(--sun)}
+body.home a:hover{color:#8ee4fa}
+body.home .logo,body.home .logo:hover{color:#fff}
+body.home .nav-links a{color:rgba(255,255,255,.86)}
+body.home .nav-links a:hover{color:#fff}
+body.home .nav-links a.btn-white,body.home .nav-links a.btn-white:visited,body.home .nav-links a.btn-white:hover{color:var(--ink)}
+body.home footer.site a{color:#fff}
+body.home footer.site a:hover{color:var(--sun)}
+body.home a.btn-primary,body.home a.btn-primary:hover{color:var(--ink);background:var(--sun)}
+body.home a.btn-primary:hover{background:#8ee4fa}
+body.home a.btn-outline,body.home a.btn-outline:hover{color:#fff}
+body.home header.site{background:rgba(7,16,24,.78)}
+body.home footer.site{margin-top:0}
+.sec{padding:4.5rem 0}
+.sec-head{max-width:40rem;margin:0 0 2.25rem}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.7rem}
+.sec-head p{color:#b7c8d4;font-size:1.05rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);margin-bottom:1rem}
+.eyebrow:before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--sun);box-shadow:0 0 12px var(--sun)}
+#hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;padding:7rem 0 4.5rem;background:
+  linear-gradient(180deg,rgba(7,16,24,.35) 0%,rgba(7,16,24,.55) 42%,rgba(7,16,24,.94) 100%),
+  url("/scene2.jpg") center 28% / cover no-repeat}
+.hero-inner{max-width:38rem}
+#hero h1{font-size:clamp(2.4rem,7vw,4.4rem);color:#fff;margin-bottom:1rem;text-shadow:0 8px 40px rgba(0,0,0,.45)}
+#hero .lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:#d5e8f2;max-width:34rem;margin-bottom:1.6rem;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap}
+.hero-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.6rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.14);font-size:.9rem;color:#c5d6e0}
+.hero-meta strong{display:block;color:#fff;font-size:1.05rem;font-weight:700}
+#how{background:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.step{background:rgba(255,255,255,.03);border:1px solid rgba(90,212,246,.14);border-radius:16px;padding:1.4rem 1.3rem}
+.step .n{font-family:Figtree,system-ui,sans-serif;font-weight:700;color:var(--sun);letter-spacing:.12em;font-size:.75rem;margin-bottom:.55rem}
+.step h3{font-size:1.45rem;margin-bottom:.4rem}
+.io{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.io .panel{background:rgba(255,255,255,.03);border:1px solid rgba(90,212,246,.14);border-radius:16px;padding:1.15rem 1.15rem .4rem;overflow:hidden}
+.io .panel h3{font-size:1.15rem;font-family:Figtree,system-ui,sans-serif;font-weight:600;letter-spacing:0;margin-bottom:.7rem;color:#cfefff}
+.io pre.code{margin:0 -1.15rem;border:0;border-radius:0;background:transparent}
+#why{background:#0a1824}
+.why-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:1.25rem}
+.panel{background:rgba(255,255,255,.03);border:1px solid rgba(90,212,246,.14);border-radius:16px;padding:1.5rem}
+.panel h3{font-size:1.55rem;margin-bottom:.6rem}
+.uses{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.25rem}
+.use{background:rgba(255,255,255,.03);border:1px solid rgba(90,212,246,.12);border-radius:14px;padding:1.15rem}
+.use h4{font-family:Figtree,system-ui,sans-serif;font-weight:700;font-size:1rem;letter-spacing:0;color:#f0f7fb;margin-bottom:.35rem}
+#results{background:
+  linear-gradient(180deg,rgba(7,16,24,.82),rgba(7,16,24,.88)),
+  url("/background.jpg") center 40% / cover no-repeat}
+.score-grid{display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:1rem}
+.score{background:rgba(7,16,24,.55);border:1px solid rgba(90,212,246,.18);border-radius:16px;padding:1.5rem;backdrop-filter:blur(8px)}
+.score .stat{color:#fff}
+.score.lead{border-color:rgba(90,212,246,.45);box-shadow:0 0 0 1px rgba(90,212,246,.12),0 20px 50px rgba(0,0,0,.25)}
+.score.lead .stat{color:var(--sun);font-size:3rem}
+.score .lbl{font-size:.92rem;color:#c5d6e0;margin-top:.45rem}
+#pricing{background:#f4f0e8;color:var(--text)}
+body.home #pricing h2,body.home #pricing h3{color:var(--navy)}
+body.home #pricing .muted{color:var(--muted)}
+body.home #pricing a{color:var(--sun-deep)}
+body.home #pricing a.btn-primary,body.home #pricing a.btn-primary:hover{color:var(--ink)}
+body.home #pricing .sec-head p{color:var(--muted)}
+.price-hero{display:flex;align-items:baseline;gap:.75rem;justify-content:center;margin-bottom:.4rem}
+.price-hero .amt{font-size:clamp(2.8rem,6vw,4.2rem);font-weight:700;letter-spacing:-.04em;color:var(--navy);font-family:Figtree,system-ui,sans-serif}
+.price-hero .per{color:var(--muted);font-size:1.05rem}
+.packs{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.75rem}
+.pack{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.35rem 1.2rem;text-align:center}
+.pack .amt{font-size:1.8rem;font-weight:700;color:var(--navy);font-family:Figtree,system-ui,sans-serif;letter-spacing:-.03em}
+.fine{text-align:center;max-width:36rem;margin:1.25rem auto 0;font-size:.92rem}
+#group{background:var(--navy);padding-bottom:5rem}
+.div-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.div-card{background:rgba(255,255,255,.03);border:1px solid rgba(90,212,246,.12);border-radius:16px;padding:1.5rem}
+.div-card .ico{width:2.4rem;height:2.4rem;margin-bottom:.9rem;color:var(--sun)}
+.div-card h3{font-size:1.45rem;margin-bottom:.45rem}
+@media(max-width:860px){
+  #hero{min-height:auto;align-items:flex-end;padding:6.5rem 0 3rem}
+  .steps,.io,.why-grid,.uses,.score-grid,.packs,.div-grid{grid-template-columns:1fr}
+  .score.lead .stat{font-size:2.4rem}
+}
+</style>
+
+<section id="hero">
+<div class="container">
+<div class="hero-inner">
+<p class="eyebrow">Decision API · live now</p>
+<h1>Send evidence.<br>Get a decision.</h1>
+<p class="lead">Give the API the facts, the question, and the options. It returns one choice with probabilities — as JSON, every time. About a second. Half a cent.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="/auth.php?action=signup">Get an API key</a>
+<a class="btn btn-outline" href="/#how">See how it works</a>
+</div>
+<div class="hero-meta">
+<div><strong>$0.005</strong> per decision, prepaid</div>
+<div><strong>JSON only</strong> never a paragraph to parse</div>
+<div><strong>0.96</strong> openjev balanced accuracy</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how" class="sec">
+<div class="container">
+<div class="sec-head">
+<p class="eyebrow">How it works</p>
+<h2>Three inputs. One structured answer.</h2>
+<p>Chat models write sentences your code then has to interpret. This API never writes a sentence. It scores the options you sent and returns them as numbers that sum to 1.</p>
+</div>
+<div class="steps">
+<div class="step"><div class="n">01 — Evidence</div><h3>The facts you have</h3><p class="muted">A ticket, a filing, a transcript, another model’s answer — whatever your software already knows.</p></div>
+<div class="step"><div class="n">02 — Criterion</div><h3>The question to apply</h3><p class="muted">“Approve this refund?” “Which class is this?” “Does the evidence support expanding?”</p></div>
+<div class="step"><div class="n">03 — Options</div><h3>Choices you define</h3><p class="muted">Two to sixteen options, in your own words. The API picks one and gives odds on all of them.</p></div>
+</div>
+<div class="io">
+<div class="panel">
+<h3>You send</h3>
+<pre class="code">POST https://www.bluusun.com/api/v1/decide
+Authorization: Bearer bsu_YOUR_KEY
+
+{
+  "evidence": "Q3 revenue beat by 12%, churn at an all-time low.",
+  "criterion": "Should we expand the sales team?",
+  "options": ["Expand now", "Hold steady", "Cut back"]
+}</pre>
+</div>
+<div class="panel">
+<h3>You get back</h3>
+<pre class="code">{
+  "decision": 0,
+  "options": [
+    {"option": "Expand now",  "probability": 0.72},
+    {"option": "Hold steady", "probability": 0.21},
+    {"option": "Cut back",    "probability": 0.07}
+  ]
+}</pre>
+</div>
+</div>
+<p class="muted" style="margin-top:.85rem;font-size:.9rem">Illustrative probabilities. <code class="inline" style="background:#10202c;border-color:#1e3a4d;color:#cfefff">decision</code> is the index of the winning option. There is also an OpenAI-compatible <code class="inline" style="background:#10202c;border-color:#1e3a4d;color:#cfefff">POST /api/v1/chat/completions</code> endpoint; the assistant content is the same JSON, never model prose.</p>
+</div>
+</section>
+
+<section id="why" class="sec">
+<div class="container">
+<div class="sec-head">
+<p class="eyebrow">Why this shape</p>
+<h2>A contract your code can trust.</h2>
+</div>
+<div class="why-grid">
+<div class="panel">
+<h3>The answer cannot change shape</h3>
+<p class="muted">The model never gets to write free text. Output is built from the probability of each option you sent, then renormalized so the odds sum to 1. Prompt injection in the evidence can only move weight between those options. It cannot invent a new format, leak the prompt, or return a paragraph for your parser to trip over.</p>
+<p class="muted" style="margin-top:.8rem">That is the whole product: a decision, with odds, over <em>your</em> choices.</p>
+</div>
+<div class="panel">
+<h3>Odds you can act on</h3>
+<p class="muted">Use the probability as a rule. Auto-approve above 0.9, send the rest to a person. Most chat models can be right often and still never tell you when they are guessing. This one reports a number on every call.</p>
+<p class="muted" style="margin-top:.8rem">Flat <strong style="color:#fff">$0.005</strong> from prepaid credit. Oversize requests are rejected and not billed. Typical latency is about a second.</p>
+</div>
+</div>
+<div class="uses">
+<div class="use"><h4>Classify and route</h4><p class="muted">Tickets, applications, content — anywhere hand-written rules start to crack.</p></div>
+<div class="use"><h4>Approve or flag</h4><p class="muted">Refunds, claims, reviews. Clear cases go through; the rest escalate.</p></div>
+<div class="use"><h4>Score and rank</h4><p class="muted">Leads, candidates, risk. One consistent judge, thousands of times.</p></div>
+<div class="use"><h4>Check other models</h4><p class="muted">Verify another model’s answer against a criterion before a user sees it.</p></div>
+</div>
+</div>
+</section>
+
+<section id="results" class="sec">
+<div class="container">
+<div class="sec-head">
+<p class="eyebrow">Measured on a public benchmark</p>
+<h2>0.96 on openjev, scored with its own evaluator.</h2>
+<p>openjev is a public set of 144 evidence-and-options decisions. We ran every item through this API and scored the run with the benchmark’s published evaluator — not a private test.</p>
+</div>
+<div class="score-grid">
+<div class="score lead"><div class="stat">0.96</div><div class="lbl"><strong>Bluusun Decision API</strong><br>balanced accuracy · 144/144 scored</div></div>
+<div class="score"><div class="stat">0.883</div><div class="lbl">Published Jev<br>the original system this benchmark was built around</div></div>
+<div class="score"><div class="stat">0.813</div><div class="lbl">Best published open baseline<br>same 144 fixtures</div></div>
+</div>
+<p class="muted" style="margin-top:1.1rem;max-width:40rem">The benchmark asks for the same thing the API serves: pick one option from evidence, with probabilities. There is no extra “parse the chatbot” step in between, so the number is measuring the product. Fixtures: <a href="https://github.com/TheoLeeCJ/openjev">openjev on GitHub</a>. In-house retake, September 2026.</p>
+</div>
+</section>
+
+<section id="pricing" class="sec">
+<div class="container">
+<div class="sec-head center">
+<p class="eyebrow" style="color:var(--sun-deep)">Pricing</p>
+<h2>Half a cent a decision.</h2>
+<p>One price, paid from prepaid credit. No subscription. Credits never expire.</p>
+</div>
+<div class="price-hero"><div class="amt">$0.005</div><div class="per">flat, per call</div></div>
+<p class="fine muted">Text decisions only. Evidence cap is 3,000 characters; oversize requests return an error and are not billed. Keys are created, rotated, and revoked in your dashboard.</p>
+<h3 style="text-align:center;margin:2rem 0 .3rem;font-size:1.5rem">Credit packs</h3>
+<p class="fine muted" style="margin-top:0">Top up with Stripe. Sign up is free and includes $0.01 — two decisions to try the API.</p>
+<div class="packs">
+<div class="pack">
+<div class="amt">$10</div>
+<p class="muted">2,000 decisions<br>never expires</p>
+</div>
+<div class="pack">
+<div class="amt">$25</div>
+<p class="muted">5,000 decisions<br>never expires</p>
+</div>
+<div class="pack">
+<div class="amt">$50</div>
+<p class="muted">10,000 decisions<br>never expires</p>
+</div>
+<div class="pack">
+<div class="amt">$100</div>
+<p class="muted">20,000 decisions<br>never expires</p>
+</div>
+</div>
+<p style="text-align:center;margin-top:1.75rem">
+<a class="btn btn-primary" href="/auth.php?action=signup">Get started</a>
+</p>
+</div>
+</section>
+
+<section id="group" class="sec">
+<div class="container">
+<div class="sec-head">
+<p class="eyebrow">Bluusun Group</p>
+<h2>AI, quantitative finance, and robotics.</h2>
+<p>We build systems we actually operate. The Decision API is the public product; the other two divisions stay in-house.</p>
+</div>
+<div class="div-grid">
+<div class="div-card">
+<svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="7" fill="currentColor"/></svg>
+<h3>Bluusun AI</h3>
+<p class="muted">Calibrated decision intelligence. The API on this page turns evidence into probabilities — no free text, no surprise format.</p>
+<p style="margin-top:.7rem"><a href="/#how">How the API works →</a></p>
+</div>
+<div class="div-card">
+<svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 32V16M20 32V10M32 32V20M40 32V8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8 38h32" stroke="currentColor" stroke-width="2" opacity=".5"/></svg>
+<h3>Quantitative finance</h3>
+<p class="muted">Systematic strategies and risk analytics, researched and operated in-house — not a public trading product.</p>
+</div>
+<div class="div-card">
+<svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="16" y="14" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="20.5" cy="20" r="1.4" fill="currentColor"/><circle cx="27.5" cy="20" r="1.4" fill="currentColor"/><path d="M24 26v6M16 32h16M18 38h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+<h3>Robotics</h3>
+<p class="muted">Autonomous systems for construction and industry, tested on the work they are meant to do.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="site">
+<div class="container">
+<h3>Bluusun Group</h3>
+<p class="muted" style="color:#9bb0c0">Mighty Media LLC</p>
+<p>500 Marquette Ave NW, Albuquerque, NM 87102, United States</p>
+<p>Corporate: <a href="/cdn-cgi/l/email-protection#10737f62607f6271647550727c656563657e3e737f7d"><span class="__cf_email__" data-cfemail="5f3c302d2f302d3e2b3a1f3d332a2a2c2a31713c3032">[email&#160;protected]</span></a></p>
+<p style="margin-top:1rem;font-size:.85rem"><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/dashboard.php">API Dashboard</a></p>
+</div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

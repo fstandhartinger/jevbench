@@ -42,6 +42,11 @@
   "release_evidence": {
    "raw_results_sha256": "72a8c09135aa0f250dce0fbdc4ee8631f37d941d5af451ebe1c95ce6d424f8a1",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "fe0439d82d7e6c0e214de6fb9f11465ea134f795ec49d00943acf4f05902713f",
    "row_sha256": "fecdfdb5d684bdb12a875337f60535e9e8403dec8da279d19065db48328edfca"
   }
@@ -89,6 +94,11 @@
   "release_evidence": {
    "raw_results_sha256": "9c5badb0d4d4917dfc2bdaf3d4e2c1ac0d61d02dc055d24fd8fa6a8cedb01e8a",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "fee9a5373f98e0c89f48758d17e234ed9edfc22cbf19bb0b8a631996c4aea541",
    "row_sha256": "8b19c05e88a3a52d649a96a03faa5a0e56955c45b3a78529060418c4e3480ea0"
   }
@@ -136,6 +146,11 @@
   "release_evidence": {
    "raw_results_sha256": "a10307a05879c96c689eb51646932622fc39b23f14a80dbf956d1bcad8a457b5",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "b7a307f637901f3b6e7342eb9767ce4fac59dee4b8066ed807e07a02cb73fb2f",
    "row_sha256": "328744b1a8b3db71d799540e16a80a963b82013ea7a28db3fbada68fbcb5d775"
   }
@@ -183,6 +198,11 @@
   "release_evidence": {
    "raw_results_sha256": "9d8c57266f3827d445870d3a586c64f4fd08cd9ca05a8a540f48fd8014e2c019",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "cb1e014fdab7d038386e4a381dde7c5824c369a9f105781da1efc38b443f1d66",
    "row_sha256": "c8664242687cfdc698795cc7e101bc9ae54f5f46255746fd0085bc13e165ad12"
   }
@@ -230,6 +250,11 @@
   "release_evidence": {
    "raw_results_sha256": "b883d4e1bd267a7ab2de494fd624b96c62abea2b92d82372bdf71a13b8c8ebcf",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "1bb636a2464c5d0e16b98ab85f87678321e6d100273a50111fd87f31ee7400d7",
    "row_sha256": "2f0c2ff57804185b439855f9b669773d8b12cb7916babaf77eca69cc2c3a1fc7"
   }
@@ -277,6 +302,11 @@
   "release_evidence": {
    "raw_results_sha256": "1a872e1694ab9b7739641597c9486f5c474c9b88b310f387df97aacbd3ed5b41",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "8eeaf793e6f16845131807da9362079349f0444d0363088a9d7cf4261c1798f3",
    "row_sha256": "c0b51dec1c5ad26e337cd1b8071a1128249cdb4e5d529bc33a26a5c9494c72ec"
   }
@@ -324,6 +354,11 @@
   "release_evidence": {
    "raw_results_sha256": "aa0543f7b86580b13d49093146941ecf1a1c3b04b9dd3bcbb76f7dfbf3433093",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "a080dba9aa5f18f17a5fffe1ef30c1fced8f7cdddd47c7ab2a9e367f217e18fc",
    "row_sha256": "6c28050aab7e36f148994fa26bfd7ea8ea6e3ffba5aef4b708d702a32d7914ce"
   }
@@ -371,73 +406,13 @@
   "release_evidence": {
    "raw_results_sha256": "08066fcdc2a8bb2a3e0beefd39f6efae72692e086168c9012a80e534e69ffd39",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "aa6bc91e3f3eb7fc95fbe7e892047eca0258abdb1c9168137e370fe1d81e7a78",
    "row_sha256": "72a37686b35271d8eef979703ee9799c65fd62aee8ea8cf1777157a238ff5cfd"
-  }
- },
- {
-  "key": "gliner25-decide",
-  "open": "yes",
-  "endpoint_kind": "cpu",
-  "partial": true,
-  "endpoint_condition": "Measured exactly as the board's three other GLiNER rows were: Sandy's CPU at 4 threads, the unchanged GLiNER2 mapping from jevbench/adapters/gliner2_local.py, native single-label softmax read out in full. Its latency on the items it did answer matches its sibling GLiNER2 large closely (median 1.11 s / p95 13.66 s here against that row's published 1.10 s / 14.49 s), so the measurement is sound where it ran. What stopped it is the long hard-tier documents, on a host whose load average rose from 8 to 20 on 12 cores during the run because of unrelated jobs — receipts/SANDY-LOAD-DURING-GLINER.txt.",
-  "not_ranked_because": "The system does not return on the hard tier's long-document items within 120 s, the same per-request timeout JevBench's typesafe adapter gives every HTTP-served system. It answered the whole easy tier, the whole standard tier and 144 of 146 judge items, then one of the first four hard items exceeded the bound and the run was stopped by the evaluator rather than left to spend hours producing a latency number measured under heavy unrelated load. 524 of 842 decisions were never attempted, including all 308 sealed items, so there is no score. Re-measure on an idle machine before ranking.",
-  "partial_measurement": {
-   "attempted": 318,
-   "answered": 315,
-   "timed_out": 3,
-   "never_attempted": 524,
-   "by_tier": {
-    "easy": {
-     "attempted": 72,
-     "answered": 72,
-     "timed_out": 0,
-     "of": 72
-    },
-    "standard": {
-     "attempted": 96,
-     "answered": 96,
-     "timed_out": 0,
-     "of": 96
-    },
-    "judge": {
-     "attempted": 146,
-     "answered": 144,
-     "timed_out": 2,
-     "of": 146
-    },
-    "hard": {
-     "attempted": 4,
-     "answered": 3,
-     "timed_out": 1,
-     "of": 220
-    },
-    "sealed": {
-     "attempted": 0,
-     "answered": 0,
-     "timed_out": 0,
-     "of": 308
-    }
-   },
-   "latency_of_answered_s": {
-    "median": 1.1128707379102707,
-    "p95": 13.65974073112011,
-    "max": 59.94799768179655,
-    "n": 315
-   }
-  },
-  "cost": {
-   "kind": "estimate",
-   "usd_per_1000": null,
-   "basis": "ESTIMATE: hosted-provider price, DeepInfra encoders of the same size class (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.00/M out — the identical basis the GLiNER2 large (#36) and Laya rows on the board use for a 340-421M encoder; one forward pass, nothing generated",
-   "usd_per_1000_v11_tiers": null,
-   "usd_per_1000_hard": null,
-   "self_host_sensitivity": null
-  },
-  "release_evidence": {
-   "partial_sha256": "1f708a51169af11e217f33d730bfba794564f6bdc0e4aa9e02279726b31b6c58",
-   "raw_results_sha256": "607a86e2852647d455b2d5fa1ed6cd8daac6586ad4d0e351a567b2c15b5b8fc8",
-   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
   }
  },
  {
@@ -483,6 +458,11 @@
   "release_evidence": {
    "raw_results_sha256": "719058590293b8fbacaf668f614e9a560e5c7673d5b651b4f919bdb0c82526f9",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "95f91f87c0af209d198b0567072253d85deed022a20bc6de990de692d402935b",
    "row_sha256": "3567ddffa3edd73c8282ac336eda31d5874207c88211688c8a81dd5499f423b1"
   }
@@ -530,6 +510,11 @@
   "release_evidence": {
    "raw_results_sha256": "293fbc168a47a44f86705c1ed281e395763468ff0b06b3ea6f54a7248aba2286",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "aade49ff5c86936b14ed287d6a503d3c1ba2884eb2b9f745cc8f0e4b73296165",
    "row_sha256": "0fe248c8e2c1f267951c8d8c0fd3a480baea1cbf725caacd2911c087facda709"
   }
@@ -563,8 +548,8 @@
   },
   "cost": {
    "kind": "estimate",
-   "usd_per_1000": 0.021861910112359554,
-   "basis": "ESTIMATE, repriced for v1.4.3 to the basis every other Qwen3.5-4B row uses: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; DeepInfra marks the listing deprecated but still lists this price; catalog read 2026-09-24T17:08Z), zero output tokens (nothing generated), x the model's own measured prompt tokens (389,142 over the 534 frozen decisions). The measurement handoff had used the $0.10/M Qwen3.5-9B sibling price. Estimated, not charged.",
+   "usd_per_1000": 0.029149213483146065,
+   "basis": "ESTIMATE, repriced for v1.4.3 to the bookable EmpirioLabs exact-base Qwen3.5-4B public list price $0.04/M input at the 25 Sep cutoff (https://empiriolabs.ai/models/qwen3-5-4b), zero output tokens (nothing generated), x the model's own measured prompt tokens (389,142 over the 534 frozen decisions). The measurement handoff had used the $0.10/M Qwen3.5-9B sibling price. Estimated, not charged.",
    "usd_per_1000_v11_tiers": null,
    "usd_per_1000_hard": null,
    "self_host_sensitivity": null,
@@ -582,9 +567,13 @@
   "release_evidence": {
    "raw_results_sha256": "759be79d95bbcbdc3b669850080bc41d62a2cec46244c3aa96d553f903286754",
    "input_sha256": "402d2b2a4835949d46f2c0994b0d64beaaf46dc98b935c003794db99a6691cf8",
+   "scope_counts": {
+    "current-sealed": 308,
+    "historical-private": 157,
+    "public-source": 377
+   },
    "aggregate_source_sha256": "65d8ba2cda9db9beba456bb736b3b55760d1753313379017ec70f5923e07333a",
-   "row_sha256": "d727be9e98e2c2dc76195436e40a3abd25e668c726cdd4ec9786eac8f0bde9e0",
-   "source_input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+   "row_sha256": "d727be9e98e2c2dc76195436e40a3abd25e668c726cdd4ec9786eac8f0bde9e0"
   }
  },
  {
@@ -630,6 +619,11 @@
   "release_evidence": {
    "raw_results_sha256": "7f0ef71b2d475f4cec888d218890cf8e12529a76f3f5878d43fb9b8520de6b45",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "de0e30897b0e3e580e93b14313854d346c388dca4259bb6367936b6bf8b9dbde",
    "row_sha256": "8ac57400f129ce5aa6c281bfd7d03f15b68fd3aa7f70d831af72eb5bc3837c97"
   }
@@ -677,6 +671,11 @@
   "release_evidence": {
    "raw_results_sha256": "2174c765a9e06c4681551cb85b08646e4ff758754be5737da6a0fd912d278417",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "8cc2bb442915d8efca9ca644d6fb14e39dcae089bfc18ee6c7fd6ca078e81f3e",
    "row_sha256": "66fb2cd94c69bd6860e296f64d70413adb093f2b6f82e6e2f6b5161427777ead"
   }
@@ -724,6 +723,11 @@
   "release_evidence": {
    "raw_results_sha256": "652eb4b27ce89ba9063c2b5c9247906b7e6a691c947509cde4694138b0875209",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "32d18d2e89dc3eb65cfb616bc60a2e7c2514f78d5c0ec1d6791e4277410b0774",
    "row_sha256": "c47c1a569cea1dd279bc4ed73b2c2d103ac880b18d90722fc6a888dc0cc4edd5"
   }
@@ -771,6 +775,11 @@
   "release_evidence": {
    "raw_results_sha256": "e80e4049e6e8e76f070a69dfdd910e39d4d3460b9107c09fc4cae16afb46bcbc",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "494be2c04a09105a43611e8edf1b6ebd0efc250488f9ef0977f2b62098b6d3eb",
    "row_sha256": "96d57c49b1572b85f5ef9273b6010f8a2ac54cf374422f44974741b5b9b579f1"
   }
@@ -818,8 +827,2672 @@
   "release_evidence": {
    "raw_results_sha256": "208e29327f88f1c0fec4a1c17ed701fa1fc9701fad51ba0e94dbdb18cf791f13",
    "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
    "aggregate_source_sha256": "3d233c9158468af257c051b3e927e40eab538cab5645a36fa8930e0922c4381a",
    "row_sha256": "33639c9c825217d4a9d4d5736442acc78ff0d4484fadc7b831054fbc8b1961b2"
+  }
+ },
+ {
+  "key": "bev-v0.1.2",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.96875,
+   "judge": 0.863013698630137,
+   "hard": 0.6272727272727273
+  },
+  "speed": {
+   "p50_s_raw": 0.7993644389789551,
+   "p95_s_raw": 1.237834874901455,
+   "p50_s_adjusted": 1.7487288779579102,
+   "p95_s_adjusted": 2.62566974980291,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own Bev API (POST /v1/systemone) on the author's patched Prism llama.cpp server (built here from the pinned source tag), behind a loopback pass-through that only removes criteria from noul questions (Bev's contract forbids them) on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.31904348314606745,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026; the Instinct precedent, as for Eikos-27B/AutoJev-27B in wave 1): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (snapshot 2026-09-25T09:53Z, receipts/OPENROUTER-MODELS-20260925T095313Z.json), zero output-token price because only one scoring position is read and nothing is used as generated text. No public bookable price exists for this system. Sensitivity: the older $0.214/M provider list price the reflex-27b and LitJev rows carry; the server's own usage.input_tokens (Bev's logical prompt tokens); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "355a4f9f7b8c1b650eca2683e35283b85504b1e4b37c2fb14bc7ec1f01f9dfc8",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "76a8d058f9950c4abd0fb900822be4081824689a59681e26651a65ec78c8e1c7",
+   "row_sha256": "0cef7ab5e13d66d3ce7da9306f0e2415f3ae496f284d6e0f1d0ceadb3df8d13d"
+  }
+ },
+ {
+  "key": "bosun-v3.1-0.6b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9722222222222222,
+   "standard": 0.75,
+   "judge": 0.6027397260273972,
+   "hard": 0.36363636363636365
+  },
+  "speed": {
+   "p50_s_raw": 0.04946391249541193,
+   "p95_s_raw": 0.05898846058407797,
+   "p50_s_adjusted": 0.24892782499082386,
+   "p95_s_adjusted": 0.26797692116815597,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to a minimal stdlib loopback wrapper (bosun_server.py) around the author's model.predict() with the request/answer mapping of the author's own Jev-compatible adapter (Hanno-Labs/jev-compatible-server bosun.py) on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.0073425655430711615,
+   "basis": "ESTIMATE: hosted-provider price of the size class, DeepInfra Qwen/Qwen3-Embedding-0.6B list price $0.01/M input (a <=0.6B one-pass model; the reference the kev 0.5B/0.6B and lev-350m rows use), read 2026-09-25T09:53Z (receipts/DEEPINFRA-MODELS-20260925T095313Z.json); nothing generated; no public bookable price exists for this system; the wrapper's usage.input_tokens (the model's tokenizer count of the prompt predict() renders); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "9e74c422dfd03d69fe943812aa8da44ffb3570fc80b52dbbf4c853f8aa9a88eb",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "8a0a7ebbe2d51e743d5350fdae98f46801bc7b335a43ec9e0cb5ba2b4fd46fc1",
+   "row_sha256": "eb3201c56f45a130a2c0c20017c43c600bd522d5ed89192408fefc75ecf1e97a"
+  }
+ },
+ {
+  "key": "bosun-v3.1-1.7b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9583333333333334,
+   "standard": 0.8020833333333334,
+   "judge": 0.6164383561643836,
+   "hard": 0.42272727272727273
+  },
+  "speed": {
+   "p50_s_raw": 0.047430317965336144,
+   "p95_s_raw": 0.05731488914461806,
+   "p50_s_adjusted": 0.24486063593067228,
+   "p95_s_adjusted": 0.2646297782892361,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to a minimal stdlib loopback wrapper (bosun_server.py) around the author's model.predict() with the request/answer mapping of the author's own Jev-compatible adapter (Hanno-Labs/jev-compatible-server bosun.py) on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.014685131086142323,
+   "basis": "ESTIMATE: hosted-provider price of the size class, DeepInfra Qwen/Qwen3.5-2B list price $0.02/M input (no hosted Qwen3-1.7B is listed; the 2B class the JevAct 2B row uses), read 2026-09-25T09:53Z (receipts/DEEPINFRA-MODELS-20260925T095313Z.json); one pass, nothing generated; no public bookable price exists for this system. Sensitivity: the Qwen3.5-4B $0.03/M the decider-2b/Malkuth-2B rows use; the wrapper's usage.input_tokens (the model's tokenizer count of the prompt predict() renders); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "aaa60d60ebfbfd128408cc42d6436956f525b67b271103287f8f6ff49aa57dec",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "82c289caea2fee4a2a780235e71b70d5d8cc6b575494d325937aa423dc299719",
+   "row_sha256": "11d98acb51b7f374d083addfe18cf673640123039c036b5371e0009fc17274d1"
+  }
+ },
+ {
+  "key": "deem-0.8b-v1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9861111111111112,
+   "standard": 0.6666666666666666,
+   "judge": 0.5684931506849316,
+   "hard": 0.37727272727272726
+  },
+  "speed": {
+   "p50_s_raw": 0.09155483706854284,
+   "p95_s_raw": 0.18947006682865322,
+   "p50_s_adjusted": 0.3331096741370857,
+   "p95_s_adjusted": 0.5289401336573064,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own server serve/deem_server.py, behind a loopback shape translator (TypeSafe criteria -> Deem options/levels, Deem noul value -> noul) on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.006595037453183521,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-0.8B list price $0.01/M input (the exact base weights; the reference of the Qwen3.5-0.8B Decision Model row), read 2026-09-25T09:53Z (receipts/DEEPINFRA-MODELS-20260925T095313Z.json); one pass, nothing generated; no public bookable price exists for this system; the server's own usage.prompt_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "43ad120bb7a3eb6ecf1d59de7430f27ceabff49be8edaa65134a7fc49621ef4c",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "e692491371a3b5fdddddaa3f1607e20596de906b8fbca6fe27e2ddd7c8c5270e",
+   "row_sha256": "9a7c05432ce8e4d80e69756b2c962fb0cf4a6442304cd46c2bc9b92ef65a7f3d"
+  }
+ },
+ {
+  "key": "deem-9b-v1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9375,
+   "judge": 0.958904109589041,
+   "hard": 0.6318181818181818
+  },
+  "speed": {
+   "p50_s_raw": 0.07584136293735355,
+   "p95_s_raw": 0.16552465185523033,
+   "p50_s_adjusted": 0.3016827258747071,
+   "p95_s_adjusted": 0.4810493037104606,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own server serve/deem_server.py, behind a loopback shape translator (TypeSafe criteria -> Deem options/levels, Deem noul value -> noul) on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.0659503745318352,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026): OpenRouter model-level input price for qwen/qwen3.5-9b, $0.10 per 1M input tokens (DeepInfra Qwen/Qwen3.5-9B lists the same $0.10/M; snapshot 2026-09-25T09:53Z, receipts/OPENROUTER-MODELS-20260925T095313Z.json, receipts/DEEPINFRA-MODELS-20260925T095313Z.json) - the basis the other Qwen3.5-9B rows (jev-local, Nimble 9B, Open-Jev 9B) use; zero output-token price because nothing is generated; no public bookable price exists for this system; the server's own usage.prompt_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "48300ae519bba8575c78386beb619e4cb195298aca73a26cfc6fa74afaf600e8",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "29d7c672c70fc19263a307f89dcf971b004346942fbbfa369fa31b731e77850b",
+   "row_sha256": "6f223ce92f17e57a9dbf0aeaa499456d46f1f9a1a36efa59fcfaf46477dfd98a"
+  }
+ },
+ {
+  "key": "jevk5-9b-v0.3",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9270833333333334,
+   "judge": 0.910958904109589,
+   "hard": 0.7363636363636363
+  },
+  "speed": {
+   "p50_s_raw": 0.019117925432510674,
+   "p95_s_raw": 0.0648491142084822,
+   "p50_s_adjusted": 0.18823585086502134,
+   "p95_s_adjusted": 0.2796982284169644,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the author's in-process jevk5_direct adapter (model loaded and warmed before the first item, like JEVBENCH_WARM_LOAD=1) inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.07452134831460674,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026): OpenRouter model-level input price for qwen/qwen3.5-9b, $0.10 per 1M input tokens (DeepInfra Qwen/Qwen3.5-9B lists the same $0.10/M; snapshot 2026-09-25T09:53Z, receipts/OPENROUTER-MODELS-20260925T095313Z.json, receipts/DEEPINFRA-MODELS-20260925T095313Z.json) - the basis the other Qwen3.5-9B rows (jev-local, Nimble 9B, Open-Jev 9B) use; zero output-token price because nothing is generated; no public bookable price exists for this system; the adapter's own usage.input_tokens (the model's tokenizer count of every pass); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "cfd2dbd67d96ed03fdd2ba8210e035c1ad2015545167397dcdbe5497236274aa",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "4f8eba027d4ad55863ccd190932752f027435722f3f5addeb8b4803a939d4b11",
+   "row_sha256": "dcc4b468b56ff31c691cdf2867d6e737f30b6785772d2d172f896152ff1b2ec0"
+  }
+ },
+ {
+  "key": "jevk5-v0.3-4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9479166666666666,
+   "judge": 0.9315068493150684,
+   "hard": 0.7818181818181819
+  },
+  "speed": {
+   "p50_s_raw": 0.01615617494098842,
+   "p95_s_raw": 0.04792517566820607,
+   "p50_s_adjusted": 0.18231234988197684,
+   "p95_s_adjusted": 0.24585035133641214,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the author's in-process jevk5_direct adapter (model loaded and warmed before the first item, like JEVBENCH_WARM_LOAD=1) inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.02235640449438202,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output tokens), read 2026-09-25T09:53Z (receipts/DEEPINFRA-MODELS-20260925T095313Z.json) - the basis the live JevK5 v0.2 row and every other Qwen3.5-4B row use; no public bookable price exists for this system; the adapter's own usage.input_tokens (the model's tokenizer count of every pass); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "8d3a8a46221409c67a82a09cafa262f4c91a135ff04273cd1448ed0a3548ecdd",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "6664736ddf63b63891abd5d4ca485de2e37969113cb8300578d9a244dca96ccb",
+   "row_sha256": "c15a64909d94aeb6d5006b9b99abd53d6524793d1b7e3188712fd92267da20ed"
+  }
+ },
+ {
+  "key": "tde-general-v0.1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.65625,
+   "judge": 0.4931506849315068,
+   "hard": 0.35454545454545455
+  },
+  "speed": {
+   "p50_s_raw": 0.021854761987924576,
+   "p95_s_raw": 0.02855540682794526,
+   "p50_s_adjusted": 0.19370952397584915,
+   "p95_s_adjusted": 0.2071108136558905,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own TypeSafe-compatible server tde-serve (e13ven-arch/tde v0.1.1) on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.0020159269662921348,
+   "basis": "ESTIMATE: hosted-provider price of the same size class, DeepInfra base-size encoders (bge-base-en-v1.5, e5-base-v2, gte-base, all-mpnet-base-v2) $0.005/M in, $0.00/M out, read 2026-09-25T09:53Z (receipts/DEEPINFRA-MODELS-20260925T095313Z.json) - the basis of the openJev Verdict (ModernBERT-base 151M) and GLiNER2 base rows; one forward pass, nothing generated; no hosted listing exists for this model. Sensitivity $0.004/M: DeepInfra's small multilingual-encoder class, the verdict-small row's basis (as wave 1's VTX sensitivity); the model's own tokenizer count of exactly the sequence it encodes (tde-serve reports no token usage; counted after the run with the author's request mapping and DecisionTokenizer, worker/count_tokens_tde.py); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "fe42041f51863938b0fc330a5dfda2e1d3afd10b2cdb137f817e83c7f60b82c6",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "cef1fd1c445e2f00eb3c15f84234b7dcd32e5a236d751d31fb4f15f42ddc3c9d",
+   "row_sha256": "ba620f4b2bbf6c0e88bdc1ac97708185ff619d25d5230d6111c8e6c1444f18c2"
+  }
+ },
+ {
+  "key": "ballot-jev-0.5b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.8611111111111112,
+   "standard": 0.4479166666666667,
+   "judge": 0.22602739726027396,
+   "hard": 0.39090909090909093
+  },
+  "speed": {
+   "p50_s_raw": 0.6920490129850805,
+   "p95_s_raw": 4.051300693675875,
+   "p50_s_adjusted": 1.5340980259701609,
+   "p95_s_adjusted": 8.252601387351751,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the in-process adapter on CPU, 4 threads (wall time per decision) inside the offline container, H100 80 GB (Hopper) (run on the pod's CPU, 4 threads, as the package is designed), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.006214194756554307,
+   "basis": "ESTIMATE: DeepInfra Qwen3-Embedding-0.6B size-class reference $0.01/M input (snapshot 2026-09-25T07:42Z) — exactly the basis of the kev-0.5B row, the same Qwen2.5-0.5B + LoRA + pointer-head shape, and this row's own old basis; input tokens counted with the model's own tokenizer (inside the timed call; negligible); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "cb0a3c40459bfa5457ee0c332557e82a5fbcb5363a0206b499a90d6f52bbd846",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "3590d990c6e4fd606ccab209e84589b5941a81d7e06b2b0f62453e042449d3f4",
+   "row_sha256": "9a4d955a61c6c63c88c3befd6eb4ce55cba0e60b9b0ec7ded1ea4ca325372c41"
+  }
+ },
+ {
+  "key": "compass-0.2.0",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.8958333333333334,
+   "judge": 0.910958904109589,
+   "hard": 0.6
+  },
+  "speed": {
+   "p50_s_raw": 0.24772124999435619,
+   "p95_s_raw": 0.31787869866238905,
+   "p50_s_adjusted": 0.6454424999887124,
+   "p95_s_adjusted": 0.7857573973247781,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.030051966292134833,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (snapshot 2026-09-25T07:42Z, gpu/receipts/DEEPINFRA-MODELS-20260925T074254Z.json; one pass, no output tokens) — the basis every Qwen3.5-4B row uses, and this row's own basis on the old v1.3 measurement; no public bookable price exists for this system; charged on the input tokens the server reports, which include every per-candidate verification branch; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "03cbd9d9c7157cc454b434dea7e9a3a20c5dcbc0cd90f04a4e430d9c900a5eff",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "161c657f4fd856a1973d5167cd9c83945e5bd4f8ab08a8d431c9342da3bf1d70",
+   "row_sha256": "89a75101f7fda6503cedf64f430b414aa0e102b512f40211058f545dfdb1acec"
+  }
+ },
+ {
+  "key": "jqv-targeted",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9583333333333334,
+   "judge": 0.773972602739726,
+   "hard": 0.7318181818181818
+  },
+  "speed": {
+   "p50_s_raw": 0.11718582350295037,
+   "p95_s_raw": 0.26011215430917217,
+   "p50_s_adjusted": 0.38437164700590076,
+   "p95_s_adjusted": 0.6702243086183444,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.05641543071161049,
+   "basis": "ESTIMATE: OpenRouter qwen/qwen3-32b list price $0.08/M input (snapshot 2026-09-25T07:42Z) — the exact base model, and the same basis as the zero-shot jqv row on the live v1.4.2 board, so the two rows differ only in the readout; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "9ad399a81160d0bc01083028c194580f46a83a9be4d0cbe7ca2db169e988bc90",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "2c0afba15eeb7e39fea5af6b5659df997edce2ef8b6c23fa3591b8e689049d1d",
+   "row_sha256": "bea7f484d1fd3ef23c98f4fb157030e4265c8ad04766cf2106bfcfe017066a53"
+  }
+ },
+ {
+  "key": "manchego-v2.1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9791666666666666,
+   "judge": 0.8424657534246576,
+   "hard": 0.6136363636363636
+  },
+  "speed": {
+   "p50_s_raw": 0.06737241300288588,
+   "p95_s_raw": 0.11853402740671298,
+   "p50_s_adjusted": 0.2847448260057718,
+   "p95_s_adjusted": 0.387068054813426,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.020723426966292133,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (snapshot 2026-09-25T07:42Z, gpu/receipts/DEEPINFRA-MODELS-20260925T074254Z.json; one pass, no output tokens) — the basis every Qwen3.5-4B row uses, and this row's own basis on the old v1.3 measurement; no public bookable price exists for this system; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "116fd61fe64b65c884cf3366abe6ae5fec082d95f56a1105fc44a4d250d5d719",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "1dbce7e09e315fb8b9545c5d9868e6003d5279c9debe3f346c301ab757e6dddc",
+   "row_sha256": "638e91d969b292382e17cab0f4aee56d835654a2f6d5cc794d9612bdad2efd4f"
+  }
+ },
+ {
+  "key": "minijev-4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.8333333333333334,
+   "judge": 0.9452054794520548,
+   "hard": 0.4909090909090909
+  },
+  "speed": {
+   "p50_s_raw": 0.03461308102123439,
+   "p95_s_raw": 0.08138393372064456,
+   "p50_s_adjusted": 0.21922616204246878,
+   "p95_s_adjusted": 0.31276786744128915,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the in-process adapter (wall time per decision) inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.021547247191011237,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B size-class reference $0.03/M input (snapshot 2026-09-25T07:42Z; the reflex-4B / kev-4B basis for a 4B one-pass model; this row's own old basis); no public bookable price exists; the prompt tokens the author's engine processed; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "fde3f4ca6689c461075cdd41acac8e013aed2dcb12a67ba2690c951b7a504d1d",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "f190204782519a09c0e39f27663edd35257f3bb44aaa616dbd2154288059aa81",
+   "row_sha256": "a6f76bec506bf485690520241824e38c0c161197dada094800e08851c1465efa"
+  }
+ },
+ {
+  "key": "nanojev-0.6b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.6388888888888888,
+   "standard": 0.4270833333333333,
+   "judge": 0.4383561643835616,
+   "hard": 0.33181818181818185
+  },
+  "speed": {
+   "p50_s_raw": 0.026683506555855274,
+   "p95_s_raw": 0.12272409589495509,
+   "p50_s_adjusted": 0.20336701311171054,
+   "p95_s_adjusted": 0.3954481917899102,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the in-process adapter (wall time per decision) inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.02387947565543071,
+   "basis": "ESTIMATE: DeepInfra Qwen3-Embedding-0.6B size-class reference $0.01/M input (snapshot 2026-09-25T07:42Z; the kev-0.6B / kev-0.5B basis for a <=0.6B one-pass model on the live v1.4.2 board; this row's own old basis); the candidate-path tokens the author's own prepare_examples() builds (the model reports none; recounted inside the timed call); nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "a190b2ae4243a3eaef0901d919c2399c67b17d99f862e195d8f5edb05ef6f954",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "4aaa2f984ea827cd68d04b0d0c4b00686720b0ab979064982c85b4f4aa91bd75",
+   "row_sha256": "1c879df098f9cc3a1201c3bbe6358aabe0bac8f3014ff53af6db68e489af2b4d"
+  }
+ },
+ {
+  "key": "nemotron-diffusion-14b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.84375,
+   "judge": 0.773972602739726,
+   "hard": 0.5727272727272728
+  },
+  "speed": {
+   "p50_s_raw": 0.024525707587599754,
+   "p95_s_raw": 0.0713193181087263,
+   "p50_s_adjusted": 0.1990514151751995,
+   "p95_s_adjusted": 0.29263863621745256,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.15854719101123593,
+   "basis": "ESTIMATE: no hosted listing exists for nvidia/Nemotron-Labs-Diffusion-14B, so the nearest same-vendor, same-size-class listing is used, as for the 8B sibling (run 14): DeepInfra nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL list price $0.20/M input and $0.60/M output (snapshot 2026-09-25T07:42Z). The server reports output_tokens: 1 per decision, so that token is paid at the output price. Sensitivity: DeepInfra Qwen/Qwen3-14B $0.12/M in (the exact size class; this row's old round-5 basis); the server's own usage.input_tokens; the one output token per decision the server reports is paid at the output price; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "e51adbf609dddb1a7b42d1d118f1f9ab241ff7f99bfe26d1b616e465ef4ef0fb",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "8869708a56bb4b24bd52c737802af05ee10ed89da76ebd9f821a06d0fd13e38e",
+   "row_sha256": "054978253b3aad63ff992c327d6ab18fc0b30e88d632cd2f84cd4a97401598eb"
+  }
+ },
+ {
+  "key": "neojev-qwen3.8-27b-l56",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9791666666666666,
+   "judge": 0.821917808219178,
+   "hard": 0.7363636363636363
+  },
+  "speed": {
+   "p50_s_raw": 1.1849737620214,
+   "p95_s_raw": 1.5576616667152847,
+   "p50_s_adjusted": 2.5199475240428,
+   "p95_s_adjusted": 3.2653233334305694,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.2884212359550562,
+   "basis": "ESTIMATE: PROVISIONAL ESTIMATE from exact Qwen3.8-27B OpenRouter market reference $0.42/M input (25 Sep catalog; no bookable NeoJev tariff), no output tokens. Subject to 30-day tariff evidence and base-model floor audit before publication. Server usage counts per-call state/question tokens; fixed cached prefix is excluded and noted for audit.; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "589125ae04dabf2600ae17b472c15c7fe402d3c03d016d59e7ffe6e88551ee49",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "fa06d93184be376e9fbcbb2f4918989f4bdeb8d18bbe804a91130135fec6eb13",
+   "row_sha256": "918fe99714195fc3d0b4db18401afacaa3bfc429e214d2a80a1334bbc1650420"
+  }
+ },
+ {
+  "key": "open-jev-27b-v1.1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9583333333333334,
+   "judge": 0.8356164383561644,
+   "hard": 0.7636363636363637
+  },
+  "speed": {
+   "p50_s_raw": 1.0874210480833426,
+   "p95_s_raw": 3.8967690837569533,
+   "p50_s_adjusted": 2.324842096166685,
+   "p95_s_adjusted": 7.943538167513907,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 1.0450504494382022,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026; the Instinct precedent): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-25T07:42Z, gpu/receipts/OPENROUTER-MODELS-20260925T074254Z.json), zero output-token price because nothing is generated; charged on the uncached per-candidate readout's own token count. No public bookable price exists for this system. Sensitivity: the older $0.214/M provider list price this row's own old measurement and the reflex-27b and LitJev rows carry; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "bdb9c8aa5c8bd5ce03fe8fa21ad47fb0945a8081b3071a7f274f23cb79e1d7c2",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "337b1546a00ff5b268ce687aa23f9c5beab736e4d320324a96ca80f008d150d8",
+   "row_sha256": "8f79de76cfbab171a436d49ecfc0a50a00b6334492137ab6d2987d8da0ccaf4c"
+  }
+ },
+ {
+  "key": "reflex-qwen3.5-0.8b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9861111111111112,
+   "standard": 0.6145833333333334,
+   "judge": 0.7671232876712328,
+   "hard": 0.42727272727272725
+  },
+  "speed": {
+   "p50_s_raw": 0.16292778548086062,
+   "p95_s_raw": 0.1738698799163103,
+   "p50_s_adjusted": 0.47585557096172126,
+   "p95_s_adjusted": 0.49773975983262064,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.008463426966292134,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-0.8B list price $0.01/M input (snapshot 2026-09-25T07:42Z; the exact base weights; one prefill pass, no output tokens; this row's own old basis and the size class of the 0.8B rows on the live board); the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "af9d599eddb93184e43a1c4f407fb86843de590e12a7e1d394bd39270b195b2b",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "3261a64cba19b5558d43330d61d4b57d30d705821db329e433c789191f090412",
+   "row_sha256": "62555a971ce970ec43d7f2152f2b54641c9b8e259cd4ec318d641ab2ce947ef2"
+  }
+ },
+ {
+  "key": "shisa-de-1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9895833333333334,
+   "judge": 0.9452054794520548,
+   "hard": 0.759090909090909
+  },
+  "speed": {
+   "p50_s_raw": 0.02496948163025081,
+   "p95_s_raw": 0.059168459824286396,
+   "p50_s_adjusted": 0.19993896326050162,
+   "p95_s_adjusted": 0.26833691964857276,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the shisa_vllm adapter to stock vLLM on loopback (wall time per decision, fallback requests included) inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.06640887640449437,
+   "basis": "ESTIMATE: OpenRouter google/gemma-4-26b-a4b-it list price $0.09/M input (snapshot 2026-09-25T07:42Z) — the exact base architecture and the Gemma 4 26B-A4B size-class reference the live board already uses; this row's own old basis; counted over every request the readout makes, fallback requests included; vLLM's own usage.prompt_tokens over every request the readout makes; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "8a3b332ab6e6bddba125fa2ee48ae450b5646f0454f634a7b1e16ceb09a28dc7",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "97b48140033bb83a3d5524f42bce3a836b44b107167750c962a98217b1c67f8d",
+   "row_sha256": "63248271847ac7d309020dbfb836bb57954b200a47c377ad124a343d6f024c5f"
+  }
+ },
+ {
+  "key": "certus-v0007",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.84375,
+   "judge": 0.6986301369863014,
+   "hard": 0.2909090909090909
+  },
+  "speed": {
+   "p50_s_raw": 0.07382542500272393,
+   "p95_s_raw": 0.0941395884961821,
+   "p50_s_adjusted": 0.2976508500054479,
+   "p95_s_adjusted": 0.3382791769923642,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.021545842696629215,
+   "basis": "ESTIMATE: hosted-provider price of the nearest listed size class, DeepInfra Qwen/Qwen3.5-2B list price $0.02/M in, $0.00/M out (receipts/DEEPINFRA-MODELS-20260925T074254Z.json, read 2026-09-25T07:42Z; cents_per_input_token 2e-06) — Qwen2.5-1.5B-Instruct itself is listed neither on DeepInfra nor on OpenRouter in the same-time snapshots; the same $0.02/M 2B size-class reference the live JevAct (jev1-2b-v2) row uses; x the server's own usage.input_tokens (all prompt tokens of the router pass and, when an adapter fires, the second pass); nothing generated; estimated, not charged; sensitivity $0.01/M = DeepInfra Qwen/Qwen3.5-0.8B (same snapshot), the next listed class below; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "b11de4810d46487665791cc9c95275831e6a4d512aab50cce87d4cf14dc70b2b",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "e7b8f9fd84917eed79f9b27d851bdce91cfcc6829ea5e63b050527099c2b1178",
+   "row_sha256": "6ac65b8c70f2223c293f6a479a7518dd9c85b9f6d990c94738fb582b5c91d7a0"
+  }
+ },
+ {
+  "key": "diy-jev-27b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9166666666666666,
+   "judge": 0.8287671232876712,
+   "hard": 0.7272727272727273
+  },
+  "speed": {
+   "p50_s_raw": 0.14165822695940733,
+   "p95_s_raw": 0.6647707130992785,
+   "p50_s_adjusted": 0.4333164539188147,
+   "p95_s_adjusted": 1.4795414261985569,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.3023897752808988,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026; the Instinct precedent): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-25T07:42Z, gpu/receipts/OPENROUTER-MODELS-20260925T074254Z.json), zero output-token price because nothing is generated; the 4-bit GGUF is priced as its base model. No public bookable price exists for this system. Sensitivity: the older $0.214/M OpenRouter provider list price the reflex-27b and LitJev rows carry; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "c678a3af8630e4e497e3feed6deb4a10fae35c19b14eef169046a7d576676881",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "d6588963df5760512903c75f73cf849adb302c6f71cb37867c6b668e7b7f877d",
+   "row_sha256": "f299404240a31606194e96d2a15301f4fcde5707b2127e5e57ce4e170c425632"
+  }
+ },
+ {
+  "key": "diy-jev-4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9583333333333334,
+   "standard": 0.7604166666666666,
+   "judge": 0.952054794520548,
+   "hard": 0.4818181818181818
+  },
+  "speed": {
+   "p50_s_raw": 0.029683099477551877,
+   "p95_s_raw": 0.12457385420566425,
+   "p50_s_adjusted": 0.20936619895510375,
+   "p95_s_adjusted": 0.3991477084113285,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.021035898876404495,
+   "basis": "ESTIMATE from the base-model size class (Florian's price rule, 24 Sep 2026): DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input, the board's 4B one-pass reference that the kev 4B (Qwen3-4B-Base) and raw Qwen3-4B-Instruct-2507 rows carry; no hosted listing of Qwen3-4B-Instruct-2507 on OpenRouter (catalog snapshot 2026-09-25T07:42Z); zero output-token price because nothing is generated. No public bookable price exists for this system. Sensitivity: the $0.04/M hosted 4B reference rate of the local-jev and metask-jev-4b rows; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "26f2f16e54c21dc2f583bac11935c22966b2a42c06020c6ff7ae9b10cff6b475",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "cf880d0688eca927cfd1a5685498d9862493610bd7bfeba34838fea49a3c3b7f",
+   "row_sha256": "f19b8d3d5eb81df14d6c3afc7f51de2f776d22b9153cd64d7042aa7cfae03fcd"
+  }
+ },
+ {
+  "key": "go-system-one",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9895833333333334,
+   "judge": 0.8561643835616438,
+   "hard": 0.7045454545454546
+  },
+  "speed": {
+   "p50_s_raw": 0.1030516205355525,
+   "p95_s_raw": 0.9263766056392342,
+   "p50_s_adjusted": 0.356103241071105,
+   "p95_s_adjusted": 2.0027532112784683,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own native Go server (go-system-one, /v1/systemone) built from source on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.03558848314606741,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026), same basis as the live v1.4.2 Cygnet (frozen Gemma-4-12B-it) and Winnow-12B rows: OpenRouter google/gemma-3-12b-it list price $0.05 per 1M input tokens, the nearest hosted 12B Gemma — google/gemma-4-12b-it is still not listed (OpenRouter catalog snapshot 2026-09-25T07:42Z, gpu/receipts/OPENROUTER-MODELS-20260925T074254Z.json, sha256 0d552d4f…; DeepInfra lists gemma-3-12b-it at the same $0.05/M, DEEPINFRA-MODELS-20260925T074254Z.json); the server's own usage.input_tokens; zero output price because nothing is generated. No public bookable price exists for this system; local cost is not measured.; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "7f85096694bf2bb0493568f721b6f434bd08822dc3616409f5c6f8f3f640b4f1",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "f88b2c7997df069b60e24e55edeb4e6ccc194495a9b0022b483f35c1a83e5d7e",
+   "row_sha256": "310289aca67f2680e86f14517d0dda4abf4e8e76bad40c9a8ccfebd0850c9c02"
+  }
+ },
+ {
+  "key": "jevall",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.78125,
+   "judge": 0.4178082191780822,
+   "hard": 0.6590909090909091
+  },
+  "speed": {
+   "p50_s_raw": 0.062309265485964715,
+   "p95_s_raw": 0.07499469071626663,
+   "p50_s_adjusted": 0.27461853097192945,
+   "p95_s_adjusted": 0.2999893814325333,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to a thin stdlib loopback adapter (jevall_systemone.py) that makes one call per decision to the author's own JEVALL /v1/decisions server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.05546966292134832,
+   "basis": "ESTIMATE: OpenRouter qwen/qwen3.5-9b model-level list price $0.10/M input (the exact, unmodified base weights; one forward pass per decision, nothing generated, so no output price applies), read 2026-09-25T09:57Z (review/PRICE-OPENROUTER-qwen3.5-9b-jevall-20260925T095711Z.json) - the basis the live v1.4.2 Qwen3.5-9B rows use (jev-local (Qwen3.5-9B), Open-Jev 9B: OpenRouter Qwen3.5-9B $0.1/M in); no public bookable price exists for this system; sensitivity $0.08/M = the cheapest listed OpenRouter endpoint for qwen/qwen3.5-9b (Darkbloom) in the same snapshot; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "fd5f916a1641175ce7326ff60d9a10045b5ccf863a06fe225843d038ad3b2229",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "b7f5d2ee5e6b744c4b670809a50235ee90f1907ea8998381d6daba700c320141",
+   "row_sha256": "5274cd8f85135b35ab7c1e3c6ef3e4e3479e8f062be6b85a48049f1402c12672"
+  }
+ },
+ {
+  "key": "quire-v0.1.1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9166666666666666,
+   "judge": 0.9383561643835616,
+   "hard": 0.6227272727272727
+  },
+  "speed": {
+   "p50_s_raw": 0.11716705455910414,
+   "p95_s_raw": 0.12945110289147121,
+   "p50_s_adjusted": 0.3843341091182083,
+   "p95_s_adjusted": 0.40890220578294245,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.025042303370786518,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact, unmodified base weights; one prefill + two short suffixes, no output tokens), the basis every other Qwen3.5-4B row uses (live v1.4.2 artifact: semif-qwen3.5-4b, jobe-qwen3.5-4b; v1.4.3 wave 1: eikos-4b) and the basis the author proposes in issue #45; no public bookable price exists for this system; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "6dcbeaea98df495fb59c894b18630fc211588fab6793d6f27173591c8889249f",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "46d1a09f2ae7dd5ff03002045bdd56dc87b675b801d5c35bf7f740cc9db634ef",
+   "row_sha256": "eabe7068d6f698b2b8b2f2fd6f7b6b694d0e1be841fdcee5df273a4e4dc2c250"
+  }
+ },
+ {
+  "key": "rev-qwen3.5-4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9479166666666666,
+   "judge": 0.9383561643835616,
+   "hard": 0.5909090909090909
+  },
+  "speed": {
+   "p50_s_raw": 0.04737898497842252,
+   "p95_s_raw": 0.06558941109105945,
+   "p50_s_adjusted": 0.24475796995684504,
+   "p95_s_adjusted": 0.28117882218211887,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to a minimal stdlib loopback wrapper (rev_systemone.py) around the author's in-process serve_local scorer, reproducing his rev_http.py adapter mapping on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.01956005617977528,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one forward pass, no output tokens), catalog snapshot 2026-09-25T07:42Z (gpu/receipts/DEEPINFRA-MODELS-20260925T074254Z.json: 3e-06 cents per input token) — the basis every other Qwen3.5-4B row uses (e.g. eikos-4b); also the author's own hosted-tariff estimate in issue #52. No public bookable price exists for this system; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "d6e2e91745f53fa7323d2d2c721ffbfe1fbc2b6f544aaccd2673d242ecd7e46a",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "57b03c9bf616d096e6d6af535c1b257b0c2f74edea58afe527f06ee30364c4e8",
+   "row_sha256": "67d3dc793280990e6677e5be4752db38d33d9f4f702206e4ec91017843e9d8e2"
+  }
+ },
+ {
+  "key": "rev-qwen3.8-27b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9895833333333334,
+   "judge": 0.9726027397260274,
+   "hard": 0.7909090909090909
+  },
+  "speed": {
+   "p50_s_raw": 0.09272386803058907,
+   "p95_s_raw": 0.1774599995231256,
+   "p50_s_adjusted": 0.33544773606117817,
+   "p95_s_adjusted": 0.5049199990462512,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to a minimal stdlib loopback wrapper (rev_systemone.py) around the author's in-process serve_local scorer, reproducing his rev_http.py adapter mapping on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.27384078651685384,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026; the Instinct precedent, same as the eikos-27b and autojev-27b rows): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-25T07:42Z, gpu/receipts/OPENROUTER-MODELS-20260925T074254Z.json: prompt 0.00000042), zero output-token price because nothing is generated. No public bookable price exists for this system. Sensitivity: the older $0.214/M OpenRouter provider list price the reflex-27b and LitJev rows carry (the author's issue quotes $0.15/M for the DeepInfra BF16 route and $0.214/M); the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "22c4a4fcb872ee28e389af8ba9b346f11a2a8efaf72d14704f6b85a5dd190299",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "926b5d454f0d24b90de77547ebf0591241c025d60ab06ff2d228a14f38151d50",
+   "row_sha256": "5222958de618db6c59a0a6d4728d2144e4366f4c2a01474614db7ea786f2019a"
+  }
+ },
+ {
+  "key": "rwkv-jev",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.7638888888888888,
+   "standard": 0.6770833333333334,
+   "judge": 0.4726027397260274,
+   "hard": 0.41818181818181815
+  },
+  "speed": {
+   "p50_s_raw": 0.11026508058421314,
+   "p95_s_raw": 0.12461812841938807,
+   "p50_s_adjusted": 0.3705301611684263,
+   "p95_s_adjusted": 0.39923625683877617,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.013718089887640448,
+   "basis": "ESTIMATE: hosted-provider price of the nearest listed size class, DeepInfra Qwen/Qwen3.5-2B $0.02/M input (its $0.10/M output price does not apply: nothing is generated; read 2026-09-25T07:42Z, receipts/DEEPINFRA-MODELS-20260925T074254Z.json; the same $0.02/M the JevAct 2B row uses). The checkpoint is about 1.5B parameters (bf16 file size) and has no hosted listing anywhere; the next larger listed Qwen3.5 size is used and errs high, as in the decider-2b and system-one-open precedents. One pass per answer path, nothing generated. Sensitivity: the author's own suggestion (~$0.01/M) = DeepInfra Qwen/Qwen3.5-0.8B $0.01/M input in the same snapshot (the price of the 0.8B rows); the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "adaa06020d9a1e800b864044c9cbe276bcb4555e1f4b4e09de343800532f7c74",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "d7efd4e3bbdc89c6e5ff09436e78b67537a64f9b227d9c3807292894d0bd7172",
+   "row_sha256": "ee99148b7395e9629ea2d1e9b6187d9083e35c9985468030f3d79d284ccd3388"
+  }
+ },
+ {
+  "key": "simplejev-gemma-4-12b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9791666666666666,
+   "judge": 0.9452054794520548,
+   "hard": 0.7363636363636363
+  },
+  "speed": {
+   "p50_s_raw": 0.18021352996584028,
+   "p95_s_raw": 0.44547901623882347,
+   "p50_s_adjusted": 0.5104270599316806,
+   "p95_s_adjusted": 1.0409580324776468,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own Simple Jev HF reference server (hf_server.py), unchanged, on loopback; no wrapper on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.11080327715355807,
+   "basis": "ESTIMATE (base-model price rule): gemma-4-12b-it has no hosted listing on OpenRouter or DeepInfra (snapshots gpu/receipts/*-20260925T074254Z.json), so the nearest hosted 12B Gemma is used: OpenRouter google/gemma-3-12b-it $0.05/M input (pricing.prompt 5e-08; DeepInfra lists the same $0.05/M), $0 output; the same basis as the live winnow-12b, cygnet and jev-omni rows. Sensitivity: Featherless developer-plan BETA price for featherless-ai/gemma-4-12B-it-classifier $0.24/M input (website/docs.html @ fe21effa; beta, 'may change'); whether that counts as a bookable price for a self-hosted row is the captain's call.; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "c46dc80c4732f148f770a2ac57bb0882ea27d1532fce60385bce4a9b192940ab",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "5047851ee23dfe4014fa547764dd3669beb40e3a663ad2cdefcbb36581102d54",
+   "row_sha256": "cde84ea0d9790cf9dcf8fae2d7252099c857a2f99f72184504a519370db2e4f8"
+  }
+ },
+ {
+  "key": "simplejev-gemma-4-26b-a4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9895833333333334,
+   "judge": 0.9246575342465754,
+   "hard": 0.7636363636363637
+  },
+  "speed": {
+   "p50_s_raw": 0.17707013903418556,
+   "p95_s_raw": 0.354973788454663,
+   "p50_s_adjusted": 0.5041402780683711,
+   "p95_s_adjusted": 0.859947576909326,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own Simple Jev HF reference server (hf_server.py), unchanged, on loopback; no wrapper on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.1994458988764045,
+   "basis": "ESTIMATE (base-model price rule): OpenRouter google/gemma-4-26b-a4b-it list price $0.09/M input (the exact base weights; gpu/receipts/OPENROUTER-MODELS-20260925T074254Z.json pricing.prompt 9e-08; the same $0.09/M the live simplejev-qwen3.8-27b and openjev-razorback16 rows use; DeepInfra lists $0.07/M), $0 output because nothing is generated. Sensitivity: Featherless developer-plan BETA price for featherless-ai/gemma-4-26B-A4B-classifier $0.28/M input (model card + docs @ fe21effa); captain's call whether it counts as bookable.; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "1ea74658aa4710256ca366af5a53da8da423ffb1be4992877bb3008c0a12d566",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "46284e4d3f14de08f62d6fe9873684e7d8294dffe0a5a1aa2a49c89b55e674e9",
+   "row_sha256": "fc557c26a35b7eeed71653dde48a07aad2f7e77b5bf2c0eca5d85fb3159ba5a2"
+  }
+ },
+ {
+  "key": "simplejev-qwen3.5-4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9583333333333334,
+   "judge": 0.958904109589041,
+   "hard": 0.5681818181818182
+  },
+  "speed": {
+   "p50_s_raw": 0.11688421538565308,
+   "p95_s_raw": 0.21553183667128903,
+   "p50_s_adjusted": 0.3837684307713062,
+   "p95_s_adjusted": 0.581063673342578,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own Simple Jev HF reference server (hf_server.py), unchanged, on loopback; no wrapper on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.06578691011235954,
+   "basis": "ESTIMATE (base-model price rule, DECISIONS 24 Sep 20:30): DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; gpu/receipts/DEEPINFRA-MODELS-20260925T074254Z.json, cents_per_input_token 3e-06), $0 output because nothing is generated; the basis every Qwen3.5-4B row on the board uses. Sensitivity: Featherless developer-plan beta price for featherless-ai/Qwen3.5-4B-classifier, also $0.03/M input (website/docs.html @ fe21effa).; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "6b2975a6e6ddafa069add6eecd662a39a44db7c4e62394261e5f4379809743e5",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "39353ac523968adefff795ba0e17e6106475725570331ac7902f673a16459e01",
+   "row_sha256": "fa6504e663f065e675d647e527d4d7d56cf940b7367e168c7f40d33718d6e001"
+  }
+ },
+ {
+  "key": "standardone-3b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.8854166666666666,
+   "judge": 0.958904109589041,
+   "hard": 0.5318181818181819
+  },
+  "speed": {
+   "p50_s_raw": 0.023637062404304743,
+   "p95_s_raw": 0.03318477870197967,
+   "p50_s_adjusted": 0.19727412480860948,
+   "p95_s_adjusted": 0.21636955740395933,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.06962846441947566,
+   "basis": "ESTIMATE: OpenRouter mistralai/ministral-3b-2512 list price $0.10/M input (= the author's proposed Mistral API price for the exact base; same basis as the standardone-8b row's ministral-8b-2512 $0.15/M in the live v1.4.2 artifact), read 2026-09-25T09:56Z (review/PRICE-standardone-3b-retry-openrouter.json); the server's own usage.input_tokens; nothing generated; estimated, not charged; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "2b793a64f9d2910462222ede335ba035dad4d6a59841bb52169a09d7fdf4f339",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "fef75e04f68e98afdaa2e6c2d9283049e374784ef02b95d3e3a1d128b8586098",
+   "row_sha256": "acae1d54c4d32f3d9a1a8a84bd311c97f22c7e1929a831f90996ebd3474b5f22"
+  }
+ },
+ {
+  "key": "bluusun-decision-1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (see speed basis), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9895833333333334,
+   "judge": 0.8356164383561644,
+   "hard": 0.5318181818181819
+  },
+  "speed": {
+   "p50_s_raw": 1.2136262618005276,
+   "p95_s_raw": 1.7489069584757087,
+   "p50_s_adjusted": 1.2136262618005276,
+   "p95_s_adjusted": 1.7489069584757087,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "serial standard+judge requests from Sandy (Hetzner, Germany) through the typesafe adapter and the loopback shim to www.bluusun.com, network included, all 842 items serially; production API: no adjustment",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 5.0,
+   "basis": "MEASURED-PRICE (not an estimate): the operator's public bookable list price, flat USD 0.005 per decision = USD 5.00 per 1,000 decisions (www.bluusun.com pricing, 25 Sep 2026 snapshot in receipts/); refused oversize requests are not billed by the operator but the cost axis uses the list price per decision",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "ffbd2200fe40b7db8a38481e40a0b2e990f16bfe75f78bfb8a61a3b16032aac9",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "995df1292b7cca9171776e7819df1bfe3106e95f14034d2c28f1f3f5d5c50125",
+   "row_sha256": "5dba82a8a1edd1cf6420425492c7958dc8e361b7fa0b58b630883d1c564fefe8"
+  }
+ },
+ {
+  "key": "simplejev-rwkv-mid",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (see speed basis), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.5138888888888888,
+   "standard": 0.4583333333333333,
+   "judge": 0.22602739726027396,
+   "hard": 0.4
+  },
+  "speed": {
+   "p50_s_raw": 0.3369472473859787,
+   "p95_s_raw": 0.6691143982112406,
+   "p50_s_adjusted": 0.6738944947719574,
+   "p95_s_adjusted": 1.3382287964224813,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "serial standard+judge requests from Sandy (Hetzner, Germany) through the typesafe adapter to the public SimpleJev demo endpoint, network included, all 842 items serially; demo-endpoint adjustment x2 (as the live SimpleJev demo rows)",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.11324925093632959,
+   "basis": "Featherless published beta list price for this exact model id, USD 0.10 per 1M input tokens, 0 output, times the endpoint's own usage.input_tokens (snapshot 25 Sep 2026); the free demo was used for the measurement; beta price, may change",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "2d8cb562796327fccb2c0eec11f3dd303a3e7ac363ef99d9e5aa491bd6da7a26",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "6b5aa36646a075060c82f658e5a8360c74278d5b15fd08c53b807f9d65f1a36e",
+   "row_sha256": "591cddc292a6714fb50339b2f5521fd6b7a7e3605231193b82a970446909accf"
+  }
+ },
+ {
+  "key": "simplejev-rwkv-small",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (see speed basis), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.6805555555555556,
+   "standard": 0.3333333333333333,
+   "judge": 0.15753424657534246,
+   "hard": 0.39545454545454545
+  },
+  "speed": {
+   "p50_s_raw": 0.32412073388695717,
+   "p95_s_raw": 0.6605874862521887,
+   "p50_s_adjusted": 0.6482414677739143,
+   "p95_s_adjusted": 1.3211749725043773,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "serial standard+judge requests from Sandy (Hetzner, Germany) through the typesafe adapter to the public SimpleJev demo endpoint, network included, all 842 items serially; demo-endpoint adjustment x2 (as the live SimpleJev demo rows)",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.03397477528089888,
+   "basis": "Featherless published beta list price for this exact model id, USD 0.03 per 1M input tokens, 0 output, times the endpoint's own usage.input_tokens (snapshot 25 Sep 2026); the free demo was used for the measurement; beta price, may change",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "ce1e0418b173021b61ca216e005d07ae64b8627edb7058a8abb4f416410bd7b1",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "1f4db5f82fafea014a9b0d86041982d08fe10a0ad7344ae8b6ae564ae77c2c76",
+   "row_sha256": "f674b089757c7baab476f31e2265c161429084dbfa17436024c52bbb131f96e6"
+  }
+ },
+ {
+  "key": "simplejev-rwkv-std",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (see speed basis), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.5277777777777778,
+   "standard": 0.46875,
+   "judge": 0.2945205479452055,
+   "hard": 0.39545454545454545
+  },
+  "speed": {
+   "p50_s_raw": 0.4574838615953922,
+   "p95_s_raw": 0.8152306795120237,
+   "p50_s_adjusted": 0.9149677231907845,
+   "p95_s_adjusted": 1.6304613590240473,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "serial standard+judge requests from Sandy (Hetzner, Germany) through the typesafe adapter to the public SimpleJev demo endpoint, network included, all 842 items serially; demo-endpoint adjustment x2 (as the live SimpleJev demo rows)",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.22649850187265919,
+   "basis": "Featherless published beta list price for this exact model id, USD 0.20 per 1M input tokens, 0 output, times the endpoint's own usage.input_tokens (snapshot 25 Sep 2026); the free demo was used for the measurement; beta price, may change",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "55e9bc361f0c3f310ae62a1d1e801c265e669f5cf8f3475340e69512297836f4",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "75a38dcb001a197d0860081a267a350bf1a3f67d5540b3b26afa2402f56a5f53",
+   "row_sha256": "f956c31e034fdcf3365f5efce51b901eba594209cffee473c0084651b2a332d3"
+  }
+ },
+ {
+  "key": "bonsai-llama-jev",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000 Blackwell 96 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.90625,
+   "judge": 0.8835616438356164,
+   "hard": 0.6227272727272727
+  },
+  "speed": {
+   "p50_s_raw": 0.15790756093338132,
+   "p95_s_raw": 0.6520145241636782,
+   "p50_s_adjusted": 0.46581512186676266,
+   "p95_s_adjusted": 1.4540290483273564,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 Blackwell 96 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests (one at a time) from the typesafe-equivalent runner to the submission's llama-server /v1/systemone on loopback inside the offline container, RTX PRO 6000 Blackwell Server Edition 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.30579853932584267,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026; the Instinct precedent and the v1.4.3 Eikos-27B/AutoJev-27B rows): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-25T07:42Z, gpu/receipts/OPENROUTER-MODELS-20260925T074254Z.json), zero output-token price because nothing is generated. No public bookable price exists for this system. Under the 25 Sep pricing addendum (list price >=30 days; cost = max(list price, base-model reference)) this is also the floor: OpenRouter's listing of the exact PrismML weights (prism-ml/ternary-bonsai-2-27b, $0.075/M, one provider, listed since 18 Sep 2026) is younger than 30 days and lower than the reference. Sensitivity: $0.075/M (that listing), $0.214/M (the reflex-27b/LitJev basis) and $0.20/M (the 23 Sep measurement's basis); the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "e4c68825cf073864041e747a459605d03d566d413d62802a2e981f918cf078ef",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "9782044f380d1a1697a60602ed67c96a6672e41080de85494906fe63a6f6d366",
+   "row_sha256": "fd002aba96db475dd05071cb580861a6a23b16aebc147be6e84e33147ec80ff7"
+  }
+ },
+ {
+  "key": "jpt-0.8b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9861111111111112,
+   "standard": 0.84375,
+   "judge": 0.8082191780821918,
+   "hard": 0.5181818181818182
+  },
+  "speed": {
+   "p50_s_raw": 0.1320304045220837,
+   "p95_s_raw": 0.1465946662123315,
+   "p50_s_adjusted": 0.4140608090441674,
+   "p95_s_adjusted": 0.44318933242466296,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to author's llm2jev 0.6.1 over SGLang 0.5.9 on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.007117602996254682,
+   "basis": "ESTIMATE: Price is a labelled BASE-MODEL ESTIMATE under the 24 Sep rule, pending the new 25 Sep 30-day list-price history audit before publication; no public bookable tariff exists for this fine-tune. Snapshot: receipts/DEEPINFRA-MODELS-20260925T095313Z.json. DeepInfra Qwen/Qwen3.5-0.8B at $0.01/M input, same base model; zero output-token price for the option-logit readout.; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "dfb725adaf043e90fe057a020b3b0690688f6054a5b16950dd76e3658f3661d9",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "f7852cce43c7b0d6793b3acd45bd4053b4a66a833b45fa2b2cbf7fae659e58ff",
+   "row_sha256": "f517ac118b5400a78f7697e4d2d2f8c932ba4c1092d2e37049e433678f440c49"
+  }
+ },
+ {
+  "key": "jpt-9b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9479166666666666,
+   "judge": 0.8767123287671232,
+   "hard": 0.7227272727272728
+  },
+  "speed": {
+   "p50_s_raw": 0.14731673058122396,
+   "p95_s_raw": 0.1692135672783479,
+   "p50_s_adjusted": 0.44463346116244795,
+   "p95_s_adjusted": 0.48842713455669584,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to author's llm2jev 0.6.1 over SGLang 0.5.9 on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.07117602996254682,
+   "basis": "ESTIMATE: Price is a labelled BASE-MODEL ESTIMATE under the 24 Sep rule, pending the new 25 Sep 30-day list-price history audit before publication; no public bookable tariff exists for this fine-tune. Snapshot: receipts/DEEPINFRA-MODELS-20260925T095313Z.json. DeepInfra Qwen/Qwen3.5-9B at $0.10/M input, same base model; zero output-token price for the option-logit readout.; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "cade5e194ee5ca1fddd1737791bf21a6d8e2f264230aadf8a8bd18f2135d1bcd",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "20326927a14e566fd4aba4801f9d7aca7e0fe00f0db501073350bd2f4344a8cd",
+   "row_sha256": "d06d0bc40bae382c57df625e0f25221a8f1f82eaf56bc93664c60764b4118177"
+  }
+ },
+ {
+  "key": "winnow-e4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9791666666666666,
+   "judge": 0.952054794520548,
+   "hard": 0.6136363636363636
+  },
+  "speed": {
+   "p50_s_raw": 0.04487658943980932,
+   "p95_s_raw": 0.12457553724525496,
+   "p50_s_adjusted": 0.23975317887961864,
+   "p95_s_adjusted": 0.3991510744905099,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to author's Winnow inference server, plus a loopback proxy adding only author-fitted Q8 temperature on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.014754943820224718,
+   "basis": "ESTIMATE: Price is a labelled BASE-MODEL ESTIMATE under the 24 Sep rule, pending the new 25 Sep 30-day list-price history audit before publication; no public bookable tariff exists for this fine-tune. Snapshot: receipts/DEEPINFRA-MODELS-20260925T095313Z.json. DeepInfra google/gemma-4-E4B-it at $0.02/M input and no generated output, the same base model and the established system-one-open precedent.; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "857b5bad2817ba820656e1c987dd06e12fb6e103aca75d750607aa4e69dad119",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "53abcac56241ea7bc77c860173d5db67b5bdd9f456cdb971c8b6d2663d9d973b",
+   "row_sha256": "f27b201e5fa12e8e2f691bb9441bf8b9dee1e3bd442462bd6ad3c95d8775f1f6"
+  }
+ },
+ {
+  "key": "mica-v01-4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 1.0,
+   "judge": 0.958904109589041,
+   "hard": 0.6636363636363637
+  },
+  "speed": {
+   "p50_s_raw": 0.022611908498220146,
+   "p95_s_raw": 0.08268476675148122,
+   "p50_s_adjusted": 0.19522381699644029,
+   "p95_s_adjusted": 0.31536953350296243,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.022626348314606744,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input, $0.00/M output (the exact base weights; one prefill, nothing generated), read 2026-09-25 - the basis the author proposed himself and the one every other Qwen3.5-4B row on the board uses; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "6df5e1829f118c9dd78fac74847ab082b3982b9d63bcf89bc4665288c5bcd06c",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "b8506e0103d6dda1cab29abce7a5f5578ebb45bb47dd4620011ed7cc2343495e",
+   "row_sha256": "41574c72d012c5acfaa151b6d6d95174dcf42aa220e6120ec5a02c8d67f34fd0"
+  }
+ },
+ {
+  "key": "tde-general-large",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9861111111111112,
+   "standard": 0.7916666666666666,
+   "judge": 0.3835616438356164,
+   "hard": 0.35909090909090907
+  },
+  "speed": {
+   "p50_s_raw": 0.022900976007804275,
+   "p95_s_raw": 0.030330751335714005,
+   "p50_s_adjusted": 0.19580195201560854,
+   "p95_s_adjusted": 0.210661502671428,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.0040318539325842695,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra encoders of the same size class (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.00/M out - the identical basis the Laya (ModernBERT-large, 395M) and GLiNER2 large (Fastino) rows on the board use; one forward pass, nothing generated; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "46463122aa78b059f084987ff30a6e43ff45665682a0f6d4853233f07b42d1f3",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "ca3731c6d7426bcbde1dab388c6ff5154cf468f65c45ce164b706c84f3d75149",
+   "row_sha256": "6179f71a69851aa2622a28a896e459c59fee6e1ae6dcdeb4d8e27049e253484d"
+  }
+ },
+ {
+  "key": "this-that-1-2",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.90625,
+   "judge": 0.7054794520547946,
+   "hard": 0.4590909090909091
+  },
+  "speed": {
+   "p50_s_raw": 0.04930558800697327,
+   "p95_s_raw": 0.10101759792887605,
+   "p50_s_adjusted": 0.24861117601394653,
+   "p95_s_adjusted": 0.3520351958577521,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.019890955056179774,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input, $0.00/M output, read 2026-09-25 - the identical basis the decider-2b row on the board uses for a ~2B Qwen3.5-class decision model, because no hosted ~2B Qwen3.5 is listed; one forward pass, nothing generated; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "32ae5bd89ddaffbae8ffe7a4df259e98bf78b5a89445e779e2e9aad87d78f2ea",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "9f676b5eada3ea282e555af916ee7f37fa10e1112e4a2ae37dd8e3e5d53710f9",
+   "row_sha256": "6a86c8316ef525c5e9dc39f49bf68a4f500383eaf5e9cc84bfba69195f627f90"
+  }
+ },
+ {
+  "key": "gevva-e2b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9166666666666666,
+   "judge": 0.8904109589041096,
+   "hard": 0.5
+  },
+  "speed": {
+   "p50_s_raw": 0.06122953654266894,
+   "p95_s_raw": 0.29400426560314374,
+   "p50_s_adjusted": 0.2724590730853379,
+   "p95_s_adjusted": 0.7380085312062875,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the in-process Gevva entailment adapter, model loaded/warmed before the first item, H100 80 GB; own-GPU adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.05898726591760299,
+   "basis": "ESTIMATE: PROVISIONAL ESTIMATE base-model public reference: Gemma 4 E2B size class; Qwen3.5-2B hosted reference $0.02/M input; subject to the v1.4.3 30-day list-price audit; no bookable Gevva-specific tariff; the model tokenizer count of every sanitized premise/hypothesis pair as encoded, after max-length truncation; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "a328ae4853aa7c87fb5013e5aadffb8fdaefcfea70092d27b874952f8763024b",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "b15a8c5b07c3446e6e36baf8e38ef2cd28b15bf0ed10cc0bf27f8406db3f85b7",
+   "row_sha256": "397cf35bac2e76765643d02d9b469309309c42b140d50827923985b151a8cd6b"
+  }
+ },
+ {
+  "key": "gevva-e4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.875,
+   "judge": 0.8698630136986302,
+   "hard": 0.5136363636363637
+  },
+  "speed": {
+   "p50_s_raw": 0.06735200399998575,
+   "p95_s_raw": 0.6965810892288571,
+   "p50_s_adjusted": 0.28470400799997153,
+   "p95_s_adjusted": 1.543162178457714,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the in-process Gevva entailment adapter, model loaded/warmed before the first item, H100 80 GB; own-GPU adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.05898726591760299,
+   "basis": "ESTIMATE: PROVISIONAL ESTIMATE base-model public reference: DeepInfra google/gemma-4-E4B-it $0.02/M input, listed since 14 Jul 2026; subject to the v1.4.3 30-day list-price audit; no bookable Gevva-specific tariff; the model tokenizer count of every sanitized premise/hypothesis pair as encoded, after max-length truncation; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "83ecc013924d784949656ad344cfdda4ccf9325ad471129dde9b30009c046405",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "fbfac14f7734f3aea55f9398604b6447b2ce9d78eca4dad22b4a16fbd0e4fd12",
+   "row_sha256": "9c7943a293700c9fe3e3e5fc19ac4598c1ace65f9e639a4c0f173c1d4f1e086f"
+  }
+ },
+ {
+  "key": "typical-small-v3",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.78125,
+   "judge": 0.7534246575342466,
+   "hard": 0.40454545454545454
+  },
+  "speed": {
+   "p50_s_raw": 0.04985561012290418,
+   "p95_s_raw": 0.07066462821094319,
+   "p50_s_adjusted": 0.24971122024580836,
+   "p95_s_adjusted": 0.29132925642188634,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through the in-process Typical native adapter, model loaded and warmed before item one, H100 80 GB, max_states=0; own-GPU adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.014387602996254682,
+   "basis": "ESTIMATE: PROVISIONAL size-class base-model reference: Qwen3-1.7B-Base, using the same DeepInfra Qwen3.5-2B $0.02/M input proxy as Bosun 3.1 1.7B; requires the 25 Sep 30-day list-price and base-floor audit before publication; exact tokenizer lengths of the prefix and rendered suffix after model truncation, including chat/eos overhead; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "2a67cb173e48d095760e9f900b8f06ae9249efe97cc68276677c3653633cea82",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "36e9f3ac11e31329899eae2352651ffc9f5248c4104cb005136ee1e26fffd63d",
+   "row_sha256": "cba551a258fa439bfca0b7751d56c999c4f4c6f79891d4e76ec1124c56d3562c"
+  }
+ },
+ {
+  "key": "gliner25-decide",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9722222222222222,
+   "standard": 0.5208333333333334,
+   "judge": 0.4931506849315068,
+   "hard": 0.36818181818181817
+  },
+  "speed": {
+   "p50_s_raw": 0.02039367298129946,
+   "p95_s_raw": 0.06805734320078044,
+   "p50_s_adjusted": 0.19078734596259891,
+   "p95_s_adjusted": 0.2861146864015609,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial in-process AutoExtractor.extract calls with the unchanged GLiNER2 mapping on an offline evaluator-owned H100 GPU; raw standard+judge request wall time includes token counting and excludes model load; self-hosted ×2 + 0.15 s adjustment",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.006249794007490637,
+   "basis": "ESTIMATE: LABELLED SIZE-CLASS ESTIMATE, pending Florian's 25 Sep 30-day public list-price and base-model floor audit before publication: DeepInfra encoders of comparable size (bge-large, e5-large, Qwen3-Embedding-0.6B) at $0.01/M input, $0.00/M output; same method as prior GLiNER2 large and Laya rows. No bookable GLiNER2.5-Decide tariff.; the model's own tokenizer count of text and schema-conditioned labels; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "ade34c2b42255493d36f95fb3998172a670e4f8ba640e83acdb86e50fad34302",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "20a6f3e80b2b2c6004b429dca724610ed194b77a5ab266fdaab3641881cb2a8d",
+   "row_sha256": "fbebfb4895d75b3be88ad3eb9472862bc87239ed8c3fe788d32bd64544cb933c"
+  }
+ },
+ {
+  "key": "diffusion-jev-sglang",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.96875,
+   "judge": 0.952054794520548,
+   "hard": 0.7136363636363636
+  },
+  "speed": {
+   "p50_s_raw": 0.14674664294579998,
+   "p95_s_raw": 0.2050617032509762,
+   "p50_s_adjusted": 0.4434932858916,
+   "p95_s_adjusted": 0.5601234065019524,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's own launcher (launch_diffusiongemma.py: patched SGLang engine + diffusion-jev serve-gemma API), unchanged on loopback inside the offline container, H100 80 GB (Hopper), all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.06566876404494382,
+   "basis": "ESTIMATE: PROVISIONAL pending Florian 25 Sep 30-day public-list-price and base-model-floor audit: ESTIMATE from the BASE MODEL's public reference price (price rule 24 Sep 2026): DiffusionGemma 26B-A4B has no hosted listing; the same-size Gemma 4 26B-A4B MoE sibling google/gemma-4-26b-a4b-it on OpenRouter lists $0.09/M input, $0.30/M output (catalog snapshot 2026-09-25T07:42Z, gpu/receipts/OPENROUTER-MODELS-20260925T074254Z.json) - the same reference the live v1.4.2 openjev-razorback16 row carries ('openrouter google/gemma-4-26b-a4b-it list price $0.09/M in, $0.3/M out ... size class moe_26B-A4B'); x measured input tokens and the 5 output tokens the server reports per decision. No public bookable price exists for this system; the author's demo credits are not a price (issue #30).; the server's own measured input and output token usage; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "61793de392826021186558e5bcbcd6c7bd40ea651c152aa3589ec7f906f1bc0d",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "1725b832abbc61c07fb131b114d6d967b93db129d32efb0e30d2046102cf9571",
+   "row_sha256": "443dd05d6063134c55d807b022d1fbf55a2cf80e3465ebb88422f7d3e27cbc81"
+  },
+  "measurement_completion": {
+   "attempted": 842,
+   "valid": 839,
+   "invalid": 3,
+   "http_503": 3
+  }
+ },
+ {
+  "key": "jevk5-9b-v0.3.3",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (H100 80 GB (evaluator-owned Lium pod)), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9479166666666666,
+   "judge": 0.958904109589041,
+   "hard": 0.7818181818181819
+  },
+  "speed": {
+   "p50_s_raw": 0.018611902953125536,
+   "p95_s_raw": 0.06346684849122539,
+   "p50_s_adjusted": 0.18722380590625107,
+   "p95_s_adjusted": 0.27693369698245074,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "H100 80 GB (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge decisions through native in-process JevK5 direct adapter, model loaded and warmed before item one, H100 80 GB, full 842 serial; own-GPU adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.07452134831460674,
+   "basis": "ESTIMATE: PROVISIONAL Qwen3.5-9B base-model input reference $0.10/M from the earlier w2a snapshot; independently recheck exact public bookability, continuous 30-day age, and base-model floor before any ranking. No public JevK5-9B v0.3.3 endpoint tariff exists; author direct adapter usage.input_tokens, exact model tokenizer count of each native forward pass; zero output tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "e8bf19065c98390eea7ed77d28cc05ae4f33365878db0d3e454e6695ae4e892d",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "token_receipt_sha256": "0f7034372252f2d12b7c03952b5fca2997e58c8e8bb96d0a6152fa656f9f0796",
+   "aggregate_source_sha256": "6ac129e6e31428afe4894f3ad7d6550a83eba53e4731cd0fde0fd46ff7436b4f",
+   "row_sha256": "ec8ebc3522aa6bdba240116e1558312abde3aa7b5446537d7161debf19227f9c"
+  }
+ },
+ {
+  "key": "jevk5-lite-preview1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (see speed basis), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9722222222222222,
+   "standard": 0.7708333333333334,
+   "judge": 0.7534246575342466,
+   "hard": 0.42272727272727273
+  },
+  "speed": {
+   "p50_s_raw": 0.16283219098113477,
+   "p95_s_raw": 0.6500218080822379,
+   "p50_s_adjusted": 0.47566438196226957,
+   "p95_s_adjusted": 1.4500436161644756,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "serial standard+judge decisions on 16 pod CPU threads in fp32 after synthetic warm-up; own-host adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.005517191011235955,
+   "basis": "ESTIMATE: PROVISIONAL $0.02/M input token size-class proxy only; this CPU encoder has no known base-model public API tariff, so the 25 Sep 30-day price and base-floor audit must determine a publishable cost; author JevK5-Lite encode() exact post-truncation input token length; zero output tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "aeae95a6ddfdb2c57b603b9b3b756e633992d692e74c72140eabf65faaa5983d",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "abed1bd2547c7d57f4f9f6cbbcb49f610fde8801f8fc083a32159db0d23ab3e9",
+   "row_sha256": "d990fbdf57abf53aff5714fec8da48f03d26f69acf7acb861db6506f30ad9df7"
+  }
+ },
+ {
+  "key": "certo-r1",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": false,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (see speed basis), offline read-only container, author's model served on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9722222222222222,
+   "standard": 0.9375,
+   "judge": 0.6712328767123288,
+   "hard": 0.5227272727272727
+  },
+  "speed": {
+   "p50_s_raw": 0.503425179515034,
+   "p95_s_raw": 1.5368564539588982,
+   "p50_s_adjusted": 1.1568503590300678,
+   "p95_s_adjusted": 3.2237129079177964,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "serial standard+judge decisions in the evaluator-owned offline BF16 GPU container after synthetic warm-up; own-host adjustment x2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.039879513108614234,
+   "basis": "ESTIMATE: PROVISIONAL exact-base Qwen3-4B market reference from Api.Airforce public pay-as-you-go route $0.05/M input and $0.18/M output, captured 25 Sep 2026 in certo/source/airforce-qwen3-4b.html SHA c9809f7c866b6614046d9d67d5a35baac0c9c9d84a84444ae3641de8d420ca65; reverify cutoff/bookability before rank; the local tokenizer's exact chat-template input IDs and actual generated output IDs; generated tokens included; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "raw_results_sha256": "02392cca5138862e25cbdc603c2753749a598e4153de1c55b952aa571ba70d62",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+   "scope_counts": {
+    "public-source": 377,
+    "historical-private": 157,
+    "current-sealed": 308
+   },
+   "aggregate_source_sha256": "6c487dfeebb77248a1165a50580e3f06ceb5eda3e8b6a918c6527fb0f1718c30",
+   "row_sha256": "a2da1e332b4cea2ccab4fc50b6c40057f72d612f69141479a162da4c7323e17c"
   }
  }
 ]

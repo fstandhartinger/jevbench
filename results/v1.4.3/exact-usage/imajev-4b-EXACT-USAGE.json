@@ -1,0 +1,31 @@
+{
+  "base_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "blind_input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+  "counts": {
+    "all_842": 2553277,
+    "old_534": 1451955,
+    "passes_all_842": 3086,
+    "passes_old_534": 1941,
+    "reported_max_all_842": 681891,
+    "reported_max_old_534": 391693,
+    "sealed_308": 1101322
+  },
+  "expected_answers_read": false,
+  "model": "imajev-4b",
+  "model_weights_loaded": false,
+  "per_item_max_checks": 842,
+  "private_detail_sha256": "f1ae814976e7c223e712099d7299c4463db726f1fe40983b1d1270991513e75a",
+  "processor_assets_sha256": {
+    "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "config.json": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+    "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+    "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+    "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+    "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+  },
+  "raw_sha256": "a10307a05879c96c689eb51646932622fc39b23f14a80dbf956d1bcad8a457b5",
+  "source_commit": "4469df3c61fa643deeeff60a64aeffbdf34a48b7",
+  "status": "pass_exact_rotation_recount"
+}

@@ -1,0 +1,299 @@
+{
+  "generated_utc": "2026-09-25T10:23:33+00:00",
+  "status": "official v1.4.3 addition row (v1.4 scorer, ranked against the published v1.4.2 board); not yet published",
+  "key": "bluusun-decision-1",
+  "display": "Bluusun Decision API (bluusun/decision-1)",
+  "author": "Bluusun (Lewis Linden)",
+  "repo": "https://www.bluusun.com",
+  "class": "jev",
+  "ranked": true,
+  "api_flag": true,
+  "endpoint_kind": "api",
+  "api_exposure_note": "API — the operator's endpoint received sealed item text, without answers.",
+  "licence": "closed commercial API (prepaid credit); author states a frozen Qwen 3.7 Max base",
+  "source": "v1.4.3 addition (official hosted-API measurement, 25 Sep 2026, jevbench-v143-models wave-2 worker w2d, run-14 protocol)",
+  "note": "Bluusun Decision API, model id bluusun/decision-1 (production endpoint https://www.bluusun.com/api/v1/decide). Per the author: a frozen Qwen 3.7 Max first-token logit readout restricted to the option letters (temperature 0, reasoning off, renormalised over the caller's options); the output is never model text. Documented limits: 2-16 options, evidence capped at 3,000 characters (longer requests are refused unbilled). Measured through a minimal reviewed stdlib loopback shim (w2d/worker/bluusun_shim.py) that maps JevBench's TypeSafe request onto the author's documented native request unchanged (evidence = state, criterion = instructions, options = the declared options with their descriptions, in request order) and passes the returned probabilities through without renormalisation; the API's documented 3,000-character refusal is counted as a wrong answer (422), as in the length-limited GPU rows. Closed weights and training data: training-data overlap with the 231 public items is UNVERIFIED (the author states no training on JevBench or openjev). The author's openjev numbers (0.956) are his own claim, not a JevBench number. Evaluation key: prepaid test credit supplied by the author.",
+  "note_v14": "Hosted-API measurement of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4), sent one at a time from Sandy (Hetzner, Germany) through JevBench's unchanged typesafe adapter and the reviewed loopback shim to the operator's production endpoint; the endpoint received sealed item text, never answers or labels. Latency is the serial client wall time (network included) on the standard+judge items, unadjusted as for every production API row. Cost is the operator's public bookable list price, a flat $0.005 per decision (www.bluusun.com pricing, credit packs via Stripe; snapshot in receipts/), i.e. $5.00 per 1,000 decisions.",
+  "v130": {
+    "score": 24.835940554990223,
+    "rank": 61,
+    "axes": {
+      "intelligence": 71.90314506225766,
+      "calibration": 68.96058964104955,
+      "speed": 76.7314832866287,
+      "cost": 0.0
+    },
+    "tiers": {
+      "easy": 1.0,
+      "standard": 0.9895833333333334,
+      "judge": 0.8356164383561644,
+      "hard": 0.5318181818181819
+    }
+  },
+  "public_acc": 0.7705627705627706,
+  "public_n": 231,
+  "public_hard_acc": 0.5315315315315315,
+  "heldout_hard_acc_v12": 0.5321100917431193,
+  "sealed_acc": 0.36038961038961037,
+  "sealed": {
+    "n": 308,
+    "attempted": 308,
+    "answered_valid": 247,
+    "failed_or_invalid": 61,
+    "by_family": {
+      "ambiguous_abstain": {
+        "correct": 18,
+        "n": 37,
+        "accuracy": 0.4864864864864865
+      },
+      "judge_hard": {
+        "correct": 26,
+        "n": 41,
+        "accuracy": 0.6341463414634146
+      },
+      "long_policy": {
+        "correct": 0,
+        "n": 40,
+        "accuracy": 0.0
+      },
+      "multi_hop": {
+        "correct": 14,
+        "n": 38,
+        "accuracy": 0.3684210526315789
+      },
+      "paraphrase_robustness": {
+        "correct": 5,
+        "n": 14,
+        "accuracy": 0.35714285714285715
+      },
+      "probability": {
+        "correct": 10,
+        "n": 28,
+        "accuracy": 0.35714285714285715
+      },
+      "safety_judge": {
+        "correct": 6,
+        "n": 16,
+        "accuracy": 0.375
+      },
+      "temporal_numeric": {
+        "correct": 18,
+        "n": 56,
+        "accuracy": 0.32142857142857145
+      },
+      "tradeoff": {
+        "correct": 7,
+        "n": 26,
+        "accuracy": 0.2692307692307692
+      },
+      "trap_adversarial": {
+        "correct": 7,
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      }
+    },
+    "by_panel_stratum": {
+      "0/3": {
+        "correct": 21,
+        "n": 109,
+        "accuracy": 0.1926605504587156
+      },
+      "1/3": {
+        "correct": 31,
+        "n": 97,
+        "accuracy": 0.31958762886597936
+      },
+      "2/3": {
+        "correct": 59,
+        "n": 102,
+        "accuracy": 0.5784313725490197
+      }
+    },
+    "ece": 0.3527782128369157,
+    "mean_tvd_gold_probs": 0.45029408389919867,
+    "calibration": 42.2074745213485,
+    "label_only": false,
+    "risk_coverage": {
+      "conf>=0.7": {
+        "coverage": 0.538961038961039,
+        "accuracy": 0.5060240963855421,
+        "n": 166
+      },
+      "conf>=0.9": {
+        "coverage": 0.37337662337662336,
+        "accuracy": 0.5739130434782609,
+        "n": 115
+      }
+    },
+    "results_location": "private sealed run directory (not published)"
+  },
+  "v14": {
+    "score": 18.09274022697381,
+    "rank": 89,
+    "axes": {
+      "intelligence": 46.5304100282848,
+      "calibration": 53.35460582122394,
+      "speed": 76.7314832866287,
+      "cost": 0.0
+    },
+    "tiers": {
+      "easy": 1.0,
+      "standard": 0.9895833333333334,
+      "judge": 0.8356164383561644,
+      "hard_public": 0.5315315315315315,
+      "hard_heldout": 0.5321100917431193,
+      "sealed": 0.36038961038961037
+    }
+  },
+  "release_score": {
+    "score": 0.0,
+    "rank": 89,
+    "axes": {
+      "intelligence": 49.90996004501061,
+      "calibration": 60.042884601149204,
+      "speed": 76.7314832866287,
+      "cost": 0.0
+    },
+    "scoring_module": "/home/flori/jobs/jevbench-v14-release-20260923/repo/jevbench/composite_v14.py",
+    "scoring_module_sha256": "33177d06eab9f78667972ec3b20997344f70a78e16b05326453a2c31200cac79",
+    "board_sha256": "ac14e206dde51ae28e40dc1ea2ff1fecc4a449b941d098e9ecb5618bd533e5be"
+  },
+  "measurements": {
+    "scope_counts": {
+      "public-source": 377,
+      "historical-private": 157,
+      "current-sealed": 308
+    },
+    "scope_accuracy": {
+      "public-source": {
+        "correct": 300,
+        "n": 377,
+        "valid": 318,
+        "accuracy": 0.7957559681697612,
+        "valid_rate": 0.843501326259947
+      },
+      "historical-private": {
+        "correct": 106,
+        "n": 157,
+        "valid": 121,
+        "accuracy": 0.6751592356687898,
+        "valid_rate": 0.7707006369426752
+      },
+      "current-sealed": {
+        "correct": 111,
+        "n": 308,
+        "valid": 247,
+        "accuracy": 0.36038961038961037,
+        "valid_rate": 0.801948051948052
+      }
+    },
+    "old_tier_metrics": {
+      "easy": {
+        "correct": 72,
+        "n": 72,
+        "valid": 72,
+        "accuracy": 1.0,
+        "valid_rate": 1.0
+      },
+      "standard": {
+        "correct": 95,
+        "n": 96,
+        "valid": 96,
+        "accuracy": 0.9895833333333334,
+        "valid_rate": 1.0
+      },
+      "judge": {
+        "correct": 122,
+        "n": 146,
+        "valid": 125,
+        "accuracy": 0.8356164383561644,
+        "valid_rate": 0.8561643835616438
+      },
+      "hard": {
+        "correct": 117,
+        "n": 220,
+        "valid": 146,
+        "accuracy": 0.5318181818181819,
+        "valid_rate": 0.6636363636363637
+      }
+    },
+    "official_public_accuracy": {
+      "correct": 178,
+      "n": 231,
+      "valid": 193,
+      "accuracy": 0.7705627705627706,
+      "valid_rate": 0.8354978354978355
+    },
+    "old_public_hard": {
+      "correct": 59,
+      "n": 111,
+      "valid": 73,
+      "accuracy": 0.5315315315315315,
+      "valid_rate": 0.6576576576576577
+    },
+    "old_historical_private_hard": {
+      "correct": 58,
+      "n": 109,
+      "valid": 73,
+      "accuracy": 0.5321100917431193,
+      "valid_rate": 0.6697247706422018
+    },
+    "hard_ece": 0.11784462388945872,
+    "hard_mean_tvd": 0.3850989594000916,
+    "hard_tvd_n": 16,
+    "old_speed": {
+      "n": 242,
+      "p50_raw_s": 1.2136262618005276,
+      "p95_raw_s": 1.7489069584757087,
+      "p50_adjusted_s": 1.2136262618005276,
+      "p95_adjusted_s": 1.7489069584757087,
+      "axis": 76.7314832866287,
+      "basis": "serial standard+judge requests from Sandy (Hetzner, Germany) through the typesafe adapter and the loopback shim to www.bluusun.com, network included, all 842 items serially; production API: no adjustment"
+    },
+    "cost": {
+      "input_tokens_old_534": 168087,
+      "output_tokens_old_534": 439,
+      "usd_per_1000_estimate": 5.0,
+      "cost_axis": 0.0,
+      "input_usd_per_m": 0.0,
+      "output_usd_per_m": 0.0,
+      "basis": "MEASURED-PRICE (not an estimate): the operator's public bookable list price, flat USD 0.005 per decision = USD 5.00 per 1,000 decisions (www.bluusun.com pricing, 25 Sep 2026 snapshot in receipts/); refused oversize requests are not billed by the operator but the cost axis uses the list price per decision",
+      "price_per_decision_usd": 0.005,
+      "sensitivity_usd_per_1000": 5.0,
+      "sensitivity_release_score": 0.0,
+      "sensitivity_rank": 89
+    },
+    "noul_by_scope": {
+      "frozen_534": {
+        "n": 195,
+        "correct": 162,
+        "false_listed_first": 195
+      },
+      "sealed_308": {
+        "n": 87,
+        "correct": 45,
+        "false_listed_first": 0
+      }
+    },
+    "failed_by_status": {
+      "422": 156
+    },
+    "calibration_blend": {
+      "old_hard_and_sealed_weight": 0.5833333333333334,
+      "release_composite_reblend_weight": 0.5714285714285715,
+      "old_calibration": 68.96058964104955,
+      "sealed_calibration": 42.2074745213485,
+      "preliminary_comparison_calibration": 53.35460582122394,
+      "release_scored_calibration": 60.042884601149204
+    }
+  },
+  "runtime": {
+    "where": "Sandy (evaluator's server), hosted API with api_flag",
+    "shim": "w2d/worker/bluusun_shim.py (reviewed, 127.0.0.1 only)",
+    "driver": "vendored run842.py + typesafe adapter, byte-identical to wave 1",
+    "review": "w2d/review/CONTROLLER-REVIEW-PASS.sha256"
+  },
+  "raw_results_sha256": "ffbd2200fe40b7db8a38481e40a0b2e990f16bfe75f78bfb8a61a3b16032aac9",
+  "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+  "scope_note": "The requested existing 534 decisions contain 377 public-source items and 157 historical private holdouts. The v1.4 public-gap accuracy follows the release code's 231-ID public subset; all 377 public-source items are separately reported. The current sealed set contains 308 items."
+}

@@ -1,0 +1,1364 @@
+{
+ "price_cutoff": "2026-09-25",
+ "rule": "25 Sep 2026: new or individually re-scored rows use a 30-day public bookable own list tariff and a current public bookable base-model floor per 1,000 decisions. Published v1.4.2 rows carry their measured price and score until individually re-scored.",
+ "rows": [
+  {
+   "key": "decider-4b-v2",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.02006786516853933,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (4B dense size class, as decider-2b), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jev-1.13.0",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.03991423595505617,
+   "basis": "public tariff x measured tokens (https://docs.typesafe.ai/models (output tokens not billed)) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | public tariff x measured tokens (hard-tier run)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score. The 15–18 Sep launch tariff is younger than 30 days at this cutoff."
+  },
+  {
+   "key": "jevk5-v02",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.022356404494382018,
+   "basis": "Reconstructed from the frozen v1.3 Cost axis; same speed/cost measurement, not a new price observation",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "cygnet",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.03736151685393259,
+   "basis": "ESTIMATE: OpenRouter google/gemma-3-12b-it list price $0.05/M input (the nearest hosted 12B Gemma; gemma-4-12b-it is not listed; the Winnow-12B / Jev-Omni precedent), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "hopper",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.02375376404494382,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "winnow-12b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.037087359550561805,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter google/gemma-3-12b-it hosted reference list price $0.05/M in, $0.0/M out (the nearest publicly hosted 12B Gemma sibling; Winnow reads answer logits in one forward pass and generates no answer tokens) x 393 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "reflex-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.022087303370786515,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen/Qwen3.5-4B list price $0.03/M in, $0.0/M out (the exact base weights; one pass, no generated output) x 377 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "djev",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.025951254681647943,
+   "basis": "ANNOUNCED PRICE (free preview): djev's docs state $0.035 per million input tokens, output tokens free (https://api.djev.dev/docs, 'Usage & credits'; prepaid billing not yet switched on, 19 Sep 2026, so nothing was charged) x measured input tokens (741 per decision on average over all 534 decisions)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score. Its announced preview tariff and Gemma sibling comparator remain a deferred basis issue."
+  },
+  {
+   "key": "jev-omni",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.03682059925093633,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Gemma 3 12B input rate list price $0.05/M in, $0.0/M out (a 12B one-pass model with no generated output; the same reference the author uses in his own model card for this model) x 384 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "metask-jev-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.032758801498127314,
+   "basis": "ESTIMATE: hosted 4B reference rate USD 0.04/M input, USD 0/M output over the exact measured prompt-token counts of all 534 attempts; no generated answer tokens",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "semif-qwen3.5-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.02244460674157303,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra Qwen/Qwen3.5-4B list price $0.03/M in, $0.15/M out (same weights (not on OpenRouter), as open-alternative-jev in v1.1.2) x 396 input and 1 output tokens per decision (input tokens measured) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | ESTIMATE: deepinfra Qwen/Qwen3.5-4B $0.03/M in, $0.15/M out x 1244 in / 0 out tokens per hard decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jobe-qwen3.5-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.022356404494382018,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3.5-4B hosted reference list price $0.03/M in, $0.0/M out (same underlying weights; one forward pass, no generated tokens) x 396 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "localjev-qwen3.5-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.02974554307116105,
+   "basis": "ESTIMATE: hosted-provider price, hosted 4B reference rate list price $0.04/M in, $0.0/M out (one forward pass over measured input tokens and no generated answer tokens) x 397 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "system-one-open",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.014880936329588014,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra google/gemma-4-E4B-it list price $0.02/M in, $0.1/M out (Gemma 4 E2B is not listed; the nearest larger sibling, Gemma 4 E4B, is listed only on DeepInfra) x 383 input and 2 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | ESTIMATE: deepinfra google/gemma-4-E4B-it $0.02/M in, $0.1/M out x 1235 in / 2 out tokens per hard decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "spark-s1-4b-v6",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.025333314606741573,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen/Qwen3.5-4B size-class reference list price $0.03/M in, $0.0/M out (a 2-4B one-pass model with no generated output; the board's 4B open-weights reference, as for reflex 4B and decider-2b) x 505 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "malkuth-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.019154662921348316,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (4B one-pass size class, as kev-4b), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jqv",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.05641543071161049,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter qwen/qwen3-32b list price $0.08/M in, $0.0/M out (the exact base model this system reads logits from; nothing is generated) x 359 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "qwen3-reranker-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.04953623422454652,
+   "basis": "MEASURED model inference time x lium.io A6000 tariff USD 0.42/hour",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "decider-35b-a3b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0665503745318352,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.6-35B-A3B list price list price $0.1/M in, $0.0/M out (the closest public hosted 35B-A3B direct-logit model; no output is generated) x 312 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "raw-qwen3-4b-instruct-2507",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.022073820224719102,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "opensourcejev-qwen35-4b-q4km",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.015903033707865177,
+   "basis": "Reconstructed from the frozen v1.3 Cost axis; same speed/cost measurement, not a new price observation",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "zerank-2",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.04729792435014604,
+   "basis": "MEASURED model inference time x lium.io A6000 tariff USD 0.42/hour",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "decision-machine-1",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.035026591760299625,
+   "basis": "public tariff x measured tokens: $0.04 per million input tokens, output free (https://docs.milliseconds.ai/reference/pricing, read 2026-09-21) x 496 input tokens per easy/standard/judge decision as reported by the API; the run used the free test key, the price is the paid one",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "malkuth-2b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.019154662921348316,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (no hosted ~2B listed; the 4B price errs high, the decider-2b precedent), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "raw-phi-4-mini",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.047970318352059935,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jev-qwen3.5-9b-base-nvfp4",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.07745842696629213,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "openjev-razorback16",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.06560455056179774,
+   "basis": "ESTIMATE: hosted-provider price, openrouter google/gemma-4-26b-a4b-it list price $0.09/M in, $0.3/M out (DiffusionGemma 26B-A4B is not listed; the same-size Gemma 4 26B-A4B MoE sibling is (size class moe_26B-A4B)) x 380 input and 1 output tokens per decision (input tokens measured) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | ESTIMATE: openrouter google/gemma-4-26b-a4b-it $0.09/M in, $0.3/M out x 1222 in / 0 out tokens per hard decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "kev-4b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.018802865168539323,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3.5-4B size-class reference list price $0.03/M in, $0.0/M out (a 4B one-pass model with no generated output) x 279 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "decision-2b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.017769999999999998,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen/Qwen3.5-4B size-class reference list price $0.03/M in, $0.0/M out (a 2-4B one-pass model with no generated output; the board's 4B open-weights reference, as for reflex 4B and decider-2b) x 269 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "qwen35-9b-jev-data-mix-v2",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.08344007490636705,
+   "basis": "Reconstructed from the frozen v1.3 Cost axis; same speed/cost measurement, not a new price observation",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gpt-6-luna-low",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.12699831460674169,
+   "basis": "Measured API usage × list price",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "simplejev-qwen3.8-27b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.10399651685393257,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Gemma 4 26B-A4B size-class reference list price $0.09/M in, $0.0/M out (a public 27B dense model served as a direct-logit classifier; no output is generated) x 809 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "ninfer-qwen3.8-flash-next",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.10869606741573033,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter qwen/qwen3.8-flash hosted list reference list price $0.15/M in, $0.0/M out (same underlying Flash-Next weights; native one-pass option-logit readout) x 366 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "swanone",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.11099550561797752,
+   "basis": "ESTIMATE: OpenRouter qwen/qwen3.8-flash list price $0.15/M input (same underlying Flash-Next weights; the NInfer Flash-Next precedent), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gpt-6-luna",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.13544588014981276,
+   "basis": "Measured API usage × list price",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "open-alternative-jev",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.022171404494382024,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra Qwen/Qwen3.5-4B list price $0.03/M in, $0.15/M out (as open-alternative-jev) x 383 input and 1 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts) | ESTIMATE: deepinfra Qwen/Qwen3.5-4B $0.03/M in, $0.15/M out x 1235 in / 1 out tokens per hard decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jev-local",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.07745842696629213,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter qwen/qwen3.5-9b list price $0.1/M in, $0.0/M out (the exact base weights; scored by log-probabilities, nothing is generated) x 452 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "decision-fast",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0062724719101123596,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3-Embedding-0.6B size-class reference list price $0.01/M in, $0.0/M out (a <=0.6B one-pass model with no generated output, the same reference the kev 0.5B/0.6B rows use) x 280 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "decider-2b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.01996511235955056,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen/Qwen3.5-4B list price $0.03/M in, $0.0/M out (no hosted ~2B Qwen3.5 is listed, so the 4B price is used and errs high; one pass, no output) x 312 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jeff",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.006036722846441948,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra encoders of the same size (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 272 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "laya",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0028831273408239703,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra encoders of the same size (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 205 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "kushal-gemma4-31b-it-autoloops",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.136347191011236,
+   "basis": "Measured API usage × list price",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "standardone-8b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.10444269662921347,
+   "basis": "ESTIMATE: OpenRouter mistralai/ministral-8b-2512 list price $0.15/M input (= the author's proposed Mistral API price for the exact base), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "lev-350m",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.006263501872659176,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3-Embedding-0.6B size-class reference list price $0.01/M in, $0.0/M out (a <=0.6B one-pass model with no generated output, the same reference the kev 0.5B/0.6B rows use) x 280 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "openjev-sglang",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.13127546816479402,
+   "basis": "ESTIMATE: hosted-provider price, openrouter qwen/qwen3.6-35b-a3b list price $0.1/M in, $0.9/M out (same base weights) x 610 input and 2 output tokens per decision [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | ESTIMATE: openrouter qwen/qwen3.6-35b-a3b $0.1/M in, $0.9/M out x 2272 in / 2 out tokens per hard decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "von-395m",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.005513183520599252,
+   "basis": "Reconstructed from the frozen v1.3 Cost axis; same speed/cost measurement, not a new price observation",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "ninfer-qwen3.8-27b-t1.5",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.14492808988764044,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.8-27B hosted list reference list price $0.2/M in, $0.0/M out (same underlying weights; native one-pass option-logit readout) x 366 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "ninfer-qwen3.8-27b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.14492808988764044,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.8-27B hosted list reference list price $0.2/M in, $0.0/M out (same underlying weights; native one-pass option-logit readout) x 366 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "kev-8b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.07333117415730338,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter qwen/qwen3-8b list price list price $0.117/M in, $0.0/M out (the same-size Qwen3-8B weights; kev generates no output tokens) x 279 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jevone",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.1373250936329588,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "typecastlm",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.02126808988764045,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "simplejev-qwen3.6-35b-a3b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.11555168539325843,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.6-35B-A3B list price list price $0.1/M in, $0.0/M out (the same base weights served as a direct-logit classifier; no output is generated) x 809 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "kev-0.6b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0062676217228464426,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3-Embedding-0.6B size-class reference list price $0.01/M in, $0.0/M out (a <=0.6B one-pass model with no generated output) x 279 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "raw-qwen3-8b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0865558988764045,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "system-one-sg",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.08944116853932584,
+   "basis": "ESTIMATE: hosted-provider price, openrouter qwen/qwen3-8b list price $0.117/M in, $0.455/M out (same weights, listed on OpenRouter) x 412 input and 1 output tokens per decision (input tokens measured) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | ESTIMATE: openrouter qwen/qwen3-8b $0.117/M in, $0.455/M out x 1258 in / 1 out tokens per hard decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "opendecision",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.006635318352059925,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra encoders of the same size (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 329 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "litjev",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.16303594007490638,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.8-27B (as the reflex-27b row) list price $0.214/M in, $0.0/M out (the exact base weights; nothing is generated) x 418 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "openjev-verdict-1.4",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.003872921348314607,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra base-size encoders (bge-base, e5-base, gte-base, all-mpnet-base) list price $0.005/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 452 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "kev-0.5b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0062676404494382025,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3-Embedding-0.6B size-class reference list price $0.01/M in, $0.0/M out (a <=0.6B one-pass model with no generated output) x 279 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "nimble-9b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.16583014981273408,
+   "basis": "ESTIMATE: hosted-provider price, openrouter qwen/qwen3.5-9b list price $0.1/M in, $0.15/M out (a LoRA merge of Qwen3.5-9B; the base weights are listed on OpenRouter (size class dense_9B), as in the v1.1.3 row) x 970 input and 1 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gpt-5.6-luna",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.24191123595505612,
+   "basis": "public tariff x measured tokens (https://platform.openai.com/docs/pricing (standard tier, read 2026-09-19)) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | public tariff x measured tokens (hard-tier run)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "openjev-verdict",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.00367125468164794,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra base-size encoders (bge-base, e5-base, gte-base, all-mpnet-base) list price $0.005/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 383 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json]",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "raw-qwen3-1.7b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.014795880149812733,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "reflex-27b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.18111733707865169,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.8-27B list price list price $0.214/M in, $0.0/M out (the exact public base weights used as a direct-logit classifier; no output is generated) x 481 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "jevact",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.015491685393258427,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3.5-2B size-class reference list price $0.02/M in, $0.0/M out (a 2B one-pass decision model with nothing generated - between the <=0.6B reference the kev 0.5B row uses and the Qwen3.5-4B reference of the reflex 4B, Jobe and SemIf rows) x 452 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "djev-thinking",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.27429398876404487,
+   "basis": "ESTIMATE: same-size hosted reference x 749 measured input and 690 measured output tokens per attempted decision across all 534, failures included",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gliner2-large",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.007745842696629214,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra encoders of the same size (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 452 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "openjev-thinking",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.25463898876404495,
+   "basis": "ESTIMATE: same hosted reference x 1778 billed input and 315 thought output tokens per decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "mghafiri-qwen3.5-0.8b-decision-model",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0064648501872659175,
+   "basis": "same-size DeepInfra Qwen3.5-0.8B reference tariff; measured JevLite tokenizer usage; estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gemini-3.1-flash-lite",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.26378698501872655,
+   "basis": "public tariff x measured tokens (https://ai.google.dev/gemini-api/docs/pricing (paid tier, read 2026-09-19)) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | public tariff x measured tokens (hard-tier run)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "open-jev-deberta-v3-large",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.007340468164794008,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra encoders of the same size (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 383 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | ESTIMATE: deepinfra encoders of the same size (bge-large, e5-large, Qwen3-Embedding-0.6B) $0.01/M in, $0.0/M out x 1235 in / 0 out tokens per hard decision",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "smalljev",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.025365692883895133,
+   "basis": "ESTIMATE: hosted-provider price, submitted Qwen/Qwen2.5-3B-Instruct hosted reference list price $0.04/M in, $0.0/M out (the author's documented reference for the same approximate size class; one forward pass, nothing generated) x 329 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gliner2",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.00367125468164794,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra base-size encoders (bge-base, e5-base, gte-base, all-mpnet-base) list price $0.005/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 383 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json]",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "instinct",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.3253253932584269,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-24T19:52Z), zero output-token price for this direct-logit system, x the board-standard input token counts (452 per standard/judge decision, 1,235 per hard decision; 774.6 per decision over the 534 frozen items, the same convention as the other run-11 rows). ZooWork publishes no bookable price; the author-announced $0.03/M is not used.",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "open-jev-zefan-9b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.24882153558052428,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.5-9B list price read 2026-09-21 list price $0.1/M in, $0.0/M out (the exact 9B base and a conservative same-family proxy for the unlisted 2B; the decision head generates no output tokens) x 1439 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "open-jev-zefan-2b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.24882153558052428,
+   "basis": "ESTIMATE: hosted-provider price, OpenRouter Qwen3.5-9B list price read 2026-09-21 list price $0.1/M in, $0.0/M out (the exact 9B base and a conservative same-family proxy for the unlisted 2B; the decision head generates no output tokens) x 1439 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gliner2.5-multi",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.003872921348314607,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra base-size encoders (bge-base, e5-base, gte-base, all-mpnet-base) list price $0.005/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 452 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "clm-8b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.005234400749063671,
+   "basis": "Qwen3-Embedding-8B hosted list price (OpenRouter/DeepInfra $0.01/M input, read 2026-09-24); CLM usage.input_tokens (encoder tokens on cache misses, documented default action cache); estimated, not charged",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "simplejev-qwen3.5-0.8b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.011435224719101125,
+   "basis": "Same nonzero hosted size-class reference and exact prompt-token accounting; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gliner2.5-small",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.003872921348314607,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra base-size encoders (bge-base, e5-base, gte-base, all-mpnet-base) list price $0.005/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 452 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "raw-qwen3-0.6b",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.007397940074906366,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "verdict-small",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0012943970037453184,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra small multilingual encoders (multilingual-e5-small class, 118M) list price $0.004/M in, $0.0/M out (an encoder of the same size class, below the base-size encoders the open-jev-deberta and OpenDecision rows use; one forward pass, nothing generated) x 114 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "deepseek-flash",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.593682584269663,
+   "basis": "public tariff x measured tokens (https://api-docs.deepseek.com/quick_start/pricing (cache-miss off-peak; the run is on a Saturday, off-peak all day)) [corrected in v1.2.3: the price now averages each of the 314 v1.1 decisions once; see results/v1.2/cost-correction-v1.2.3.json] | public tariff x measured tokens (hard-tier run)",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "mirror",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.007745842696629214,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "mxbai-rerank-base-v2",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.011722048450570633,
+   "basis": "MEASURED model inference time x lium.io A6000 tariff USD 0.42/hour",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "bge-reranker-v2-m3",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.007718915951068509,
+   "basis": "MEASURED model inference time x lium.io A6000 tariff USD 0.42/hour",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "gte-reranker-modernbert-base",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.010280148864935354,
+   "basis": "MEASURED model inference time x lium.io A6000 tariff USD 0.42/hour",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "certo",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.0009654868913857679,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra encoders of the same size (bge-large, e5-large, Qwen3-Embedding-0.6B) list price $0.01/M in, $0.0/M out (an encoder of the same size class; one forward pass, nothing generated) x 86 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "open-jev-json-canvas-joshuasp",
+   "status": "carried-v142-unrescored",
+   "usd_per_1000": 0.06498050561797752,
+   "basis": "Nonzero hosted-comparable estimate; see RESULT.md",
+   "reason": "Published v1.4.2 row carried without an individual re-score. Its tariff and base reference require the 25 Sep rule at its next re-score."
+  },
+  {
+   "key": "blink-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.029815131086142328,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.022361348314606743,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "imajev-2b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.21752134831460676,
+   "basis": "ESTIMATE: Featherless Qwen/Qwen3.5-2B public Developer-plan list price; $50/month prepaid credits; https://featherless.ai/models/Qwen/Qwen3.5-2B",
+   "reported_max_input_tokens": 391693,
+   "measured_full_forward_input_tokens": 1451955,
+   "evidence": [
+    "results/v1.4.3/exact-usage/imajev-2b-EXACT-USAGE.json",
+    "Featherless Qwen/Qwen3.5-2B public Developer-plan list price; $50/month prepaid credits; https://featherless.ai/models/Qwen/Qwen3.5-2B"
+   ]
+  },
+  {
+   "key": "imajev-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.10876067415730338,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "reported_max_input_tokens": 391693,
+   "measured_full_forward_input_tokens": 1451955,
+   "evidence": [
+    "results/v1.4.3/exact-usage/imajev-4b-EXACT-USAGE.json",
+    "EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "imajev-9b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.21752134831460676,
+   "basis": "ESTIMATE: OpenRouter Darkbloom qwen/qwen3.5-9b active standard endpoint $0.08/M input, $0.13/M output, discount 0; exact base-model ID, 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.5-9b",
+   "reported_max_input_tokens": 391693,
+   "measured_full_forward_input_tokens": 1451955,
+   "evidence": [
+    "results/v1.4.3/exact-usage/imajev-9b-EXACT-USAGE.json",
+    "OpenRouter Darkbloom qwen/qwen3.5-9b active standard endpoint $0.08/M input, $0.13/M output, discount 0; exact base-model ID, 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.5-9b"
+   ]
+  },
+  {
+   "key": "ryotide-gemma",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.015783558052434456,
+   "basis": "ESTIMATE: DeepInfra exact google/gemma-4-E4B-it standard list $0.02/M input, active at cutoff; scheduled retirement 1 Oct 2026. https://deepinfra.com/google/gemma-4-E4B-it",
+   "evidence": [
+    "results/v1.4.3/price-receipts/DEEPINFRA-FRESH-20260925T1715Z.json"
+   ]
+  },
+  {
+   "key": "ryotide-qwen",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.03139408239700375,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.02354556179775281,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "decision-4b-v11",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.0298085393258427,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.02235640449438202,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "decision-4b-v12",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.0298085393258427,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.02235640449438202,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "nemotron-diffusion-8b",
+   "status": "withheld-pending-price",
+   "reason": "The exact nvidia/Nemotron-Labs-Diffusion-8B checkpoint has no public bookable exact-base route. Its DeepInfra Nemotron-Nano-9B-v2 sibling comparator was retired 11 Jun 2026; no replacement proxy has been approved.",
+   "measured_input_tokens_frozen": 421719,
+   "measured_output_tokens_frozen": 534,
+   "evidence": [
+    "receipts/DIFFUSION-RWKV-AUDIT-20260925.md",
+    "3567ddffa3edd73c8282ac336eda31d5874207c88211688c8a81dd5499f423b1"
+   ]
+  },
+  {
+   "key": "plumb-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.0298085393258427,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.02235640449438202,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "apus-openjev-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.029149213483146065,
+   "basis": "ESTIMATE, repriced for v1.4.3 to the bookable EmpirioLabs exact-base Qwen3.5-4B public list price $0.04/M input at the 25 Sep cutoff (https://empiriolabs.ai/models/qwen3-5-4b), zero output tokens (nothing generated), x the model's own measured prompt tokens (389,142 over the 534 frozen decisions). The measurement handoff had used the $0.10/M Qwen3.5-9B sibling price. Estimated, not charged.",
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "jpt-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.028470411985018727,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.021352808988764044,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "autojev-27b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.06575295131086141,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3.8-27b Reka standard endpoint $0.092/M input and $4.40/M output, no discount, active at the 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.8-27b",
+   "replaced_model_level_quote": 0.30017651685393254,
+   "measured_input_tokens_frozen": 381653,
+   "measured_output_tokens_frozen": 0,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.8-27b",
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN38-27B-ENDPOINTS-20260925T1748Z.json",
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "receipts/QWEN38-REKA-CORRECTION-20260925.md"
+   ]
+  },
+  {
+   "key": "eikos-27b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.0685596404494382,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3.8-27b Reka standard endpoint $0.092/M input and $4.40/M output, no discount, active at the 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.8-27b",
+   "replaced_model_level_quote": 0.3129896629213483,
+   "measured_input_tokens_frozen": 397944,
+   "measured_output_tokens_frozen": 0,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.8-27b",
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN38-27B-ENDPOINTS-20260925T1748Z.json",
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "receipts/QWEN38-REKA-CORRECTION-20260925.md"
+   ]
+  },
+  {
+   "key": "eikos-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.0298085393258427,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.02235640449438202,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "vtx-jev-1",
+   "status": "withheld-pending-price",
+   "reason": "VTX-JEV-1 is a custom 12.66M LF4 encoder with no identified public exact-base model or own bookable tariff. The owner's $0.005/M MiniLM size-class comparator is a different model and does not establish a validated cost.",
+   "measured_input_tokens_frozen": 213468,
+   "evidence": [
+    "receipts/VTX-BOSUN06-AUDIT-20260925.md",
+    "33639c9c825217d4a9d4d5736442acc78ff0d4484fadc7b831054fbc8b1961b2"
+   ]
+  },
+  {
+   "key": "bev-v0.1.2",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.07428571535580525,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3.8-27b Reka standard endpoint $0.092/M input and $4.40/M output, no discount, active at the 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.8-27b",
+   "replaced_model_level_quote": 0.31904348314606745,
+   "measured_input_tokens_frozen": 405641,
+   "measured_output_tokens_frozen": 534,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.8-27b",
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN38-27B-ENDPOINTS-20260925T1748Z.json",
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "receipts/QWEN38-REKA-CORRECTION-20260925.md"
+   ]
+  },
+  {
+   "key": "bosun-v3.1-0.6b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.029370262172284646,
+   "basis": "ESTIMATE: Featherless exact Qwen/Qwen3-0.6B active warm Developer-plan model-detail list $0.04/M input, $0.08/M output; 25 Sep 2026 cutoff. https://featherless.ai/models/Qwen/Qwen3-0.6B",
+   "replaced_retired_quote": 0.0073425655430711615,
+   "evidence": [
+    "https://featherless.ai/models/Qwen/Qwen3-0.6B",
+    "results/v1.4.3/price-receipts/FEATHERLESS-QWEN3-06B-DETAIL-20260925T1806Z.json"
+   ]
+  },
+  {
+   "key": "bosun-v3.1-1.7b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.23496209737827717,
+   "basis": "ESTIMATE: Featherless exact Qwen/Qwen3-1.7B active warm Developer-plan model-detail list $0.32/M input, $1.60/M output; 25 Sep 2026 cutoff. https://featherless.ai/models/Qwen/Qwen3-1.7B",
+   "replaced_retired_quote": 0.014685131086142323,
+   "evidence": [
+    "https://featherless.ai/models/Qwen/Qwen3-1.7B",
+    "results/v1.4.3/price-receipts/FEATHERLESS-QWEN3-17B-DETAIL-20260925T1732Z.json"
+   ]
+  },
+  {
+   "key": "deem-0.8b-v1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.0659503745318352,
+   "basis": "ESTIMATE: Routeway qwen3.5-0.8b public pay-as-you-go list price $0.10/M input, $0.15/M output; exact base model, available in live API catalog. https://api.routeway.ai/v1/models",
+   "replaced_retired_quote": 0.006595037453183521,
+   "evidence": [
+    "https://api.routeway.ai/v1/models"
+   ]
+  },
+  {
+   "key": "deem-9b-v1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.05276029962546817,
+   "basis": "ESTIMATE: OpenRouter Darkbloom qwen/qwen3.5-9b active standard endpoint $0.08/M input, $0.13/M output, discount 0; exact base-model ID, 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.5-9b",
+   "replaced_model_level_quote": 0.0659503745318352,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.5-9b",
+    "receipts/OPENROUTER-QWEN3.5-9B-ENDPOINTS-20260925T1640Z.json"
+   ]
+  },
+  {
+   "key": "jevk5-9b-v0.3",
+   "status": "superseded-version",
+   "prior_candidate_score": 47.19257763972096,
+   "replacement": "jevk5-9b-v0.3.3",
+   "evidence": [
+    "https://github.com/fstandhartinger/jevbench/issues/31"
+   ],
+   "reason": "The author superseded the measured JevK5-9B v0.3 (HF 54492aa6, T=1.049) in GitHub issue #31 on 25 Sep 15:27 UTC with v0.3.3 (HF d6521a18, T=1.316); the replacement completed a full official run and is separately listed."
+  },
+  {
+   "key": "jevk5-v0.3-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.0298085393258427,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.02235640449438202,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "tde-general-v0.1",
+   "status": "withheld-pending-price",
+   "reason": "The pinned answerdotai/ModernBERT-base has no verified public bookable exact-base per-token route. The owner's $0.005/M DeepInfra BGE/e5/gte encoder-size proxy is a different model and is not a validated floor.",
+   "measured_input_tokens_frozen": 215301,
+   "evidence": [
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "ba620f4b2bbf6c0e88bdc1ac97708185ff619d25d5230d6111c8e6c1444f18c2"
+   ]
+  },
+  {
+   "key": "ballot-jev-0.5b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.02485677902621723,
+   "basis": "ESTIMATE: Featherless exact Qwen/Qwen2.5-0.5B active warm Developer-plan model-detail list $0.04/M input, $0.08/M output; 25 Sep 2026 cutoff. https://featherless.ai/models/Qwen/Qwen2.5-0.5B",
+   "replaced_retired_quote": 0.006214194756554307,
+   "evidence": [
+    "https://featherless.ai/models/Qwen/Qwen2.5-0.5B",
+    "results/v1.4.3/price-receipts/FEATHERLESS-QWEN25-05B-DETAIL-20260925T1806Z.json"
+   ]
+  },
+  {
+   "key": "compass-0.2.0",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.04006928838951312,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.030051966292134833,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "jqv-targeted",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.05641543071161049,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3-32b DeepInfra standard endpoint $0.08/M input and $0.28/M output, no discount, active at cutoff. https://openrouter.ai/qwen/qwen3-32b",
+   "evidence": [
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN3-32B-ENDPOINTS-20260925T1807Z.json"
+   ]
+  },
+  {
+   "key": "manchego-v2.1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.02763123595505618,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.020723426966292133,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "minijev-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.02872966292134832,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.021547247191011237,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "nanojev-0.6b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.09551790262172286,
+   "basis": "ESTIMATE: Featherless exact Qwen/Qwen3-0.6B active warm Developer-plan model-detail list $0.04/M input, $0.08/M output; 25 Sep 2026 cutoff. https://featherless.ai/models/Qwen/Qwen3-0.6B",
+   "replaced_retired_quote": 0.02387947565543071,
+   "evidence": [
+    "https://featherless.ai/models/Qwen/Qwen3-0.6B",
+    "results/v1.4.3/price-receipts/FEATHERLESS-QWEN3-06B-DETAIL-20260925T1806Z.json"
+   ]
+  },
+  {
+   "key": "nemotron-diffusion-14b",
+   "status": "withheld-pending-price",
+   "reason": "The exact nvidia/Nemotron-Labs-Diffusion-14B checkpoint has no public bookable exact-base route. Its DeepInfra Nemotron-Nano-12B-v2-VL sibling comparator was retired 16 Jul 2026; no replacement proxy has been approved.",
+   "measured_input_tokens_frozen": 421719,
+   "measured_output_tokens_frozen": 534,
+   "evidence": [
+    "receipts/DIFFUSION-RWKV-AUDIT-20260925.md",
+    "054978253b3aad63ff992c327d6ab18fc0b30e88d632cd2f84cd4a97401598eb"
+   ]
+  },
+  {
+   "key": "neojev-qwen3.8-27b-l56",
+   "status": "withheld-pending-usage",
+   "reason": "The pinned decider_cuda.hidden() path processes a 36-token fixed __head__ prefix cached once per server lifetime, while usage.input_tokens reports only 366,707 variable suffix tokens over 534 frozen calls. An independent tokenizer recount verified the 36-token prefix (neo-usage/PREFIX-COUNT.json, SHA-256 65af8990...). The hypothetical uncached 36-per-request amount is a sensitivity, not measured per-call compute. Method-owner guidance on cached logical token accounting is pending.",
+   "reported_suffix_input_tokens_frozen": 366707,
+   "evidence": [
+    "w2b/RESULT.md",
+    "w2b/outputs/neojev-qwen3.8-27b-l56-ROW-v1.4.3.json"
+   ]
+  },
+  {
+   "key": "open-jev-27b-v1.1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.22891581273408237,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3.8-27b Reka standard endpoint $0.092/M input and $4.40/M output, no discount, active at the 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.8-27b",
+   "replaced_model_level_quote": 1.0450504494382022,
+   "measured_input_tokens_frozen": 1328707,
+   "measured_output_tokens_frozen": 0,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.8-27b",
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN38-27B-ENDPOINTS-20260925T1748Z.json",
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "receipts/QWEN38-REKA-CORRECTION-20260925.md"
+   ]
+  },
+  {
+   "key": "reflex-qwen3.5-0.8b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.08463426966292135,
+   "basis": "ESTIMATE: Routeway qwen3.5-0.8b public pay-as-you-go list price $0.10/M input, $0.15/M output; exact base model, available in live API catalog. https://api.routeway.ai/v1/models",
+   "replaced_retired_quote": 0.008463426966292134,
+   "evidence": [
+    "https://api.routeway.ai/v1/models"
+   ]
+  },
+  {
+   "key": "shisa-de-1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.030990808988764048,
+   "basis": "ESTIMATE: OpenRouter Darkbloom active standard endpoint for exact google/gemma-4-26b-a4b-it at $0.042/M input, $0.22/M output, discount 0 on 25 Sep 2026. https://openrouter.ai/google/gemma-4-26b-a4b-it/api",
+   "replaced_model_level_quote": 0.06640887640449437,
+   "evidence": [
+    "https://openrouter.ai/google/gemma-4-26b-a4b-it/api",
+    "results/v1.4.3/price-receipts/OR-GEMMA26-ENDPOINTS-20260925T1716Z.json"
+   ]
+  },
+  {
+   "key": "certus-v0007",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.04309168539325843,
+   "basis": "ESTIMATE: Featherless exact Qwen/Qwen2.5-1.5B-Instruct active warm Developer-plan model-detail list $0.04/M input, $0.08/M output; 25 Sep 2026 cutoff. https://featherless.ai/models/Qwen/Qwen2.5-1.5B-Instruct",
+   "replaced_retired_quote": 0.021545842696629215,
+   "evidence": [
+    "https://featherless.ai/models/Qwen/Qwen2.5-1.5B-Instruct",
+    "results/v1.4.3/price-receipts/FEATHERLESS-QWEN25-15B-DETAIL-20260925T1733Z.json"
+   ]
+  },
+  {
+   "key": "diy-jev-27b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.07063776029962547,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3.8-27b Reka standard endpoint $0.092/M input and $4.40/M output, no discount, active at the 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.8-27b",
+   "replaced_model_level_quote": 0.3023897752808988,
+   "measured_input_tokens_frozen": 384467,
+   "measured_output_tokens_frozen": 534,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.8-27b",
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN38-27B-ENDPOINTS-20260925T1748Z.json",
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "receipts/QWEN38-REKA-CORRECTION-20260925.md"
+   ]
+  },
+  {
+   "key": "diy-jev-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.02804786516853933,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.021035898876404495,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "go-system-one",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.06668492509363297,
+   "basis": "ESTIMATE: NanoGPT gemma-4-12b-it public Auto list price $0.05/M input, $0.25/M output; exact Gemma 4 12B base with active aoru provider, 25 Sep 2026 cutoff. https://nano-gpt.com/api-pricing",
+   "replaced_sibling_quote": 0.03558848314606741,
+   "evidence": [
+    "https://nano-gpt.com/api-pricing",
+    "results/v1.4.3/price-receipts/NANOGPT-MODELS-20260925T1650Z.json"
+   ]
+  },
+  {
+   "key": "jevall",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.04437573033707865,
+   "basis": "ESTIMATE: OpenRouter Darkbloom qwen/qwen3.5-9b active standard endpoint $0.08/M input, $0.13/M output, discount 0; exact base-model ID, 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.5-9b",
+   "replaced_model_level_quote": 0.05546966292134832,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.5-9b",
+    "receipts/OPENROUTER-QWEN3.5-9B-ENDPOINTS-20260925T1640Z.json"
+   ]
+  },
+  {
+   "key": "quire-v0.1.1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.033389737827715364,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.025042303370786518,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "rev-qwen3.5-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.026080074906367046,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.01956005617977528,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "rev-qwen3.8-27b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.05998417228464419,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3.8-27b Reka standard endpoint $0.092/M input and $4.40/M output, no discount, active at the 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.8-27b",
+   "replaced_model_level_quote": 0.27384078651685384,
+   "measured_input_tokens_frozen": 348169,
+   "measured_output_tokens_frozen": 0,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.8-27b",
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN38-27B-ENDPOINTS-20260925T1748Z.json",
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "receipts/QWEN38-REKA-CORRECTION-20260925.md"
+   ]
+  },
+  {
+   "key": "rwkv-jev",
+   "status": "withheld-pending-price",
+   "reason": "The exact BlinkDL rwkv-g1k-1b-temp-6003.pth checkpoint has no public bookable exact-base per-token route. The DeepInfra Qwen3.5-2B size proxy is a different model and was retired 11 Jun 2026; no replacement proxy has been approved.",
+   "measured_input_tokens_frozen": 366273,
+   "measured_output_tokens_frozen": 0,
+   "evidence": [
+    "receipts/DIFFUSION-RWKV-AUDIT-20260925.md",
+    "ee99148b7395e9629ea2d1e9b6187d9083e35c9985468030f3d79d284ccd3388"
+   ]
+  },
+  {
+   "key": "simplejev-gemma-4-12b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.11080327715355807,
+   "basis": "ESTIMATE: NanoGPT gemma-4-12b-it public Auto list price $0.05/M input, $0.25/M output; exact Gemma 4 12B base with active aoru provider, 25 Sep 2026 cutoff. https://nano-gpt.com/api-pricing",
+   "replaced_sibling_quote": 0.11080327715355807,
+   "evidence": [
+    "https://nano-gpt.com/api-pricing",
+    "results/v1.4.3/price-receipts/NANOGPT-MODELS-20260925T1650Z.json"
+   ]
+  },
+  {
+   "key": "simplejev-gemma-4-26b-a4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.09307475280898876,
+   "basis": "ESTIMATE: OpenRouter Darkbloom active standard endpoint for exact google/gemma-4-26b-a4b-it at $0.042/M input, $0.22/M output, discount 0 on 25 Sep 2026. https://openrouter.ai/google/gemma-4-26b-a4b-it/api",
+   "replaced_model_level_quote": 0.1994458988764045,
+   "evidence": [
+    "https://openrouter.ai/google/gemma-4-26b-a4b-it/api",
+    "results/v1.4.3/price-receipts/OR-GEMMA26-ENDPOINTS-20260925T1716Z.json"
+   ]
+  },
+  {
+   "key": "simplejev-qwen3.5-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.08771588014981273,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.06578691011235954,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "standardone-3b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.06962846441947566,
+   "basis": "ESTIMATE: OpenRouter exact mistralai/ministral-3b-2512 first-party Mistral standard endpoint $0.10/M input and output, active at cutoff. https://openrouter.ai/mistralai/ministral-3b-2512/pricing",
+   "evidence": [
+    "results/v1.4.3/price-receipts/OR-MINISTRAL3-ENDPOINTS-20260925T1716Z.json"
+   ]
+  },
+  {
+   "key": "bluusun-decision-1",
+   "status": "withheld-pending-price",
+   "prior_candidate_score": 0.0,
+   "reason": "The first retained list-price snapshot is 25 Sep 2026; no 30-day price-age evidence or identifiable public base-model market reference is recorded.",
+   "evidence": [
+    "results/v1.4.3/price-receipts/BLUUSUN-PRICING-PAGE-20260925T095040Z.html",
+    "w2d/RESULT.md",
+    "5dba82a8a1edd1cf6420425492c7958dc8e361b7fa0b58b630883d1c564fefe8"
+   ]
+  },
+  {
+   "key": "simplejev-rwkv-mid",
+   "status": "withheld-pending-price",
+   "prior_candidate_score": 0.7052905270776338,
+   "reason": "Featherless beta tariff has no 30-day price-age evidence; no public market reference for the exact RWKV base is recorded.",
+   "evidence": [
+    "results/v1.4.3/price-receipts/SIMPLEJEV-DEMO-MODELS-20260925T095040Z.json",
+    "w2d/RESULT.md",
+    "591cddc292a6714fb50339b2f5521fd6b7a7e3605231193b82a970446909accf"
+   ]
+  },
+  {
+   "key": "simplejev-rwkv-small",
+   "status": "withheld-pending-price",
+   "prior_candidate_score": 1.1711928423031175,
+   "reason": "Featherless beta tariff has no 30-day price-age evidence; no public market reference for the exact RWKV base is recorded.",
+   "evidence": [
+    "results/v1.4.3/price-receipts/SIMPLEJEV-DEMO-MODELS-20260925T095040Z.json",
+    "w2d/RESULT.md",
+    "f674b089757c7baab476f31e2265c161429084dbfa17436024c52bbb131f96e6"
+   ]
+  },
+  {
+   "key": "simplejev-rwkv-std",
+   "status": "withheld-pending-price",
+   "prior_candidate_score": 0.6445319098300045,
+   "reason": "Featherless beta tariff has no 30-day price-age evidence; no public market reference for the exact RWKV base is recorded.",
+   "evidence": [
+    "results/v1.4.3/price-receipts/SIMPLEJEV-DEMO-MODELS-20260925T095040Z.json",
+    "w2d/RESULT.md",
+    "f956c31e034fdcf3365f5efce51b901eba594209cffee473c0084651b2a332d3"
+   ]
+  },
+  {
+   "key": "bonsai-llama-jev",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.06698444194756555,
+   "basis": "ESTIMATE: OpenRouter exact qwen/qwen3.8-27b Reka standard endpoint $0.092/M input and $4.40/M output, no discount, active at the 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.8-27b",
+   "replaced_model_level_quote": 0.30579853932584267,
+   "measured_input_tokens_frozen": 388801,
+   "measured_output_tokens_frozen": 0,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.8-27b",
+    "results/v1.4.3/price-receipts/OPENROUTER-QWEN38-27B-ENDPOINTS-20260925T1748Z.json",
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "receipts/QWEN38-REKA-CORRECTION-20260925.md"
+   ]
+  },
+  {
+   "key": "jpt-0.8b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.07132602996254682,
+   "basis": "ESTIMATE: Routeway qwen3.5-0.8b public pay-as-you-go list price $0.10/M input, $0.15/M output; exact base model, available in live API catalog. https://api.routeway.ai/v1/models",
+   "replaced_retired_quote": 0.007117602996254682,
+   "evidence": [
+    "https://api.routeway.ai/v1/models"
+   ]
+  },
+  {
+   "key": "jpt-9b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.05707082397003746,
+   "basis": "ESTIMATE: OpenRouter Darkbloom qwen/qwen3.5-9b active standard endpoint $0.08/M input, $0.13/M output, discount 0; exact base-model ID, 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.5-9b",
+   "replaced_model_level_quote": 0.07117602996254682,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.5-9b",
+    "receipts/OPENROUTER-QWEN3.5-9B-ENDPOINTS-20260925T1640Z.json"
+   ]
+  },
+  {
+   "key": "winnow-e4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.014754943820224718,
+   "basis": "ESTIMATE: DeepInfra exact google/gemma-4-E4B-it standard list $0.02/M input, active at cutoff; scheduled retirement 1 Oct 2026. https://deepinfra.com/google/gemma-4-E4B-it",
+   "evidence": [
+    "results/v1.4.3/price-receipts/DEEPINFRA-FRESH-20260925T1715Z.json"
+   ]
+  },
+  {
+   "key": "mica-v01-4b",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.03016846441947566,
+   "basis": "ESTIMATE: EmpirioLabs qwen3-5-4b public pay-as-you-go list price $0.04/M input, $0.07/M output; exact Qwen3.5-4B base model, 25 Sep 2026 cutoff; no output generated by this system. https://empiriolabs.ai/models/qwen3-5-4b",
+   "replaced_retired_quote": 0.022626348314606744,
+   "evidence": [
+    "https://empiriolabs.ai/models/qwen3-5-4b"
+   ]
+  },
+  {
+   "key": "tde-general-large",
+   "status": "withheld-pending-price",
+   "reason": "The pinned answerdotai/ModernBERT-large (via GliClass) has no verified public bookable exact-base per-token route. The owner's $0.01/M DeepInfra BGE/e5 encoder-size proxy is a different model and is not a validated floor.",
+   "measured_input_tokens_frozen": 215301,
+   "evidence": [
+    "receipts/QWEN38-27B-AND-MODERNBERT-AUDIT-20260925.md",
+    "6179f71a69851aa2622a28a896e459c59fee6e1ae6dcdeb4d8e27049e253484d"
+   ]
+  },
+  {
+   "key": "this-that-1-2",
+   "status": "withheld-pending-price",
+   "reason": "The pinned checkpoint descends from Mapika decider-2b and Qwen3.5-2B-Base, not the retired DeepInfra Qwen3.5-4B $0.03/M proxy. A currently bookable exact-base or exact parent route with a payable per-token rate is not yet verified.",
+   "measured_input_tokens_frozen": 354059,
+   "evidence": [
+    "receipts/FIVE-BASE-AUDIT-20260925.md",
+    "6a86c8316ef525c5e9dc39f49bf68a4f500383eaf5e9cc84bfba69195f627f90"
+   ]
+  },
+  {
+   "key": "gevva-e2b",
+   "status": "withheld-provenance",
+   "usd_per_1000": 0.11797453183520598,
+   "score_at_reference_price": 22.612815841883762,
+   "evidence": [
+    "AWS Bedrock Standard US exact google.gemma-4-e2b on-demand list $0.04/M input, $0.08/M output; https://aws.amazon.com/bedrock/pricing/",
+    "w3b/RESULT.md",
+    "w3b/receipts/GEVVA-EXACT-BASE-PRICE-HANDOFF-20260925.md"
+   ],
+   "reason": "Public gold-labelled JevBench errors and targeted remediation occur in the author's source; the evaluator-neutral reranker mapping is not the author's stated serving adapter. Public item overlap and serving equivalence need review."
+  },
+  {
+   "key": "gevva-e4b",
+   "status": "withheld-provenance",
+   "usd_per_1000": 0.05898726591760299,
+   "score_at_reference_price": 37.23486518314488,
+   "evidence": [
+    "DeepInfra exact google/gemma-4-E4B-it direct model page list $0.02/M input, $0.10/M output; https://deepinfra.com/google/gemma-4-E4B-it",
+    "w3b/RESULT.md",
+    "w3b/receipts/GEVVA-EXACT-BASE-PRICE-HANDOFF-20260925.md"
+   ],
+   "reason": "Public gold-labelled JevBench errors and targeted remediation occur in the author's source; the evaluator-neutral reranker mapping is not the author's stated serving adapter. Public item overlap and serving equivalence need review."
+  },
+  {
+   "key": "typical-small-v3",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.23020164794007494,
+   "basis": "ESTIMATE: Featherless public Developer-plan list price for exact Qwen/Qwen3-1.7B-Base: $0.32/M input and $1.60/M output, with $50/month prepaid credits; https://featherless.ai/models/Qwen/Qwen3-1.7B-Base",
+   "reported_input_tokens": 384149,
+   "reported_output_tokens": 0,
+   "evidence": [
+    "https://featherless.ai/models/Qwen/Qwen3-1.7B-Base",
+    "https://featherless.ai/docs/request-pricing-and-credits",
+    "w3c/outputs/typical-small-v3-TOKEN-AGGREGATE-SOURCE-v1.4.3.json"
+   ]
+  },
+  {
+   "key": "gliner25-decide",
+   "status": "withheld-pending-price",
+   "reason": "The pinned fastino/gliner2-large-v1 base has no verified public per-token market listing. The owner's $0.01/M rate is a different-base encoder size proxy; it does not establish the exact-base reference required by the 25 Sep method.",
+   "measured_input_tokens_frozen": 333739,
+   "evidence": [
+    "gliner-gpu/RESULT.md",
+    "fbebfb4895d75b3be88ad3eb9472862bc87239ed8c3fe788d32bd64544cb933c"
+   ]
+  },
+  {
+   "key": "diffusion-jev-sglang",
+   "status": "withheld-pending-price",
+   "reason": "DiffusionGemma 26B-A4B has no verified public bookable exact-base per-token reference. The owner used the $0.09/M input, $0.30/M output Gemma 4 26B-A4B sibling as a provisional comparator; its suitability under the signed base-model floor needs a method ruling.",
+   "measured_input_tokens_frozen": 380768,
+   "measured_output_tokens_frozen": 2660,
+   "evidence": [
+    "w4a/RESULT.md",
+    "w4a/outputs/diffusion-jev-sglang-ROW-v1.4.3.json"
+   ]
+  },
+  {
+   "key": "jevk5-9b-v0.3.3",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.05961707865168539,
+   "basis": "ESTIMATE: OpenRouter Darkbloom qwen/qwen3.5-9b active standard endpoint $0.08/M input, $0.13/M output, discount 0; exact base-model ID, 25 Sep 2026 cutoff. https://openrouter.ai/qwen/qwen3.5-9b",
+   "replaced_model_level_quote": 0.07452134831460674,
+   "evidence": [
+    "https://openrouter.ai/qwen/qwen3.5-9b",
+    "receipts/OPENROUTER-QWEN3.5-9B-ENDPOINTS-20260925T1640Z.json"
+   ]
+  },
+  {
+   "key": "jevk5-lite-preview1",
+   "status": "withheld-pending-price",
+   "reason": "The pinned microsoft/deberta-v3-large base has no verified public bookable exact-base per-token rate. The owner's $0.02/M size-class proxy does not establish a market reference for this encoder.",
+   "measured_input_tokens_frozen": 147309,
+   "evidence": [
+    "w3d/outputs/jevk5-lite-preview1-TOKEN-AGGREGATE-SOURCE-v1.4.3.json",
+    "d990fbdf57abf53aff5714fec8da48f03d26f69acf7acb861db6506f30ad9df7"
+   ]
+  },
+  {
+   "key": "certo-r1",
+   "status": "bookable-base-reference",
+   "usd_per_1000": 0.039879513108614234,
+   "basis": "ESTIMATE: Api.Airforce exact Qwen3-4B paid operational pay-as-you-go route $0.05/M input and $0.18/M output, 25 Sep 2026 cutoff; https://api.airforce/models/qwen3-4b/",
+   "evidence": [
+    "results/v1.4.3/price-receipts/APIAIRFORCE-QWEN3-4B-20260925.html",
+    "certo/RESULT.md",
+    "certo/outputs/certo-r1-ROW-v1.4.3.json"
+   ]
+  }
+ ]
+}

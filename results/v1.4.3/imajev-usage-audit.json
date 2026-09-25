@@ -1,0 +1,44 @@
+{
+  "cutoff_utc": "2026-09-25",
+  "method": "Pinned server torch backend performs one full forward for each cyclic candidate order, min(4, answer options plus unknown). It reports only the maximum token count across the passes per request. Multiplying each recorded maximum by that request\u2019s pass count gives a rigorous upper bound, not exact usage. No task texts, labels, predictions or IDs are exported.",
+  "old_answer_option_histogram": {
+    "2": 195,
+    "3": 26,
+    "4": 126,
+    "5": 91,
+    "6": 18,
+    "9": 78
+  },
+  "rows": {
+    "imajev-2b": {
+      "raw_results_sha256": "9c5badb0d4d4917dfc2bdaf3d4e2c1ac0d61d02dc055d24fd8fa6a8cedb01e8a",
+      "frozen_decisions": 534,
+      "all_decisions": 842,
+      "reported_max_per_request_input_tokens_frozen": 391693,
+      "full_forward_input_tokens_upper_bound_frozen": 1451955,
+      "output_tokens_reported_frozen": 0,
+      "full_forward_pass_count_frozen": 1941,
+      "input_underreport_factor_upper_bound": 3.706869921086157
+    },
+    "imajev-4b": {
+      "raw_results_sha256": "a10307a05879c96c689eb51646932622fc39b23f14a80dbf956d1bcad8a457b5",
+      "frozen_decisions": 534,
+      "all_decisions": 842,
+      "reported_max_per_request_input_tokens_frozen": 391693,
+      "full_forward_input_tokens_upper_bound_frozen": 1451955,
+      "output_tokens_reported_frozen": 0,
+      "full_forward_pass_count_frozen": 1941,
+      "input_underreport_factor_upper_bound": 3.706869921086157
+    },
+    "imajev-9b": {
+      "raw_results_sha256": "9d8c57266f3827d445870d3a586c64f4fd08cd9ca05a8a540f48fd8014e2c019",
+      "frozen_decisions": 534,
+      "all_decisions": 842,
+      "reported_max_per_request_input_tokens_frozen": 391693,
+      "full_forward_input_tokens_upper_bound_frozen": 1451955,
+      "output_tokens_reported_frozen": 0,
+      "full_forward_pass_count_frozen": 1941,
+      "input_underreport_factor_upper_bound": 3.706869921086157
+    }
+  }
+}

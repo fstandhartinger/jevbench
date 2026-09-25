@@ -1,0 +1,138 @@
+{
+  "api_flag": false,
+  "author": "APUS AI Lab",
+  "class": "system-one-open",
+  "display": "APUS-OpenJev-v1-4B",
+  "key": "apus-openjev-4b",
+  "licence": "Apache-2.0",
+  "note": "APUS-OpenJev-v1-4B revision 422b3741f8b5c092eeefef847c1ca89d78337d45, based on Qwen/Qwen3.5-4B. The full-depth released OpenJet decision API receives the official state and instructions with each full option text in the original order; ordinal score levels are represented as choices over every complete level description; binary guardrail items use APUS's native yes/no API. The exact upstream training-example overlap is unknown. This model was previously measured on the public 231-item split, so that split is exposed to model selection. Structured source-state objects were rendered as compact JSON for APUS’s text state field; source strings were preserved verbatim.",
+  "note_v14": "Offline local open-weight inference on the frozen 308-item v1.4 set in a network-disabled, read-only container on an evaluator-owned Lium RTX PRO 6000 pod; no operator endpoint; no golds were exposed. Latency is the in-process APUS decision call on the serial standard+judge items with the self-hosted adjustment. Cost is estimated from the active hosted Qwen3.5-9B sibling price ($0.10/$0.15 per million input/output tokens) because DeepInfra marks the exact Qwen3.5-4B listing retired and replaced by 9B; APUS's measured prompt-token counts are used and generated output tokens are zero. This is a labeled proxy, not a GPU bill.",
+  "public_acc": 0.7965367965367965,
+  "ranked": true,
+  "repo": "https://huggingface.co/apus-ailab/APUS-OpenJev-v1-4B",
+  "sealed": {
+    "answered_valid": 308,
+    "by_family": {
+      "ambiguous_abstain": {
+        "accuracy": 0.21621621621621623,
+        "correct": 8,
+        "n": 37
+      },
+      "judge_hard": {
+        "accuracy": 0.3902439024390244,
+        "correct": 16,
+        "n": 41
+      },
+      "long_policy": {
+        "accuracy": 0.125,
+        "correct": 5,
+        "n": 40
+      },
+      "multi_hop": {
+        "accuracy": 0.13157894736842105,
+        "correct": 5,
+        "n": 38
+      },
+      "paraphrase_robustness": {
+        "accuracy": 0.35714285714285715,
+        "correct": 5,
+        "n": 14
+      },
+      "probability": {
+        "accuracy": 0.21428571428571427,
+        "correct": 6,
+        "n": 28
+      },
+      "safety_judge": {
+        "accuracy": 0.375,
+        "correct": 6,
+        "n": 16
+      },
+      "temporal_numeric": {
+        "accuracy": 0.19642857142857142,
+        "correct": 11,
+        "n": 56
+      },
+      "tradeoff": {
+        "accuracy": 0.38461538461538464,
+        "correct": 10,
+        "n": 26
+      },
+      "trap_adversarial": {
+        "accuracy": 0.5833333333333334,
+        "correct": 7,
+        "n": 12
+      }
+    },
+    "by_panel_stratum": {
+      "0/3": {
+        "accuracy": 0.11926605504587157,
+        "correct": 13,
+        "n": 109
+      },
+      "1/3": {
+        "accuracy": 0.27835051546391754,
+        "correct": 27,
+        "n": 97
+      },
+      "2/3": {
+        "accuracy": 0.38235294117647056,
+        "correct": 39,
+        "n": 102
+      }
+    },
+    "calibration": 26.28256416905405,
+    "ece": 0.47333455376565914,
+    "label_only": false,
+    "mean_tvd_gold_probs": 0.5276796090876007,
+    "n": 308,
+    "risk_coverage": {
+      "conf>=0.7": {
+        "accuracy": 0.2677595628415301,
+        "coverage": 0.5941558441558441,
+        "n": 183
+      },
+      "conf>=0.9": {
+        "accuracy": 0.24107142857142858,
+        "coverage": 0.36363636363636365,
+        "n": 112
+      }
+    }
+  },
+  "sealed_acc": 0.2564935064935065,
+  "source": "v1.4.2 addition (official offline measurement on an evaluator-owned Lium pod, 24 Sep 2026)",
+  "v130": {
+    "axes": {
+      "calibration": 51.673741796513,
+      "cost": 44.12299451196682,
+      "intelligence": 77.34311013269121,
+      "speed": 88.03811240314363
+    },
+    "rank": 32,
+    "score": 62.77067677360569,
+    "tiers": {
+      "easy": 1,
+      "hard": 0.6136363636363636,
+      "judge": 0.8904109589041096,
+      "standard": 0.9791666666666666
+    }
+  },
+  "v14": {
+    "axes": {
+      "calibration": 36.862221513828615,
+      "cost": 44.12299451196682,
+      "intelligence": 47.7459552102095,
+      "speed": 88.03811240314363
+    },
+    "rank": 37,
+    "score": 46.627981130804805,
+    "tiers": {
+      "easy": 1,
+      "hard_heldout": 0.6422018348623854,
+      "hard_public": 0.5855855855855856,
+      "judge": 0.8904109589041096,
+      "sealed": 0.2564935064935065,
+      "standard": 0.9791666666666666
+    }
+  }
+}

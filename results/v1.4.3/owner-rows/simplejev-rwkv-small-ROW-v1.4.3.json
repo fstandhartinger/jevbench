@@ -1,0 +1,296 @@
+{
+  "generated_utc": "2026-09-25T10:24:19+00:00",
+  "status": "official v1.4.3 addition row (v1.4 scorer, ranked against the published v1.4.2 board); not yet published",
+  "key": "simplejev-rwkv-small",
+  "display": "SimpleJev RWKV-small (Featherless, demo API)",
+  "author": "Featherless AI",
+  "repo": "https://github.com/featherless-ai/simple-jev",
+  "class": "jev-rebuild",
+  "ranked": true,
+  "api_flag": true,
+  "endpoint_kind": "demo",
+  "api_exposure_note": "API — the operator's endpoint received sealed item text, without answers.",
+  "licence": "code Apache-2.0 (featherless-ai/simple-jev); RWKV weights behind the demo not named",
+  "source": "v1.4.3 addition (official demo-endpoint measurement, 25 Sep 2026, jevbench-v143-models wave-2 worker w2d, run-14 protocol)",
+  "note": "featherless-ai/RWKV-small-classifier on the author's public SimpleJev demo endpoint (https://simple-jev-demo-api.featherless.ai, TypeSafe-compatible /v1/systemone, no key): SimpleJev's direct-logit classifier (code github.com/featherless-ai/simple-jev @ fe21effa3c8e) over an RWKV-7 model of 2.9B parameters (Featherless model page) whose checkpoint, fine-tune, head and prompt the author does not publish (the linked HF repo is private), so it cannot be self-hosted and the demo is the only way to measure it (w2c/outputs/simplejev-SELFHOST-NOT-POSSIBLE.json). Called with JevBench's unchanged typesafe adapter, no wrapper. Training-data overlap: UNVERIFIED (weights and data not identified). The simple-jev repository selects prompt policies on a development set that contains all 231 public JevBench items (eval/prompt_search.py; author's disclosure).",
+  "note_v14": "Demo-endpoint measurement of all 842 decisions (534 frozen v1.2 + 308 sealed v1.4), one request at a time from Sandy (Hetzner, Germany) through JevBench's unchanged typesafe adapter to the author's public demo endpoint; the endpoint received sealed item text, never answers or labels. Latency is the serial client wall time (network included) on the standard+judge items with the demo-endpoint adjustment (x2), as for the live SimpleJev demo rows. Cost: Featherless's published beta list price for this exact model id on its production classifier API, per million input tokens, times the endpoint's own usage.input_tokens (the demo itself is free).",
+  "v130": {
+    "score": 2.11232547989984,
+    "rank": 70,
+    "axes": {
+      "intelligence": 11.104676872925761,
+      "calibration": 69.4389359229642,
+      "speed": 80.67302852653361,
+      "cost": 54.065302214100996
+    },
+    "tiers": {
+      "easy": 0.6805555555555556,
+      "standard": 0.3333333333333333,
+      "judge": 0.15753424657534246,
+      "hard": 0.39545454545454545
+    }
+  },
+  "public_acc": 0.44155844155844154,
+  "public_n": 231,
+  "public_hard_acc": 0.40540540540540543,
+  "heldout_hard_acc_v12": 0.3853211009174312,
+  "sealed_acc": 0.3409090909090909,
+  "sealed": {
+    "n": 308,
+    "attempted": 308,
+    "answered_valid": 308,
+    "failed_or_invalid": 0,
+    "by_family": {
+      "ambiguous_abstain": {
+        "correct": 9,
+        "n": 37,
+        "accuracy": 0.24324324324324326
+      },
+      "judge_hard": {
+        "correct": 28,
+        "n": 41,
+        "accuracy": 0.6829268292682927
+      },
+      "long_policy": {
+        "correct": 10,
+        "n": 40,
+        "accuracy": 0.25
+      },
+      "multi_hop": {
+        "correct": 9,
+        "n": 38,
+        "accuracy": 0.23684210526315788
+      },
+      "paraphrase_robustness": {
+        "correct": 7,
+        "n": 14,
+        "accuracy": 0.5
+      },
+      "probability": {
+        "correct": 9,
+        "n": 28,
+        "accuracy": 0.32142857142857145
+      },
+      "safety_judge": {
+        "correct": 8,
+        "n": 16,
+        "accuracy": 0.5
+      },
+      "temporal_numeric": {
+        "correct": 15,
+        "n": 56,
+        "accuracy": 0.26785714285714285
+      },
+      "tradeoff": {
+        "correct": 7,
+        "n": 26,
+        "accuracy": 0.2692307692307692
+      },
+      "trap_adversarial": {
+        "correct": 3,
+        "n": 12,
+        "accuracy": 0.25
+      }
+    },
+    "by_panel_stratum": {
+      "0/3": {
+        "correct": 36,
+        "n": 109,
+        "accuracy": 0.3302752293577982
+      },
+      "1/3": {
+        "correct": 39,
+        "n": 97,
+        "accuracy": 0.4020618556701031
+      },
+      "2/3": {
+        "correct": 30,
+        "n": 102,
+        "accuracy": 0.29411764705882354
+      }
+    },
+    "ece": 0.1984709207849069,
+    "mean_tvd_gold_probs": 0.2889838961774822,
+    "calibration": 65.7037131126352,
+    "label_only": false,
+    "risk_coverage": {
+      "conf>=0.7": {
+        "coverage": 0.09090909090909091,
+        "accuracy": 0.35714285714285715,
+        "n": 28
+      },
+      "conf>=0.9": {
+        "coverage": 0.0,
+        "accuracy": null,
+        "n": 0
+      }
+    },
+    "results_location": "private sealed run directory (not published)"
+  },
+  "v14": {
+    "score": 1.391700188084053,
+    "rank": 85,
+    "axes": {
+      "intelligence": 9.257725176772059,
+      "calibration": 67.26005595027229,
+      "speed": 80.67302852653361,
+      "cost": 54.065302214100996
+    },
+    "tiers": {
+      "easy": 0.6805555555555556,
+      "standard": 0.3333333333333333,
+      "judge": 0.15753424657534246,
+      "hard_public": 0.40540540540540543,
+      "hard_heldout": 0.3853211009174312,
+      "sealed": 0.3409090909090909
+    }
+  },
+  "release_score": {
+    "score": 1.1711928423031175,
+    "rank": 85,
+    "axes": {
+      "intelligence": 10.239019883321966,
+      "calibration": 68.19386165285454,
+      "speed": 80.67302852653361,
+      "cost": 54.065302214100996
+    },
+    "scoring_module": "/home/flori/jobs/jevbench-v14-release-20260923/repo/jevbench/composite_v14.py",
+    "scoring_module_sha256": "33177d06eab9f78667972ec3b20997344f70a78e16b05326453a2c31200cac79",
+    "board_sha256": "ac14e206dde51ae28e40dc1ea2ff1fecc4a449b941d098e9ecb5618bd533e5be"
+  },
+  "measurements": {
+    "scope_counts": {
+      "public-source": 377,
+      "historical-private": 157,
+      "current-sealed": 308
+    },
+    "scope_accuracy": {
+      "public-source": {
+        "correct": 125,
+        "n": 377,
+        "valid": 377,
+        "accuracy": 0.33156498673740054,
+        "valid_rate": 1.0
+      },
+      "historical-private": {
+        "correct": 66,
+        "n": 157,
+        "valid": 157,
+        "accuracy": 0.42038216560509556,
+        "valid_rate": 1.0
+      },
+      "current-sealed": {
+        "correct": 105,
+        "n": 308,
+        "valid": 308,
+        "accuracy": 0.3409090909090909,
+        "valid_rate": 1.0
+      }
+    },
+    "old_tier_metrics": {
+      "easy": {
+        "correct": 49,
+        "n": 72,
+        "valid": 72,
+        "accuracy": 0.6805555555555556,
+        "valid_rate": 1.0
+      },
+      "standard": {
+        "correct": 32,
+        "n": 96,
+        "valid": 96,
+        "accuracy": 0.3333333333333333,
+        "valid_rate": 1.0
+      },
+      "judge": {
+        "correct": 23,
+        "n": 146,
+        "valid": 146,
+        "accuracy": 0.15753424657534246,
+        "valid_rate": 1.0
+      },
+      "hard": {
+        "correct": 87,
+        "n": 220,
+        "valid": 220,
+        "accuracy": 0.39545454545454545,
+        "valid_rate": 1.0
+      }
+    },
+    "official_public_accuracy": {
+      "correct": 102,
+      "n": 231,
+      "valid": 231,
+      "accuracy": 0.44155844155844154,
+      "valid_rate": 1.0
+    },
+    "old_public_hard": {
+      "correct": 45,
+      "n": 111,
+      "valid": 111,
+      "accuracy": 0.40540540540540543,
+      "valid_rate": 1.0
+    },
+    "old_historical_private_hard": {
+      "correct": 42,
+      "n": 109,
+      "valid": 109,
+      "accuracy": 0.3853211009174312,
+      "valid_rate": 1.0
+    },
+    "hard_ece": 0.1702010224678301,
+    "hard_mean_tvd": 0.27081923660505564,
+    "hard_tvd_n": 20,
+    "old_speed": {
+      "n": 242,
+      "p50_raw_s": 0.32412073388695717,
+      "p95_raw_s": 0.6605874862521887,
+      "p50_adjusted_s": 0.6482414677739143,
+      "p95_adjusted_s": 1.3211749725043773,
+      "axis": 80.67302852653361,
+      "basis": "serial standard+judge requests from Sandy (Hetzner, Germany) through the typesafe adapter to the public SimpleJev demo endpoint, network included, all 842 items serially; demo-endpoint adjustment x2 (as the live SimpleJev demo rows)"
+    },
+    "cost": {
+      "input_tokens_old_534": 604751,
+      "output_tokens_old_534": 534,
+      "usd_per_1000_estimate": 0.03397477528089888,
+      "cost_axis": 54.065302214100996,
+      "input_usd_per_m": 0.03,
+      "output_usd_per_m": 0.0,
+      "basis": "Featherless published beta list price for this exact model id, USD 0.03 per 1M input tokens, 0 output, times the endpoint's own usage.input_tokens (snapshot 25 Sep 2026); the free demo was used for the measurement; beta price, may change",
+      "price_per_decision_usd": null,
+      "sensitivity_usd_per_1000": 0.03397477528089888,
+      "sensitivity_release_score": 1.1711928423031175,
+      "sensitivity_rank": 85
+    },
+    "noul_by_scope": {
+      "frozen_534": {
+        "n": 195,
+        "correct": 76,
+        "false_listed_first": 195
+      },
+      "sealed_308": {
+        "n": 87,
+        "correct": 48,
+        "false_listed_first": 0
+      }
+    },
+    "failed_by_status": {},
+    "calibration_blend": {
+      "old_hard_and_sealed_weight": 0.5833333333333334,
+      "release_composite_reblend_weight": 0.5714285714285715,
+      "old_calibration": 69.4389359229642,
+      "sealed_calibration": 65.7037131126352,
+      "preliminary_comparison_calibration": 67.26005595027229,
+      "release_scored_calibration": 68.19386165285454
+    }
+  },
+  "runtime": {
+    "where": "Sandy (evaluator's server), public demo endpoint with api_flag",
+    "driver": "vendored run842.py + typesafe adapter, byte-identical to wave 1",
+    "review": "w2d/review/CONTROLLER-REVIEW-PASS.sha256"
+  },
+  "raw_results_sha256": "ce1e0418b173021b61ca216e005d07ae64b8627edb7058a8abb4f416410bd7b1",
+  "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc",
+  "scope_note": "The requested existing 534 decisions contain 377 public-source items and 157 historical private holdouts. The v1.4 public-gap accuracy follows the release code's 231-ID public subset; all 377 public-source items are separately reported. The current sealed set contains 308 items."
+}

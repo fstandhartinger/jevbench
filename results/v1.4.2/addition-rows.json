@@ -1,0 +1,756 @@
+[
+ {
+  "key": "decider-4b-v2",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.96875,
+   "judge": 0.8767123287671232,
+   "hard": 0.6727272727272727
+  },
+  "speed": {
+   "p50_s_raw": 0.01749592460691929,
+   "p95_s_raw": 0.06258766227401794,
+   "p50_s_adjusted": 0.18499184921383857,
+   "p95_s_adjusted": 0.27517532454803584,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, RTX PRO 6000 Blackwell 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.02006786516853933,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (4B dense size class, as decider-2b), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "244a63753e86153a1faa53ec10a328702632bb94f2139ccb154bb1583e8e0ce4",
+   "row_sha256": "78524df885397f6390200ee0db087ece0093ceeeee780003ab461beb833b54e7",
+   "raw_results_sha256": "d389e2f4f830bd8766aaf09117769ad9b048046433b3c51636841a59313455d7",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "cygnet",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.96875,
+   "judge": 0.952054794520548,
+   "hard": 0.7545454545454545
+  },
+  "speed": {
+   "p50_s_raw": 0.035219401121139526,
+   "p95_s_raw": 0.11935583325102912,
+   "p50_s_adjusted": 0.22043880224227905,
+   "p95_s_adjusted": 0.38871166650205824,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, RTX PRO 6000 Blackwell 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.03736151685393259,
+   "basis": "ESTIMATE: OpenRouter google/gemma-3-12b-it list price $0.05/M input (the nearest hosted 12B Gemma; gemma-4-12b-it is not listed; the Winnow-12B / Jev-Omni precedent), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "136858429923947953444101d7f2e93ca9c6a0753a2d66f3f76bb8dbb48fad3c",
+   "row_sha256": "fde5ccf3e37aaaece5aef68538563f78e9d5d0b90b23da1ac52e7c395fbcb697",
+   "raw_results_sha256": "c3e7a4acbb69d787842e4835f4646993d4eecadce66d88b8eb93152994aece89",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "malkuth-4b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9583333333333334,
+   "judge": 0.910958904109589,
+   "hard": 0.5272727272727272
+  },
+  "speed": {
+   "p50_s_raw": 0.08862553583458066,
+   "p95_s_raw": 0.14933330831117927,
+   "p50_s_adjusted": 0.32725107166916134,
+   "p95_s_adjusted": 0.4486666166223585,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, RTX PRO 6000 Blackwell 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.019154662921348316,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (4B one-pass size class, as kev-4b), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "d52c6ff2d9cc9fb6c40104a868643a602f44efe027b41ebbd27ce73fb4fb265f",
+   "row_sha256": "981a6763827626f3e9559d41351c75843eb11b24dc33a9513b1fd95530706b77",
+   "raw_results_sha256": "4327bc1cdb685622a0dc7cf4652c8440c0f1d90cc36bd48429efab354820ff75",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "malkuth-2b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.8854166666666666,
+   "judge": 0.863013698630137,
+   "hard": 0.44545454545454544
+  },
+  "speed": {
+   "p50_s_raw": 0.04497810127213597,
+   "p95_s_raw": 0.07615387919358908,
+   "p50_s_adjusted": 0.23995620254427194,
+   "p95_s_adjusted": 0.30230775838717816,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, RTX PRO 6000 Blackwell 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.019154662921348316,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (no hosted ~2B listed; the 4B price errs high, the decider-2b precedent), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "c5c8e642539f596fece95ec68020f714e2addba6956007ffcd28336c2a11b855",
+   "row_sha256": "11469ca612340d0557749a92ee0d989a48ea300a2c46e1cfef679de9a4eac99f",
+   "raw_results_sha256": "6e468641a599b2ca1c4bdf080d50c20f6e3f6abb24d4cad337eb8d0c65e522a8",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "swanone",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9583333333333334,
+   "judge": 0.9315068493150684,
+   "hard": 0.7545454545454545
+  },
+  "speed": {
+   "p50_s_raw": 0.2812396320514381,
+   "p95_s_raw": 0.3177051310893148,
+   "p50_s_adjusted": 0.7124792641028762,
+   "p95_s_adjusted": 0.7854102621786296,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, RTX PRO 6000 Blackwell 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.11099550561797752,
+   "basis": "ESTIMATE: OpenRouter qwen/qwen3.8-flash list price $0.15/M input (same underlying Flash-Next weights; the NInfer Flash-Next precedent), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "e2fa276cd8c1e9c64943f64d33ba41862a099578e55004e76f195d50fd357c15",
+   "row_sha256": "e3f21199eb9a25669394c5b9f51fae9e58426f0d5a58d5743b0778cec3621436",
+   "raw_results_sha256": "14c33bf1c4de9fa4495fe2bbfbd8a751472e1489f67f4ac9f2e003e149bdf010",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "standardone-8b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 1.0,
+   "standard": 0.9479166666666666,
+   "judge": 0.9657534246575342,
+   "hard": 0.5681818181818182
+  },
+  "speed": {
+   "p50_s_raw": 0.023836581502109766,
+   "p95_s_raw": 0.08334439168684185,
+   "p50_s_adjusted": 0.19767316300421953,
+   "p95_s_adjusted": 0.31668878337368367,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, RTX PRO 6000 Blackwell 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.10444269662921347,
+   "basis": "ESTIMATE: OpenRouter mistralai/ministral-8b-2512 list price $0.15/M input (= the author's proposed Mistral API price for the exact base), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "7bf28891ae6843655d91fe145c380dc41affa70b18069787f2572dab1ed242cb",
+   "row_sha256": "f7b874c485ab44cfdf8df4fd80e2275714bd6ecff8f99e85bc3b12fadd7c0110",
+   "raw_results_sha256": "6cd6ee61f2c4342612cae5b57de420d28ccc346f8ade2f7d04a90f5134a91878",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "typecastlm",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9861111111111112,
+   "standard": 0.9375,
+   "judge": 0.410958904109589,
+   "hard": 0.5818181818181818
+  },
+  "speed": {
+   "p50_s_raw": 0.027890041936188936,
+   "p95_s_raw": 0.05798874022439122,
+   "p50_s_adjusted": 0.20578008387237787,
+   "p95_s_adjusted": 0.26597748044878244,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge requests through the typesafe adapter to the author's server on loopback inside the offline container, RTX PRO 6000 Blackwell 96 GB, all 842 items serially; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.02126808988764045,
+   "basis": "ESTIMATE: DeepInfra Qwen/Qwen3.5-4B list price $0.03/M input (the exact base weights; one pass, no output), read 2026-09-24; the server's own usage.input_tokens; nothing generated; estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "8949544e51c4d509fcea5714cd93db96f40b3c3217d65c22c733ad910e430985",
+   "row_sha256": "7d1f2a3cb04bf31f6e89cf26847e91611bbdced2d06ae03d18d063bc742bd727",
+   "raw_results_sha256": "5cf64733ba8267b1edccbe241d57a645fe082164b41d225011c995bf05865885",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "clm-8b",
+  "open": "yes",
+  "underlying": null,
+  "has_distribution": true,
+  "probability_source": null,
+  "endpoint_condition": "our evaluator-owned Lium GPU pod (RTX PRO 6000), offline read-only container, author's server on loopback",
+  "endpoint_kind": "gpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.6666666666666666,
+   "standard": 0.3854166666666667,
+   "judge": 0.7123287671232876,
+   "hard": 0.35909090909090907
+  },
+  "speed": {
+   "p50_s_raw": 0.016774784307926893,
+   "p95_s_raw": 0.04461275222711264,
+   "p50_s_adjusted": 0.18354956861585378,
+   "p95_s_adjusted": 0.23922550445422527,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "RTX PRO 6000 (evaluator-owned Lium pod)",
+   "measured_where": "serial standard+judge tasks, in-process Engine.answer on RTX PRO 6000 with CLM's documented embedding and action caches on (default settings; repeated option texts are served from cache), all 842 items run serially in one process; own-GPU adjustment ×2 + 0.15 s",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.005234400749063671,
+   "basis": "Qwen3-Embedding-8B hosted list price (OpenRouter/DeepInfra $0.01/M input, read 2026-09-24); CLM usage.input_tokens (encoder tokens on cache misses, documented default action cache); estimated, not charged",
+   "usd_per_1000_v11_tiers": null,
+   "usd_per_1000_hard": null,
+   "self_host_sensitivity": null
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": null,
+  "release_evidence": {
+   "aggregate_source_sha256": "38f491d18216387eba0de63c64474d7ab434d55dfbbc58522ddd6e17dbba5814",
+   "row_sha256": "aba3020880495c47a920b2895ac88153f597f11f340a56733e113bab592a69c8",
+   "raw_results_sha256": "c839df117e42099d3c4d7d72ea51735e03a1ea557d164b106253d5dcaa4427cf",
+   "input_sha256": "6b06782a8a9fadfae770cf88985ec188f3244f01510e9b3f15b34c9723937cfc"
+  }
+ },
+ {
+  "key": "instinct",
+  "open": "no",
+  "underlying": "Qwen3.8-27B (Apache-2.0 base weights) with no additional fine-tuning; their own serving stack reads candidate-token scores in one forward pass per question and normalizes them into a decision probability, with no autoregressive decoding. The serving implementation is not public.",
+  "has_distribution": true,
+  "probability_source": [
+   "native"
+  ],
+  "endpoint_condition": "free evaluation/demo endpoint (ZooWork Instinct, api.zoowork.ai), reached from a Hetzner server in Germany",
+  "endpoint_kind": "demo",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9861111111111112,
+   "standard": 0.9583333333333334,
+   "judge": 0.9452054794520548,
+   "hard": 0.759090909090909
+  },
+  "speed": {
+   "p50_s_raw": 0.25864607095718384,
+   "p95_s_raw": 0.3919508829712868,
+   "p50_s_adjusted": 0.5172921419143677,
+   "p95_s_adjusted": 0.7839017659425735,
+   "adjustment": "x2 (free evaluation/demo endpoint: no SLA, no status page, no terms, no bookable price)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "from a Hetzner server in Germany, network included",
+   "hard_tier_p50_s": 0.3032262772321701,
+   "hard_tier_p95_s": 0.8084227547049523
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.3253253932584269,
+   "basis": "ESTIMATE from the BASE MODEL's public reference price (Florian's price rule, 24 Sep 2026): OpenRouter's model-level input price for qwen/qwen3.8-27b, $0.42 per 1M input tokens (catalog snapshot 2026-09-24T19:52Z), zero output-token price for this direct-logit system, x the board-standard input token counts (452 per standard/judge decision, 1,235 per hard decision; 774.6 per decision over the 534 frozen items, the same convention as the other run-11 rows). ZooWork publishes no bookable price; the author-announced $0.03/M is not used.",
+   "superseded_basis": "author-announced $0.03/M (board #824); superseded by the 20:30 price rule",
+   "reference_model": "qwen/qwen3.8-27b",
+   "input_usd_per_m": 0.42,
+   "output_usd_per_m": 0.0
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": {
+   "run": "runs/instinct--hard (job jevbench-add-requests-20260919)",
+   "n_items": 220,
+   "n_ok": 217,
+   "n_attempted": 220,
+   "coverage": 1.0,
+   "success_rate": 0.9863636363636363,
+   "accuracy": 0.759090909090909,
+   "by_family": {
+    "adversarial": {
+     "correct": 12,
+     "n": 12,
+     "accuracy": 1.0
+    },
+    "ambiguous": {
+     "correct": 12,
+     "n": 14,
+     "accuracy": 0.8571428571428571
+    },
+    "judge_hard": {
+     "correct": 28,
+     "n": 33,
+     "accuracy": 0.8484848484848485
+    },
+    "long_policy": {
+     "correct": 28,
+     "n": 38,
+     "accuracy": 0.7368421052631579
+    },
+    "multi_hop": {
+     "correct": 28,
+     "n": 35,
+     "accuracy": 0.8
+    },
+    "probability": {
+     "correct": 12,
+     "n": 20,
+     "accuracy": 0.6
+    },
+    "routing_hard": {
+     "correct": 10,
+     "n": 10,
+     "accuracy": 1.0
+    },
+    "temporal_numeric": {
+     "correct": 11,
+     "n": 30,
+     "accuracy": 0.36666666666666664
+    },
+    "tradeoff": {
+     "correct": 10,
+     "n": 12,
+     "accuracy": 0.8333333333333334
+    },
+    "trap": {
+     "correct": 16,
+     "n": 16,
+     "accuracy": 1.0
+    }
+   },
+   "has_distribution": true,
+   "brier_mean": 0.3030795173651991,
+   "ece": 0.03778852692833676,
+   "probability_fidelity": 76.84827661334029,
+   "calibration_score": 84.64528561383646,
+   "onehot": {
+    "ece": 0.2304147465437788,
+    "probability_fidelity": 52.4436842105263,
+    "calibration_score": 53.18036745088527
+   },
+   "latency_p50_s": 0.3032262772321701,
+   "latency_p95_s": 0.8084227547049523,
+   "mean_input_tokens": 1242.857142857143,
+   "mean_output_tokens": 0.0,
+   "charged_usd": 0.008091000000000006
+  },
+  "release_evidence": {
+   "sealed_aggregate_sha256": "e9c9e1e56718064d7dfc1e413c94f7664f01d75502b608711e2c3f529997927e",
+   "detail_row_sha256": "adf01c6492368359aa21293a0b225bb4d4a1c6166a45d657681f698c9f31ec1c",
+   "sealed_result_sha256": "1e3603a23dfe201c6245ae1eb636af279b44b1354ac2b88ffb8ff8721923e257",
+   "repriced_row_sha256": "f11e47a3a75664db3996b754cbdea31f39ae0c804b29acb5557c41b8ec163533"
+  }
+ },
+ {
+  "key": "jevact",
+  "open": "no",
+  "underlying": "the author's own checkpoint model/jev1-2b-v2/checkpoint-45000-67.53 over a Qwen3.5-2B base, served by the author on his own machine; one request per decision returns a native probability for every offered option",
+  "has_distribution": true,
+  "probability_source": [
+   "native"
+  ],
+  "endpoint_condition": "author-hosted endpoint (one machine at 115.190.124.200:18084, China), reached from a Hetzner server in Germany",
+  "endpoint_kind": "demo",
+  "partial": false,
+  "tiers": {
+   "easy": 0.9861111111111112,
+   "standard": 0.6875,
+   "judge": 0.589041095890411,
+   "hard": 0.37272727272727274
+  },
+  "speed": {
+   "p50_s_raw": 0.3992511257529259,
+   "p95_s_raw": 1.4150911435484888,
+   "p50_s_adjusted": 0.7985022515058517,
+   "p95_s_adjusted": 2.8301822870969775,
+   "adjustment": "x2 (not a production API; no +0.15 s)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": null,
+   "measured_where": "from a Hetzner server in Germany, network included",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.015491685393258427,
+   "basis": "ESTIMATE: hosted-provider price, DeepInfra Qwen3.5-2B size-class reference list price $0.02/M in, $0.0/M out (a 2B one-pass decision model with nothing generated - between the <=0.6B reference the kev 0.5B row uses and the Qwen3.5-4B reference of the reflex 4B, Jobe and SemIf rows) x 452 input and 0 output tokens per decision (input tokens counted from the gemini-3.1-flash-lite run, same prompts)",
+   "usd_per_1000_v11_tiers": 0.009040000000000001,
+   "usd_per_1000_hard": 0.0247
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": {
+   "run": "runs/jevact--hard (job jevbench-add-requests-20260919)",
+   "n_items": 220,
+   "n_ok": 142,
+   "n_attempted": 220,
+   "coverage": 1.0,
+   "success_rate": 0.6454545454545455,
+   "accuracy": 0.37272727272727274,
+   "by_family": {
+    "adversarial": {
+     "correct": 9,
+     "n": 12,
+     "accuracy": 0.75
+    },
+    "ambiguous": {
+     "correct": 6,
+     "n": 14,
+     "accuracy": 0.42857142857142855
+    },
+    "judge_hard": {
+     "correct": 20,
+     "n": 33,
+     "accuracy": 0.6060606060606061
+    },
+    "long_policy": {
+     "correct": 0,
+     "n": 38,
+     "accuracy": 0.0
+    },
+    "multi_hop": {
+     "correct": 1,
+     "n": 35,
+     "accuracy": 0.02857142857142857
+    },
+    "probability": {
+     "correct": 8,
+     "n": 20,
+     "accuracy": 0.4
+    },
+    "routing_hard": {
+     "correct": 9,
+     "n": 10,
+     "accuracy": 0.9
+    },
+    "temporal_numeric": {
+     "correct": 8,
+     "n": 30,
+     "accuracy": 0.26666666666666666
+    },
+    "tradeoff": {
+     "correct": 7,
+     "n": 12,
+     "accuracy": 0.5833333333333334
+    },
+    "trap": {
+     "correct": 14,
+     "n": 16,
+     "accuracy": 0.875
+    }
+   },
+   "has_distribution": true,
+   "brier_mean": 0.6497616683189185,
+   "ece": 0.2041986865896574,
+   "probability_fidelity": 69.7478839531111,
+   "calibration_score": 64.4540733175898,
+   "onehot": {
+    "ece": 0.4225352112676056,
+    "probability_fidelity": 52.74769230769232,
+    "calibration_score": 34.1203250270856
+   },
+   "latency_p50_s": 0.4214286766946316,
+   "latency_p95_s": 1.666276295855641,
+   "mean_input_tokens": null,
+   "mean_output_tokens": null,
+   "charged_usd": 0.0
+  },
+  "release_evidence": {
+   "sealed_aggregate_sha256": "9c76965bbd15d7b1400197d0c31318ce15441b43ef1a06edf996bdbc19627650",
+   "detail_row_sha256": "f4f8bba7ee05c218629e1050c58e4e8f4d96229c47b8bb34d17be049fe82bfd5",
+   "sealed_result_sha256": "492594c04be554b38a24b414be7f61faafc67a4d29a5e0a52c11fac3d64c2799"
+  }
+ },
+ {
+  "key": "verdict-small",
+  "open": "yes",
+  "underlying": "intfloat/multilingual-e5-small (118M multilingual bi-encoder) fine-tuned on a typed-decision mix; each option is scored against the rendered state by cosine similarity, with temperature scaling and a conformal abstain set on top. One encoder pass per option, no tokens generated.",
+  "has_distribution": true,
+  "probability_source": [
+   "native"
+  ],
+  "endpoint_condition": "our CPU (8 threads, Ryzen 5 3600)",
+  "endpoint_kind": "cpu",
+  "partial": false,
+  "tiers": {
+   "easy": 0.8888888888888888,
+   "standard": 0.5104166666666666,
+   "judge": 0.2808219178082192,
+   "hard": 0.4
+  },
+  "speed": {
+   "p50_s_raw": 0.0534759983420372,
+   "p95_s_raw": 0.5461470346897828,
+   "p50_s_adjusted": 0.2569519966840744,
+   "p95_s_adjusted": 1.2422940693795654,
+   "adjustment": "x2 + 0.15 s (assumption, not measured)",
+   "run": "serial 242-decision standard+judge run",
+   "hardware": "AMD Ryzen 5 3600 (Sandy), 4 threads",
+   "measured_where": "local, 4 CPU threads of a Ryzen 5 3600, model loaded before timing",
+   "hard_tier_p50_s": null,
+   "hard_tier_p95_s": null
+  },
+  "cost": {
+   "kind": "estimate",
+   "usd_per_1000": 0.0012943970037453184,
+   "basis": "ESTIMATE: hosted-provider price, deepinfra small multilingual encoders (multilingual-e5-small class, 118M) list price $0.004/M in, $0.0/M out (an encoder of the same size class, below the base-size encoders the open-jev-deberta and OpenDecision rows use; one forward pass, nothing generated) x 114 input and 0 output tokens per decision (input tokens measured (the system's own count))",
+   "usd_per_1000_v11_tiers": 0.00045771974522293,
+   "usd_per_1000_hard": 0.0024885636363636368
+  },
+  "calibration": {
+   "score": null,
+   "note": null
+  },
+  "hard": {
+   "run": "runs/verdict-small--hard (job jevbench-add-requests-20260919)",
+   "n_items": 220,
+   "n_ok": 220,
+   "n_attempted": 220,
+   "coverage": 1.0,
+   "success_rate": 1.0,
+   "accuracy": 0.4,
+   "by_family": {
+    "adversarial": {
+     "correct": 5,
+     "n": 12,
+     "accuracy": 0.4166666666666667
+    },
+    "ambiguous": {
+     "correct": 4,
+     "n": 14,
+     "accuracy": 0.2857142857142857
+    },
+    "judge_hard": {
+     "correct": 15,
+     "n": 33,
+     "accuracy": 0.45454545454545453
+    },
+    "long_policy": {
+     "correct": 17,
+     "n": 38,
+     "accuracy": 0.4473684210526316
+    },
+    "multi_hop": {
+     "correct": 9,
+     "n": 35,
+     "accuracy": 0.2571428571428571
+    },
+    "probability": {
+     "correct": 5,
+     "n": 20,
+     "accuracy": 0.25
+    },
+    "routing_hard": {
+     "correct": 8,
+     "n": 10,
+     "accuracy": 0.8
+    },
+    "temporal_numeric": {
+     "correct": 9,
+     "n": 30,
+     "accuracy": 0.3
+    },
+    "tradeoff": {
+     "correct": 8,
+     "n": 12,
+     "accuracy": 0.6666666666666666
+    },
+    "trap": {
+     "correct": 8,
+     "n": 16,
+     "accuracy": 0.5
+    }
+   },
+   "has_distribution": true,
+   "brier_mean": 0.770191638,
+   "ece": 0.1801,
+   "probability_fidelity": 62.575250000000004,
+   "calibration_score": 63.277625,
+   "onehot": {
+    "ece": 0.6,
+    "probability_fidelity": 27.659000000000013,
+    "calibration_score": 13.829500000000007
+   },
+   "latency_p50_s": 0.16950783133506775,
+   "latency_p95_s": 0.996096399798989,
+   "mean_input_tokens": 622.1409090909091,
+   "mean_output_tokens": 0.0,
+   "charged_usd": 0.0
+  },
+  "release_evidence": {
+   "sealed_aggregate_sha256": "642280f9f6334e540f6ff8a2df0930d9ed3b76f20b57e953e683fdf2ac6b1455",
+   "detail_row_sha256": "ebe9519b426e67b128b827b3de375a1347d910d2a6be8661516b0828ecce6fce",
+   "sealed_result_sha256": "89fc5de11c7fcb47382830c8c0d00ce7eacd08ff0d7a6d8ba4fbda0f4ca2611e"
+  }
+ },
+ {
+  "key": "kushal-gemma4-31b-it-autoloops",
+  "open": "no",
+  "endpoint_kind": "api",
+  "endpoint_condition": "Autoloops production API, reached from a Hetzner server in Germany",
+  "release_evidence": {
+   "candidate_sha256": "d92411c795410382d6f57d87acc8528afb1149982b3132d4ad7b642e0013300f"
+  }
+ }
+]

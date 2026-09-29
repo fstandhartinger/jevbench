@@ -12,7 +12,7 @@
 - Base checkpoints: `Qwen/Qwen3.6-35B-A3B`, `nvidia/Qwen3.6-35B-A3B-NVFP4`, and `juspay/xor`
 - Intended use: image-conditioned typed decisions
 
-The model card describes a mixed-precision NVFP4 build with an adapter blend, and documents image data URL support through the serving bundle's TypeSafe-compatible `/v1/systemone` interface. It reports validation on two NVIDIA RTX PRO 6000 Blackwell GPUs. These are model-card claims, not independent ImageJevBench findings.
+The model card describes a mixed-precision NVFP4 build with an adapter blend, and documents image data URL support through the serving bundle's TypeSafe-compatible `/v1/systemone` interface. It reports validation on two NVIDIA RTX PRO 6000 Blackwell GPUs. These are model-card statements and have not been verified by ImageJevBench.
 
 ## Requested evaluation
 

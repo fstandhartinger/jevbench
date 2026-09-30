@@ -25,7 +25,7 @@ from .adapters import (GradioSpaceAdapter, LocalOpenJevAdapter, NeedleLocalAdapt
                        RemoteInprocAdapter, SemIfDirectAdapter, SgSystemOneAdapter, So1DeciderAdapter,
                        TypeSafeAdapter, DjevAdapter,
                        LayaLocalAdapter, Gliner2LocalAdapter, VerdictLocalAdapter, PawLocalAdapter,
-                       ClassifierDevAdapter, CertoLocalAdapter, QwenFlashLinearAdapter)
+                       ClassifierDevAdapter, CertoLocalAdapter, QwenFlashLinearAdapter, Jevora9BV1Adapter)
 from .budget import Ledger
 from .runner import DEFAULT_RESERVE_USD, Runner
 from .summarize import public_export, summarize
@@ -65,7 +65,7 @@ def cmd_run(args) -> int:
              "laya_local": LayaLocalAdapter, "gliner2_local": Gliner2LocalAdapter,
              "verdict_local": VerdictLocalAdapter, "paw_local": PawLocalAdapter,
              "classifier_dev": ClassifierDevAdapter, "certo_local": CertoLocalAdapter,
-             "qwen_flash_linear": QwenFlashLinearAdapter}
+             "qwen_flash_linear": QwenFlashLinearAdapter, "jevora_9b_v1": Jevora9BV1Adapter}
     if args.adapter not in ("typesafe", "djev", "needle_local", "semif_direct", "so1_decider", "sg_system_one", "classifier_dev") and not args.endpoint:
         print(f"--endpoint required for {args.adapter}", file=sys.stderr)
         return 2
@@ -78,6 +78,9 @@ def cmd_run(args) -> int:
     if args.adapter in ("local_openjev", "semif_direct", "so1_decider", "sg_system_one",
                         "laya_local", "gliner2_local", "verdict_local", "paw_local", "certo_local"):
         kwargs["revision"] = args.revision
+    if args.adapter == "jevora_9b_v1":
+        kwargs["revision"] = args.revision
+        kwargs["device"] = args.device
     adapter = kinds[args.adapter](**kwargs)
     if args.cost_basis:
         adapter.cost_basis = args.cost_basis
@@ -166,7 +169,7 @@ def main(argv=None) -> int:
                                 "semif_direct", "so1_decider", "remote_inproc",
                                 "sg_system_one", "djev", "laya_local", "gliner2_local",
                                 "verdict_local", "paw_local", "classifier_dev", "certo_local",
-                                "qwen_flash_linear"])
+                                "qwen_flash_linear", "jevora_9b_v1"])
     p_run.add_argument("--endpoint", default=None)
     p_run.add_argument("--model", default=None)
     p_run.add_argument("--key-env", dest="key_env",
@@ -191,6 +194,8 @@ def main(argv=None) -> int:
                             "'{\"reasoning_effort\": \"low\"}'")
     p_run.add_argument("--revision", default=None,
                        help="pinned revision of a local checkpoint")
+    p_run.add_argument("--device", default="cuda",
+                       help="local device for adapters that load weights in-process")
     p_run.add_argument("--run-label", dest="run_label", default=None)
     p_run.add_argument("--cost-basis", dest="cost_basis", default=None,
                        help="why this route's per-decision cost is what it is, "

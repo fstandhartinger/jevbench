@@ -45,13 +45,16 @@ class TrioSparkAdapter:
         if not 2 <= len(criteria) <= 8:
             raise ValueError("Trio-Spark accepts 2 to 8 choices")
         state = task.state if isinstance(task.state, dict) else {"observation": task.state}
+        if set(criteria) != set(task.labels):
+            raise ValueError("task labels do not match its criteria")
         return {
             "model": self.model,
             "task": task.question["instructions"],
             "state": state,
             "choices": [
                 {"id": label, "description": description}
-                for label, description in criteria.items()
+                for label in task.labels
+                for description in [criteria[label]]
             ],
         }
 

@@ -25,6 +25,13 @@ def test_builds_all_three_primitives():
         assert body["state"] == {"observation": "state text"}
 
 
+def test_choice_order_follows_canonical_labels():
+    value = task()
+    value.question["criteria"] = {"b": "B", "a": "A"}
+    body = TrioSparkAdapter(key_env="").build_request(value)
+    assert [choice["id"] for choice in body["choices"]] == ["a", "b"]
+
+
 def test_parses_native_probabilities(monkeypatch):
     monkeypatch.setenv("TRIO_SPARK_API_KEY", "test-key-not-a-credential")
     monkeypatch.setattr(

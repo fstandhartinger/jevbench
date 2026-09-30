@@ -309,9 +309,10 @@ author published:
 | `gradio_space` | a rebuild whose only public interface is its Hugging Face Space demo |
 | `local_openjev` | open weights loaded in-process, no network |
 | `openai_compat` | ordinary instruction models, JSON-schema-constrained |
+| `trio_spark` | MachineFi's hosted Trio-Spark production API |
 
-The first four read the model's **own** probability distribution. The last one asks the
-model to **write** probabilities out under a schema. Those are different objects and are
+Every adapter above except `openai_compat` reads the model's **own** probability distribution.
+`openai_compat` asks the model to **write** probabilities out under a schema. Those are different objects and are
 labelled `native` and `verbalized` everywhere. Token-level logprobs are not used
 anywhere, for anyone.
 
@@ -342,6 +343,14 @@ python -m jevbench.cli run --tasks datasets/public/original.jsonl \
 
 python -m jevbench.cli summarize --tasks datasets/public/original.jsonl \
   --results RUN/results.jsonl --public-export RUN/summary.json
+
+# Trio-Spark v1.0, one native Choice distribution per request
+python -m jevbench.cli run \
+  --tasks datasets/public/easy.jsonl,datasets/public/original.jsonl,datasets/public/hard.jsonl \
+  --adapter trio_spark --key-env TRIO_SPARK_API_KEY \
+  --price-in-per-m 0.042 --price-out-per-m 0 --delay-s 1.2 \
+  --results RUN3/results.jsonl --raw-dir RUN3/raw \
+  --ledger RUN3/ledger.jsonl --cap-usd 15 --manifest RUN3/manifest.json
 ```
 
 Keys live in the environment and are named, never written into a config file, a result

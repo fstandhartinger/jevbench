@@ -26,6 +26,7 @@ from .adapters import (GradioSpaceAdapter, LocalOpenJevAdapter, NeedleLocalAdapt
                        TypeSafeAdapter, DjevAdapter,
                        LayaLocalAdapter, Gliner2LocalAdapter, VerdictLocalAdapter, PawLocalAdapter,
                        ClassifierDevAdapter, CertoLocalAdapter, QwenFlashLinearAdapter)
+from .adapters import TrioSparkAdapter
 from .budget import Ledger
 from .runner import DEFAULT_RESERVE_USD, Runner
 from .summarize import public_export, summarize
@@ -65,8 +66,9 @@ def cmd_run(args) -> int:
              "laya_local": LayaLocalAdapter, "gliner2_local": Gliner2LocalAdapter,
              "verdict_local": VerdictLocalAdapter, "paw_local": PawLocalAdapter,
              "classifier_dev": ClassifierDevAdapter, "certo_local": CertoLocalAdapter,
-             "qwen_flash_linear": QwenFlashLinearAdapter}
-    if args.adapter not in ("typesafe", "djev", "needle_local", "semif_direct", "so1_decider", "sg_system_one", "classifier_dev") and not args.endpoint:
+             "qwen_flash_linear": QwenFlashLinearAdapter,
+             "trio_spark": TrioSparkAdapter}
+    if args.adapter not in ("typesafe", "trio_spark", "djev", "needle_local", "semif_direct", "so1_decider", "sg_system_one", "classifier_dev") and not args.endpoint:
         print(f"--endpoint required for {args.adapter}", file=sys.stderr)
         return 2
     kwargs = dict(endpoint=args.endpoint, model=args.model,
@@ -166,7 +168,7 @@ def main(argv=None) -> int:
                                 "semif_direct", "so1_decider", "remote_inproc",
                                 "sg_system_one", "djev", "laya_local", "gliner2_local",
                                 "verdict_local", "paw_local", "classifier_dev", "certo_local",
-                                "qwen_flash_linear"])
+                                "qwen_flash_linear", "trio_spark"])
     p_run.add_argument("--endpoint", default=None)
     p_run.add_argument("--model", default=None)
     p_run.add_argument("--key-env", dest="key_env",

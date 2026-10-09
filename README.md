@@ -1,21 +1,37 @@
-# JevBench - https://benchmarkheaven.com/jev-models
+# JevBench — Benchmark for AI Decision Models
 
+Jev is TypeSafe AI's decision model; JevBench also evaluates Jev-compatible systems. The canonical JevBench board is https://benchmarkheaven.com/jev-models.
+
+## Current results and scoring
+
+JevBench by Benchmark Heaven is a benchmark for AI decision models, including Jev-compatible systems. It measures typed decision accuracy, probability calibration, latency and cost. Maintained by Benchmark Heaven, independently of TypeSafe AI.
+
+[Current open-weights board](https://benchmarkheaven.com/jev-models) · [Hosted API board](https://benchmarkheaven.com/jev-models/api) · [Methodology](https://benchmarkheaven.com/jev-models/methodology) · [Data card](https://benchmarkheaven.com/jev-models/data) · [Benchmark comparison](https://benchmarkheaven.com/decision-model-benchmarks)
+
+Published release: **v1.6.1**, initially published 2026-10-06. [Version permalink](https://benchmarkheaven.com/jev-models/v1.6.1). Published addenda: a6 (2026-10-07), a7 (2026-10-07), a8 (2026-10-07), a11 (2026-10-08), a12 (2026-10-08); amended through 2026-10-08. Latest row measurement: 2026-10-07. This list includes additions embedded in the results artifact; method amendments and board revisions are listed separately on the versioned board. Cite source_sha256 5cd8c1332226ea9c179883d2285c0d8b8cc593ae38f2645197364a7ddd9c83c1 for the exact published bytes. The live board may also include later dated API reruns and presentation revisions.
+
+**Capability Score:** Arithmetic mean of Intelligence and Calibration; ranked models within both official caps. Headline on the open-weights board. Cost cap: USD 0.0646 per 1,000 decisions; adjusted median-latency cap: 1.23 seconds.
+
+**Composite Score:** Weighted harmonic mean of Intelligence, Calibration, Speed and Cost, multiplied by squared penalties when Intelligence is below its configured floor, or Speed or Cost is below 50. Equal 25% weights do not mean an arithmetic average. Option A: weights Calibration 25%, Cost 25%, Intelligence 25%, Speed 25%; Intelligence floor 50. Composite is secondary on open weights and leads the hosted API board.
+
+[Authoritative release manifest](https://benchmarkheaven.com/api/jevbench/manifest) · [Own results JSON](https://benchmarkheaven.com/api/decision-results/jevbench/v1.6.1/json) · [Own results CSV](https://benchmarkheaven.com/api/decision-results/jevbench/v1.6.1/csv). Missing measurements are null, never zero. No third-party benchmark numbers are included.
+
+**Limitations:** finite task coverage; sealed inputs prevent complete independent reruns; hosted endpoint versions can be opaque; cost is modeled from the published basis and latency depends on the runtime and measurement location. Training on the public split must be disclosed. A leaderboard score does not establish reliability on your workload.
+
+**Name disambiguation:** this is JevBench by Benchmark Heaven at benchmarkheaven.com. The [metamorphic coherence benchmark](https://jevbench.github.io/) is a separate project; its consistency scores measure a different property.
+
+Historical releases retain their original scoring definitions and measurement sets. Do not compare scores across method versions as if they were the same experiment.
+
+
+## Historical releases
 Combination experiments (confidence cascades, committees, and real-sample best-of-n) are
 reported in [RESULTS-COMBINATIONS.md](RESULTS-COMBINATIONS.md). None changed the ranked board.
 
-A benchmark for **Jev-class decision models**: you hand the model a piece of state
-and a bounded rubric, and it hands back a typed answer, ideally with a probability for
-every option. No prose, no parsing, no "as an AI language model".
-
-JevBench is [Benchmark Heaven](https://benchmarkheaven.com)'s own benchmark. It is not
-affiliated with or endorsed by TypeSafe AI, whose Jev model is one of the systems
-measured here.
-
-## Scoring method
+### v1.5 method record
 
 JevBench v1.5's frozen method and its disclosed release addenda are available in the [v1.5 method index](docs/METHOD-v1.5-README.md). It links the unchanged frozen method, every v1.5 addendum, and a SHA-256 manifest.
 
-## v1.4.2.2: Imajev-4B leads; Plumb-4B is #2 (current)
+### v1.4.2.2: Imajev-4B leads; Plumb-4B is #2 (historical release)
 
 **[Live board](https://benchmarkheaven.com/jev-models)** · [v1.4.2.2 release notes](docs/RELEASE-v1.4.2.2.md) ·
 [v1.4 method](docs/METHOD-v1.4.md) · [aggregate results](results/v1.4.2.2/jevbench-v1.4.2.2-results.json) · [changelog](CHANGELOG.md)
@@ -32,7 +48,7 @@ The v1.4.2 scorer is unchanged. v1.4.2.2 adds Imajev-4B, measured on the full v1
 
 Imajev-4B's estimated Cost uses the public DeepInfra Qwen/Qwen3.5-4B reference price and zero generated output tokens. It is a model-price estimate, not a GPU bill.
 
-## v1.4.2.1: Plumb-4B added (previous release)
+### v1.4.2.1: Plumb-4B added (previous release)
 
 **[Live board](https://benchmarkheaven.com/jev-models)** · [v1.4.2.1 release notes](docs/RELEASE-v1.4.2.1.md) ·
 [v1.4 method](docs/METHOD-v1.4.md) · [aggregate results](results/v1.4.2.1/jevbench-v1.4.2.1-results.json) · [changelog](CHANGELOG.md)
@@ -51,15 +67,15 @@ Plumb-4B takes the highest equal-weight composite. Jev 1.13.0 out-reasons decide
 
 v1.4.2.1 adds Plumb-4B to the live v1.4.2 baseline: 94 systems, 90 ranked. The v1.4.2 scorer and prior measurements are unchanged; ranks move only where the added row changes the order. Plumb's estimated Cost uses the bookable EmpirioLabs Qwen3.5-4B input rate of $0.04/M, not a GPU bill. Only aggregates are published for the sealed items. Rows with an **API** flag identify operator endpoints that received item text without answer keys. The public half can be trained on or selected against, so the held-out private part will need to evolve as the field changes.
 
-## v1.4.2: eleven new systems and swanOne's sealed run
+### v1.4.2: eleven new systems and swanOne's sealed run
 
 [v1.4.2 release notes](docs/RELEASE-v1.4.2.md) · [aggregate results](results/v1.4.2/jevbench-v1.4.2-results.json)
 
-## v1.4.1: six completed additions to the v1.4 board
+### v1.4.1: six completed additions to the v1.4 board
 
 [v1.4.1 release notes](docs/RELEASE-v1.4.1.md) · [aggregate results](results/v1.4.1/jevbench-v1.4.1-results.json). The previous top five was Jev 1.13.0 (63.29), JevK5 v0.2.0 (62.04), Hopper (59.43), Winnow-12B Q8 (55.58) and reflex 4B (53.99).
 
-## v1.3.0: previous scoring release
+### v1.3.0: previous scoring release
 
 **[Results -> `RESULTS-v1.2.md`](RESULTS-v1.2.md)** · artifact [`results/v1.2/jevbench-v1.2-results.json`](results/v1.2/jevbench-v1.2-results.json) ·
 interactive: [benchmarkheaven.com/jev-models](https://benchmarkheaven.com/jev-models) · how the hard tier was made: [`datasets/HARD-TIER.md`](datasets/HARD-TIER.md)
@@ -124,7 +140,7 @@ v1.2-wip (tag `v1.2-wip`) hard tier + calibration sub-score, Balanced 33:33:33 M
 and Cost 30 points per decade; latency of non-production endpoints adjusted ×2 (+0.15 s on our own servers, an assumption);
 one open-alternative-jev row (author's option order); Needle 3 options-as-tools priced on Needle 3's per-token basis ($0.0162 est.).
 The earlier weightings are kept as views, recomputed the same way, and are not the JevBench Score.
-**v1.2.1 (tag `v1.2.1`): added djev** (Maisa's diffusion-gemma Jev implementation, api.djev.dev) — all 534 decisions including the
+**v1.2.1 (tag `v1.2.1`): added djev** (Maisa's diffusion-gemma Jev-compatible implementation, api.djev.dev) — all 534 decisions including the
 held-out items, one request at a time through its production API (no latency adjustment), scored with the unchanged v1.2 rules.
 Cost uses djev's announced price ($0.035 per million input tokens, output free), which is not charged yet (free preview).
 Adapter: [`jevbench/adapters/djev.py`](jevbench/adapters/djev.py); row: [`results/v1.2/additions/djev.json`](results/v1.2/additions/djev.json).
@@ -225,7 +241,7 @@ ran all 534 frozen decisions serially on our lium.io A6000, scoring **62.4 (#29)
 non-zero hosted-reference cost basis and allowed public-benchmark-directed training disclosure were committed before
 the run ([`docs/v1.2-additions-smalljev.md`](docs/v1.2-additions-smalljev.md)). No earlier result or task changed.
 
-## v1.1.3: the GPU round
+### v1.1.3: the GPU round
 
 **[Results -> `RESULTS-v1.1.3.md`](RESULTS-v1.1.3.md)** · artifact
 [`results/v1.1.3/jevbench-v1.1.3-results.json`](results/v1.1.3/jevbench-v1.1.3-results.json)
@@ -236,7 +252,7 @@ SemIf on Qwen3.5-4B, open-alternative-jev (complete this time; plus a marked pos
 Qwen3-8B, and Bespoke Nimble 9B. Speed is measured from Germany over the internet to the GPU, like every
 remote entrant. v1.1.2 rows are unchanged; only ranks move. Their hard-tier runs feed v1.2.
 
-## v1.1: three sub-benchmarks and one Main Score (superseded by v1.2)
+### v1.1: three sub-benchmarks and one Main Score (superseded by v1.2)
 
 **[Results -> `RESULTS-v1.1.md`](RESULTS-v1.1.md)** · artifact
 [`results/v1.1/jevbench-v1.1-results.json`](results/v1.1/jevbench-v1.1-results.json)
@@ -271,7 +287,7 @@ $0.001-$10 per 1,000 decisions, so no system sits at the 100 cap.
 v1.1 numbers are never mixed with v1.0's. v1.0 is described below and its results stay in
 [`RESULTS.md`](RESULTS.md) as published.
 
-## v1.0
+### v1.0
 
 v1.0 scored five axes side by side without a composite: **smart** (is it right), **cheap**
 (what 1,000 decisions cost), **fast** (end-to-end latency, network included), **reliable**

@@ -1,15 +1,17 @@
 """JevBench CLI.
 
-  python -m jevbench.cli run      --tasks <jsonl[,jsonl...]> \
-      --adapter typesafe|systemone_list|gradio_space|local_openjev|openai_compat \
-      --results <out.jsonl> [--endpoint URL] [--model NAME] [--key-env ENV] \
-      [--cap-usd N] [--ledger PATH] [--raw-dir DIR] [--reserve-usd N] \
-      [--price-in-per-m X] [--price-out-per-m X] [--limit N]
-  python -m jevbench.cli summarize --tasks <jsonl[,jsonl...]> --results <jsonl> \
+  jevbench run       --tasks <jsonl[,jsonl...]> --adapter <name> --results <out.jsonl> \
+      [--endpoint URL] [--model NAME] [--key-env ENV] [--cap-usd N] [--ledger PATH] \
+      [--raw-dir DIR] [--reserve-usd N] [--price-in-per-m X] [--price-out-per-m X] \
+      [--limit N] [--delay-s S] [--request-options JSON] [--revision REV] \
+      [--run-label LABEL] [--cost-basis TEXT] [--manifest PATH]
+  jevbench summarize --tasks <jsonl[,jsonl...]> --results <jsonl> \
       [--ledger PATH] [--public-export PATH] [--include-excluded]
 
+`python -m jevbench.cli ...` is equivalent. See docs/CLI.md for every flag.
+
 Never prints or logs secrets. Raw responses are written into --raw-dir,
-which should live OUTSIDE the repo (defaults to ../private/raw_responses).
+which must live OUTSIDE the repo (defaults to ../private/raw_responses).
 """
 
 from __future__ import annotations
@@ -151,38 +153,110 @@ def cmd_summarize(args) -> int:
     return 0
 
 
+_NO_ENDPOINT_ADAPTERS = ("typesafe, djev, needle_local, semif_direct, so1_decider, "
+                         "sg_system_one, classifier_dev")
+
+_MAIN_EPILOG = """\
+examples:
+  jevbench run --tasks datasets/public/easy.jsonl --adapter openai_compat \\
+      --endpoint http://127.0.0.1:8000/v1 --model my-model --key-env MY_KEY \\
+      --results /tmp/jb/results.jsonl --ledger /tmp/jb/ledger.jsonl --raw-dir /tmp/jb/raw
+  jevbench summarize --tasks datasets/public/easy.jsonl \\
+      --results /tmp/jb/results.jsonl --ledger /tmp/jb/ledger.jsonl
+
+Results, ledger and raw responses must be written outside the repository.
+Full reference: docs/CLI.md
+"""
+
+_RUN_EPILOG = f"""\
+--endpoint is required except for: {_NO_ENDPOINT_ADAPTERS}.
+--results and --raw-dir must be outside the repository; an existing results
+file or raw response file is never overwritten, so use a fresh directory.
+Exit status: 0 all tasks attempted, 3 run stopped early (budget, auth/rate
+limit or 3 consecutive infrastructure errors), 2 usage error.
+
+example:
+  jevbench run --tasks datasets/public/easy.jsonl,datasets/public/hard.jsonl \\
+      --adapter openai_compat --endpoint http://127.0.0.1:8000/v1 --model my-model \\
+      --key-env MY_KEY --results /tmp/jb/results.jsonl --ledger /tmp/jb/ledger.jsonl \\
+      --raw-dir /tmp/jb/raw --manifest /tmp/jb/manifest.json --limit 10
+"""
+
+_SUM_EPILOG = """\
+Prints the summary JSON to stdout. Items with an exclude_reason or no
+expected answer are never scored (they still count as attempted).
+
+example:
+  jevbench summarize --tasks datasets/public/easy.jsonl \\
+      --results /tmp/jb/results.jsonl --ledger /tmp/jb/ledger.jsonl \\
+      --public-export /tmp/jb/public.json
+"""
+
+
 def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(prog="jevbench")
-    sub = ap.add_subparsers(dest="cmd", required=True)
+    fmt = argparse.RawDescriptionHelpFormatter
+    ap = argparse.ArgumentParser(
+        prog="jevbench", formatter_class=fmt, epilog=_MAIN_EPILOG,
+        description="JevBench: run a decision model adapter over JevBench task "
+                    "files and summarize the per-item results.")
+    sub = ap.add_subparsers(dest="cmd", required=True, metavar="{run,summarize}")
 
     def ds_default(name: str) -> str:
         return os.path.join(REPO_ROOT, "..", "private", name)
 
-    p_run = sub.add_parser("run", help="run the benchmark over tasks")
-    p_run.add_argument("--tasks", required=True)
+    p_run = sub.add_parser(
+        "run", help="run one adapter over task files and write per-item results",
+        description="Run one adapter serially (no retries) over the given tasks. "
+                    "Writes one JSON line per attempted task to --results, raw "
+                    "request/response evidence to --raw-dir, and reservations "
+                    "to the shared budget --ledger.",
+        formatter_class=fmt, epilog=_RUN_EPILOG)
+    p_run.add_argument("--tasks", required=True,
+                       help="task JSONL file(s), comma-separated, "
+                            "e.g. datasets/public/easy.jsonl")
     p_run.add_argument("--adapter", required=True,
                        choices=["typesafe", "systemone_list", "gradio_space",
                                 "local_openjev", "openai_compat", "needle_local",
                                 "semif_direct", "so1_decider", "remote_inproc",
                                 "sg_system_one", "djev", "laya_local", "gliner2_local",
                                 "verdict_local", "paw_local", "classifier_dev", "certo_local",
-                                "qwen_flash_linear"])
-    p_run.add_argument("--endpoint", default=None)
-    p_run.add_argument("--model", default=None)
+                                "qwen_flash_linear"],
+                       help="adapter to run: %(choices)s")
+    p_run.add_argument("--endpoint", default=None,
+                       help="base URL (or path, for local adapters) of the system "
+                            "under test; required for most adapters (see below)")
+    p_run.add_argument("--model", default=None,
+                       help="model name to request (openai_compat sends \"\" if unset)")
     p_run.add_argument("--key-env", dest="key_env",
-                       default="TYPESAFE_API_KEY")
-    p_run.add_argument("--results", required=True)
-    p_run.add_argument("--ledger", default=ds_default("ledger.jsonl"))
+                       default="TYPESAFE_API_KEY",
+                       help="NAME of the environment variable holding the API key; "
+                            "the key itself is never printed (default: %(default)s)")
+    p_run.add_argument("--results", required=True,
+                       help="per-item results JSONL to create; must not exist "
+                            "and must be outside the repository")
+    p_run.add_argument("--ledger", default=ds_default("ledger.jsonl"),
+                       help="shared budget ledger JSONL, appended to "
+                            "(default: <repo>/../private/ledger.jsonl)")
     p_run.add_argument("--raw-dir", dest="raw_dir",
-                       default=ds_default("raw_responses"))
-    p_run.add_argument("--cap-usd", dest="cap_usd", type=float, default=15.0)
+                       default=ds_default("raw_responses"),
+                       help="directory for raw request/response evidence, outside "
+                            "the repository (default: <repo>/../private/raw_responses)")
+    p_run.add_argument("--cap-usd", dest="cap_usd", type=float, default=15.0,
+                       help="budget cap in USD; if the ledger already records a lower "
+                            "cap, the lower one applies (default: %(default)s)")
     p_run.add_argument("--reserve-usd", dest="reserve_usd", type=float,
-                       default=DEFAULT_RESERVE_USD)
+                       default=DEFAULT_RESERVE_USD,
+                       help="minimum USD reserved per request before it is sent "
+                            "(default: %(default)s)")
     p_run.add_argument("--price-in-per-m", dest="price_in_per_m", type=float,
-                       default=None)
+                       default=None,
+                       help="USD per million input tokens; with --price-out-per-m "
+                            "this turns reported usage into cost_usd")
     p_run.add_argument("--price-out-per-m", dest="price_out_per_m", type=float,
-                       default=None)
-    p_run.add_argument("--limit", type=int, default=None)
+                       default=None,
+                       help="USD per million output tokens")
+    p_run.add_argument("--limit", type=int, default=None,
+                       help="only run the first N tasks (smoke tests)")
     p_run.add_argument("--delay-s", dest="delay_s", type=float, default=0.0,
                        help="pause between requests; be a polite guest on "
                             "someone else's free public demo")
@@ -191,22 +265,35 @@ def main(argv=None) -> int:
                             "'{\"reasoning_effort\": \"low\"}'")
     p_run.add_argument("--revision", default=None,
                        help="pinned revision of a local checkpoint")
-    p_run.add_argument("--run-label", dest="run_label", default=None)
+    p_run.add_argument("--run-label", dest="run_label", default=None,
+                       help="label stored in the manifest (default: --model, "
+                            "else --adapter)")
     p_run.add_argument("--cost-basis", dest="cost_basis", default=None,
                        help="why this route's per-decision cost is what it is, "
                             "e.g. no_billable_account_public_demo")
     p_run.add_argument("--manifest", default=None,
-                       help="write the run's exact settings here")
+                       help="write the run's exact settings (JSON) to this path")
     p_run.set_defaults(fn=cmd_run)
 
-    p_sum = sub.add_parser("summarize", help="aggregate results")
-    p_sum.add_argument("--tasks", required=True)
-    p_sum.add_argument("--results", required=True)
-    p_sum.add_argument("--ledger", default=None)
-    p_sum.add_argument("--public-export", dest="public_export", default=None)
+    p_sum = sub.add_parser(
+        "summarize", help="aggregate a results file into summary metrics",
+        description="Aggregate per-item results from `jevbench run` into "
+                    "overall, per-family and per-split metrics.",
+        formatter_class=fmt, epilog=_SUM_EPILOG)
+    p_sum.add_argument("--tasks", required=True,
+                       help="the same task JSONL file(s) the run used, comma-separated")
+    p_sum.add_argument("--results", required=True,
+                       help="per-item results JSONL written by `jevbench run`")
+    p_sum.add_argument("--ledger", default=None,
+                       help="ledger JSONL; if given and present, its total is "
+                            "reported as ledger_charged_usd")
+    p_sum.add_argument("--public-export", dest="public_export", default=None,
+                       help="also write an allowlisted aggregate JSON (no item "
+                            "text or labels, no ledger spend) to this path")
     p_sum.add_argument("--include-excluded", dest="include_excluded",
                        action="store_true",
-                       help="include non-headline (excluded/unmeasured) items")
+                       help="include non-headline (excluded/unmeasured) items; currently "
+                            "has no effect on the output (see docs/CLI.md)")
     p_sum.set_defaults(fn=cmd_summarize)
 
     args = ap.parse_args(argv)

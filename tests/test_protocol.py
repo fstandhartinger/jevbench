@@ -69,7 +69,7 @@ class Protocol(unittest.TestCase):
  def test_local_adapter_has_no_tariff(self):
   a=LocalOpenJevAdapter('/tmp/none');self.assertIsNone(a.price_input_per_m);self.assertEqual(a.reserve_estimate(task()),0)
  def test_public_suite_pairs(self):
-  ts=load_jsonl('datasets/public/original.jsonl');self.assertEqual(len(ts),72);self.assertEqual(len({t.id for t in ts}),72)
+  ts=load_jsonl(Path(__file__).resolve().parents[1]/'datasets/public/original.jsonl');self.assertEqual(len(ts),72);self.assertEqual(len({t.id for t in ts}),72)
   for t in ts:t.validate()
   groups={t.group for t in ts}
   for g in groups:self.assertEqual(len({str(t.expected)for t in ts if t.group==g}),1)

@@ -26,3 +26,14 @@ jobs:
         run: python -m pip install -e . pytest
       - name: Test
         run: python -m pytest -q
+      - name: Build sdist and wheel
+        run: |
+          python -m pip install build
+          python -m build --outdir dist
+      - name: Install wheel in clean venv and smoke-test CLI
+        run: |
+          python -m venv /tmp/wheel-venv
+          /tmp/wheel-venv/bin/python -m pip install dist/*.whl
+          cd /tmp
+          /tmp/wheel-venv/bin/jevbench --help
+          /tmp/wheel-venv/bin/python -c "import jevbench.adapters, jevbench.cli"

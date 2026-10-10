@@ -27,6 +27,21 @@ python -m pytest -q
 
 The suite runs offline in about a second. Please keep it that way.
 
+## Checking task files
+
+```sh
+python -m jevbench.cli validate-data datasets/public/*.jsonl
+```
+
+`validate-data` is read-only. It loads each file with the loader in
+`jevbench/tasks.py`, which runs every task's `validate()`, then checks that ids
+are unique across all files given, that each `question.type` is an allowed kind
+(`noul`, `choice`, `score`), that `expected` has the type its kind needs (an int
+level for `score`, `"no"`/`"yes"` for `noul`, a label string for `choice`) and
+that all items sharing a `group` share one expected answer. It prints a
+per-file summary and one `PROBLEM` line per issue, and exits 1 if there is
+any problem.
+
 ## What not to change in a PR
 
 * Benchmark items (`datasets/`) and published results (`results/`) are

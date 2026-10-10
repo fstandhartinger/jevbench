@@ -7,6 +7,7 @@
       [--price-in-per-m X] [--price-out-per-m X] [--limit N]
   python -m jevbench.cli summarize --tasks <jsonl[,jsonl...]> --results <jsonl> \
       [--ledger PATH] [--public-export PATH] [--include-excluded]
+  python -m jevbench.cli validate-data <jsonl> [<jsonl>...]
 
 Never prints or logs secrets. Raw responses are written into --raw-dir,
 which should live OUTSIDE the repo (defaults to ../private/raw_responses).
@@ -151,6 +152,12 @@ def cmd_summarize(args) -> int:
     return 0
 
 
+def cmd_validate_data(args) -> int:
+    from .validate_data import report
+
+    return report(args.paths, sys.stdout)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="jevbench")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -208,6 +215,11 @@ def main(argv=None) -> int:
                        action="store_true",
                        help="include non-headline (excluded/unmeasured) items")
     p_sum.set_defaults(fn=cmd_summarize)
+
+    p_val = sub.add_parser("validate-data",
+                           help="read-only checks over task JSONL files")
+    p_val.add_argument("paths", nargs="+", metavar="PATH")
+    p_val.set_defaults(fn=cmd_validate_data)
 
     args = ap.parse_args(argv)
     return args.fn(args)

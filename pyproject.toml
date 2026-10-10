@@ -11,3 +11,6 @@ license = {text = "MIT"}
 jevbench = "jevbench.cli:main"
 [tool.setuptools.packages.find]
 include = ["jevbench*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

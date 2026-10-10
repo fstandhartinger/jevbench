@@ -1,5 +1,7 @@
 # JevBench — Benchmark for AI Decision Models
 
+[![tests](https://github.com/fstandhartinger/jevbench/actions/workflows/tests.yml/badge.svg)](https://github.com/fstandhartinger/jevbench/actions/workflows/tests.yml)
+
 Jev is TypeSafe AI's decision model; JevBench also evaluates Jev-compatible systems. The canonical JevBench board is https://benchmarkheaven.com/jev-models.
 
 ## Current results and scoring

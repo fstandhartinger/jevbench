@@ -1,12 +1,43 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "jevbench"
 version = "1.0.0"
 description = "Reproducible typed decision model evaluation"
+readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Florian Standhartinger and contributors"}]
+keywords = ["benchmark", "evaluation", "decision models", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# The core package and the HTTP adapters use only the standard library.
+# Local-model adapters import their libraries lazily; these extras cover the
+# ones published on PyPI. Adapters for systems that load the author's own repo
+# (laya, so1, semif, system_one, typed_decisions, verdict, certo, needle,
+# smalljev) still need that code installed separately.
+[project.optional-dependencies]
+gradio = ["gradio_client"]
+gliner2 = ["gliner2", "torch"]
+paw = ["programasweights"]
+smalljev = ["torch", "transformers", "peft"]
+torch = ["torch"]
+[project.urls]
+Homepage = "https://github.com/fstandhartinger/jevbench"
+Repository = "https://github.com/fstandhartinger/jevbench"
+Issues = "https://github.com/fstandhartinger/jevbench/issues"
+Leaderboard = "https://benchmarkheaven.com/jev-models"
 [project.scripts]
 jevbench = "jevbench.cli:main"
 [tool.setuptools.packages.find]

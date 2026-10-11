@@ -25,9 +25,9 @@ We submit **Agent MIKI Cloud Edition v1.3.7** for inclusion in the official JevB
 | **Official Harmonic** | 67.38 pt | 70.41 pt | **71.88 pt** | **+4.50 pt** |
 
 ## 3. Reproduction & Verification
-Evaluators can verify the entire submission with a single command:
+Evaluators can verify the entire submission with a single command from the repository root:
 ```bash
-python submission/reproduce_cloud_benchmark.py
+python docs/submissions/hcie_cloud/reproduce_cloud_benchmark.py
 ```
 This performs:
 1. Cryptographic hash integrity checks on all source datasets, execution logs, and submission row.
@@ -36,5 +36,5 @@ This performs:
 4. Autonomous evaluation of 4-axes scores, latency percentiles, and world rank determination.
 
 ## 4. Live Hardware Verification Policy
-- **Offline Evaluation (Default)**: Evaluators can run `python submission/reproduce_cloud_benchmark.py` instantly without network connectivity or API credentials.
+- **Offline Evaluation (Default)**: Evaluators can run `python docs/submissions/hcie_cloud/reproduce_cloud_benchmark.py` (or `python reproduce_cloud_benchmark.py` within the submission directory) instantly without network connectivity or API credentials.
 - **On-Demand Live Verification**: To maintain strict security and protect against unauthorized compute quota consumption on our serverless GPU backend, live inference endpoints require temporary authenticated tokens. If the Benchmark Heaven maintainers require live test queries on the NVIDIA L4 Cloud Run cluster, please ping us in this PR and we will provide a time-limited, dedicated verification token via secure channel.

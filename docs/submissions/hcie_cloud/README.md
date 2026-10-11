@@ -11,7 +11,11 @@ This directory contains the official PR submission package for **Agent MIKI Clou
 - [`../results/cuda_cloud_jevbench_europe.jsonl`](../results/cuda_cloud_jevbench_europe.jsonl): Full 231-task raw E2E inference execution log with real-time `pynvml` hardware telemetry.
 
 ## Verification
-Run:
+Run from the repository root:
 ```bash
-python submission/reproduce_cloud_benchmark.py
+python docs/submissions/hcie_cloud/reproduce_cloud_benchmark.py
+```
+Or run from within this directory:
+```bash
+python reproduce_cloud_benchmark.py
 ```

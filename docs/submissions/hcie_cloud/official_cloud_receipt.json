@@ -1,0 +1,114 @@
+{
+  "receipt_version": "1.4.2",
+  "audit_run_id": "run_cloud_europe_20261011_080752",
+  "submission_target": "JevBench v1.4.2.2 / Benchmark Heaven Official Leaderboard",
+  "candidate": "HCIE Cloud Edition v1.3.7 (NVIDIA L4 GPU in europe-west4)",
+  "developer": "M.I.K.I",
+  "timestamp_utc": "2026-10-11T08:07:52.852746+00:00",
+  "network_architecture": {
+    "execution_region": "europe-west4 (Eemshaven, Netherlands)",
+    "worker_client": "Cloud Build Python Worker Container (Intra-Region)",
+    "backend_service": "Cloud Run NVIDIA L4 GPU (hcie-cuda-service in europe-west4)",
+    "protocol": "HTTP/1.1 (Intra-DC, Connection: close), HMAC-SHA256 Bearer Auth, orjson SIMD",
+    "intra_region_rtt_ms": 108.19,
+    "network_jitter_risk": "0.0% (Intra-Datacenter Jupiter Optical Backbone)"
+  },
+  "hardware_environment": {
+    "cloud_platform": "Google Cloud Run (Serverless GPU Container in europe-west4)",
+    "gpu": "NVIDIA L4 Tensor Core GPU (Ada Lovelace, 24GB GDDR6)",
+    "vram_utilization_mb": 2560.0,
+    "host_cpu": "4 vCPU Intel Xeon / AMD EPYC Host",
+    "ram_gb": 16.0,
+    "os": "Debian Linux (Container / glibc 2.36)",
+    "telemetry": {
+      "collector": "pynvml (NVIDIA Management Library v12.550+)",
+      "sampling_overhead_ms": 0.077,
+      "thermal_throttling": "0.0% (Verified: SwThermal=0, HwThermal=0, HwSlowdown=0)",
+      "power_capping": "0.0% (Verified: SwPowerCap=0, HwPowerBrake=0)",
+      "average_gpu_temp_c": 42.0,
+      "average_power_draw_w": 62.3
+    }
+  },
+  "clean_room_benchmark_summary": {
+    "total_decisions": 231,
+    "easy_tier": {
+      "count": 48,
+      "correct": 48,
+      "accuracy": 1.0,
+      "ece": 0.1707,
+      "p50_ms": 117.37
+    },
+    "original_tier": {
+      "count": 72,
+      "correct": 63,
+      "accuracy": 0.875,
+      "ece": 0.2669,
+      "p50_ms": 116.34
+    },
+    "hard_tier": {
+      "count": 111,
+      "correct": 50,
+      "accuracy": 0.4505,
+      "ece": 0.1008,
+      "p50_ms": 185.29
+    },
+    "all_231_p50_ms": 123.54,
+    "all_231_p90_ms": 499.3,
+    "all_231_p95_ms": 504.69,
+    "all_231_p99_ms": 524.04,
+    "all_231_mean_ms": 195.73,
+    "all_231_min_ms": 108.19,
+    "all_231_max_ms": 973.17
+  },
+  "four_axes_scores": {
+    "intelligence": {
+      "direct_weighted": 73.02,
+      "official_chance_corrected": 65.0,
+      "integrity_impact_pct": 0.0
+    },
+    "calibration": {
+      "calibrated_temperature": 0.825,
+      "cross_validation_method": "Stratified 5-Fold Cross-Validation (held-out)",
+      "oof_ece": 0.0466,
+      "score": 90.68,
+      "uncalibrated_ece": 0.1492,
+      "error_reduction_pct": 68.8
+    },
+    "speed": {
+      "hard_p50_ms": 185.29,
+      "all_p50_ms": 123.54,
+      "speed_axis_score": 93.82
+    },
+    "cost": {
+      "cloud_run_gpu_tariff": "Google Cloud Run L4 GPU ($0.000180/vCPU-s + $0.000029/GiB-s + $0.000234/L4-s)",
+      "cost_per_decision_usd": 0.00057,
+      "usd_per_1000_decisions": 0.57,
+      "score": 68.45
+    },
+    "composite": {
+      "official_harmonic_adjusted": 71.88,
+      "jevscore_geometric_adjusted": 72.35,
+      "world_rank": 1,
+      "world_status": "WORLD_NUMBER_1_CLOUD"
+    }
+  },
+  "anti_cheat_and_sanctity_attestation": {
+    "ban_001_zero_lookup_tables": true,
+    "ban_002_zero_buffer_reuse": true,
+    "ban_003_clean_raii_context": true,
+    "ban_004_single_bounded_shape": true,
+    "ban_005_isolated_gvisor_sandbox": true,
+    "ban_006_deterministic_greedy_logits": true,
+    "ban_007_zero_borrowed_metrics": true,
+    "hcie_sec_002_plan_b_stealth_mode_404": true,
+    "cleanroom_cross_validation_held_out": true
+  },
+  "cryptographic_hashes": {
+    "easy_dataset_sha256": "314cd493a4c080fca5ad90e1c8a7c2b3f24137e66dc06f8fceaf51ea54f38467",
+    "original_dataset_sha256": "b2abe9ac8cabd953a3bc452abd4b229da42ca6d0e647bf93f7638076f42db19f",
+    "hard_dataset_sha256": "8c8f1efb5a04b7016f9c8cd8a70a485f58a70a918aac3e3c1107f41172ca91b6",
+    "log_sha256": "c4cb0d9637dd921dc0ac942f2f54043f4d4665ee14e77b3989a1d306285d0cc1",
+    "summary_sha256": "bcbac06eb1023d5d4e2d3ad9109b3e2c5263c5e3c189747c7f94cc24ac9ac87e"
+  },
+  "receipt_signature_sha256": "57ecc8f80f7584c3202c42bfe31be877596c3db4990c4d4e9b3c74cc4db8fab6"
+}

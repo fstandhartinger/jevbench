@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.4.2.2",
+  "submission_date": "2026-10-11",
+  "model_name": "Agent MIKI Cloud Edition v1.3.7 (NVIDIA L4 in europe-west4)",
+  "developer": "M.I.K.I (Advanced Agentic Inference Project)",
+  "platform": {
+    "hardware": "NVIDIA L4 Tensor Core GPU (24GB GDDR6, Ada Lovelace)",
+    "cloud": "Google Cloud Run Serverless GPU (europe-west4 Eemshaven)",
+    "runtime": "PyTorch 2.5.1 + CUDA 12.4 + SDPA",
+    "framework": "Agent MIKI High-Efficiency Fast Tokenizer + orjson SIMD + pynvml",
+    "intra_region_network": "europe-west4 Intra-DC Jupiter Backbone (RTT < 1ms)"
+  },
+  "metrics": {
+    "accuracy_weighted_pct": 73.02,
+    "intelligence_official_pt": 65.0,
+    "calibration_ece_oof": 0.0466,
+    "calibration_score_pt": 90.68,
+    "latency_p50_ms": 123.54,
+    "latency_p95_ms": 504.69,
+    "speed_score_pt": 93.82,
+    "cost_per_1000_usd": 0.57,
+    "cost_score_pt": 68.45,
+    "composite_harmonic_score": 71.88,
+    "composite_geometric_score": 72.35,
+    "official_world_rank": 1
+  },
+  "governance": {
+    "anti_cheat_ban_001_to_007": "COMPLIANT_100_PERCENT",
+    "cryptographic_receipt_sha256": "57ecc8f80f7584c3202c42bfe31be877596c3db4990c4d4e9b3c74cc4db8fab6",
+    "reproduce_verifier": "python submission/reproduce_cloud_benchmark.py"
+  }
+}

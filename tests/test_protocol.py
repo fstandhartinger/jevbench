@@ -1,4 +1,4 @@
-import json,math,tempfile,unittest
+import json,math,multiprocessing,tempfile,time,unittest
 from pathlib import Path
 from jevbench.tasks import Task,load_jsonl
 from jevbench.budget import Ledger,BudgetExceeded
@@ -7,6 +7,15 @@ from jevbench.summarize import summarize,public_export,agreement
 from jevbench.adapters import GradioSpaceAdapter,LocalOpenJevAdapter,OpenAICompatAdapter,SystemOneListAdapter,TypeSafeAdapter
 from jevbench.adapters.base import DecisionResult
 from jevbench.runner import Runner
+
+class SlowLedger(Ledger):
+ def _read(self,f):
+  state=super()._read(f);time.sleep(.2);return state
+
+def reserve_concurrently(path,start,outcomes):
+ start.wait()
+ try:SlowLedger(path,1).reserve(.6);outcomes.put('reserved')
+ except BudgetExceeded:outcomes.put('rejected')
 
 def task(id='x',split='private',group=None):return Task(id,'intent','PRIVATE TEXT SENTINEL',{'type':'choice','instructions':'Which?','criteria':{'a':'A','b':'B'}},['a','b'],'b',split,group)
 class Protocol(unittest.TestCase):
@@ -21,6 +30,14 @@ class Protocol(unittest.TestCase):
   with tempfile.TemporaryDirectory()as d:
    for v in [float('nan'),float('inf'),-1]:
     with self.assertRaises(BudgetExceeded):Ledger(d+'/l',1).reserve(v)
+ def test_budget_concurrent_reservations_share_cap(self):
+  with tempfile.TemporaryDirectory()as d:
+   ctx=multiprocessing.get_context('spawn');start=ctx.Event();outcomes=ctx.Queue()
+   workers=[ctx.Process(target=reserve_concurrently,args=(d+'/ledger',start,outcomes))for _ in range(2)]
+   for worker in workers:worker.start()
+   start.set()
+   for worker in workers:worker.join(10);self.assertFalse(worker.is_alive());self.assertEqual(worker.exitcode,0)
+   self.assertEqual(sorted(outcomes.get(timeout=1)for _ in workers),['rejected','reserved'])
  def test_invalid_probabilities(self):
   for p in [{'a':True,'b':0},{'a':math.nan,'b':.5},{'a':.3,'b':.3},{'a':1},{'a':1,'b':0,'c':0}]:
    with self.assertRaises(InvalidDistribution):validate_probs(p,['a','b'])

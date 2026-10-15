@@ -1,5 +1,25 @@
 """Durable, locked reservations. Unsettled calls stay charged after interruption."""
-import fcntl,json,math,os,time,uuid
+import json,math,os,time,uuid
+from contextlib import contextmanager
+
+if os.name == 'nt':
+ import msvcrt
+else:
+ import fcntl
+
+@contextmanager
+def _locked(f,shared=False):
+ if os.name == 'nt':
+  # Windows has no shared byte-range locks; serializing readers preserves safety.
+  f.seek(0);msvcrt.locking(f.fileno(),msvcrt.LK_LOCK,1)
+  try:yield
+  finally:
+   f.seek(0);msvcrt.locking(f.fileno(),msvcrt.LK_UNLCK,1)
+ else:
+  fcntl.flock(f,fcntl.LOCK_SH if shared else fcntl.LOCK_EX)
+  try:yield
+  finally:fcntl.flock(f,fcntl.LOCK_UN)
+
 class BudgetExceeded(RuntimeError):pass
 def finite(x):
  x=float(x)
@@ -33,19 +53,21 @@ class Ledger:
  @property
  def charged(self):
   with open(self.path,'a+')as f:
-   fcntl.flock(f,fcntl.LOCK_SH);_,r,s=self._read(f);return self._charge(r,s)
+   with _locked(f,shared=True):_,r,s=self._read(f);return self._charge(r,s)
  def reserve(self,amount_usd,meta=None):
   amount=finite(amount_usd)
   with open(self.path,'a+')as f:
-   fcntl.flock(f,fcntl.LOCK_EX);rows,r,s=self._read(f)
-   caps=[x['cap_usd']for x in rows if x['event']=='cap'];cap=min(caps+[self.cap_usd])
-   if not caps:self._append(f,{'event':'cap','cap_usd':cap,'ts':time.time()})
-   if self._charge(r,s)+amount>cap+1e-12:raise BudgetExceeded('Shared job budget exhausted; request not sent')
-   rid=uuid.uuid4().hex;self._append(f,{'event':'reserve','reservation_id':rid,'reserved_usd':amount,'ts':time.time(),'meta':meta or {}});return rid
+   with _locked(f):
+    rows,r,s=self._read(f)
+    caps=[x['cap_usd']for x in rows if x['event']=='cap'];cap=min(caps+[self.cap_usd])
+    if not caps:self._append(f,{'event':'cap','cap_usd':cap,'ts':time.time()})
+    if self._charge(r,s)+amount>cap+1e-12:raise BudgetExceeded('Shared job budget exhausted; request not sent')
+    rid=uuid.uuid4().hex;self._append(f,{'event':'reserve','reservation_id':rid,'reserved_usd':amount,'ts':time.time(),'meta':meta or {}});return rid
  def settle(self,reservation_id,actual_usd,meta=None):
   actual=finite(actual_usd)
   with open(self.path,'a+')as f:
-   fcntl.flock(f,fcntl.LOCK_EX);_,r,s=self._read(f)
-   if reservation_id not in r or reservation_id in s:raise BudgetExceeded('Missing or duplicate reservation')
-   self._append(f,{'event':'settle','reservation_id':reservation_id,'charged_usd':actual,'ts':time.time(),'meta':meta or {}})
-   if actual>r[reservation_id]+1e-12:raise BudgetExceeded('Actual charge exceeded reserved maximum; halt and audit')
+   with _locked(f):
+    _,r,s=self._read(f)
+    if reservation_id not in r or reservation_id in s:raise BudgetExceeded('Missing or duplicate reservation')
+    self._append(f,{'event':'settle','reservation_id':reservation_id,'charged_usd':actual,'ts':time.time(),'meta':meta or {}})
+    if actual>r[reservation_id]+1e-12:raise BudgetExceeded('Actual charge exceeded reserved maximum; halt and audit')

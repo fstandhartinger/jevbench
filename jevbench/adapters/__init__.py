@@ -41,3 +41,4 @@ def NeedleLocalAdapter(**kw):  # lazy: only the Needle venv can import needle
     return A(**kw)
 
 from .qwen_flash_linear import QwenFlashLinearAdapter  # noqa: F401
+from .trio_spark import TrioSparkAdapter  # noqa: F401

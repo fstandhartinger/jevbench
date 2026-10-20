@@ -17,6 +17,7 @@ Raw provider responses are preserved by the runner, not here.
 
 from .base import DecisionResult  # noqa: F401
 from .typesafe import TypeSafeAdapter  # noqa: F401
+from .openjev_image import OpenJevImageAdapter  # noqa: F401
 from .openai_compat import OpenAICompatAdapter  # noqa: F401
 from .systemone_list import SystemOneListAdapter  # noqa: F401
 from .gradio_space import GradioSpaceAdapter  # noqa: F401

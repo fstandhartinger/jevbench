@@ -24,7 +24,7 @@ import time
 from .adapters import (GradioSpaceAdapter, LocalOpenJevAdapter, NeedleLocalAdapter,
                        OpenAICompatAdapter, SystemOneListAdapter,
                        RemoteInprocAdapter, SemIfDirectAdapter, SgSystemOneAdapter, So1DeciderAdapter,
-                       TypeSafeAdapter, DjevAdapter,
+                       TypeSafeAdapter, OpenJevImageAdapter, DjevAdapter,
                        LayaLocalAdapter, Gliner2LocalAdapter, VerdictLocalAdapter, PawLocalAdapter,
                        ClassifierDevAdapter, CertoLocalAdapter, QwenFlashLinearAdapter)
 from .budget import Ledger
@@ -56,7 +56,7 @@ def cmd_run(args) -> int:
     if args.limit:
         tasks = tasks[: args.limit]
 
-    kinds = {"typesafe": TypeSafeAdapter, "systemone_list": SystemOneListAdapter,
+    kinds = {"typesafe": TypeSafeAdapter, "openjev_image": OpenJevImageAdapter, "systemone_list": SystemOneListAdapter,
              "gradio_space": GradioSpaceAdapter, "local_openjev": LocalOpenJevAdapter,
              "openai_compat": OpenAICompatAdapter,
              "needle_local": NeedleLocalAdapter,
@@ -168,7 +168,7 @@ def main(argv=None) -> int:
     p_run = sub.add_parser("run", help="run the benchmark over tasks")
     p_run.add_argument("--tasks", required=True)
     p_run.add_argument("--adapter", required=True,
-                       choices=["typesafe", "systemone_list", "gradio_space",
+                       choices=["typesafe", "openjev_image", "systemone_list", "gradio_space",
                                 "local_openjev", "openai_compat", "needle_local",
                                 "semif_direct", "so1_decider", "remote_inproc",
                                 "sg_system_one", "djev", "laya_local", "gliner2_local",

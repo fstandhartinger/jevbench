@@ -20,11 +20,11 @@ from .base import DecisionResult
 
 
 JEVORA_MODEL = "kadirbekovvv/jevora-9b-v1"
-JEVORA_HF_REVISION = "c644b9c7a3b67b7acc3279523e3bee69a4be473d"
+JEVORA_HF_REVISION = "545549b8e8104f1780966ef1c13136abb32712b4"
 JEVORA_CODE_REPOSITORY = "https://github.com/doxanocap/jevora-9b-v1"
-JEVORA_CODE_REVISION = "50027755772570d13bde8ec07503ec90ab893e01"
-JEVORA_PACKAGE_MANIFEST_SHA256 = "5fdc127bfee88aa2c722c12194a045f18599ff6eb44b171a3551921735cc51b5"
-JEVORA_MAX_LENGTH = 1024
+JEVORA_CODE_REVISION = "84864f9a8e8a6642a7b7bc1ab57ee0d5f5297cd2"
+JEVORA_PACKAGE_MANIFEST_SHA256 = "483a5398d29b48f252d0aa6349946433b1c0b291bad81ce66d47f1f94ea3c6db"
+JEVORA_MAX_LENGTH = 8192
 JEVORA_MAX_OPTIONS = 255
 PROBABILITY_SUM_TOLERANCE = 1e-6
 OVERLENGTH_ERROR = re.compile(r"input has \d+ tokens, exceeds max_length=\d+")
@@ -35,8 +35,11 @@ class InputLimitExceeded(ValueError):
 
 
 def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
     with path.open("rb") as source:
-        return hashlib.file_digest(source, "sha256").hexdigest()
+        for chunk in iter(lambda: source.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _text(value: Any) -> str:
@@ -203,8 +206,8 @@ class Jevora9BV1Adapter:
                 raw={"choice": task.labels[choice], "probabilities": mapped,
                      "runtime": {"hf_revision": self.revision,
                                  "code_revision": JEVORA_CODE_REVISION,
-                                 "probability_origin": "native_jevora_decision_head_softmax",
-                                 "temperature_source": "verified_package_calibration"}},
+                                 "probability_origin": "native_jevora_candidate_logits_softmax",
+                                 "temperature_source": "verified_package_temperature"}},
             )
         except Exception as error:
             # JevBench treats documented input limits as 422, not infrastructure failures.

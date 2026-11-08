@@ -7,12 +7,13 @@ the exact task-label order and returns Jevora's native probability distribution.
 ## Pins and limits
 
 - Weights: `kadirbekovvv/jevora-9b-v1` at HF revision
-  `c644b9c7a3b67b7acc3279523e3bee69a4be473d`.
+  `545549b8e8104f1780966ef1c13136abb32712b4`.
 - Public inference code:
-  `doxanocap/jevora-9b-v1@50027755772570d13bde8ec07503ec90ab893e01`.
+  `doxanocap/jevora-9b-v1@84864f9a8e8a6642a7b7bc1ab57ee0d5f5297cd2`.
 - The package manifest must have SHA256
-  `5fdc127bfee88aa2c722c12194a045f18599ff6eb44b171a3551921735cc51b5`.
-- The adapter returns HTTP-like status `422` for more than 1,024 rendered
+  `483a5398d29b48f252d0aa6349946433b1c0b291bad81ce66d47f1f94ea3c6db`.
+- This V1.6 package uses BF16 and uncalibrated temperature `1`.
+- The adapter returns HTTP-like status `422` for more than 8,192 rendered
   tokens or more than 255 options. It never truncates. Runtime and inference
   errors remain failed attempts without a synthetic status.
 
@@ -30,14 +31,14 @@ claimed benchmark run:
 JEVBENCH_DIR="$(pwd -P)"
 WORK_DIR="$(cd .. && pwd -P)"
 CODE_REPO=https://github.com/doxanocap/jevora-9b-v1
-CODE_REVISION=50027755772570d13bde8ec07503ec90ab893e01
+CODE_REVISION=84864f9a8e8a6642a7b7bc1ab57ee0d5f5297cd2
 CODE_DIR="$WORK_DIR/jevora-public"
 git clone "$CODE_REPO" "$CODE_DIR"
 git -C "$CODE_DIR" checkout --detach "$CODE_REVISION"
 (cd "$CODE_DIR" && uv sync --locked)
 
 HF_REPO_ID=kadirbekovvv/jevora-9b-v1
-HF_REVISION=c644b9c7a3b67b7acc3279523e3bee69a4be473d
+HF_REVISION=545549b8e8104f1780966ef1c13136abb32712b4
 MODEL_DIR="$WORK_DIR/models/jevora-9b-v1"
 "$CODE_DIR/.venv/bin/hf" download "$HF_REPO_ID" --revision "$HF_REVISION" --local-dir "$MODEL_DIR"
 PACKAGE="$MODEL_DIR/jevora-9b-v1"

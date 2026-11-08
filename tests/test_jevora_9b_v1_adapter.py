@@ -12,7 +12,7 @@ def adapter_with_mocked_inference(monkeypatch, outcome):
     adapter.load = lambda: None
     adapter._model = object()
     adapter._tokenizer = object()
-    adapter._metadata = {"max_length": 1024}
+    adapter._metadata = {"max_length": 8192}
     adapter._device = object()
     adapter._prompt_version = "jevora-v0.2-lm-head-codes"
     adapter._temperature = 1.0
@@ -43,7 +43,7 @@ def test_over_options_and_overlength_are_422(monkeypatch):
     assert not over_options.ok and over_options.status == 422
 
     def overlength(*_):
-        raise ValueError("input has 1025 tokens, exceeds max_length=1024")
+        raise ValueError("input has 8193 tokens, exceeds max_length=8192")
 
     adapter = adapter_with_mocked_inference(monkeypatch, overlength)
     result = adapter.run(task("choice", {"a": "A", "b": "B"}, ["a", "b"]))
@@ -61,7 +61,7 @@ def test_runtime_errors_have_no_synthetic_status(monkeypatch):
 
 def test_unrelated_value_errors_are_not_misclassified_as_overlength(monkeypatch):
     def malformed_message(*_):
-        raise ValueError("input has invalid fields, exceeds max_length=1024")
+        raise ValueError("input has invalid fields, exceeds max_length=8192")
 
     adapter = adapter_with_mocked_inference(monkeypatch, malformed_message)
     result = adapter.run(task("choice", {"a": "A", "b": "B"}, ["a", "b"]))

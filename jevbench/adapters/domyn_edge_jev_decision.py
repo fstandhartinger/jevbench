@@ -1,8 +1,8 @@
-"""Domyn-System-Jev adapter: a single-forward-pass typed-decision model built on Domyn-Edge-SFT (3.93B).
+"""Domyn-Edge-Jev-Decision adapter: a single-forward-pass typed-decision model built on Domyn-Edge-SFT (3.93B).
 
 The model answers in ONE forward pass with zero generated tokens: the prompt is rendered to the decision position
 and the next-token distribution over single-token option codes (A, B, ... at that position) is the native
-categorical answer. Weights: deshwalmahesh/domyn-system-jev (open, loaded in-process). No calibrator is baked in
+categorical answer. Weights: deshwalmahesh/domyn-edge-jev-decision (open, loaded in-process). No calibrator is baked in
 (temperature 1.0); the raw native distribution is returned.
 
 Rendering (shared by training, eval and here — train == serve):
@@ -23,7 +23,7 @@ from .base import DecisionResult
 
 PROMPT = ("Answer the question about the state with exactly one option code.\n\n"
           "State:\n{state}\n\nQuestion: {question}\n\nOptions:\n{options}\n\nReply with only the option code.")
-DEFAULT_MODEL = "deshwalmahesh/domyn-system-jev"
+DEFAULT_MODEL = "deshwalmahesh/domyn-edge-jev-decision"
 MAX_CODES = 255
 
 
@@ -67,8 +67,8 @@ def _option_codes(tok, tail):
     return codes
 
 
-class DomynSystemJevAdapter:
-    name = "domyn_system_jev"
+class DomynEdgeJevDecisionAdapter:
+    name = "domyn_edge_jev_decision"
     cost_basis = "self_hosted_gpu"
 
     def __init__(self, endpoint=None, model=None, key_env="", timeout_s=None,

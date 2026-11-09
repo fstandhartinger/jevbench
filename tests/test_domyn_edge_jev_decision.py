@@ -1,4 +1,4 @@
-"""Offline tests for the domyn_system_jev adapter: no model download, no GPU.
+"""Offline tests for the domyn_edge_jev_decision adapter: no model download, no GPU.
 
 They pin the contract that matters for scoring — the returned probability keys equal `task.labels` for every
 task kind — by exercising the pure label-mapping logic; the model forward is not run here (the conformance kit
@@ -6,7 +6,7 @@ and the sealed run do that).
 """
 from types import SimpleNamespace
 
-from jevbench.adapters.domyn_system_jev import DomynSystemJevAdapter
+from jevbench.adapters.domyn_edge_jev_decision import DomynEdgeJevDecisionAdapter
 
 
 def _task(kind, instructions, labels, criteria=None, state="some state"):
@@ -15,15 +15,15 @@ def _task(kind, instructions, labels, criteria=None, state="some state"):
 
 
 def test_attrs_and_defaults():
-    a = DomynSystemJevAdapter()
-    assert a.name == "domyn_system_jev"
-    assert a.model_id == "deshwalmahesh/domyn-system-jev"
+    a = DomynEdgeJevDecisionAdapter()
+    assert a.name == "domyn_edge_jev_decision"
+    assert a.model_id == "deshwalmahesh/domyn-edge-jev-decision"
     assert a.reserve_estimate(None) == 0.0
     assert a.price_input_per_m == 0.04 and a.price_output_per_m == 0.0
 
 
 def test_keys_equal_labels_per_kind():
-    a = DomynSystemJevAdapter()
+    a = DomynEdgeJevDecisionAdapter()
 
     keys, _, _, _ = a._keys_texts(_task("noul", "Is X true?", ["no", "yes"]))
     assert set(keys) == {"yes", "no"}

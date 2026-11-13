@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+import tomllib
+
 import pytest
 
 from jevbench import cli
@@ -172,3 +175,10 @@ def test_cli_accepts_nullspan_local_without_endpoint(tmp_path, monkeypatch):
     ])
     assert rc == 0
     assert out_path.exists()
+
+
+def test_pyproject_pins_exact_nullspan_version():
+    pyproject = Path(__file__).resolve().parents[1] / "pyproject.toml"
+    data = tomllib.loads(pyproject.read_text(encoding="utf-8"))
+    assert data["project"]["optional-dependencies"]["nullspan"] == ["nullspan[hf]==1.3.1"]
+

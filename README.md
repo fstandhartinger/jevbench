@@ -380,6 +380,8 @@ House rules the harness enforces rather than documents:
   `null` with `n = 0`, not a flattering `0.0`. A malformed distribution is a schema
   failure and counts as wrong; it is never repaired into a distribution.
 
+- [EvalScope](https://github.com/modelscope/evalscope) supports CLI and Python evaluation of the JevBench public 231-item subset, with saved predictions, public-subset metrics and reports. [Tutorial](https://evalscope.readthedocs.io/en/latest/benchmarks/jevbench.html).
+
 ## What gets measured
 
 - **Accuracy** - argmax over the exact label set. Every block also reports

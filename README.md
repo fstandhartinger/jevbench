@@ -339,7 +339,7 @@ The optional [`qwen_flash_linear` adapter](docs/qwen-flash-linear.md) connects t
 Qwen3.8 Flash Next compact BF16 linear runtime. Its pinned deployment instructions
 and repeatability limitations are documented separately; no scored row is added.
 
-- External evaluation: [EvalScope on the JevBench public 231-item subset](https://evalscope.readthedocs.io/en/latest/benchmarks/jevbench.html) documents smoke-test and full-subset runs; public-subset metrics are not the official Composite or Capability scores.
+- [Evaluate the JevBench public 231-item subset with EvalScope](https://evalscope.readthedocs.io/en/latest/benchmarks/jevbench.html): run a 3-item smoke test or the full subset, save predictions, and report accuracy and available probability metrics.
 
 Python 3.10+. The HTTP adapters need only the standard library.
 

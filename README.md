@@ -380,30 +380,7 @@ House rules the harness enforces rather than documents:
   `null` with `n = 0`, not a flattering `0.0`. A malformed distribution is a schema
   failure and counts as wrong; it is never repaired into a distribution.
 
-### Evaluate with EvalScope
-
-[EvalScope](https://github.com/modelscope/evalscope) offers a CLI and Python workflow
-for the pinned JevBench public 231-item subset, with saved predictions and evaluation
-reports. See the [JevBench guide](https://evalscope.readthedocs.io/en/latest/benchmarks/jevbench.html)
-for dataset details, metrics and Python examples.
-
-Use a Python 3.11+ environment and a running System One-compatible typed-decision
-service. Set `SYSTEM_ONE_API_URL` to its base URL ending in `/v1` and
-`SYSTEM_ONE_API_KEY` to its API key (`EMPTY` for an unauthenticated endpoint).
-
-```sh
-pip install -U evalscope
-
-# 3-item smoke test
-evalscope eval --model YOUR_MODEL --eval-type systemone_api \
-  --api-url "$SYSTEM_ONE_API_URL" --api-key "$SYSTEM_ONE_API_KEY" \
-  --datasets jevbench --limit 3
-```
-
-Remove `--limit 3` to evaluate all 231 public items. Reports include public-subset
-accuracy, available probability metrics and execution coverage. When sharing
-results, label the run **EvalScope on the JevBench public 231-item subset** and
-record the dataset snapshot, EvalScope version and model/service used.
+- [EvalScope](https://github.com/modelscope/evalscope) supports CLI and Python evaluation of the JevBench public 231-item subset, with saved predictions, public-subset metrics and reports. [Tutorial](https://evalscope.readthedocs.io/en/latest/benchmarks/jevbench.html).
 
 ## What gets measured
 
